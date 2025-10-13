@@ -18,7 +18,7 @@ const GradientBorderButton = ({ children }: GradientButtonProps) => {
   return (
     <button className="relative overflow-hidden rounded-full bg-transparent px-6 py-2 text-white font-medium">
       <span className="relative z-10 flex items-center gap-2 text-xs font-semibold">
-        <span className="mt-[2px]">{children}</span>
+        {children}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4 w-4 ml-2"

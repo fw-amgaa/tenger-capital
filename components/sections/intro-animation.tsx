@@ -42,7 +42,7 @@ export function IntroAnimation({
       className="fixed inset-0 z-50 flex items-center justify-center bg-black"
     >
       <motion.h1
-        className="text-white text-4xl md:text-6xl font-semibold font-sans"
+        className="text-white text-4xl md:text-6xl font-semibold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}

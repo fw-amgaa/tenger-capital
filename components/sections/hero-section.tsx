@@ -19,7 +19,7 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
         <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-4">
           Wealth Manager In Your Pocket
         </h1>
-        <p className="text-lg font-light text-muted-foreground max-w-xl mx-auto mb-8">
+        <p className="text-md font-light text-muted-foreground max-w-xl mx-auto mb-8">
           From RSUs to tax planning, investing, and everything in between. Our
           wealth and investment teams handle complexity so you don’t have to.
         </p>

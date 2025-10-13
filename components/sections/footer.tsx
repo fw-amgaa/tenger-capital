@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import GradientBorderButton from "../gradient-border-button";
 import OutlineBorderButton from "../outline-border-button";
 
 const Footer = () => {
