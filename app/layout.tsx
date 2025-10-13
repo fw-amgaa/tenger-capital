@@ -3,7 +3,7 @@ import AdaptiveHeader from "@/components/sections/adaptive-header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { ttcommons } from "./fonts";
+import { moisette, ttCommons } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${ttcommons.className} antialiased`}>
+      <body
+        className={`${moisette.variable} ${ttCommons.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
