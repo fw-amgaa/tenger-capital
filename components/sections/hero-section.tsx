@@ -14,17 +14,16 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: introDone ? 1 : 0, y: introDone ? 0 : 40 }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="z-10 md:w-[360px] text-center md:text-left"
+        className="z-10 md:w-[370px] text-center md:text-left"
       >
         <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-4">
-          Wealth Manager In Your Pocket
+          Create Value Through Investing
         </h1>
-        <p className="text-md font-light text-muted-foreground max-w-xl mx-auto mb-8">
-          From RSUs to tax planning, investing, and everything in between. Our
-          wealth and investment teams handle complexity so you don’t have to.
+        <p className="text-sm font-light italic text-muted-foreground max-w-xl mx-auto mb-8">
+          Brokerage | Underwriting | Advisory and Research | Wealth Management
         </p>
 
-        <GradientBorderButton>OPEN</GradientBorderButton>
+        <GradientBorderButton>OPEN AN ACCOUNT</GradientBorderButton>
       </motion.div>
 
       <AutoScrollGallery />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import OutlineBorderButton from "../outline-border-button";
+import GradientBorderButton from "../gradient-border-button";
 
 const Footer = () => {
   return (
@@ -234,7 +234,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-col items-end justify-between max-lg:w-full lg:h-full">
-            <OutlineBorderButton>OPEN AN ACCOUNT</OutlineBorderButton>
+            <GradientBorderButton mode="light" borderAnimation={false}>
+              OPEN AN ACCOUNT
+            </GradientBorderButton>
             <div className="text-black flex flex-col items-center justify-center gap-[3rem] max-lg:w-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

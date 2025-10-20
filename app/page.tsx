@@ -8,32 +8,33 @@ import HeroSection from "@/components/sections/hero-section";
 import { IntroAnimation } from "@/components/sections/intro-animation";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
+import SmoothScroll from "@/components/smooth-scroll";
 import { useState } from "react";
 
 export default function Home() {
-  const [introDone, setIntroDone] = useState(false);
+  const [introDone, setIntroDone] = useState(true);
 
   return (
     <div className="">
-      <main className="flex flex-col gap-[32px] row-start-2 px-4 md:px-8 lg:px-12 xl:px-24">
-        {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />}
+      {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />}
+      {/* <SmoothScroll> */}
+      <>
+        <main className="flex flex-col gap-[32px] row-start-2 px-4 md:px-8 lg:px-12 xl:px-24 mb-100">
+          <HeroSection introDone={introDone} />
 
-        <HeroSection introDone={introDone} />
+          <VideoIntroduction />
 
-        <VideoIntroduction />
+          <Brief />
 
-        <Brief />
+          <TeamMembers />
 
-        <TeamMembers />
+          <Blogs />
 
-        <Blogs />
-
-        <FAQ />
-
-        <div className="h-100" />
-      </main>
-
-      <Footer />
+          <FAQ />
+        </main>
+        <Footer />
+      </>
+      {/* </SmoothScroll> */}
     </div>
   );
 }

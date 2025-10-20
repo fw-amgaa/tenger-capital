@@ -1,0 +1,45 @@
+.el {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.burger {
+  width: 22.5px;
+  position: relative;
+  pointer-events: none;
+}
+
+.burger::after,
+.burger::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  display: block;
+  transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.burger::after {
+  top: -4px;
+}
+
+.burger::before {
+  top: 2px;
+}
+
+.burgerActive::after {
+  transform: rotate(45deg);
+  top: -1px;
+  background-color: black;
+}
+
+.burgerActive::before {
+  transform: rotate(-45deg);
+  top: 0px;
+  background-color: black;
+}

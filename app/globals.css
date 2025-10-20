@@ -43,7 +43,9 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-html {
+html,
+body {
+  overscroll-behavior: none;
   scroll-behavior: smooth;
 }
 
