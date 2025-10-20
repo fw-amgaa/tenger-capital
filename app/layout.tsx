@@ -1,5 +1,5 @@
 import CursorFollower from "@/components/cursor-follower";
-import AdaptiveHeader from "@/components/sections/adaptive-header";
+import Header from "@/components/sections/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -26,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AdaptiveHeader />
+          <Header />
           {children}
           <CursorFollower />
         </ThemeProvider>

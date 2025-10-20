@@ -20,6 +20,9 @@ export function IntroAnimation({
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
     const typingTimer = setTimeout(() => setTypingDone(true), typingDuration);
     const fadeTimer = setTimeout(() => {
       setVisible(false);
@@ -29,6 +32,8 @@ export function IntroAnimation({
     return () => {
       clearTimeout(typingTimer);
       clearTimeout(fadeTimer);
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [onComplete, typingDuration, fadeDuration]);
 
@@ -39,7 +44,7 @@ export function IntroAnimation({
       initial={{ opacity: 1 }}
       animate={{ opacity: typingDone ? 0 : 1 }}
       transition={{ duration: 1 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+      className="fixed inset-0 z-100 flex items-center justify-center bg-black"
     >
       <motion.h1
         className="text-white text-4xl md:text-6xl font-semibold"

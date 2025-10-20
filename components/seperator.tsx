@@ -10,7 +10,7 @@ export default function Seperator() {
   const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const ease = 0.5; // Lower = slower, smoother (0.01-0.2 recommended)
+    const ease = 0.03; // Lower = slower, smoother (0.01-0.2 recommended)
 
     const animate = (): void => {
       setDisplayX((prev) => {
