@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] md:min-h-[40rem] lg:min-h-[50rem] lg:gap-0 bg-white">
           <div className="flex h-full flex-col justify-between max-md:items-center">
             <Link
-              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100"
+              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm"
               href="#"
             >
               Back to top
@@ -37,8 +37,8 @@ const Footer = () => {
           <div className="flex h-full flex-col justify-between">
             <div className="flex flex-col gap-[4rem] lg:flex-row lg:gap-[30%]">
               <div className="text-black type-xs flex flex-col gap-2 text-center lg:text-left">
-                <h4 className="text-md opacity-[.4]">Tenger Capital</h4>
-                <ul className="flex flex-col text-md">
+                <h4 className="text-sm opacity-[.4]">Tenger Capital</h4>
+                <ul className="flex flex-col text-sm">
                   <li>
                     <Link
                       className="relative w-fit inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
@@ -143,8 +143,8 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="text-black type-xs flex flex-col gap-2 text-center lg:text-left">
-                <h4 className="text-md opacity-[.4]">Strategies</h4>
-                <ul className="flex flex-col text-md">
+                <h4 className="text-sm opacity-[.4]">Strategies</h4>
+                <ul className="flex flex-col text-sm">
                   <li>
                     <Link
                       className="relative w-fit inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
