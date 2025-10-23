@@ -6,6 +6,7 @@ import FAQ from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
 import HeroSection from "@/components/sections/hero-section";
 import { IntroAnimation } from "@/components/sections/intro-animation";
+import Partners from "@/components/sections/partners";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
 import SmoothScroll from "@/components/smooth-scroll";
@@ -27,6 +28,8 @@ export default function Home() {
           <Brief />
 
           <TeamMembers />
+
+          <Partners />
 
           <Blogs />
 
