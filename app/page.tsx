@@ -9,35 +9,42 @@ import { IntroAnimation } from "@/components/sections/intro-animation";
 import Partners from "@/components/sections/partners";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
-import SmoothScroll from "@/components/smooth-scroll";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Lenis from "lenis";
 
 export default function Home() {
-  const [introDone, setIntroDone] = useState(true);
+  const [introDone, setIntroDone] = useState(false);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
-    <div className="">
+    <>
       {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />}
-      {/* <SmoothScroll> */}
-      <>
-        <main className="flex flex-col gap-[32px] row-start-2 px-4 md:px-8 lg:px-12 xl:px-24 mb-100">
-          <HeroSection introDone={introDone} />
+      <main className="flex flex-col gap-[32px] row-start-2 px-4 md:px-8 lg:px-12 xl:px-24 mb-100">
+        <HeroSection introDone={introDone} />
 
-          <VideoIntroduction />
+        <VideoIntroduction />
 
-          <Brief />
+        <Brief />
 
-          <TeamMembers />
+        <TeamMembers />
 
-          <Partners />
+        <Partners />
 
-          <Blogs />
+        <Blogs />
 
-          <FAQ />
-        </main>
-        <Footer />
-      </>
-      {/* </SmoothScroll> */}
-    </div>
+        <FAQ />
+      </main>
+      <Footer />
+    </>
   );
 }

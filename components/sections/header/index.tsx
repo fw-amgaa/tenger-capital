@@ -16,6 +16,7 @@ import Navigation, {
   EXIT_DURATION,
 } from "./navigation";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 // Define the scroll threshold (in pixels) for the top animation to start
 const TOP_SCROLL_THRESHOLD = 800;
@@ -23,6 +24,7 @@ const TOP_SCROLL_THRESHOLD = 800;
 const BOTTOM_SCROLL_OFFSET = 700;
 
 export default function Header() {
+  const isMobile = useIsMobile();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   // State for top-scroll animation
@@ -117,14 +119,14 @@ export default function Header() {
         }}
         className={cn(
           "fixed z-50 px-6 py-2",
-          isOpen
+          isOpen && !isMobile
             ? "top-4 left-4 right-4 w-[calc(100% - 16px)]"
             : "top-0 left-0 right-0 w-full"
         )}
       >
         <div
           className={cn(
-            "mx-auto px-6 py-4 flex items-center justify-between z-50"
+            "mx-auto md:px-6 py-2 md:py-4 flex items-center justify-between z-50"
           )}
         >
           {/* Logo and Burger Button (UNCHANGED) */}
