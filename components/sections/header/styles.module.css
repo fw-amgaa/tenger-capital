@@ -8,6 +8,7 @@
 }
 
 .burger {
+  margin-bottom: 3px;
   width: 22.5px;
   position: relative;
   pointer-events: none;
@@ -25,7 +26,7 @@
 }
 
 .burger::after {
-  top: -4px;
+  top: -3px;
 }
 
 .burger::before {
