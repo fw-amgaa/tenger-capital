@@ -8,17 +8,34 @@ interface GradientButtonProps {
   children?: React.ReactNode;
   mode?: "light" | "dark";
   borderAnimation?: boolean;
-  showArrow?: boolean;
+  hasBorder?: boolean; // default true
+  iconComponent?: React.ReactNode;
 }
 
 const GradientBorderButton = ({
   children,
   mode = "dark",
   borderAnimation = true,
-  showArrow = true,
+  hasBorder = true,
+  iconComponent,
 }: GradientButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const time = useTime();
+
+  const buttonIcon = iconComponent || (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="10"
+      height="8"
+      fill="none"
+      className="ml-4"
+    >
+      <path
+        fill="currentColor"
+        d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"
+      ></path>
+    </svg>
+  );
 
   const rotate = useTransform(time, [0, 3000], [0, 360], { clamp: false });
 
@@ -40,21 +57,23 @@ const GradientBorderButton = ({
       whileTap={{ scale: 0.98 }}
       className="relative overflow-hidden rounded-full bg-transparent px-6 py-2 font-medium cursor-pointer"
     >
-      {/* ✨ Glow / Background pulse */}
-      <motion.div
-        animate={{
-          opacity: isHovered ? 0.45 : 0,
-          scale: isHovered ? 1.15 : 1,
-        }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className="absolute inset-0 rounded-full blur-lg"
-        style={{
-          background:
-            mode === "light"
-              ? "radial-gradient(circle, rgba(255,153,0,0.25) 0%, rgba(255,153,0,0.05) 70%)"
-              : "radial-gradient(circle, rgba(255,153,0,0.5) 0%, transparent 70%)",
-        }}
-      />
+      {/* ✨ Glow / Background pulse only if hasBorder */}
+      {hasBorder && (
+        <motion.div
+          animate={{
+            opacity: isHovered ? 0.45 : 0,
+            scale: isHovered ? 1.15 : 1,
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="absolute inset-0 rounded-full blur-lg"
+          style={{
+            background:
+              mode === "light"
+                ? "radial-gradient(circle, rgba(255,153,0,0.25) 0%, rgba(255,153,0,0.05) 70%)"
+                : "radial-gradient(circle, rgba(255,153,0,0.5) 0%, transparent 70%)",
+          }}
+        />
+      )}
 
       {/* 🩶 Text + Icon */}
       <motion.span
@@ -82,48 +101,43 @@ const GradientBorderButton = ({
         )}
       >
         {children}
-        {showArrow && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="8"
-            fill="none"
-            className="ml-4"
-          >
-            <path
-              fill="currentColor"
-              d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"
-            ></path>
-          </svg>
-        )}
+        {buttonIcon}
       </motion.span>
 
       {/* 🌈 Rotating Gradient Border */}
-      <motion.div
-        style={{
-          background: rotatingBackground,
-          opacity: borderAnimation ? 1 : 0,
-        }}
-        transition={{ duration: 0.3 }}
-        className="absolute -inset-[1px] rounded-full"
-      />
+      {hasBorder && (
+        <motion.div
+          style={{
+            background: rotatingBackground,
+            opacity: borderAnimation ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+          className="absolute -inset-[1px] rounded-full"
+        />
+      )}
 
       {/* 🩶 Static Border */}
-      <motion.div
-        animate={{
-          opacity: borderAnimation ? 0 : 1,
-        }}
-        transition={{ duration: 0.3 }}
-        style={{ background: staticBackground }}
-        className="absolute -inset-[1px] rounded-full"
-      />
+      {hasBorder && (
+        <motion.div
+          animate={{
+            opacity: borderAnimation ? 0 : 1,
+          }}
+          transition={{ duration: 0.3 }}
+          style={{ background: staticBackground }}
+          className="absolute -inset-[1px] rounded-full"
+        />
+      )}
 
       {/* 🖤 Inner Layer */}
       <motion.span
         transition={{ duration: 0.3 }}
         className={cn(
           "absolute inset-[1px] rounded-full",
-          mode === "light" ? "bg-white" : "bg-black"
+          hasBorder
+            ? mode === "light"
+              ? "bg-white"
+              : "bg-black"
+            : "bg-transparent"
         )}
       />
 
