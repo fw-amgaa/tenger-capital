@@ -23,7 +23,12 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
           Brokerage | Underwriting | Advisory and Research | Wealth Management
         </p>
 
-        <GradientBorderButton>OPEN AN ACCOUNT</GradientBorderButton>
+        <div className="flex gap-2">
+          <GradientBorderButton>OPEN</GradientBorderButton>
+          <GradientBorderButton hasBorder={false} borderAnimation={false}>
+            SUBMIT YOUR PROJECT
+          </GradientBorderButton>
+        </div>
       </motion.div>
 
       <AutoScrollGallery />

@@ -35,14 +35,16 @@ export default function Partners() {
           iconic institutions in Mongolia.
         </p>
         <div className="flex flex-wrap gap-3">
-          <GradientBorderButton showArrow={false}>Tech</GradientBorderButton>
-          <GradientBorderButton showArrow={false} borderAnimation={false}>
+          <GradientBorderButton iconComponent={<></>}>
+            Tech
+          </GradientBorderButton>
+          <GradientBorderButton iconComponent={<></>} borderAnimation={false}>
             Gov’t
           </GradientBorderButton>
-          <GradientBorderButton showArrow={false} borderAnimation={false}>
+          <GradientBorderButton iconComponent={<></>} borderAnimation={false}>
             Finance
           </GradientBorderButton>
-          <GradientBorderButton showArrow={false} borderAnimation={false}>
+          <GradientBorderButton iconComponent={<></>} borderAnimation={false}>
             Others
           </GradientBorderButton>
         </div>
