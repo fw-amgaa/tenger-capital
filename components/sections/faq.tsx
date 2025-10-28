@@ -22,7 +22,7 @@ const FAQ = () => {
         >
           <AccordionItem value="item-1">
             <AccordionTrigger>Product Information</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
+            <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
               <p>
                 Our flagship product combines cutting-edge technology with sleek
                 design. Built with premium materials, it offers unparalleled
@@ -37,7 +37,7 @@ const FAQ = () => {
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>Shipping Details</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
+            <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
               <p>
                 We offer worldwide shipping through trusted courier partners.
                 Standard delivery takes 3-5 business days, while express
@@ -51,7 +51,7 @@ const FAQ = () => {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>Return Policy</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
+            <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
               <p>
                 We stand behind our products with a comprehensive 30-day return
                 policy. If you&apos;re not completely satisfied, simply return
