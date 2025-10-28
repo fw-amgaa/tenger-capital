@@ -8,12 +8,14 @@ interface GradientButtonProps {
   children?: React.ReactNode;
   mode?: "light" | "dark";
   borderAnimation?: boolean;
+  showArrow?: boolean;
 }
 
 const GradientBorderButton = ({
   children,
   mode = "dark",
   borderAnimation = true,
+  showArrow = true,
 }: GradientButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const time = useTime();
@@ -80,18 +82,20 @@ const GradientBorderButton = ({
         )}
       >
         {children}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="8"
-          fill="none"
-          className="ml-4"
-        >
-          <path
-            fill="currentColor"
-            d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"
-          ></path>
-        </svg>
+        {showArrow && (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="8"
+            fill="none"
+            className="ml-4"
+          >
+            <path
+              fill="currentColor"
+              d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"
+            ></path>
+          </svg>
+        )}
       </motion.span>
 
       {/* 🌈 Rotating Gradient Border */}
