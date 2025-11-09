@@ -134,7 +134,7 @@ const Navigation = () => {
           >
             <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
               <Image
-                src="/mockups/1.avif"
+                src="/mockups/4.avif"
                 alt="Offerings"
                 fill
                 className="object-cover"
@@ -225,7 +225,7 @@ const Navigation = () => {
                 <Link
                   className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                   target="_self"
-                  href="/titan-testimonials"
+                  href="/TG-testimonials"
                 >
                   Client Testimonials
                 </Link>

@@ -18,6 +18,7 @@ import Navigation, {
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { LockIcon } from "lucide-react";
+import Link from "next/link";
 
 // Define the scroll threshold (in pixels) for the top animation to start
 const TOP_SCROLL_THRESHOLD = 800;
@@ -131,7 +132,7 @@ export default function Header() {
           )}
         >
           {/* Logo and Burger Button (UNCHANGED) */}
-          <div className="flex items-center gap-4 relative w-32 h-10">
+          <div className="flex items-center gap-4 relative h-10">
             <div
               className={styles.el}
               onClick={() => {
@@ -139,28 +140,31 @@ export default function Header() {
               }}
             >
               <div
-                className={`${styles.burger} ${
-                  isOpen ? styles.burgerActive : ""
-                }`}
+                className={`${styles.burger} ${isOpen ? styles.burgerActive : ""
+                  }`}
               />
             </div>
-            {isOpen ? (
-              <Image
-                src={logoDark}
-                alt="Logo"
-                width={128}
-                height={40}
-                className={`w-full h-full object-contain transition-opacity duration-300`}
-              />
-            ) : (
-              <Image
-                src={logoLight}
-                width={128}
-                height={40}
-                alt="Logo"
-                className={`w-full h-full object-contain transition-opacity duration-300`}
-              />
-            )}
+
+            <Link className="block relative" href="/">
+              {isOpen ? (
+                <Image
+                  src={logoDark}
+                  alt="Logo"
+                  width={128}
+                  height={40}
+                  className={`h-full w-full object-contain transition-opacity duration-300`}
+                />
+              ) : (
+                <Image
+                  src={logoLight}
+                  width={128}
+                  height={40}
+                  alt="Logo"
+                  className={`h-full w-full object-contain transition-opacity duration-300`}
+                />
+              )}
+            </Link>
+
           </div>
 
           {/* Navigation */}
