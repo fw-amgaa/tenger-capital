@@ -1,10 +1,9 @@
-import CursorFollower from "@/components/cursor-follower";
+import FloatingDashboard from "@/components/sections/floating-dashboard";
 import Header from "@/components/sections/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
-import "./globals.css";
 import { moisette, ttCommons } from "./fonts";
-import FloatingDashboard from "@/components/sections/floating-dashboard";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Tenger Capital",

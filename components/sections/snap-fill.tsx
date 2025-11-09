@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 type SnapFillProps = {
   children?: React.ReactNode;
@@ -13,7 +13,7 @@ type SnapFillProps = {
 
 export default function SnapFillSection({
   children,
-  initialPadding = 24,
+  // initialPadding = 24,
   initialRadius = 24,
   className,
 }: SnapFillProps) {
@@ -40,13 +40,13 @@ export default function SnapFillSection({
   const titleY = useTransform(chartProgress, [0, 0.22], [0, -12]);
 
   // Bars fade in
-  const barsOpacity = useTransform(chartProgress, [0.18, 0.3], [0, 1]);
+  // const barsOpacity = useTransform(chartProgress, [0.18, 0.3], [0, 1]);
 
   // Horizontal pan across bars
-  const barsTranslateX = useTransform(chartProgress, [0.3, 0.8], [0, -800]);
+  // const barsTranslateX = useTransform(chartProgress, [0.3, 0.8], [0, -800]);
 
   // Final stage: zoom out to show all bars
-  const overviewScale = useTransform(chartProgress, [0.8, 1], [1, 0.7]);
+  // const overviewScale = useTransform(chartProgress, [0.8, 1], [1, 0.7]);
 
   return (
     <section
@@ -62,7 +62,7 @@ export default function SnapFillSection({
       {/* Sticky viewport container */}
       <motion.div
         style={{
-          ["--snap-progress" as any]: approachProgress,
+          ["--snap-progress" as string]: approachProgress,
           borderRadius: radius,
           background: "var(--main-white)",
           marginLeft: margin,

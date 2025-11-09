@@ -1,9 +1,9 @@
 "use client";
 
-import { useId, useMemo } from "react";
-import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
+import { useId, useMemo } from "react";
 
 type InfoBubbleDialogProps = {
   items: string[];

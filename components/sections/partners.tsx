@@ -3,7 +3,6 @@
 import { useAnimationFrame } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import GradientBorderButton from "../gradient-border-button";
 import Seperator from "../seperator";
 
 const techLogos = [

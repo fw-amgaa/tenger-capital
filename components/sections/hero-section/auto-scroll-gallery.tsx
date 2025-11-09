@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ReactNode } from "react";
 
 const images1 = [
   "/mockups/1.avif",
@@ -9,7 +8,7 @@ const images1 = [
   "/mockups/3.avif",
   "/mockups/4.avif",
 ];
-const images2 = ["/mockups/5.avif", "/mockups/6.avif", "/mockups/7.avif"];
+// const images2 = ["/mockups/5.avif", "/mockups/6.avif", "/mockups/7.avif"];
 
 export default function AutoScrollGallery() {
   return (

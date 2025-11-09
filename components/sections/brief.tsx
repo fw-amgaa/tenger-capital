@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, PanInfo } from 'framer-motion';
-import { ChevronLeft, ChevronRight, User, Bell, TrendingUp, WifiHighIcon, BatteryFullIcon, BatteryChargingIcon, BarChart, WifiIcon } from 'lucide-react';
+import { AnimatePresence, motion, PanInfo } from 'framer-motion';
+import { BarChart, BatteryChargingIcon, Bell, TrendingUp, User, WifiIcon } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import Seperator from '../seperator';
 
 const carouselData = [
@@ -129,8 +129,8 @@ const Brief = () => {
         </div>
 
         <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-          Tenger Capital gives you professional advice, whether it's equity compensation
-          or buying a home. You're not left guessing. Just smart moves, made simple.
+          Tenger Capital gives you professional advice, whether its equity compensation
+          or buying a home. Youre not left guessing. Just smart moves, made simple.
         </p>
       </div>
 

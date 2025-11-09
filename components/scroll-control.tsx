@@ -41,7 +41,7 @@ export function ScrollControlProvider({ children }: { children: React.ReactNode 
   }, []);
 
   const scrollTo = useCallback<ScrollControl["scrollTo"]>((target, opts) => {
-    lenisRef.current?.scrollTo(target as any, opts as any);
+    lenisRef.current?.scrollTo(target as number, opts!);
   }, []);
 
   const value = useMemo(() => ({ stop, start, scrollTo }), [stop, start, scrollTo]);
