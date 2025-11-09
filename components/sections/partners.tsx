@@ -4,6 +4,7 @@ import { useAnimationFrame } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import GradientBorderButton from "../gradient-border-button";
+import Seperator from "../seperator";
 
 const techLogos = [
   { src: "/partners/binance.png", alt: "binance" },
@@ -27,31 +28,22 @@ export default function Partners() {
   });
 
   return (
-    <section className="flex flex-col md:flex-row w-full text-white gap-4 md:gap-8 mb-16 md:mb-64">
-      {/* LEFT PANEL */}
-      <div className="flex flex-col items-center justify-center space-y-6 bg-[#1a1a1a] rounded-3xl p-8 aspect-[0.75]">
-        <p className="text-xs md:text-sm text-gray-300 leading-relaxed text-center">
-          Tenger capital clients include professionals from some of the most
-          iconic institutions in Mongolia.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <GradientBorderButton iconComponent={<></>}>
-            Tech
-          </GradientBorderButton>
-          <GradientBorderButton iconComponent={<></>} borderAnimation={false}>
-            Gov’t
-          </GradientBorderButton>
-          <GradientBorderButton iconComponent={<></>} borderAnimation={false}>
-            Finance
-          </GradientBorderButton>
-          <GradientBorderButton iconComponent={<></>} borderAnimation={false}>
-            Others
-          </GradientBorderButton>
+    <div className="section-container flex flex-col gap-8">
+      <Seperator />
+
+      <div className="grid md:grid-cols-2">
+        <h1 className="text-4xl">Partners</h1>
+
+        <div className="flex flex-col gap-6">
+          <p className="text-lg leading-[1.4]">
+            We partner with only the rich and wealthy, not with some fodders, peasants and commoners.
+          </p>
         </div>
       </div>
 
-      {/* RIGHT PANEL — Infinite Carousel */}
-      <div className="relative overflow-hidden rounded-3xl bg-[#1a1a1a] flex items-center justify-center md:w-2/3 min-h-[160px]">
+      <div className="relative overflow-hidden flex items-center justify-center w-full min-h-[160px] mt-48 mb-64">
+        <div className="absolute left-0 top-0 h-full bg-red w-20 z-10" />
+
         <div
           ref={containerRef}
           className="flex gap-12 items-center absolute will-change-transform"
@@ -59,19 +51,19 @@ export default function Partners() {
           {[...techLogos, ...techLogos].map((logo, i) => (
             <div
               key={i}
-              className="w-[160px] h-[60px] flex items-center justify-center"
+              className="w-[120px] h-[40px] flex items-center justify-center"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
-                width={160}
-                height={60}
+                width={120}
+                height={40}
                 className="object-cover"
               />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

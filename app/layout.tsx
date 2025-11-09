@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
 import { moisette, ttCommons } from "./fonts";
+import FloatingDashboard from "@/components/sections/floating-dashboard";
 
 export const metadata: Metadata = {
   title: "Tenger Capital",
@@ -28,7 +29,17 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <CursorFollower />
+          {/* <CursorFollower /> */}
+
+          <FloatingDashboard deposits={[{
+            amount: '4,000.00',
+            id: "1",
+            timeAgo: '7 days ago'
+          }, {
+            amount: '20,000.00',
+            id: "2",
+            timeAgo: '22 hours ago'
+          }]} />
         </ThemeProvider>
       </body>
     </html>

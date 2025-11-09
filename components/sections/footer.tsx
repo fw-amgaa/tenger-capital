@@ -4,8 +4,8 @@ import GradientBorderButton from "../gradient-border-button";
 
 const Footer = () => {
   return (
-    <footer className="">
-      <div className="relative flex flex-col gap-[2rem] px-[2rem] pt-[2rem] pb-[2rem] lg:gap-[3rem] lg:pt-[3rem]">
+    <footer className="p-4">
+      <div className="relative flex flex-col gap-[2rem] lg:gap-[3rem] lg:pt-[3rem]">
         <div className="relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] md:min-h-[40rem] lg:min-h-[50rem] lg:gap-0 bg-white">
           <div className="flex h-full flex-col justify-between max-md:items-center">
             <Link
@@ -70,7 +70,7 @@ const Footer = () => {
                     <Link
                       className="relative w-fit pt-[.2rem] lg:pt-[.35rem] inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                       target="_self"
-                      href="/titan-testimonials"
+                      href="/TG-testimonials"
                     >
                       Client Testimonials
                     </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
                       className="relative w-fit pt-[.2rem] lg:pt-[.35rem] inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://Linkpp.titan.com/historical-performance"
+                      href="https://Linkpp.TG.com/historical-performance"
                     >
                       Historical Performance
                     </Link>
@@ -135,7 +135,7 @@ const Footer = () => {
                       className="relative w-fit pt-[.2rem] lg:pt-[.35rem] inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://help.titan.com/"
+                      href="https://help.TG.com/"
                     >
                       Help
                     </Link>
@@ -203,7 +203,7 @@ const Footer = () => {
                     <Link
                       className="relative w-fit pt-[.2rem] lg:pt-[.35rem] inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                       target="_self"
-                      href="titancrypto"
+                      href="TGcrypto"
                     >
                       Crypto
                     </Link>
@@ -313,7 +313,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label="Social link for x"
                   className="flex-center"
-                  href="https://x.com/titanvest"
+                  href="https://x.com/TGvest"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -331,7 +331,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label="Social link for linkedin"
                   className="flex-center"
-                  href="https://www.linkedin.com/company/titan-invest"
+                  href="https://www.linkedin.com/company/TG-invest"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +349,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label="Social link for youtube"
                   className="flex-center"
-                  href="https://www.youtube.com/titanvest"
+                  href="https://www.youtube.com/TGvest"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -367,7 +367,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label="Social link for instagram"
                   className="flex-center"
-                  href="https://www.instagram.com/titanvest"
+                  href="https://www.instagram.com/TGvest"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -383,7 +383,7 @@ const Footer = () => {
                 </Link>
               </div>
               <p className="text-black text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
-                © 2025 Titan Global Capital Management USA LLC. All Rights
+                © 2025 TG Global Capital Management USA LLC. All Rights
                 Reserved
               </p>
             </div>
@@ -392,61 +392,61 @@ const Footer = () => {
 
         <div className="bg-[#191919] leading-[1.4] text-xs rounded-[2rem] p-8 opacity-[0.8] text-[#f8f8f8CC])] [&amp;_p:not(:last-child)]:mb-[1em]">
           <p className="mb-2">
-            Advisory services are provided by Titan Global Capital Management
+            Advisory services are provided by TG Global Capital Management
             USA LLC (`Tenger Capital`), an investment adviser registered with
             the Securities and Exchange Commission (“SEC”). By using this
-            website, you accept and agree to Titan’s&nbsp;
-            <Link className="underline" href="https://www.titan.com/terms">
+            website, you accept and agree to TG’s&nbsp;
+            <Link className="underline" href="https://www.TG.com/terms">
               Terms of Use
             </Link>
             &nbsp;and&nbsp;
             <Link
               className="underline"
-              href="https://www.titan.com/privacypolicy"
+              href="https://www.TG.com/privacypolicy"
             >
               Privacy Policy
             </Link>
-            . Titan’s investment advisory services are available only to
-            residents of the United States in jurisdictions where Titan is
+            . TG’s investment advisory services are available only to
+            residents of the United States in jurisdictions where TG is
             registered. Nothing on this website should be considered an offer,
             solicitation of an offer, or advice to buy or sell securities or
             investment products. Past performance is no guarantee of future
             results. Any historical returns, expected returns, or probability
             projections are purely hypothetical in nature and may not reflect
             actual or potential future performance; nor do they represent actual
-            performance outcomes of a client. Please see Titan’s Interactive
+            performance outcomes of a client. Please see TG’s Interactive
             Performance Tool available at&nbsp;
             <Link
               className="underline"
-              href="http://www.titan.com/historical-performance"
+              href="http://www.TG.com/historical-performance"
             >
-              www.titan.com/historical-performance
+              www.TG.com/historical-performance
             </Link>
             &nbsp;for important information and disclosures. Strategy holdings
             and other information provided are for illustrative purposes only
             and are not to be considered investment recommendations. The content
             on this website is for informational purposes only and does not
-            constitute a comprehensive description of Titan’s investment
+            constitute a comprehensive description of TG’s investment
             advisory services. Any visuals of the in-app experience are for
             illustrative purposes only.
           </p>
           <p className="mb-2"></p>
           <p className="mb-2">
-            Please refer to Titan`s&nbsp;
+            Please refer to TG`s&nbsp;
             <Link
               className="underline"
-              href="https://cdn.titanvest.com/disclosures/TitanInvest_FormADV_Part2A_Wrap_Brochure.pdf"
+              href="https://cdn.TGvest.com/disclosures/TGInvest_FormADV_Part2A_Wrap_Brochure.pdf"
             >
               Program Brochure
             </Link>
             &nbsp;for important additional information. Certain investments are
             not suitable for all investors. Before investing, you should
-            consider your investment objectives and any fees charged by Titan.
+            consider your investment objectives and any fees charged by TG.
             The rate of return on investments can vary widely over time,
             especially for long term investments. Investment losses are
             possible, including the potential loss of all amounts invested,
-            including principal. Brokerage services are provided to Titan
-            Clients by Titan Global Technologies LLC and Apex Clearing
+            including principal. Brokerage services are provided to TG
+            Clients by TG Global Technologies LLC and Apex Clearing
             Corporation, both registered broker-dealers and members of&nbsp;
             <Link className="underline" href="https://www.finra.org/">
               FINRA
@@ -458,7 +458,7 @@ const Footer = () => {
             . For more information, visit our&nbsp;
             <Link
               className="underline"
-              href="https://www.titan.com/disclosures"
+              href="https://www.TG.com/disclosures"
             >
               disclosures
             </Link>
@@ -475,15 +475,15 @@ const Footer = () => {
             offered by third party fund families and investment companies are
             made available on the platform. Before investing in such Third Party
             Funds you should consult the specific supplemental information
-            available for each product. Please refer to Titan`s&nbsp;
+            available for each product. Please refer to TG`s&nbsp;
             <Link
               className="underline"
-              href="https://cdn.titanvest.com/disclosures/TitanInvest_FormADV_Part2A_Wrap_Brochure.pdf"
+              href="https://cdn.TGvest.com/disclosures/TGInvest_FormADV_Part2A_Wrap_Brochure.pdf"
             >
               Program Brochure
             </Link>
             &nbsp;for important additional information. Certain Third Party
-            Funds that are available on Titan’s platform are interval funds.
+            Funds that are available on TG’s platform are interval funds.
             Investments in interval funds are highly speculative and subject to
             a lack of liquidity that is generally available in other types of
             investments. Actual investment return and principal value is likely
@@ -494,15 +494,15 @@ const Footer = () => {
           <p className="mb-2"></p>
           <p className="mb-2">
             The cash sweep program is made available in coordination with Apex
-            Clearing Corporation through Titan Global Technologies LLC. Please
+            Clearing Corporation through TG Global Technologies LLC. Please
             visit&nbsp;
-            <Link className="underline" href="https://www.titan.com/legal">
-              www.titan.com/legal
+            <Link className="underline" href="https://www.TG.com/legal">
+              www.TG.com/legal
             </Link>
             &nbsp;for applicable&nbsp;
             <Link
               className="underline"
-              href="https://cdn.titanvest.com/disclosures/Titan+Cash+Sweep+Program+Terms+and+Conditions.pdf"
+              href="https://cdn.TGvest.com/disclosures/TG+Cash+Sweep+Program+Terms+and+Conditions.pdf"
             >
               terms and conditions
             </Link>
@@ -522,12 +522,12 @@ const Footer = () => {
           </p>
           <p className="mb-2"></p>
           <p className="mb-2">
-            Titan’s concierge services are available exclusively to Titan
+            TG’s concierge services are available exclusively to TG
             clients, subject to availability and location, and are not
             guaranteed. Certain perks are subject to eligibility. Terms and
-            conditions apply. Tax filing services via Titan Tax are offered by
-            Column Tax. Titan does not provide tax advice, and Column Tax is not
-            an affiliate of Titan. Terms apply, and details are available in
+            conditions apply. Tax filing services via TG Tax are offered by
+            Column Tax. TG does not provide tax advice, and Column Tax is not
+            an affiliate of TG. Terms apply, and details are available in
             Column Tax’s&nbsp;
             <Link
               className="underline"
@@ -540,21 +540,21 @@ const Footer = () => {
           <p className="mb-2"></p>
           <p className="mb-2">
             Any logos or mentions of other companies are for informational
-            purposes only and do not imply affiliation or endorsement of Titan
+            purposes only and do not imply affiliation or endorsement of TG
             by these companies.
           </p>
           <p className="mb-2"></p>
           <p className="mb-2">
-            Information provided by Titan Support is for informational and
+            Information provided by TG Support is for informational and
             general educational purposes only and is not investment or financial
             advice.
           </p>
           <p className="mb-2"></p>
 
           <p className="mb-2">
-            Contact Titan at&nbsp;
-            <Link className="underline" href="mailto:support@titan.com">
-              support@titan.com
+            Contact TG at&nbsp;
+            <Link className="underline" href="mailto:support@TG.com">
+              support@TG.com
             </Link>
             . 508 LaGuardia Place NY, NY 10012.
           </p>

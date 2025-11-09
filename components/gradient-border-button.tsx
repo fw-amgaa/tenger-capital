@@ -37,7 +37,7 @@ const GradientBorderButton = ({
     </svg>
   );
 
-  const rotate = useTransform(time, [0, 3000], [0, 360], { clamp: false });
+  const rotate = useTransform(time, [0, 6000], [0, 360], { clamp: false });
 
   const rotatingBackground = useTransform(rotate, (r) => {
     return `linear-gradient(${r}deg,
@@ -80,14 +80,12 @@ const GradientBorderButton = ({
         animate={{
           filter: isHovered
             ? [
-                `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
-                `blur(${mode === "light" ? 2 : 4}px) drop-shadow(0 0 ${
-                  mode === "light" ? 3 : 8
-                }px ${
-                  mode === "light" ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.6)"
-                })`,
-                `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
-              ]
+              `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
+              `blur(${mode === "light" ? 2 : 4}px) drop-shadow(0 0 ${mode === "light" ? 3 : 8
+              }px ${mode === "light" ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.6)"
+              })`,
+              `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
+            ]
             : `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
         }}
         transition={{

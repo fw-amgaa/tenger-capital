@@ -125,15 +125,22 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground font-[var(--font-ttcommons)];
   }
+
+  .section-container {
+    @apply px-[20px] lg:px-[40px] w-full
+  }
+
 }
 
 @keyframes scroll-up {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -143,10 +150,12 @@ body {
   0% {
     transform: translateY(-50%);
   }
+
   100% {
     transform: translateY(0);
   }
 }
+
 
 .animate-scroll-up {
   animation: scroll-up 30s linear infinite;
@@ -179,6 +188,7 @@ h3 {
   from {
     width: 0;
   }
+
   to {
     width: 390px;
   }

@@ -9,42 +9,29 @@ import { IntroAnimation } from "@/components/sections/intro-animation";
 import Partners from "@/components/sections/partners";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
-import { useEffect, useState } from "react";
-import Lenis from "lenis";
+import SnapFillSection from "@/components/sections/snap-fill";
+import { useState } from "react";
+import { ScrollControlProvider } from "@/components/scroll-control";
+import WorkWithUs from "@/components/sections/work-with-us";
 
 export default function Home() {
   const [introDone, setIntroDone] = useState(false);
 
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
-    <>
+    <ScrollControlProvider>
       {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />}
-      <main className="flex flex-col gap-[32px] row-start-2 px-4 md:px-8 lg:px-12 xl:px-24 mb-100">
+      <main className="flex flex-col gap-[32px] row-start-2 mb-100">
         <HeroSection introDone={introDone} />
-
         <VideoIntroduction />
-
         <Brief />
-
+        <WorkWithUs />
         <TeamMembers />
-
+        {/* <SnapFillSection /> */}
+        {/* <Blogs /> */}
         <Partners />
-
-        <Blogs />
-
         <FAQ />
       </main>
       <Footer />
-    </>
+    </ScrollControlProvider>
   );
 }
