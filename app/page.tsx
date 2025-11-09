@@ -1,6 +1,6 @@
 "use client";
 
-import Blogs from "@/components/sections/blogs";
+import { ScrollControlProvider } from "@/components/scroll-control";
 import Brief from "@/components/sections/brief";
 import FAQ from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
@@ -9,10 +9,8 @@ import { IntroAnimation } from "@/components/sections/intro-animation";
 import Partners from "@/components/sections/partners";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
-import SnapFillSection from "@/components/sections/snap-fill";
-import { useState } from "react";
-import { ScrollControlProvider } from "@/components/scroll-control";
 import WorkWithUs from "@/components/sections/work-with-us";
+import { useState } from "react";
 
 export default function Home() {
   const [introDone, setIntroDone] = useState(false);

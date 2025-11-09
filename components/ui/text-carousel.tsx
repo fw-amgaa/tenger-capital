@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type TextCarouselProps = {
   items: string[];
@@ -14,7 +14,6 @@ export default function TextCarousel({ items, intervalMs = 5000, className }: Te
   const [index, setIndex] = useState(0);
   const itemCount = items.length;
   const timerRef = useRef<number | null>(null);
-  const isMounted = useRef(false);
   const measureRef = useRef<HTMLDivElement | null>(null);
   const [textWidth, setTextWidth] = useState<number>(0);
 
