@@ -29,16 +29,6 @@ export default function RootLayout({
           <Header />
           {children}
           {/* <CursorFollower /> */}
-
-          <FloatingDashboard deposits={[{
-            amount: '4,000.00',
-            id: "1",
-            timeAgo: '7 days ago'
-          }, {
-            amount: '20,000.00',
-            id: "2",
-            timeAgo: '22 hours ago'
-          }]} />
         </ThemeProvider>
       </body>
     </html>

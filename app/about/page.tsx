@@ -1,3 +1,20 @@
+import { ScrollControlProvider } from "@/components/scroll-control";
+import HeroSection from "./hero-section";
+import LetterFromCeo from "./letter-from-ceo";
+import Footer from "@/components/sections/footer";
+import { TimelineSection } from "./timeline";
+import TeamMembers from "@/components/sections/team-members";
+
 export default function Page() {
-    return <div>hi</div>
+    return <ScrollControlProvider>
+        <HeroSection />
+        <LetterFromCeo />
+
+        <div className="mb-24">
+            <TimelineSection />
+        </div>
+
+        <TeamMembers showTitle={false} />
+        <Footer />
+    </ScrollControlProvider>
 }

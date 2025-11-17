@@ -10,7 +10,7 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: introDone ? 1 : 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      className="mt-32 md:mt-0 md:h-screen relative flex flex-wrap items-center justify-center md:justify-between md:px-16 lg:px-32 xl:px-48 space-y-8 md:gap-8"
+      className="section-container mt-32 md:mt-0 md:h-screen relative flex flex-wrap items-center justify-center md:justify-between md:px-16 lg:px-32 xl:px-48 space-y-8 md:gap-8"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

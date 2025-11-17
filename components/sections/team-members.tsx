@@ -10,7 +10,7 @@ interface TeamMember {
   image: string;
 }
 
-export default function TeamMembers() {
+export default function TeamMembers({ showTitle = true }: { showTitle?: boolean }) {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -61,15 +61,15 @@ export default function TeamMembers() {
   return (
     <div className="section-container">
       {/* Spacer before section */}
-      <div className="flex items-center justify-center">
+      {showTitle && <div className="flex items-center justify-center">
         <h2 className="mt-48 mb-32 text-white text-7xl">
           MEET THE TEAM
         </h2>
-      </div>
+      </div>}
 
       {/* Scroll section with sticky images */}
       <div ref={containerRef} className="relative px-8">
-        <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8 py-20">
+        <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-16 py-20">
           {/* Scrolling team member details - RIGHT SIDE */}
           <div className="text-white max-w-[400px]">
             {teamMembers.map((member, index) => (
@@ -91,7 +91,7 @@ export default function TeamMembers() {
 
           {/* Sticky image stack - LEFT SIDE */}
           <div className="sticky top-0 h-screen flex items-center">
-            <div className="relative w-full h-[70vh]">
+            <div className="relative w-full h-[65vh]">
               {teamMembers.map((member, index) => {
                 const isActive = index === currentIndex;
                 const isPast = index < currentIndex;
