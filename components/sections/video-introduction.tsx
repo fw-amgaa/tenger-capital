@@ -39,10 +39,10 @@ const VideoIntroduction = () => {
     <div ref={containerRef} className="my-48 section-container">
       <Video
         src={introduction}
-        controls={false}
+        controls={true}
         playsInline
         muted={false}
-        autoPlay={false}
+        autoPlay={true}
       />
     </div>
   );
