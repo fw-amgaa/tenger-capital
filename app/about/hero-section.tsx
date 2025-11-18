@@ -82,7 +82,7 @@ export default function HeroSection() {
                         className="absolute inset-0 flex items-center justify-center z-30 pointer-events-none"
                     >
                         <h2 className="text-4xl md:text-6xl font-bold text-white text-center px-4 drop-shadow-lg">
-                            GIVE US YOUR MONEY
+                            WEALTH IS OUR ENTIRE FOCUS
                         </h2>
                     </motion.div>
                 </div>

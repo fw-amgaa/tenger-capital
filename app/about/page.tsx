@@ -9,12 +9,12 @@ export default function Page() {
     return <ScrollControlProvider>
         <HeroSection />
         <LetterFromCeo />
+        <TeamMembers showTitle={false} />
 
         <div className="mb-24">
             <TimelineSection />
         </div>
 
-        <TeamMembers showTitle={false} />
         <Footer />
     </ScrollControlProvider>
 }
