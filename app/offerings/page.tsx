@@ -14,9 +14,11 @@ export default function Page() {
         <Brokerage />
         <WealthManagement />
         <MacbookScrollSection />
-        <FAQ />
 
-        <div className="h-40" />
+        <div className="my-40">
+            <FAQ />
+        </div>
+
         <Footer />
     </ScrollControlProvider>
 }
