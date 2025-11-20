@@ -34,13 +34,13 @@ function StatCard({ value, label, suffix = '', prefix = '', delay = 0 }: StatPro
     return (
         <div
             ref={cardRef}
-            className={`group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[rgb(255,153,0)] via-[rgb(248,229,181)] via-[rgb(161,111,16)] via-[rgb(248,229,181)] to-[rgb(255,153,0)] p-[1px] transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            className={`group relative overflow-hidden rounded-3xl bg-gradient-to-r from-[rgb(255,153,0)] via-[rgb(248,229,181)] via-[rgb(161,111,16)] via-[rgb(248,229,181)] to-[rgb(255,153,0)] p-[1px] transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                 }`}
         >
-            <div className="relative h-full overflow-hidden rounded-2xl bg-gradient-to-br from-black/95 to-black/98 p-8 backdrop-blur-sm transition-all duration-500 hover:from-black/90 hover:to-black/95">
-                <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[rgb(255,153,0)]/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="relative h-full overflow-hidden rounded-3xl bg-gradient-to-br from-black/95 to-black/98 backdrop-blur-sm transition-all duration-500 hover:from-black/90 hover:to-black/95">
+                <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#ff990026] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <div className="relative">
+                <div className="relative bg-[#ff990026]  p-8">
                     <div className="mb-4 flex items-baseline gap-1">
                         {prefix && (
                             <span className="text-3xl font-light text-white/60 md:text-4xl">
