@@ -68,9 +68,8 @@ export default function Seperator() {
 
       {/* Colored section that follows cursor */}
       <div
-        className={`absolute h-px pointer-events-none will-change-transform ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute h-px pointer-events-none will-change-transform ${isVisible ? "opacity-100" : "opacity-0"
+          }`}
         style={{
           top: "50%",
           transform: "translate(-15%, -50%)",

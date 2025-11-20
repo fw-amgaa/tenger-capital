@@ -6,6 +6,7 @@ import { TimelineSection } from "./timeline";
 import TeamMembers from "@/components/sections/team-members";
 import KeyFigures from "./key-figures";
 import GuidingPrinciples from "./guiding-principles";
+import Personalized from "./personalized";
 
 export default function Page() {
     return <ScrollControlProvider>
@@ -16,6 +17,8 @@ export default function Page() {
 
         <GuidingPrinciples />
         <TeamMembers showTitle={false} />
+
+        <Personalized />
 
         <div className="mb-24">
             <TimelineSection />
