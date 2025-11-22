@@ -6,6 +6,7 @@ import FAQ from "@/components/sections/faq";
 import FloatingDashboard from "@/components/sections/floating-dashboard";
 import Footer from "@/components/sections/footer";
 import HeroSection from "@/components/sections/hero-section";
+import Offerings from "@/components/sections/offerings";
 import Partners from "@/components/sections/partners";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
@@ -24,6 +25,7 @@ export default function Home() {
         <Brief />
         <WorkWithUs />
         <TeamMembers />
+        <Offerings />
         {/* <SnapFillSection /> */}
         {/* <Blogs /> */}
         <Partners />
