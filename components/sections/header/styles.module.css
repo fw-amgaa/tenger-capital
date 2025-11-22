@@ -25,6 +25,12 @@
   transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
+.dark::after,
+/* .dark is relative to .burger, so you need to target the .burger.dark combination */
+.dark::before {
+  background-color: black;
+}
+
 .burger::after {
   top: -3px;
 }

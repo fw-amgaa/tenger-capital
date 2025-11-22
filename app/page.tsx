@@ -5,6 +5,7 @@ import Brief from "@/components/sections/brief";
 import FAQ from "@/components/sections/faq";
 import FloatingDashboard from "@/components/sections/floating-dashboard";
 import Footer from "@/components/sections/footer";
+import Header from "@/components/sections/header";
 import HeroSection from "@/components/sections/hero-section";
 import Offerings from "@/components/sections/offerings";
 import Partners from "@/components/sections/partners";
@@ -15,9 +16,11 @@ import { useState } from "react";
 
 export default function Home() {
   const [introDone, setIntroDone] = useState(true);
+  const [headerMode, setHeaderMode] = useState<'light' | 'dark'>('dark')
 
   return (
     <ScrollControlProvider>
+      <Header headerMode={headerMode} />
       {/* {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />} */}
       <main className="flex flex-col gap-[32px] row-start-2 mb-100">
         <HeroSection introDone={introDone} />
@@ -25,7 +28,7 @@ export default function Home() {
         <Brief />
         <WorkWithUs />
         <TeamMembers />
-        <Offerings />
+        <Offerings setHeaderMode={setHeaderMode} />
         {/* <SnapFillSection /> */}
         {/* <Blogs /> */}
         <Partners />

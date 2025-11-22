@@ -2,9 +2,10 @@
 
 import { useComponentWidth } from "@/hooks/use-component-width"
 import { cn } from "@/lib/utils"
-import { motion, useAnimation, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
-import { useRef, useState } from "react"
+import { motion, useAnimation, useInView, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import GradientBorderButton from "../gradient-border-button"
+import Link from "next/link"
 
 const openingState = 0.22
 const firstState = 0.3
@@ -68,11 +69,16 @@ const months = [
     },
 ]
 
-export default function Offerings() {
+interface Props {
+    setHeaderMode: Dispatch<SetStateAction<"light" | "dark">>
+}
+
+export default function Offerings({ setHeaderMode }: Props) {
     const containerRef = useRef<HTMLDivElement>(null)
     const { ref, width } = useComponentWidth();
     const [isOverflowHidden, setIsOverflowHidden] = useState(true);
     const [showMonth, setShowMonth] = useState(false)
+
 
     const controls = useAnimation();
     const endControls = useAnimation();
@@ -125,6 +131,14 @@ export default function Offerings() {
             endControls.start({ opacity: 1 });
         } else {
             endControls.start({ opacity: 0 });
+        }
+
+        if (v >= 0.99) {
+            setHeaderMode('dark');
+        } else if (v > 0.22) {
+            setHeaderMode('light');
+        } else {
+            setHeaderMode('dark');
         }
     });
 
@@ -189,12 +203,13 @@ export default function Offerings() {
                                         <motion.h3 animate={{ ...endControls, animationDelay: 0 }}>We filter out the noise,&nbsp;</motion.h3>
                                         <motion.h3 animate={{ ...endControls, animationDelay: 0.1 }}>so you don&apos;t have to.&nbsp;</motion.h3>
                                     </div>
-                                    <motion.button
+                                    <motion.div
                                         animate={{ ...endControls, animationDelay: 0.2 }}
                                     >
-                                        <GradientBorderButton borderAnimation={false} mode={'light'}>Offerings</GradientBorderButton>
-                                    </motion.button>
-
+                                        <Link href='/offerings'>
+                                            <GradientBorderButton borderAnimation={false} mode={'light'}>Offerings</GradientBorderButton>
+                                        </Link>
+                                    </motion.div>
                                 </motion.div>
                             </div>
                         </div>
