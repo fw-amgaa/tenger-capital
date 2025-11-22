@@ -25,7 +25,11 @@ const TOP_SCROLL_THRESHOLD = 800;
 // Define the distance (in pixels) from the bottom of the page to hide the button
 const BOTTOM_SCROLL_OFFSET = 700;
 
-export default function Header() {
+interface Props {
+  headerMode?: 'light' | "dark"
+}
+
+export default function Header({ headerMode = 'dark' }: Props) {
   const isMobile = useIsMobile();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -140,13 +144,12 @@ export default function Header() {
               }}
             >
               <div
-                className={`${styles.burger} ${isOpen ? styles.burgerActive : ""
-                  }`}
+                className={`${styles.burger} ${isOpen ? styles.burgerActive : ""} ${headerMode === "light" ? styles.dark : ''}`}
               />
             </div>
 
             <Link className="block relative" href="/">
-              {isOpen ? (
+              {isOpen || headerMode === "light" ? (
                 <Image
                   src={logoDark}
                   alt="Logo"
@@ -175,7 +178,7 @@ export default function Header() {
               transition={{ duration: 0.3 }}
             >
               <GradientBorderButton
-                mode={isOpen ? "light" : "dark"}
+                mode={isOpen ? "light" : headerMode}
                 hasBorder={false}
                 iconComponent={<LockIcon size={12} />}
               >
@@ -188,7 +191,7 @@ export default function Header() {
               transition={{ duration: 0.3 }}
             >
               <GradientBorderButton
-                mode={isOpen ? "light" : "dark"}
+                mode={isOpen ? "light" : headerMode}
                 borderAnimation={shouldAnimateBorder}
               >
                 OPEN AN ACCOUNT

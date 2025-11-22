@@ -7,9 +7,12 @@ import TeamMembers from "@/components/sections/team-members";
 import KeyFigures from "./key-figures";
 import GuidingPrinciples from "./guiding-principles";
 import Personalized from "./personalized";
+import Header from "@/components/sections/header";
 
 export default function Page() {
     return <ScrollControlProvider>
+        <Header />
+
         <HeroSection />
         <LetterFromCeo />
 
