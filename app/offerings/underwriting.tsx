@@ -1,12 +1,14 @@
 "use client";
 
+import GradientBorderButton from "@/components/gradient-border-button";
+import Seperator from "@/components/seperator";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
 interface Service {
     name: string;
-    description: string;
+    description: React.ReactNode;
     image: string;
 }
 
@@ -16,16 +18,34 @@ export default function UnderWriting({ showTitle = true }: { showTitle?: boolean
 
     const services: Service[] = [
         {
-            name: "OTC.MSE",
-            description: "Tenger capital acts as your personal investment office. We advise on everything—equity compensation, liquidity events, company exits, major purchases, and the financial decisions that come with real wealth.",
+            name: "Debt Issuance",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    We structure and execute debt issuances tailored to each issuer’s needs, from flexible OTC private placements to publicly offered MSE-listed bonds. Our team oversees the full process—structuring, due diligence, documentation, regulatory filings, and investor marketing—to support capital raising for expansion, refinancing, working capital, and development projects. We also originate and structure asset-backed securities backed by loan portfolios, receivables, leasing contracts, and microfinance assets. From asset pool analysis and SPV setup to ratings coordination and institutional placement, we help convert cash-flow-generating assets into marketable securities.
+                </p>
+            </div>,
             image:
                 "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop",
         },
         {
-            name: "IPO",
-            description: "You’ll be paired with a dedicated advisor who gets to know you, your goals, and your entire financial picture. They’re your first call for everything from asset allocation to “Should I sell this?” And the best part? They’ll keep it simple, proactive, and personalized.",
+            name: "Initial Public Offering (IPO) & Equity Capital Markets",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    We guide companies through the full IPO process to access equity financing on the Mongolian Stock Exchange. Our team supports issuers from early-stage preparation through listing, including pre-IPO readiness assessments, valuation and financial modeling, prospectus development, and all regulatory submissions. We manage underwriting and book-building activities while leading investor education, marketing campaigns, and roadshows to ensure strong market engagement. Throughout the process, we help issuers build sustainable shareholder structures and position themselves for long-term success in the public markets.
+                </p>
+            </div>,
             image:
                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
+        },
+        {
+            name: "Mergers & Acquisitions",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    We provide strategic advisory services for both buy-side and sell-side M&A transactions, guiding clients through every stage of the deal process. Our team supports target sourcing and evaluation, conducts financial and commercial due diligence, and leads deal structuring and negotiations to help clients secure favorable terms. We handle valuation and modeling as well as documentation and transaction execution, ensuring a seamless and confidential process. Throughout each engagement, we focus on achieving optimal outcomes through strategic insight and disciplined execution.
+                </p>
+            </div>,
+            image:
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop",
         }
     ];
 
@@ -47,10 +67,22 @@ export default function UnderWriting({ showTitle = true }: { showTitle?: boolean
     const memberProgress = (progress * (totalServices - 1)) % 1;
 
     return (
-        <div className="section-container">
+        <div className="section-container py-20">
+            <div className="flex flex-col gap-8">
+                <Seperator />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
+                    <div>
+                        <h1 className="text-3xl md:text-4xl font-serif">UNDERWRITING</h1>
+                        {/* <h1 className="text-3xl md:text-4xl font-serif opacity-40">Real Humans. Real Time.</h1> */}
+                    </div>
+
+                    <p className="text-base md:text-md leading-relaxed md:w-[400px]">
+                        Tenger Capital SC LLC provides end-to-end underwriting and capital-raising solutions for corporations, financial institutions, and government-linked entities. From structuring and regulatory preparation to marketing, distribution, and post-issuance support, our investment banking team ensures efficient and transparent execution. We help issuers raise capital with confidence in both domestic and private markets.                    </p>
+                </div>
+            </div>
             {/* Scroll section with sticky images */}
             <div ref={containerRef} className="relative px-8">
-                <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8 py-20">
+                <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8">
 
 
                     {/* Scrolling team member details - RIGHT SIDE */}
@@ -61,13 +93,7 @@ export default function UnderWriting({ showTitle = true }: { showTitle?: boolean
                                 className="min-h-screen flex flex-col justify-center"
                             >
                                 <h3 className="text-3xl font-bold mb-8">{service.name}</h3>
-                                <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
-                                    Associate Wealth Advisor at TG. Prior
-                                    to TG, Allison worked at Bank of
-                                    America Private Bank in Charlotte and
-                                    New York City, serving high net worth and
-                                    ultra high net worth clients.
-                                </p>
+                                {service.description}
                             </div>
                         ))}
                     </div>

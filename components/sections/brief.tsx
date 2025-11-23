@@ -14,7 +14,7 @@ const carouselData = [
   {
     icon: <User className="w-4 h-4" />,
     title: "Human Service",
-    description: "All Titan clients have access to a dedicated wealth advisor.",
+    description: "All Tenger Capital clients have access to a dedicated wealth advisor.",
     phoneImage: "/phone-screen/2.avif"
   },
   {

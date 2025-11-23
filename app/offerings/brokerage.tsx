@@ -1,12 +1,14 @@
 "use client";
 
+import GradientBorderButton from "@/components/gradient-border-button";
+import Seperator from "@/components/seperator";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
 interface Service {
     name: string;
-    description: string;
+    description: React.ReactNode;
     image: string;
 }
 
@@ -16,21 +18,53 @@ export default function Brokerage({ showTitle = true }: { showTitle?: boolean })
 
     const services: Service[] = [
         {
-            name: "MSE",
-            description: "Tenger capital manages your portfolio from start to finish. We design the strategy, manage risk, and make ongoing adjustments as markets shift. You stay informed and in control, without the stress of rebalancing, timing trades, or second-guessing decisions. This is active wealth management, built for peace of mind.",
+            name: "Domestic Exchange",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    Investors can access the domestic primary and secondary markets through our online investment platform and mobile apps and manage their portfolios, track performance, and stay informed with market insights.
+                </p>
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    Through Tenger Capital, investors can access both primary and secondary markets for a wide range of investment products, including:
+                </p>
+                <ol className="text-sm ml-6">
+                    <li>- Equities</li>
+                    <li>- Corporate bonds</li>
+                    <li>- Government bonds</li>
+                    <li>- Asset-backed securities</li>
+                </ol>
+
+                <div className="mt-6 m-auto">
+                    <GradientBorderButton borderAnimation={false}>OPEN YOUR ACCOUNT</GradientBorderButton>
+                </div>
+            </div>,
 
             image:
                 "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop",
         },
         {
-            name: "OTC",
-            description: "Think of us as your in-house money team. We handle the moves you don’t have time for, such as account consolidation, rebalancing, and rollovers, with precision and ease.",
+            name: "International Markets",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    Investors can access 160 stock markets of over 35 countries. Invest globally in stocks, ETFs, options, futures, currencies and bonds through our partner Interactive Brokers’ unified platform
+                </p>
+
+                <div className="mt-6 m-auto">
+                    <GradientBorderButton borderAnimation={false}>OPEN YOUR ACCOUNT</GradientBorderButton>
+                </div>
+            </div>,
             image:
                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
         },
         {
-            name: "IBKR",
-            description: "Stay ahead with weekly insights, deep-dive reports, and real-time portfolio updates...without drowning in market chatter.",
+            name: "OTC market",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    Investors can participate in the fastest growing capital market sector in Mongolia. We facilitate both sides of issuance and sales of private bonds with thorough due dilligence and integrity.                </p>
+
+                <div className="mt-6 m-auto">
+                    <GradientBorderButton borderAnimation={false}>OPEN YOUR ACCOUNT</GradientBorderButton>
+                </div>
+            </div>,
             image:
                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
         }
@@ -54,10 +88,23 @@ export default function Brokerage({ showTitle = true }: { showTitle?: boolean })
     const memberProgress = (progress * (totalServices - 1)) % 1;
 
     return (
-        <div className="section-container">
+        <div className="section-container py-20">
+            <div className="flex flex-col gap-8">
+                <Seperator />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
+                    <div>
+                        <h1 className="text-3xl md:text-4xl font-serif">BROKERAGE</h1>
+                        {/* <h1 className="text-3xl md:text-4xl font-serif opacity-40">Real Humans. Real Time.</h1> */}
+                    </div>
+
+                    <p className="text-base md:text-md leading-relaxed md:w-[400px]">
+                        Tenger Capital SC LLC delivers dynamic, full-service brokerage solutions for both individual and institutional investors. We help you take control of your cash flows and put your capital to work with purpose. Powered by our research and advisory experts, you gain the insight and confidence to act decisively in today’s fast-moving markets.
+                    </p>
+                </div>
+            </div>
             {/* Scroll section with sticky images */}
             <div ref={containerRef} className="relative px-8">
-                <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8 py-20">
+                <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8">
                     {/* Sticky image stack - LEFT SIDE */}
                     <div className="sticky top-0 h-screen flex items-center">
                         <div className="relative w-full h-[65vh]">
@@ -115,13 +162,9 @@ export default function Brokerage({ showTitle = true }: { showTitle?: boolean })
                                 className="min-h-screen flex flex-col justify-center"
                             >
                                 <h3 className="text-3xl font-bold mb-8">{service.name}</h3>
-                                <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
-                                    Associate Wealth Advisor at TG. Prior
-                                    to TG, Allison worked at Bank of
-                                    America Private Bank in Charlotte and
-                                    New York City, serving high net worth and
-                                    ultra high net worth clients.
-                                </p>
+
+                                {service.description}
+
                             </div>
                         ))}
                     </div>

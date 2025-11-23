@@ -200,10 +200,11 @@ export default function Offerings({ setHeaderMode }: Props) {
                                 <motion.div
                                     className="flex flex-col relative text-center text-black">
                                     <div className="flex flex-col mb-8 text-4xl">
-                                        <motion.h3 animate={{ ...endControls, animationDelay: 0 }}>We filter out the noise,&nbsp;</motion.h3>
-                                        <motion.h3 animate={{ ...endControls, animationDelay: 0.1 }}>so you don&apos;t have to.&nbsp;</motion.h3>
+                                        <motion.h3 initial={{ opacity: 0 }} animate={{ ...endControls, animationDelay: 0 }}>We filter out the noise,&nbsp;</motion.h3>
+                                        <motion.h3 initial={{ opacity: 0 }} animate={{ ...endControls, animationDelay: 0.1 }}>so you don&apos;t have to.&nbsp;</motion.h3>
                                     </div>
                                     <motion.div
+                                        initial={{ opacity: 0 }}
                                         animate={{ ...endControls, animationDelay: 0.2 }}
                                     >
                                         <Link href='/offerings'>

@@ -1,12 +1,13 @@
 "use client";
 
+import Seperator from "@/components/seperator";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
 interface Service {
     name: string;
-    description: string;
+    description: React.ReactNode;
     image: string;
 }
 
@@ -16,14 +17,22 @@ export default function WealthManagement({ showTitle = true }: { showTitle?: boo
 
     const services: Service[] = [
         {
-            name: "Wealth Management",
-            description: "We provide personalized financial guidance that brings together investments, planning, and long-term strategy—helping you build, preserve, and transfer wealth with confidence.",
+            name: "Fund Management",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    We provide personalized fund and portfolio management tailored to each client’s goals and risk appetite. Our team builds diversified portfolios—from conservative fixed-income to growth-oriented equity funds—while actively monitoring and adjusting allocations to stay aligned with market conditions and client objectives.
+                </p>
+            </div>,
             image:
                 "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop",
         },
         {
-            name: "Asset Management",
-            description: "We actively manage your investments with a disciplined, research-driven approach—aiming to protect your capital, optimize performance, and grow your portfolio over time.",
+            name: "Equity & Market Research",
+            description: <div className="flex flex-col gap-2">
+                <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+                    Our dedicated research unit delivers fundamental equity research, technical analyses, sector analyses, macroeconomic insights, and valuation assessments. These research capabilities form the backbone of our investment decisions, supporting portfolio construction, idea generation, and tactical market positioning.
+                </p>
+            </div>,
             image:
                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
         }
@@ -47,10 +56,23 @@ export default function WealthManagement({ showTitle = true }: { showTitle?: boo
     const memberProgress = (progress * (totalServices - 1)) % 1;
 
     return (
-        <div className="section-container">
+        <div className="section-container py-20">
+            <div className="flex flex-col gap-8">
+                <Seperator />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
+                    <div>
+                        <h1 className="text-3xl md:text-4xl font-serif">Wealth & Asset Management</h1>
+                        {/* <h1 className="text-3xl md:text-4xl font-serif opacity-40">Real Humans. Real Time.</h1> */}
+                    </div>
+
+                    <p className="text-base md:text-md leading-relaxed md:w-[400px]">
+                        Tenger Capital SC LLC delivers tailored wealth and asset management solutions designed to help clients grow, preserve, and strategically allocate their capital. Through disciplined portfolio management, in-house equity research, and a structured fund platform, we offer investment strategies that align with each client’s risk appetite and long-term financial objectives.
+                    </p>
+                </div>
+            </div>
             {/* Scroll section with sticky images */}
             <div ref={containerRef} className="relative px-8">
-                <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8 py-20">
+                <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8">
 
 
                     {/* Scrolling team member details - RIGHT SIDE */}
