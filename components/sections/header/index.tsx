@@ -177,25 +177,29 @@ export default function Header({ headerMode = 'dark' }: Props) {
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}
             >
-              <GradientBorderButton
-                mode={isOpen ? "light" : headerMode}
-                hasBorder={false}
-                iconComponent={<LockIcon size={12} />}
-              >
-                LOG IN
-              </GradientBorderButton>
+              <Link href="https://xacex.tengercapital.mn/auth/login" target="_blank">
+                <GradientBorderButton
+                  mode={isOpen ? "light" : headerMode}
+                  hasBorder={false}
+                  iconComponent={<LockIcon size={12} />}
+                >
+                  LOG IN
+                </GradientBorderButton>
+              </Link>
             </motion.div>
             <motion.div
               variants={buttonVariants}
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}
             >
-              <GradientBorderButton
-                mode={isOpen ? "light" : headerMode}
-                borderAnimation={shouldAnimateBorder}
-              >
-                OPEN AN ACCOUNT
-              </GradientBorderButton>
+              <Link href="https://xacex.tengercapital.mn/auth/login" target="_blank">
+                <GradientBorderButton
+                  mode={isOpen ? "light" : headerMode}
+                  borderAnimation={shouldAnimateBorder}
+                >
+                  OPEN AN ACCOUNT
+                </GradientBorderButton>
+              </Link>
             </motion.div>
           </nav>
         </div>

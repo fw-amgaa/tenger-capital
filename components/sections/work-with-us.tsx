@@ -4,30 +4,30 @@ import { PlusIcon, X } from 'lucide-react';
 
 const statsData = [
     {
-        title: "Titan clients have historically compounded their wealth at an average of 10.72%/year. Composite performance represents the net annualized return from 2/20/18 through 12/31/24. Tap the '+' for additional disclosures.",
+        title: "Tenger Capital clients have historically compounded their wealth at an average of 10.72%/year. Composite performance represents the net annualized return from 2/20/18 through 12/31/24. Tap the '+' for additional disclosures.",
         percentage: "10.72",
         unit: "%",
-        label: "With Titan +10.72%",
+        label: "With TG +10.72%",
         hasChart: true,
-        disclosure: "Past performance is not indicative of future results. Investment involves risk, including the potential loss of principal. The composite performance shown represents the net annualized return for all Titan clients from February 20, 2018, through December 31, 2024. Individual results may vary based on timing of investment, market conditions, and personal financial circumstances. This data includes reinvested dividends and is net of all fees and expenses."
+        disclosure: "Past performance is not indicative of future results. Investment involves risk, including the potential loss of principal. The composite performance shown represents the net annualized return for all Tenger Capital clients from February 20, 2018, through December 31, 2024. Individual results may vary based on timing of investment, market conditions, and personal financial circumstances. This data includes reinvested dividends and is net of all fees and expenses."
     },
     {
         title: "Better value than a typical private wealth manager.",
         percentage: "60",
         unit: "%",
         suffix: "cheaper",
-        labels: ["Others", "Titan"],
+        labels: ["Others", "TG"],
         hasBarChart: true,
-        disclosure: "Fee comparison based on industry average private wealth management fees of 1.0% AUM for portfolios under $1M versus Titan's standard advisory fee of 0.40% AUM. Actual savings may vary based on portfolio size, service level, and additional account fees. This comparison does not include performance-based fees or transaction costs that may apply to either service."
+        disclosure: "Fee comparison based on industry average private wealth management fees of 1.0% AUM for portfolios under $1M versus Tenger Capital's standard advisory fee of 0.40% AUM. Actual savings may vary based on portfolio size, service level, and additional account fees. This comparison does not include performance-based fees or transaction costs that may apply to either service."
     },
     {
         title: "Save up to 5–10 hours weekly managing your portfolio.",
         percentage: "100",
         unit: "%",
         suffix: "time saved",
-        label: "With Titan",
+        label: "With TG",
         hasPieChart: true,
-        disclosure: "Time savings estimate based on average self-directed investor activities including research, portfolio rebalancing, tax optimization, and performance tracking. Actual time saved varies by individual investment strategy complexity and personal involvement preferences. This represents potential time allocation that can be redirected to other activities when using Titan's managed services."
+        disclosure: "Time savings estimate based on average self-directed investor activities including research, portfolio rebalancing, tax optimization, and performance tracking. Actual time saved varies by individual investment strategy complexity and personal involvement preferences. This represents potential time allocation that can be redirected to other activities when using Tenger Capital's managed services."
     }
 ];
 
@@ -262,7 +262,7 @@ const StatsCard = ({
                                     </div>
                                 </div>
 
-                                {/* Titan bar */}
+                                {/* TG bar */}
                                 <div className="flex-1 flex flex-col items-center gap-3">
                                     <div className="relative w-full rounded-t-2xl bg-gradient-to-b from-[#8b6a3f] to-[#5a4628] h-48">
                                         <div className="absolute top-4 left-1/2 -translate-x-1/2">
