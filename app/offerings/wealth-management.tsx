@@ -62,7 +62,7 @@ export default function WealthManagement({ showTitle = true }: { showTitle?: boo
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
                     <div>
                         <h1 className="text-3xl md:text-4xl font-serif">Wealth & Asset Management</h1>
-                        {/* <h1 className="text-3xl md:text-4xl font-serif opacity-40">Real Humans. Real Time.</h1> */}
+                        <h1 className="text-3xl md:text-4xl font-serif opacity-40">Preserving wealth. Securing future.</h1>
                     </div>
 
                     <p className="text-base md:text-md leading-relaxed md:w-[400px]">
@@ -83,13 +83,7 @@ export default function WealthManagement({ showTitle = true }: { showTitle?: boo
                                 className="min-h-screen flex flex-col justify-center"
                             >
                                 <h3 className="text-3xl font-bold mb-8">{service.name}</h3>
-                                <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
-                                    Associate Wealth Advisor at TG. Prior
-                                    to TG, Allison worked at Bank of
-                                    America Private Bank in Charlotte and
-                                    New York City, serving high net worth and
-                                    ultra high net worth clients.
-                                </p>
+                                {service.description}
                             </div>
                         ))}
                     </div>

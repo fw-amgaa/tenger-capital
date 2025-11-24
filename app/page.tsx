@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollControlProvider } from "@/components/scroll-control";
+import Blogs from "@/components/sections/blogs";
 import Brief from "@/components/sections/brief";
 import FAQ from "@/components/sections/faq";
 import FloatingDashboard from "@/components/sections/floating-dashboard";
@@ -27,11 +28,11 @@ export default function Home() {
         <VideoIntroduction />
         <Brief />
         <WorkWithUs />
-        <TeamMembers />
+        <div className="h-100" />
+        {/* <TeamMembers /> */}
         <Offerings setHeaderMode={setHeaderMode} />
-        {/* <SnapFillSection /> */}
         {/* <Blogs /> */}
-        <Partners />
+        {/* <Partners /> */}
         <FAQ />
       </main>
       <Footer />

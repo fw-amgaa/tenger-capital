@@ -93,8 +93,8 @@ export default function Brokerage({ showTitle = true }: { showTitle?: boolean })
                 <Seperator />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
                     <div>
-                        <h1 className="text-3xl md:text-4xl font-serif">BROKERAGE</h1>
-                        {/* <h1 className="text-3xl md:text-4xl font-serif opacity-40">Real Humans. Real Time.</h1> */}
+                        <h1 className="text-3xl md:text-4xl font-serif">Brokerage</h1>
+                        <h1 className="text-3xl md:text-4xl font-serif opacity-40">Stand solid. Stay liquid.</h1>
                     </div>
 
                     <p className="text-base md:text-md leading-relaxed md:w-[400px]">
