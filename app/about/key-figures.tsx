@@ -40,7 +40,7 @@ function StatCard({ value, label, suffix = '', prefix = '', delay = 0 }: StatPro
             <div className="relative h-full overflow-hidden rounded-3xl bg-gradient-to-br from-black/95 to-black/98 backdrop-blur-sm transition-all duration-500 hover:from-black/90 hover:to-black/95">
                 <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#ff990026] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <div className="relative bg-[#ff990026]  p-8">
+                <div className="relative bg-[#ff990026] p-8">
                     <div className="mb-4 flex items-baseline gap-1">
                         {prefix && (
                             <span className="text-3xl font-light text-white/60 md:text-4xl">

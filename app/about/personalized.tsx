@@ -23,12 +23,12 @@ export default function Personalized() {
                 className="z-10 md:w-[370px] text-center md:text-left"
             >
                 <h3 className="text-4xl md:text-5xl tracking-tight text-primary mb-1 mt-6">
-                    Personalized
+                    Personalized service
                 </h3>
 
-                <span className="text-white/60 text-sm">Dedicated broker analyst</span>
+                <span className="text-white/60 text-sm">A service as individual as you are</span>
 
-                <p className="text-md mt-12 text-white/80">Think of us as your in-house money team. We handle the moves you don’t have time for, such as account consolidation, rebalancing, and rollovers, with precision and ease.</p>
+                <p className="text-md mt-12 text-white/80">Every client receives individualized attention from a dedicated broker and analyst, ensuring you always have experts on hand to answer questions and navigate every financial decision with confidence.</p>
             </motion.div>
         </motion.main>
     );

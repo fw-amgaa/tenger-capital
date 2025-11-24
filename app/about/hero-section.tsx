@@ -53,8 +53,8 @@ export default function HeroSection() {
                         // style={{ opacity: initialTextOpacity }}
                         className="absolute inset-0 flex items-center justify-center z-5"
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold text-center mb-16 px-32 max-w-[800px]">
-                            TENGER CAPITAL ABOUT US SECTION
+                        <h1 className="text-4xl md:text-8xl text-center mb-16 px-32">
+                            CREATE VALUE THROUGH INVESTING
                         </h1>
                     </motion.div>
 
@@ -82,7 +82,8 @@ export default function HeroSection() {
                         className="absolute inset-0 flex items-center justify-center z-30 pointer-events-none"
                     >
                         <h2 className="text-4xl md:text-6xl font-bold text-white text-center px-4 drop-shadow-lg">
-                            WEALTH IS OUR ENTIRE FOCUS
+                            <span>Founded on Integrity.</span><br />
+                            <span>Focused on Your Future.</span>
                         </h2>
                     </motion.div>
                 </div>

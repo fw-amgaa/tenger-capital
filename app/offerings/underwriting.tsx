@@ -21,17 +21,17 @@ export default function UnderWriting({ showTitle = true }: { showTitle?: boolean
             name: "Debt Issuance",
             description: <div className="flex flex-col gap-2">
                 <p className="text-sm text-[#f8f8f8] leading-[1.4]">
-                    We structure and execute debt issuances tailored to each issuer’s needs, from flexible OTC private placements to publicly offered MSE-listed bonds. Our team oversees the full process—structuring, due diligence, documentation, regulatory filings, and investor marketing—to support capital raising for expansion, refinancing, working capital, and development projects. We also originate and structure asset-backed securities backed by loan portfolios, receivables, leasing contracts, and microfinance assets. From asset pool analysis and SPV setup to ratings coordination and institutional placement, we help convert cash-flow-generating assets into marketable securities.
+                    We structure and execute debt offerings—from flexible OTC placements to MSE-listed bonds—and asset-backed securities. Our team manages structuring, due diligence, documentation, filings, and investor marketing, helping clients raise capital for expansion, refinancing, working capital, or development projects.
                 </p>
             </div>,
             image:
                 "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop",
         },
         {
-            name: "Initial Public Offering (IPO) & Equity Capital Markets",
+            name: "IPO & Equity Capital Markets",
             description: <div className="flex flex-col gap-2">
                 <p className="text-sm text-[#f8f8f8] leading-[1.4]">
-                    We guide companies through the full IPO process to access equity financing on the Mongolian Stock Exchange. Our team supports issuers from early-stage preparation through listing, including pre-IPO readiness assessments, valuation and financial modeling, prospectus development, and all regulatory submissions. We manage underwriting and book-building activities while leading investor education, marketing campaigns, and roadshows to ensure strong market engagement. Throughout the process, we help issuers build sustainable shareholder structures and position themselves for long-term success in the public markets.
+                    We guide companies through the IPO process on the Mongolian Stock Exchange, covering preparation, valuation, prospectus drafting, regulatory filings, underwriting, and investor outreach. Our support helps issuers engage markets effectively, build sustainable shareholder structures, and achieve long-term success.
                 </p>
             </div>,
             image:
@@ -41,7 +41,7 @@ export default function UnderWriting({ showTitle = true }: { showTitle?: boolean
             name: "Mergers & Acquisitions",
             description: <div className="flex flex-col gap-2">
                 <p className="text-sm text-[#f8f8f8] leading-[1.4]">
-                    We provide strategic advisory services for both buy-side and sell-side M&A transactions, guiding clients through every stage of the deal process. Our team supports target sourcing and evaluation, conducts financial and commercial due diligence, and leads deal structuring and negotiations to help clients secure favorable terms. We handle valuation and modeling as well as documentation and transaction execution, ensuring a seamless and confidential process. Throughout each engagement, we focus on achieving optimal outcomes through strategic insight and disciplined execution.
+                    We advise on buy-side and sell-side M&A, supporting target evaluation, due diligence, deal structuring, valuation, and execution. Our team ensures confidential, strategic guidance, helping clients secure favorable terms and achieve optimal transaction outcomes.
                 </p>
             </div>,
             image:
@@ -72,12 +72,13 @@ export default function UnderWriting({ showTitle = true }: { showTitle?: boolean
                 <Seperator />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
                     <div>
-                        <h1 className="text-3xl md:text-4xl font-serif">UNDERWRITING</h1>
-                        {/* <h1 className="text-3xl md:text-4xl font-serif opacity-40">Real Humans. Real Time.</h1> */}
+                        <h1 className="text-3xl md:text-4xl font-serif">Underwriting</h1>
+                        <h1 className="text-3xl md:text-4xl font-serif opacity-40">Building value that lasts.</h1>
                     </div>
 
                     <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-                        Tenger Capital SC LLC provides end-to-end underwriting and capital-raising solutions for corporations, financial institutions, and government-linked entities. From structuring and regulatory preparation to marketing, distribution, and post-issuance support, our investment banking team ensures efficient and transparent execution. We help issuers raise capital with confidence in both domestic and private markets.                    </p>
+                        Tenger Capital SC LLC provides end-to-end underwriting and capital-raising solutions for corporations and institutions, guiding clients through structuring, regulatory compliance, marketing, and distribution. We ensure efficient execution and help issuers raise capital confidently across domestic and private markets.
+                    </p>
                 </div>
             </div>
             {/* Scroll section with sticky images */}
