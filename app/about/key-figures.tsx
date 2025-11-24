@@ -88,21 +88,21 @@ export default function KeyFigures() {
 
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     <StatCard
-                        value="125"
+                        value="300"
                         suffix="B+"
-                        prefix="$"
-                        label="Assets Under Management"
+                        prefix="₮"
+                        label="Billion raised in 2025H1"
                         delay={0}
                     />
                     <StatCard
-                        value="50"
-                        suffix="K+"
-                        label="Active Clients"
+                        value="170"
+                        suffix="+"
+                        label="Institutional and HNW clients"
                         delay={100}
                     />
                     <StatCard
-                        value="28"
-                        label="Years of Excellence"
+                        value="18"
+                        label="Years of Experience"
                         delay={200}
                     />
                     <StatCard
@@ -112,9 +112,9 @@ export default function KeyFigures() {
                         delay={300}
                     />
                     <StatCard
-                        value="200"
+                        value="10,000"
                         suffix="+"
-                        label="Expert Advisors"
+                        label="Retail Clients"
                         delay={400}
                     />
                     <StatCard
