@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import Image from 'next/image'
 
 const initialWidth = 250 // Initial image size in pixels
 const initialHeight = 150 // Initial image size in pixels
@@ -68,10 +69,14 @@ export default function HeroSection() {
                         className="absolute left-1/2 -translate-x-1/2 z-10"
                     >
                         <div className="relative w-full h-full overflow-hidden" style={{ borderRadius: 'inherit' }}>
-                            <img
-                                src="mockups/4.avif"
+                            <Image
+                                fill
+                                src="/about-us/about-us.jpg"
                                 alt="Expanding landscape"
                                 className="w-full h-full object-cover"
+                            />
+                            <div
+                                className="absolute inset-0 bg-black opacity-40 z-1"
                             />
                         </div>
                     </motion.div>
