@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useTime, useTransform, AnimatePresence } from 'framer-motion';
 import { PlusIcon, X } from 'lucide-react';
