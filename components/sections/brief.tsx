@@ -129,8 +129,7 @@ const Brief = () => {
         </div>
 
         <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-          Tenger Capital gives you professional advice, whether its equity compensation
-          or buying a home. Youre not left guessing. Just smart moves, made simple.
+          From executing trades to structuring deals and managing wealth, Tenger Capital offers the expertise and clarity clients rely on. We turn questions into strategy and uncertainty into opportunity.
         </p>
       </div>
 
