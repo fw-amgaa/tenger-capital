@@ -396,7 +396,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-[#191919] leading-[1.4] text-xs rounded-[2rem] p-8 opacity-[0.8] text-[#f8f8f8CC)] [&amp;_p:not(:last-child)]:mb-[1em]">
+        {/* <div className="bg-[#191919] leading-[1.4] text-xs rounded-[2rem] p-8 opacity-[0.8] text-[#f8f8f8CC)] [&amp;_p:not(:last-child)]:mb-[1em]">
           <p className="mb-2 font-bold text-base mt-4">1. General Provisions</p>
 
           <p className="mb-2">
@@ -661,7 +661,7 @@ const Footer = () => {
           <ul></ul>
           <ul></ul>
           <ul></ul>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

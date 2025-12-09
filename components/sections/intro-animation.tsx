@@ -11,10 +11,10 @@ interface IntroAnimationProps {
 }
 
 export function IntroAnimation({
-  text = "Tenger Capital",
+  text = "Create value through investing",
   onComplete,
   typingDuration = 3000,
-  fadeDuration = 1000,
+  fadeDuration = 0,
 }: IntroAnimationProps) {
   const [visible, setVisible] = useState(true);
   const ref = useRef(null);
@@ -27,7 +27,7 @@ export function IntroAnimation({
 
     const fadeTimer = setTimeout(() => {
       setVisible(false);
-      // onComplete?.();
+      onComplete?.();
     }, typingDuration + fadeDuration);
 
     return () => {
@@ -42,16 +42,16 @@ export function IntroAnimation({
   return (
     <h2
       ref={ref}
-      className="fixed inset-0 z-100 flex items-center justify-center bg-black"
+      className="fixed inset-0 z-100 flex items-center justify-center bg-black text-2xl md:text-4xl lg:text-6xl"
     >
       {text.split("").map((letter, index) => (
         <motion.span
           key={index}
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.2, delay: index * 0.1 }}
+          transition={{ duration: 0.2, delay: index * 0.05 }}
         >
-          {letter}
+          {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
     </h2>
