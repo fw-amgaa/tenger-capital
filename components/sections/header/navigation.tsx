@@ -207,7 +207,7 @@ const Navigation = () => {
                 <Link
                   className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                   target="_self"
-                  href="/Linkbout"
+                  href="/about"
                 >
                   About
                 </Link>
@@ -221,7 +221,7 @@ const Navigation = () => {
                   What We Offer
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                   target="_self"
@@ -247,8 +247,11 @@ const Navigation = () => {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
+            <p className="text-sm text-black/80 font-semibold ml-4 flex items-center">
+              ✧ <span className="text-xs"> Powered by Esugsoft LLC</span>
+            </p>
           </div>
         </div>
       </div>
