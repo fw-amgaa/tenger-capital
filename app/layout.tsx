@@ -1,5 +1,3 @@
-import FloatingDashboard from "@/components/sections/floating-dashboard";
-import Header from "@/components/sections/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { moisette, ttCommons } from "./fonts";
@@ -27,7 +25,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          {/* <CursorFollower /> */}
         </ThemeProvider>
       </body>
     </html>
