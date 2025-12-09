@@ -13,7 +13,7 @@ import WorkWithUs from "@/components/sections/work-with-us";
 import { useState } from "react";
 
 export default function Home() {
-  const [introDone, setIntroDone] = useState(true);
+  const [introDone, setIntroDone] = useState(false);
   const [headerMode, setHeaderMode] = useState<"light" | "dark">("dark");
 
   return (
