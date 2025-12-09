@@ -1,28 +1,37 @@
-import { AnimatePresence, motion, PanInfo } from 'framer-motion';
-import { BarChart, BatteryChargingIcon, Bell, TrendingUp, User, WifiIcon } from 'lucide-react';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import Seperator from '../seperator';
+import { AnimatePresence, motion, PanInfo } from "framer-motion";
+import {
+  BarChart,
+  BatteryChargingIcon,
+  Bell,
+  TrendingUp,
+  User,
+  WifiIcon,
+} from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import Seperator from "../seperator";
 
 const carouselData = [
   {
     icon: <Bell className="w-4 h-4" />,
     title: "Real-Time Updates",
     description: "Get video updates on your investments from our team.",
-    phoneImage: "/phone-screen/1.png"
+    phoneImage: "/phone-screen/1.png",
   },
   {
     icon: <User className="w-4 h-4" />,
     title: "Human Service",
-    description: "All Tenger Capital clients have access to a dedicated wealth advisor.",
-    phoneImage: "/phone-screen/2.avif"
+    description:
+      "All Tenger Capital clients have access to a dedicated wealth advisor.",
+    phoneImage: "/phone-screen/2.avif",
   },
   {
     icon: <TrendingUp className="w-4 h-4" />,
     title: "Expert Guidance",
-    description: "Professional advice tailored to your financial goals and needs.",
-    phoneImage: "/phone-screen/3.avif"
-  }
+    description:
+      "Professional advice tailored to your financial goals and needs.",
+    phoneImage: "/phone-screen/3.jpg",
+  },
 ];
 
 const Brief = () => {
@@ -39,7 +48,7 @@ const Brief = () => {
           setCurrentIndex((current) => (current + 1) % carouselData.length);
           return 0;
         }
-        return prev + (100 / (duration / 100));
+        return prev + 100 / (duration / 100);
       });
     }, 100);
 
@@ -55,7 +64,9 @@ const Brief = () => {
   const handlePrev = () => {
     setDirection(-1);
     setProgress(0);
-    setCurrentIndex((prev) => (prev - 1 + carouselData.length) % carouselData.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + carouselData.length) % carouselData.length
+    );
   };
 
   const handleDotClick = (index: number) => {
@@ -68,7 +79,10 @@ const Brief = () => {
     setCurrentIndex(index);
   };
 
-  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const handleDragEnd = (
+    event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
     const swipeThreshold = 50;
     if (info.offset.x > swipeThreshold) {
       handlePrev();
@@ -84,39 +98,39 @@ const Brief = () => {
     enter: (direction: number) => ({
       x: direction > 0 ? 100 : -100,
       opacity: 0,
-      scale: 0.9
+      scale: 0.9,
     }),
     center: {
       x: 0,
       opacity: 1,
-      scale: 1
+      scale: 1,
     },
     exit: (direction: number) => ({
       x: direction > 0 ? -100 : 100,
       opacity: 0,
-      scale: 0.9
-    })
+      scale: 0.9,
+    }),
   };
 
   // Content animation - slides smoothly
   const contentVariants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 50 : -50,
-      opacity: 0
+      opacity: 0,
     }),
     center: {
       x: 0,
-      opacity: 1
+      opacity: 1,
     },
     exit: (direction: number) => ({
       x: direction > 0 ? -50 : 50,
-      opacity: 0
-    })
+      opacity: 0,
+    }),
   };
 
   const transition = {
     duration: 0.15,
-    ease: [0.25, 0.1, 0.25, 1] as const
+    ease: [0.25, 0.1, 0.25, 1] as const,
   };
 
   return (
@@ -124,12 +138,18 @@ const Brief = () => {
       <Seperator />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
         <div>
-          <h1 className="text-3xl md:text-4xl font-serif">Inspired by Tenger</h1>
-          <h1 className="text-3xl md:text-4xl font-serif opacity-40">Integrity. Wisdom. Foresight.</h1>
+          <h1 className="text-3xl md:text-4xl font-serif">
+            Inspired by Tenger
+          </h1>
+          <h1 className="text-3xl md:text-4xl font-serif opacity-40">
+            Integrity. Wisdom. Foresight.
+          </h1>
         </div>
 
         <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-          From executing trades to structuring deals and managing wealth, Tenger Capital offers the expertise and clarity clients rely on. We turn questions into strategy and uncertainty into opportunity.
+          From executing trades to structuring deals and managing wealth, Tenger
+          Capital offers the expertise and clarity clients rely on. We turn
+          questions into strategy and uncertainty into opportunity.
         </p>
       </div>
 
@@ -154,7 +174,6 @@ const Brief = () => {
                 <div className="absolute top-0 left-0 right-0 h-8 flex items-center justify-between px-4 text-white z-10 bg-gradient-to-b from-black/50 to-transparent">
                   <span className="text-[10px]">11:11</span>
                   <div className="flex gap-1 items-center justify-center">
-
                     <BarChart size={12} />
                     <WifiIcon size={12} />
                     <BatteryChargingIcon size={15} />
@@ -177,7 +196,9 @@ const Brief = () => {
             </AnimatePresence>
 
             {/* Illustrative Label */}
-            <p className="text-center text-[#f8f8f8] opacity-30 text-[8px] mt-6">For illustrative purposes only.</p>
+            <p className="text-center text-[#f8f8f8] opacity-30 text-[8px] mt-6">
+              For illustrative purposes only.
+            </p>
           </div>
         </div>
 
@@ -200,7 +221,7 @@ const Brief = () => {
                 animate="center"
                 exit="exit"
                 transition={transition}
-                className='flex flex-col items-center'
+                className="flex flex-col items-center"
               >
                 {/* Icon */}
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-white mb-8">
@@ -208,7 +229,9 @@ const Brief = () => {
                 </div>
 
                 {/* Title */}
-                <span className="font-bold mb-4 text-black">{currentItem.title}</span>
+                <span className="font-bold mb-4 text-black">
+                  {currentItem.title}
+                </span>
 
                 {/* Description */}
                 <p className="text-black opacity-70 mb-12 text-center">
@@ -224,7 +247,17 @@ const Brief = () => {
               className="cursor-pointer w-[30px] h-[30px] rounded-lg bg-[#0A0A0A0D] text-black transition-colors flex items-center justify-center rotate-[-180deg]"
               aria-label="Previous"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" fill="none"><path fill="currentColor" d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"></path></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="8"
+                fill="none"
+              >
+                <path
+                  fill="currentColor"
+                  d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"
+                ></path>
+              </svg>
             </button>
 
             {/* Progress Indicators */}
@@ -248,7 +281,9 @@ const Brief = () => {
                     </div>
                   ) : (
                     // Inactive indicators - dots
-                    <div className={`w-1 h-1 rounded-full cursor-pointer transition-colors bg-black opacity-20 group-hover:bg-gray-400`} />
+                    <div
+                      className={`w-1 h-1 rounded-full cursor-pointer transition-colors bg-black opacity-20 group-hover:bg-gray-400`}
+                    />
                   )}
                 </button>
               ))}
@@ -259,7 +294,17 @@ const Brief = () => {
               className="cursor-pointer w-[30px] h-[30px] rounded-lg bg-[#0A0A0A0D] text-black transition-colors flex items-center justify-center"
               aria-label="Next"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" fill="none"><path fill="currentColor" d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"></path></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="8"
+                fill="none"
+              >
+                <path
+                  fill="currentColor"
+                  d="m5.731 0-.564.564L8.199 3.6H.131v.8h8.068L5.167 7.436 5.731 8l4-4z"
+                ></path>
+              </svg>
             </button>
           </div>
         </div>
