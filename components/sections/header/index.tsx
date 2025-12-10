@@ -26,10 +26,10 @@ const TOP_SCROLL_THRESHOLD = 800;
 const BOTTOM_SCROLL_OFFSET = 700;
 
 interface Props {
-  headerMode?: 'light' | "dark"
+  headerMode?: "light" | "dark";
 }
 
-export default function Header({ headerMode = 'dark' }: Props) {
+export default function Header({ headerMode = "dark" }: Props) {
   const isMobile = useIsMobile();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -38,8 +38,8 @@ export default function Header({ headerMode = 'dark' }: Props) {
   // NEW STATE: Tracks if the user is near the bottom
   const [isNearBottom, setIsNearBottom] = useState(false);
 
-  const logoLight = "/logo/logo_main_white.png";
-  const logoDark = "/logo/logo_main_black.png";
+  const logoLight = "/logo/logo_main_light.png";
+  const logoDark = "/logo/logo_main_dark.png";
 
   const { scrollY } = useScroll();
 
@@ -144,7 +144,9 @@ export default function Header({ headerMode = 'dark' }: Props) {
               }}
             >
               <div
-                className={`${styles.burger} ${isOpen ? styles.burgerActive : ""} ${headerMode === "light" ? styles.dark : ''}`}
+                className={`${styles.burger} ${
+                  isOpen ? styles.burgerActive : ""
+                } ${headerMode === "light" ? styles.dark : ""}`}
               />
             </div>
 
@@ -167,7 +169,6 @@ export default function Header({ headerMode = 'dark' }: Props) {
                 />
               )}
             </Link>
-
           </div>
 
           {/* Navigation */}
@@ -177,7 +178,10 @@ export default function Header({ headerMode = 'dark' }: Props) {
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}
             >
-              <Link href="https://xacex.tengercapital.mn/auth/login" target="_blank">
+              <Link
+                href="https://xacex.tengercapital.mn/auth/login"
+                target="_blank"
+              >
                 <GradientBorderButton
                   mode={isOpen ? "light" : headerMode}
                   hasBorder={false}
@@ -192,7 +196,10 @@ export default function Header({ headerMode = 'dark' }: Props) {
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}
             >
-              <Link href="https://xacex.tengercapital.mn/auth/login" target="_blank">
+              <Link
+                href="https://xacex.tengercapital.mn/auth/login"
+                target="_blank"
+              >
                 <GradientBorderButton
                   mode={isOpen ? "light" : headerMode}
                   borderAnimation={shouldAnimateBorder}
