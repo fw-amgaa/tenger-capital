@@ -14,9 +14,10 @@ import Seperator from "../seperator";
 const carouselData = [
   {
     icon: <Bell className="w-4 h-4" />,
-    title: "Real-Time Updates",
-    description: "Get video updates on your investments from our team.",
-    phoneImage: "/phone-screen/1.png",
+    title: "Real-Time Data",
+    description:
+      "Keep track with current market orders and prices of your MSE products.",
+    phoneImage: "/phone-screen/real_time.jpg",
   },
   {
     icon: <User className="w-4 h-4" />,
@@ -27,10 +28,10 @@ const carouselData = [
   },
   {
     icon: <TrendingUp className="w-4 h-4" />,
-    title: "Expert Guidance",
+    title: "Monitor your Portfolio",
     description:
-      "Professional advice tailored to your financial goals and needs.",
-    phoneImage: "/phone-screen/3.jpg",
+      "Your total portfolio including all your bonds and stocks in one place.",
+    phoneImage: "/phone-screen/monitoring_portfolio.jpg",
   },
 ];
 
@@ -171,14 +172,14 @@ const Brief = () => {
                 className="text-white border-white rounded-overflow-hidden-safari relative aspect-[786/1704] h-full w-auto overflow-hidden rounded-2xl border-[1px] md:rounded-3xl lg:rounded-4xl"
               >
                 {/* Status Bar */}
-                <div className="absolute top-0 left-0 right-0 h-8 flex items-center justify-between px-4 text-white z-10 bg-gradient-to-b from-black/50 to-transparent">
+                {/* <div className="absolute top-0 left-0 right-0 h-8 flex items-center justify-between px-4 text-white z-10 bg-gradient-to-b from-black/50 to-transparent">
                   <span className="text-[10px]">11:11</span>
                   <div className="flex gap-1 items-center justify-center">
                     <BarChart size={12} />
                     <WifiIcon size={12} />
                     <BatteryChargingIcon size={15} />
                   </div>
-                </div>
+                </div> */}
 
                 {/* Phone Screen Content */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900">
@@ -191,7 +192,7 @@ const Brief = () => {
                 </div>
 
                 {/* Home Indicator */}
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-[3px] bg-white rounded-full z-10" />
+                {/* <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-[3px] bg-white rounded-full z-10" /> */}
               </motion.div>
             </AnimatePresence>
 
