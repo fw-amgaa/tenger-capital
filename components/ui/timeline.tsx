@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  motion,
-  useScroll,
-  useTransform
-} from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -42,8 +38,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Changelog from our journey
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          We&apos;ve been working on Tenger Capital for the past 18 years. Here&apos;s
-          a timeline of our journey.
+          We&apos;ve been working on Tenger Capital for the past 18 years.
+          Here&apos;s a timeline of our journey.
         </p>
       </div>
 
@@ -51,9 +47,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-15 lg:pt-20 md:gap-10"
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div className="sticky flex flex-col md:flex-row z-2 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
@@ -80,7 +76,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             style={{
               height: heightTransform,
               opacity: opacityTransform,
-              background: "linear-gradient(to top, rgb(255,153,0) 15.57%, rgb(248,229,181) 33.39%, rgb(161,111,16) 50.58%, rgb(248,229,181) 67.75%, rgb(255,153,0) 91.74%)"
+              background:
+                "linear-gradient(to top, rgb(255,153,0) 15.57%, rgb(248,229,181) 33.39%, rgb(161,111,16) 50.58%, rgb(248,229,181) 67.75%, rgb(255,153,0) 91.74%)",
             }}
             className="absolute inset-x-0 top-0 w-[2px] rounded-full"
           />
