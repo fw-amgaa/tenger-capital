@@ -94,8 +94,7 @@ export default function Brokerage({
           </div>
         </div>
       ),
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
+      image: "/offerings/otc-market.jpg",
     },
   ];
 
@@ -118,9 +117,19 @@ export default function Brokerage({
 
   return (
     <div className="section-container py-20">
-      <div className="flex flex-col gap-8">
+      <div className="relative flex flex-col gap-8">
+        <div
+          className="absolute inset-0 opacity-90 z-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%), url("/brand/pattern-fade.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
         <Seperator />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48 z-5">
           <div>
             <h1 className="text-3xl md:text-4xl font-serif">Brokerage</h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Seperator from "../seperator";
 import {
   Accordion,
@@ -8,10 +9,19 @@ import {
 
 const FAQ = () => {
   return (
-    <div className="section-container flex flex-col gap-8">
+    <div className="section-container flex flex-col gap-8 relative">
+      <div className="absolute left-0 w-full h-screen z-0">
+        <Image
+          src={"/brand/traditional-pattern.png"}
+          fill
+          objectFit="cover"
+          alt="pattern"
+        />
+      </div>
+
       <Seperator />
 
-      <div className="grid md:grid-cols-2">
+      <div className="grid md:grid-cols-2 z-1">
         <h1 className="text-4xl">Frequently Asked Questions</h1>
 
         <Accordion
@@ -21,7 +31,7 @@ const FAQ = () => {
           defaultValue="item-1"
         >
           <AccordionItem value="item-1">
-            <AccordionTrigger>Product Information</AccordionTrigger>
+            <AccordionTrigger>Service Information</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
               <p>
                 Our flagship product combines cutting-edge technology with sleek
@@ -36,7 +46,7 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Shipping Details</AccordionTrigger>
+            <AccordionTrigger>Illustrations</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
               <p>
                 We offer worldwide shipping through trusted courier partners.
@@ -51,6 +61,51 @@ const FAQ = () => {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>Return Policy</AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
+              <p>
+                We stand behind our products with a comprehensive 30-day return
+                policy. If you&apos;re not completely satisfied, simply return
+                the item in its original condition.
+              </p>
+              <p>
+                Our hassle-free return process includes free return shipping and
+                full refunds processed within 48 hours of receiving the returned
+                item.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Terms of service</AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
+              <p>
+                We stand behind our products with a comprehensive 30-day return
+                policy. If you&apos;re not completely satisfied, simply return
+                the item in its original condition.
+              </p>
+              <p>
+                Our hassle-free return process includes free return shipping and
+                full refunds processed within 48 hours of receiving the returned
+                item.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Customer Service</AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
+              <p>
+                We stand behind our products with a comprehensive 30-day return
+                policy. If you&apos;re not completely satisfied, simply return
+                the item in its original condition.
+              </p>
+              <p>
+                Our hassle-free return process includes free return shipping and
+                full refunds processed within 48 hours of receiving the returned
+                item.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Feedbacks</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance opacity-80">
               <p>
                 We stand behind our products with a comprehensive 30-day return
