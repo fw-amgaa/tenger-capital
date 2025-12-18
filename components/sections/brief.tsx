@@ -135,23 +135,35 @@ const Brief = () => {
   };
 
   return (
-    <div className="section-container flex flex-col gap-8">
-      <Seperator />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48">
-        <div>
-          <h1 className="text-3xl md:text-4xl font-serif">
-            Inspired by Tenger
-          </h1>
-          <h1 className="text-3xl md:text-4xl font-serif opacity-40">
-            Integrity. Wisdom. Foresight.
-          </h1>
-        </div>
+    <div className="section-container flex flex-col gap-16">
+      <div className="relative flex flex-col gap-8">
+        <div
+          className="absolute inset-0 opacity-90 z-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%), url("/brand/pattern-fade.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <Seperator />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48 z-5">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-serif">
+              Inspired by Tenger
+            </h1>
+            <h1 className="text-3xl md:text-4xl font-serif opacity-40">
+              Integrity. Wisdom. Foresight.
+            </h1>
+          </div>
 
-        <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-          From executing trades to structuring deals and managing wealth, Tenger
-          Capital offers the expertise and clarity clients rely on. We turn
-          questions into strategy and uncertainty into opportunity.
-        </p>
+          <p className="text-base md:text-md leading-relaxed md:w-[400px]">
+            From executing trades to structuring deals and managing wealth,
+            Tenger Capital offers the expertise and clarity clients rely on. We
+            turn questions into strategy and uncertainty into opportunity.
+          </p>
+        </div>
       </div>
 
       {/* Carousel Section */}

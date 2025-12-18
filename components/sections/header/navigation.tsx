@@ -134,7 +134,7 @@ const Navigation = () => {
           >
             <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
               <Image
-                src="/mockups/4.avif"
+                src="/navigation/offerings.jpg"
                 alt="Offerings"
                 fill
                 className="object-cover"
@@ -157,13 +157,15 @@ const Navigation = () => {
             >
               <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
                 <Image
-                  src="/mockups/2.avif"
+                  src="/navigation/about-us.jpg"
                   alt="About"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h2 className="relative text-2xl leading-[120%] z-10">About</h2>
+              <h2 className="relative text-2xl leading-[120%] z-10">
+                About us
+              </h2>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
                 DISCOVER NOW
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
@@ -173,12 +175,12 @@ const Navigation = () => {
             </a>
 
             <a
-              href="/blog"
+              // href="/blog"
               className="nav-section group min-h-32 relative flex w-full md:w-1/2 flex-col justify-between overflow-hidden rounded-3xl p-6 md:p-8 text-white"
             >
               <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
                 <Image
-                  src="/mockups/3.avif"
+                  src="/navigation/blogs.avif"
                   alt="Blog"
                   fill
                   className="object-cover"
@@ -186,7 +188,7 @@ const Navigation = () => {
               </div>
               <h2 className="relative text-2xl leading-[120%] z-10">Blog</h2>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
-                DISCOVER NOW
+                COMING SOON
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
                   →
                 </span>
