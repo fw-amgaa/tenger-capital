@@ -252,7 +252,7 @@ const Navigation = () => {
               </li> */}
             </ul>
             <p className="text-sm text-black/80 font-semibold ml-4 flex items-center">
-              ✧ <span className="text-xs"> Powered by Esugsoft LLC</span>
+              ✧ <span className="text-xs ml-1">Powered by Esugsoft LLC</span>
             </p>
           </div>
         </div>
