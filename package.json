@@ -27,6 +27,7 @@
     "next-view-transitions": "^0.3.4",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "recharts": "2.15.4",
     "resize-observer-polyfill": "^1.5.1",
     "tailwind-merge": "^3.3.1"
   },

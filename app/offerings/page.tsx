@@ -10,23 +10,24 @@ import WealthManagement from "./wealth-management";
 import WorkWithUs from "./work-with-us";
 
 export default function Page() {
+  return (
+    <ScrollControlProvider>
+      <Header />
 
-    return <ScrollControlProvider>
-        <Header />
+      <HeroSection />
+      <UnderWriting />
+      <Brokerage />
+      <WealthManagement />
+      <WorkWithUs />
 
-        <HeroSection />
-        <UnderWriting />
-        <Brokerage />
-        <WealthManagement />
-        <WorkWithUs />
+      <div className="h-60" />
+      <MacbookScrollSection />
 
-        <div className="h-60" />
-        <MacbookScrollSection />
+      <div className="my-40">
+        <FAQ />
+      </div>
 
-        <div className="my-40">
-            <FAQ />
-        </div>
-
-        <Footer />
+      <Footer />
     </ScrollControlProvider>
+  );
 }

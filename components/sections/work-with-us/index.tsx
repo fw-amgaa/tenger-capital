@@ -3,39 +3,37 @@
 import { AnimatePresence, motion, useTime, useTransform } from "framer-motion";
 import { PlusIcon, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { ChartPieDonutActive } from "./pie-chart";
+import { ChartBarLabelCustom } from "./bar-chart";
+import { ChartBarMultiple } from "./bar-chart-multiple";
+import { ChartReveal } from "./chart-reveal";
 
 const statsData = [
   {
-    title:
-      "With wide opportunities to access both domestic and international markets, investors are not limited to the Mongolian capital market alone. They can enter any market worldwide according to their preference.",
-    percentage: "10.72",
-    unit: "%",
-    label: "With TG +10.72%",
-    hasChart: true,
-    disclosure:
-      "Past performance is not indicative of future results. Investment involves risk, including the potential loss of principal. The composite performance shown represents the net annualized return for all Tenger Capital clients from February 20, 2018, through December 31, 2024. Individual results may vary based on timing of investment, market conditions, and personal financial circumstances. This data includes reinvested dividends and is net of all fees and expenses.",
-  },
-  {
-    title:
-      "By using online applications and platforms, investors can trade conveniently and quickly, while also receiving advice and research support to make informed investment decisions.",
-    percentage: "60",
-    unit: "%",
-    suffix: "cheaper",
+    title: "Бондын анхдагч зах зээл (2025 оны байдлаар)",
+    percentage: "379.2",
+    unit: "₮",
+    suffix: "тэрбум төгрөг",
     labels: ["Others", "TG"],
     hasBarChart: true,
-    disclosure:
-      "Fee comparison based on industry average private wealth management fees of 1.0% AUM for portfolios under $1M versus Tenger Capital's standard advisory fee of 0.40% AUM. Actual savings may vary based on portfolio size, service level, and additional account fees. This comparison does not include performance-based fees or transaction costs that may apply to either service.",
+    disclosure: "Бондын анхдагч зах зээл (2025 оны байдлаар)",
   },
   {
-    title:
-      "Conduct capital market research and analysis, provide market information, reports, and recommendations. Participate in stock and bond issuance (underwriting), IPOs, and offer investment advisory services.",
-    percentage: "100",
+    title: "Бондын анхдагч зах зээлийн эзлэх хувь.",
+    percentage: "25",
     unit: "%",
-    suffix: "time saved",
-    label: "With TG",
+    suffix: "нийт зах зээлийн",
+    label: "Tenger Capital",
     hasPieChart: true,
-    disclosure:
-      "Time savings estimate based on average self-directed investor activities including research, portfolio rebalancing, tax optimization, and performance tracking. Actual time saved varies by individual investment strategy complexity and personal involvement preferences. This represents potential time allocation that can be redirected to other activities when using Tenger Capital's managed services.",
+    disclosure: "Бондын анхдагч зах зээлийн эзлэх хувь.",
+  },
+  {
+    title: "Компаний үйл ажиллагааний өсөлт",
+    percentage: "9.04",
+    unit: "x",
+    suffix: "өнгөрсөн жилээс",
+    hasChart: true,
+    disclosure: "Компаний үйл ажиллагааний өсөлт",
   },
 ];
 
@@ -121,7 +119,6 @@ const StatsCard = ({
   unit,
   suffix,
   label,
-  labels,
   hasChart,
   hasBarChart,
   hasPieChart,
@@ -152,7 +149,7 @@ const StatsCard = ({
   });
 
   return (
-    <div className="relative aspect-3/5 rounded-3xl overflow-hidden max-w-[400px]">
+    <div className="relative aspect-3/5 rounded-3xl overflow-hidden">
       {/* Rotating Gradient Border */}
       <motion.div
         style={{
@@ -163,7 +160,7 @@ const StatsCard = ({
 
       {/* Inner Card */}
       <div className="absolute inset-[1px] bg-black rounded-3xl overflow-hidden">
-        <div className="bg-[#ff990026] p-8 lg:p-12 flex flex-col h-full relative">
+        <div className="bg-[#ff990026] p-8 lg:p-8 flex flex-col h-full relative">
           {/* Plus/Close Button */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -202,134 +199,41 @@ const StatsCard = ({
           {/* Visual Content */}
           <div className="flex-grow flex items-end mb-8">
             {hasChart && (
-              <div className="w-full h-32 relative">
-                {/* Simple line chart visualization */}
-                <svg viewBox="0 0 400 120" className="w-full h-full">
-                  {/* Grid lines */}
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <line
-                      key={i}
-                      x1="0"
-                      y1={i * 30}
-                      x2="400"
-                      y2={i * 30}
-                      stroke="rgba(255,255,255,0.05)"
-                      strokeWidth="1"
-                      strokeDasharray="4 4"
-                    />
-                  ))}
+              <div className="w-full h-56 relative">
+                <ChartReveal>
+                  <ChartBarMultiple />
+                </ChartReveal>
 
-                  {/* Growth line */}
-                  <path
-                    d="M 0 110 Q 100 100 200 60 T 400 20"
-                    fill="none"
-                    stroke="rgb(255,153,0)"
-                    strokeWidth="2"
-                  />
+                <div className="absolute top-12 left-[7%]">
+                  <div className="px-3 py-1 rounded-full border border-[#d4a55a] bg-[#5a4628] text-[#d4a55a] text-xs font-medium whitespace-nowrap">
+                    9.04x
+                  </div>
+                </div>
 
-                  {/* Label badge */}
-                  <g transform="translate(230, 30)">
-                    <rect
-                      x="-55"
-                      y="-12"
-                      width="110"
-                      height="24"
-                      rx="12"
-                      fill="rgb(255,153,0)"
-                    />
-                    <text
-                      x="0"
-                      y="4"
-                      textAnchor="middle"
-                      fill="#2a2520"
-                      fontSize="10"
-                      fontWeight="600"
-                    >
-                      {label}
-                    </text>
-                  </g>
-
-                  {/* Arrow */}
-                  <path
-                    d="M 390 20 L 400 25 L 390 30"
-                    fill="none"
-                    stroke="rgb(255,153,0)"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <div className="absolute top-12 right-[28%]">
+                  <div className="px-3 py-1 rounded-full border border-[#d4a55a] bg-[#5a4628] text-[#d4a55a] text-xs font-medium whitespace-nowrap">
+                    7.5x
+                  </div>
+                </div>
               </div>
             )}
 
             {hasBarChart && (
-              <div className="w-full h-48 flex items-end gap-8">
-                {/* Others bar */}
-                <div className="flex-1 flex flex-col items-center gap-3">
-                  <div className="relative w-full rounded-t-2xl bg-[#3d3530] h-32">
-                    <div className="absolute top-4 left-1/2 -translate-x-1/2">
-                      <div className="px-4 py-1 rounded-full bg-[#4a3f38] text-white/60 text-xs font-medium whitespace-nowrap">
-                        {labels?.[0]}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* TG bar */}
-                <div className="flex-1 flex flex-col items-center gap-3">
-                  <div className="relative w-full rounded-t-2xl bg-gradient-to-b from-[#8b6a3f] to-[#5a4628] h-48">
-                    <div className="absolute top-4 left-1/2 -translate-x-1/2">
-                      <div className="px-4 py-1 rounded-full border border-[#d4a55a] bg-[#5a4628] text-[#d4a55a] text-xs font-medium whitespace-nowrap">
-                        {labels?.[1]}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full h-64 flex gap-8">
+                <ChartReveal>
+                  <ChartBarLabelCustom />
+                </ChartReveal>
               </div>
             )}
 
             {hasPieChart && (
-              <div className="w-full h-48 flex items-center justify-center">
-                {/* Pie chart using SVG */}
-                <div className="relative w-48 h-48">
-                  <svg
-                    viewBox="0 0 100 100"
-                    className="w-full h-full -rotate-90"
-                  >
-                    {/* Full circle background */}
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      fill="none"
-                      stroke="#3d3530"
-                      strokeWidth="20"
-                    />
-                    {/* 100% arc - full circle */}
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      fill="none"
-                      stroke="url(#gradient)"
-                      strokeWidth="20"
-                      strokeDasharray="251.2"
-                      strokeDashoffset="0"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="gradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="100%"
-                      >
-                        <stop offset="0%" stopColor="#d4a55a" />
-                        <stop offset="100%" stopColor="#8b6a3f" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+              <div className="w-full h-64 flex items-center justify-center">
+                <div className="relative w-64 h-64">
+                  <ChartReveal>
+                    <ChartPieDonutActive />
+                  </ChartReveal>
 
-                  {/* Label on arc */}
-                  <div className="absolute top-8 right-4">
+                  <div className="absolute top-12 right-0">
                     <div className="px-3 py-1 rounded-full border border-[#d4a55a] bg-[#5a4628] text-[#d4a55a] text-xs font-medium whitespace-nowrap">
                       {label}
                     </div>
