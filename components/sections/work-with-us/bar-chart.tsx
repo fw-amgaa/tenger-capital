@@ -74,10 +74,10 @@ export function ChartBarLabelCustom() {
             chartConfig[value as keyof typeof chartConfig]?.label
           }
         />
-        <ChartTooltip
+        {/* <ChartTooltip
           cursor={false}
           content={<ChartTooltipContent hideLabel />}
-        />
+        /> */}
         <Bar
           dataKey="amount"
           strokeWidth={2}

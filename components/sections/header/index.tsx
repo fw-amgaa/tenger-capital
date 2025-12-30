@@ -17,7 +17,7 @@ import Navigation, {
 } from "./navigation";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-is-mobile";
-import { LockIcon } from "lucide-react";
+import { FlagIcon, LockIcon } from "lucide-react";
 import Link from "next/link";
 
 // Define the scroll threshold (in pixels) for the top animation to start
@@ -172,7 +172,20 @@ export default function Header({ headerMode = "dark" }: Props) {
           </div>
 
           {/* Navigation */}
-          <nav className="flex gap-2">
+          <nav className="flex">
+            <motion.div
+              variants={buttonVariants}
+              animate={isButtonVisible ? "visible" : "hidden"}
+              transition={{ duration: 0.3 }}
+            >
+              <GradientBorderButton
+                mode={isOpen ? "light" : headerMode}
+                hasBorder={false}
+                iconComponent={<></>}
+              >
+                ENG
+              </GradientBorderButton>
+            </motion.div>
             <motion.div
               variants={buttonVariants}
               animate={isButtonVisible ? "visible" : "hidden"}

@@ -38,10 +38,10 @@ export function ChartBarMultiple() {
           tickMargin={10}
           axisLine={false}
         />
-        <ChartTooltip
+        {/* <ChartTooltip
           cursor={false}
           content={<ChartTooltipContent indicator="dashed" />}
-        />
+        /> */}
         <Bar dataKey="prev" fill="#4a3f38" radius={4} barSize={32} />
         <Bar dataKey="this" fill="#8b6a3f" radius={4} barSize={32} />
       </BarChart>
