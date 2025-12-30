@@ -1,276 +1,95 @@
 export const brokerFaqs = [
   {
     mn: {
-      question: "Үнэт цаасны данс нээлгэх заавар",
+      question:
+        "Үнэт цаас гэж юу вэ? Ямар төрлийн үнэт цаасанд хөрөнгө оруулж болох вэ?",
       answer:
-        "Өөрийн гар утасанд апп татах, цахим брокерын систем (tenger.istock.mn) болон ТК ҮЦК ХХК-ийн брокерийн ажилтанд мэдэгдснээр дансаа нээлгэх боломжтой.",
+        "Үнэт цаас гэдэг нь өмчлөх эрх, мөнгөн урсгал авах эрх эсвэл хөрөнгө оруулалтын эрхийг илэрхийлсэн санхүүгийн хэрэгсэл юм. Хууль тогтоомжийн дагуу үнэт цаас эзэмшигч нь тодорхой эрх, үүрэг хүлээнэ. Түгээмэл үнэт цаасанд бонд, хувьцаа болон хөрөнгөөр баталгаажсан үнэт цаас орно.",
     },
     en: {
-      question: "Instructions for opening a securities account",
+      question:
+        "What is a security, and what types of securities can I invest in?",
       answer:
-        "You can open an account by downloading the Tenger Capital app, using the online broker system (tenger.istock.mn), or by contacting a broker at Tenger Capital SC LLC.",
-    },
-  },
-  {
-    mn: {
-      question: "Монголын Хөрөнгийн Бирж дээрх арилжааны цаг",
-      answer: "Биржийн арилжааны цаг нь 10:00–13:00 хооронд байдаг.",
-    },
-    en: {
-      question: "Trading hours at the Mongolian Stock Exchange",
-      answer:
-        "Trading hours at the Mongolian Stock Exchange are from 10:00 to 13:00.",
-    },
-  },
-  {
-    mn: {
-      question: "МХБиржийн арилжааны бус цагаар захиалга өгч болох уу?",
-      answer:
-        "Өгч болно. Гэхдээ захиалга нь дараагийн ажлын өдрийн арилжааны цагт МХБиржийн системд орно.",
-    },
-    en: {
-      question: "Can I place an order outside trading hours?",
-      answer:
-        "Yes. Orders placed outside trading hours will be processed during the next working day’s trading session.",
-    },
-  },
-  {
-    mn: {
-      question: "Үнэт цаасны данстай эсэхээ хэрхэн мэдэх вэ?",
-      answer: "Та өөрийн үнэт цаасны мэдээллийг ҮЦТХТ-с лавлах боломжтой.",
-    },
-    en: {
-      question: "How do I know if I have a securities account?",
-      answer:
-        "You can check your securities information through the Mongolian Central Securities Depository (MCSD).",
-    },
-  },
-  {
-    mn: {
-      question: "Бондын хугацаанаас хүү нь хамаардаг уу?",
-      answer: "Бондын хүүг хугацаанаас хамааруулан тогтоодог.",
-    },
-    en: {
-      question: "Does a bond’s interest rate depend on its term?",
-      answer:
-        "Yes, the interest rate of a bond is determined based on its maturity period.",
-    },
-  },
-  {
-    mn: {
-      question: "Богино хугацаагаар бонд авах боломжтой юу?",
-      answer:
-        "Боломжтой. Хөрөнгө оруулагч нь брокертойгоо харилцан тохиролцсоны үндсэн дээр богино хугацаагаар авах боломжтой.",
-    },
-    en: {
-      question: "Is it possible to purchase bonds for a short term?",
-      answer:
-        "Yes. An investor may purchase bonds for a short term based on mutual agreement with their broker.",
+        "A security is a financial instrument that represents ownership, the right to receive cash flows, or investment rights. Under the law, security holders have specific rights and obligations. Common securities include bonds, stocks, and asset-backed securities.",
     },
   },
   {
     mn: {
       question:
-        "Бондын хугацаа дуусахаас өмнө бондоо авах боломжгүй болсон тохиолдолд миний эзэмшиж байгаа бонд хаачих вэ?",
+        "Үнэт цаасны дансыг хэрхэн нээх вэ? Хэдий хугацаанд нээгдэх вэ?",
       answer:
-        "Та санаа зовох шаардлагагүй. Таны үнэт цаас ҮЦТХТ-д хадгалагддаг бөгөөд өв залгамжлалаар ойр дотнын хүнд шилжих боломжтой.",
+        "Та Tenger Capital гар утасны аппликейшн, цахим арилжааны систем (tenger.istock.mn) ашиглан эсвэл Тэнгэр Капитал ҮЦК ХХК-ийн брокертой холбогдон үнэт цаасны данс нээх боломжтой. Хувь хүний данс 24 цагийн дотор, байгууллагын данс шаардлагатай бичиг баримтыг бүрдүүлсний дараа 24–48 цагийн дотор нээгдэнэ.",
     },
     en: {
       question:
-        "What happens to my bonds if I am unable to redeem them before maturity?",
+        "How do I open a securities account, and how long does it take?",
       answer:
-        "You do not need to worry. Your securities are safely stored at the Central Securities Depository and can be transferred to a close relative through inheritance.",
+        "You can open a securities account by using the Tenger Capital mobile application, the online trading system (tenger.istock.mn), or by contacting a broker at Tenger Capital SC LLC. Individual accounts are opened within 24 hours, while organizational accounts take 24–48 hours once all required documents are submitted.",
     },
   },
   {
     mn: {
-      question: "Үнэт цаасны данс нээлгэхэд хэдэн өдөр шаардлагатай вэ?",
+      question: "Хэн үнэт цаасны данс нээх боломжтой вэ?",
       answer:
-        "Иргэний данс 24 цагийн дотор, байгууллагын данс 24–48 цагийн дотор нээгдэнэ.",
+        "Хувь хүн болон хуулийн этгээд үнэт цаасны данс нээх боломжтой. Насанд хүрээгүй хүүхэд эцэг, эхийн иргэний үнэмлэх болон төрсний гэрчилгээний хуулгын хамт данс нээлгэх боломжтой. Өөр брокер компанид данстай байсан ч дахин данс нээх боломжтой.",
     },
     en: {
-      question: "How long does it take to open a securities account?",
+      question: "Who can open a securities account?",
       answer:
-        "For individuals, accounts are opened within 24 hours. For organizations, it takes 24–48 hours.",
-    },
-  },
-  {
-    mn: {
-      question: "Харилцагчийн мэдээллийг хэрхэн хамгаалдаг вэ?",
-      answer:
-        "Тэнгэр Капитал ҮЦК ХХК нь хуулийн дагуу харилцагчийн мэдээллийг хамгаалдаг. Үнэт цаасны мэдээлэл ҮЦТХТ-д найдвартай хадгалагдана.",
-    },
-    en: {
-      question: "How do you protect customer information?",
-      answer:
-        "Tenger Capital operates in accordance with the law and protects customer information. Securities data is securely stored at the Central Securities Depository.",
-    },
-  },
-  {
-    mn: {
-      question: "Хувь хүн арилжаанд оролцох боломжтой юу?",
-      answer:
-        "Мэдээж боломжтой. Та Тэнгэр Капиталын апп ашиглан МХБ-ийн арилжаанд оролцож болно.",
-    },
-    en: {
-      question: "Can individuals participate in trading?",
-      answer:
-        "Of course. You can participate in MSE trading using the Tenger Capital application.",
+        "Both individuals and organizations can open securities accounts. Minors may also open an account with the required documents, including a copy of the birth certificate and a parent’s ID. Clients may open an account even if they already have one at another brokerage.",
     },
   },
   {
     mn: {
       question:
-        "Байгууллага данс нээх материалаа бүрдүүлсэн тохиолдолд хэр хугацаанд данс нээгддэг вэ?",
-      answer: "ҮЦТХТ-д хүргүүлснээс хойш 24 цагийн дотор нээгдэнэ.",
+        "Арилжаа хэдэн цагаас хэдэн цагт явагддаг вэ? Арилжааны цагаас гадуур захиалга өгөх боломжтой юу?",
+      answer:
+        "Монголын хөрөнгийн биржийн арилжаа 10:00–13:00 цагийн хооронд явагддаг. Арилжааны цагаас гадуур захиалга өгч болох бөгөөд дараагийн арилжааны өдөр биржийн системд идэвхжинэ.",
     },
     en: {
       question:
-        "How long does it take for an organization to open an account after submission?",
+        "When can I trade, and can I place orders outside trading hours?",
       answer:
-        "The account will be opened within 24 hours after submission to the Central Securities Depository.",
+        "Trading hours on the Mongolian Stock Exchange are from 10:00 to 13:00. Orders may be placed outside trading hours, but they will be activated in the exchange system during the next trading day.",
     },
   },
   {
     mn: {
-      question: "Хөрөнгийн зах зээлийн арилжаанд оролцохын давуу тал юу вэ?",
+      question: "Бонд гэж юу вэ? Хугацаа дуустал нь хадгалбал яах вэ?",
       answer:
-        "МХБ нь стандарт, хуулийн дагуу, олон нийтэд нээлттэй арилжаа явагддаг тул найдвартай.",
+        "Бонд нь тодорхой хугацаа, тогтмол хүүтэйгээр гаргадаг өрийн хэрэгсэл юм. Бондын хүү нь хугацаанаас хамааран тогтоогддог. Хэрэв бондыг хугацаанаас нь өмнө эргүүлэн худалдан аваагүй бол Төвлөрсөн хадгаламжийн төвд аюулгүй хадгалагдаж, хуульд заасны дагуу өв залгамжлах боломжтой.",
     },
     en: {
       question:
-        "What are the advantages of participating in stock market trading?",
+        "How do bonds work, and what happens if I hold them until maturity?",
       answer:
-        "The Mongolian Stock Exchange operates transparently under legal standards and is considered reliable.",
-    },
-  },
-  {
-    mn: {
-      question: "Бонд гэж юу вэ?",
-      answer:
-        "Бонд нь тогтоосон хугацаанд, тогтоосон хүүтэйгээр эргүүлэн төлөгдөх өрийн хэрэгсэл юм.",
-    },
-    en: {
-      question: "What is a bond?",
-      answer:
-        "A bond is a debt instrument that is repaid over a specified period at a fixed interest rate.",
-    },
-  },
-  {
-    mn: {
-      question: "Бондод хөрөнгө оруулах шалтгаан юу вэ?",
-      answer:
-        "Бонд нь хувьцаатай харьцуулахад эрсдэл багатай бөгөөд тогтмол өгөөж өгдөг.",
-    },
-    en: {
-      question: "Why invest in bonds?",
-      answer:
-        "Bonds are considered less risky than stocks and provide stable returns over a fixed period.",
-    },
-  },
-  {
-    mn: {
-      question: "Мэргэшсэн хамт олноор багаа бүрдүүлсэн үү?",
-      answer:
-        "Манай хамт олон зах зээлд ажиллах улаан үнэмлэхтэй, туршлагатай мэргэжилтнүүдээс бүрдсэн.",
-    },
-    en: {
-      question: "Have you assembled a professional team?",
-      answer:
-        "Yes. Our team consists of licensed professionals with extensive experience in the capital market.",
-    },
-  },
-  {
-    mn: {
-      question: "Насанд хүрээгүй хүүхэд данс нээх боломжтой юу?",
-      answer:
-        "Боломжтой. Төрсний гэрчилгээ болон эцэг эхийн иргэний үнэмлэхний хуулбар шаардлагатай.",
-    },
-    en: {
-      question: "Can a minor open a securities account?",
-      answer:
-        "Yes. A copy of the birth certificate and a parent’s ID card are required.",
-    },
-  },
-  {
-    mn: {
-      question: "Өөр ҮЦК дээр данстай ч данс нээлгэж болдог уу?",
-      answer: "Боломжтой.",
-    },
-    en: {
-      question:
-        "Can I open an account if I already have one at another brokerage?",
-      answer: "Yes, it is possible.",
-    },
-  },
-  {
-    mn: {
-      question: "Хөрөнгөө хэрхэн удирдах талаар сургалт, зөвлөгөө байдаг уу?",
-      answer: "Тиймээ, байдаг.",
-    },
-    en: {
-      question: "Is there training or advice on asset management?",
-      answer: "Yes, training and advisory services are available.",
+        "A bond is a debt instrument issued at a fixed price with a fixed interest rate and maturity. Bond interest rates are determined based on their term. If bonds are not redeemed before maturity, they remain safely stored at the Central Securities Depository and may be transferred through inheritance if applicable.",
     },
   },
   {
     mn: {
       question:
-        "Гэр бүлийн гишүүнийхээ үнэт цаасны мэдээллийг мэдэж болдог уу?",
-      answer: "Насанд хүрсэн хүний хувийн мэдээллийг бусдад өгөх боломжгүй.",
+        "Харилцагчийн хөрөнгө болон хувийн мэдээллийг хэрхэн хамгаалдаг вэ?",
+      answer:
+        "Тэнгэр Капитал нь холбогдох хууль тогтоомжийн хүрээнд харилцагчийн мэдээллийн нууцлалыг ханган ажилладаг. Үнэт цаас нь Төвлөрсөн хадгаламжийн төвд найдвартай хадгалагдана. Харилцагчийн хувийн болон үнэт цаасны мэдээллийг хуульд заасан үндэслэлгүйгээр гуравдагч этгээдэд задруулахгүй.",
     },
     en: {
-      question: "Can I access my family member’s securities information?",
+      question: "How do you protect client assets and personal information?",
       answer:
-        "Personal securities information of adults cannot be disclosed to others.",
+        "Tenger Capital operates in accordance with applicable laws and is responsible for protecting client information. Securities are securely held at the Central Securities Depository. Personal and securities information is confidential and cannot be disclosed to third parties without legal grounds.",
     },
   },
   {
     mn: {
-      question: "Хувийн мэдээллээ хэрхэн хамгаалах вэ?",
+      question:
+        "Та хөрөнгө оруулалтын зөвлөгөө, удирдлагын үйлчилгээ үзүүлдэг үү?",
       answer:
-        "Таны хувийн мэдээлэл зөвхөн танд хамаарах бөгөөд бусдад дамжуулагддаггүй.",
+        "Тийм. Харилцагчид Тэнгэр Капиталын мэргэжлийн брокерийн багтай холбогдон хөрөнгө оруулалтаа удирдах, зөвлөгөө авах боломжтой.",
     },
     en: {
-      question: "How is personal information protected?",
+      question: "Do you provide investment advice or asset management support?",
       answer:
-        "Your personal information is confidential and accessible only to you.",
-    },
-  },
-  {
-    mn: {
-      question: "Үнэт цаас гэж юу вэ?",
-      answer:
-        "Хөрөнгө оруулалтын эрх, мөнгөн урсгал эсвэл өмчлөлийг илэрхийлсэн санхүүгийн хэрэгсэл юм.",
-    },
-    en: {
-      question: "What is a security?",
-      answer:
-        "A financial instrument representing investment rights, cash flows, or ownership.",
-    },
-  },
-  {
-    mn: {
-      question: "Хамгийн бага эрсдэлтэй үнэт цаас байдаг уу?",
-      answer:
-        "Бонд болон хөрөнгөөр баталгаажсан үнэт цаас (ХБҮЦ) нь харьцангуй бага эрсдэлтэй.",
-    },
-    en: {
-      question: "Are there low-risk securities?",
-      answer:
-        "Bonds and asset-backed securities are considered relatively low-risk investments.",
-    },
-  },
-  {
-    mn: {
-      question: "Насанд хүрээгүй хүн данс нээлгэхэд бүрдүүлэх материал?",
-      answer:
-        "Төрсний гэрчилгээ, эцэг эхийн иргэний үнэмлэхний хуулбар, данс нээлгэх хураамж.",
-    },
-    en: {
-      question: "What documents are required for a minor to open an account?",
-      answer:
-        "A birth certificate, copies of parents’ ID cards, and payment of the account opening fee.",
+        "Yes. Clients may receive guidance and advice on managing their investments through communication with Tenger Capital’s professional brokerage team.",
     },
   },
 ];

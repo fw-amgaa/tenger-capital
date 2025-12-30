@@ -30,10 +30,10 @@ export function ChartPieDonutActive() {
   return (
     <ChartContainer config={chartConfig} className="mx-auto aspect-square">
       <PieChart>
-        <ChartTooltip
+        {/* <ChartTooltip
           cursor={false}
           content={<ChartTooltipContent hideLabel />}
-        />
+        /> */}
         <Pie
           data={chartData}
           dataKey="percentage"
