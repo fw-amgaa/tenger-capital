@@ -38,7 +38,7 @@ export function ChartPieDonutActive() {
           data={chartData}
           dataKey="percentage"
           nameKey="name"
-          innerRadius={64}
+          innerRadius={84}
           strokeWidth={5}
           activeIndex={0}
           activeShape={({ outerRadius = 0, ...props }: PieSectorDataItem) => (

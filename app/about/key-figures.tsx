@@ -57,7 +57,7 @@ function StatCard({
                 {prefix}
               </span>
             )}
-            <span className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+            <span className="text-4xl tracking-tight text-white md:text-5xl lg:text-6xl">
               {value}
             </span>
             {suffix && (

@@ -30,18 +30,18 @@ export default function Brokerage({
       name: "Domestic Exchange",
       description: (
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.4]">
             Investors can access the domestic primary and secondary markets
             through our online investment platform and mobile apps and manage
             their portfolios, track performance, and stay informed with market
             insights.
           </p>
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.4]">
             Through Tenger Capital, investors can access both primary and
             secondary markets for a wide range of investment products,
             including:
           </p>
-          <ol className="text-sm ml-6">
+          <ol className="text-md ml-6">
             <li>- Equities</li>
             <li>- Corporate bonds</li>
             <li>- Government bonds</li>
@@ -62,7 +62,7 @@ export default function Brokerage({
       name: "International Markets",
       description: (
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.4]">
             Investors can access 160 stock markets of over 35 countries. Invest
             globally in stocks, ETFs, options, futures, currencies and bonds
             through our partner Interactive Brokers’ unified platform
@@ -81,7 +81,7 @@ export default function Brokerage({
       name: "OTC market",
       description: (
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.4]">
             Investors can participate in the fastest growing capital market
             sector in Mongolia. We facilitate both sides of issuance and sales
             of private bonds with thorough due dilligence and integrity.{" "}

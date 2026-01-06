@@ -16,7 +16,7 @@ export default function LetterFromCeo() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="section-container my-64"
+      className="section-container py-64"
     >
       <motion.main
         initial={{ opacity: 0 }}
