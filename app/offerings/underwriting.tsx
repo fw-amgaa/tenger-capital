@@ -97,7 +97,7 @@ export default function UnderWriting({
           className="absolute inset-0 opacity-90 z-0"
           style={{
             backgroundImage:
-              'linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%), url("/brand/pattern-fade.png")',
+              'linear-gradient(to bottom, rgba(0,0,0,0) 60%, var(--background) 100%), url("/brand/pattern-fade.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
