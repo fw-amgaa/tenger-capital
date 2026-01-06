@@ -51,7 +51,7 @@ const WorkWithUs = () => {
         </h2>
       </div>
       {/* Desktop View */}
-      <div className="hidden section-container md:grid md:grid-cols-3 gap-4 lg:gap-6 2xl:px-36">
+      <div className="hidden section-container md:grid md:grid-cols-3 gap-4 xl:px-24 2xl:px-36">
         {statsData.map((stat, index) => (
           <StatsCard key={index} {...stat} />
         ))}
@@ -163,12 +163,12 @@ const StatsCard = ({
             </button>
 
             {/* Title */}
-            <p className="text-white/80 text-base leading-relaxed mb-auto pr-8">
+            <p className="text-white/80 text-lg leading-relaxed mb-auto pr-8">
               {title}
             </p>
 
             {/* Disclosure */}
-            <p className="text-white/60 text-sm leading-relaxed mb-auto pr-8">
+            <p className="text-white/60 text-base leading-relaxed mb-auto pr-8">
               {disclosure}
             </p>
 
@@ -191,7 +191,7 @@ const StatsCard = ({
                         delay: 0.2,
                         ease: "easeOut",
                       }}
-                      className="text-[#fda6228c] text-sm leading-relaxed"
+                      className="text-[#fda6228c] text-base leading-relaxed"
                     >
                       {disclosure?.split("").map((char, index) => (
                         <motion.span

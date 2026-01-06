@@ -66,7 +66,7 @@ const WorkWithUs = () => {
         </h2>
       </div>
       {/* Desktop View */}
-      <div className="hidden section-container md:grid md:grid-cols-3 gap-4 lg:gap-6 2xl:px-36">
+      <div className="hidden section-container md:grid md:grid-cols-3 gap-4 xl:px-24 2xl:px-36">
         {statsData.map((stat, index) => (
           <StatsCard key={index} {...stat} />
         ))}
@@ -200,7 +200,7 @@ const StatsCard = ({
             {/* Visual Content */}
             <div className="flex-grow flex items-end mb-8">
               {hasChart && (
-                <div className="w-full h-56 relative">
+                <div className="w-full h-64 relative">
                   <div className="absolute top-12 left-[7%]">
                     <div className="px-3 py-1 rounded-full border border-[#d4a55a] bg-[#5a4628] text-[#d4a55a] text-xs font-medium whitespace-nowrap">
                       9.04x
@@ -228,8 +228,8 @@ const StatsCard = ({
               )}
 
               {hasPieChart && (
-                <div className="w-full h-64 flex items-center justify-center">
-                  <div className="relative w-64 h-64">
+                <div className="w-full h-84 flex items-center justify-center">
+                  <div className="relative w-84 h-84">
                     <ChartReveal>
                       <ChartPieDonutActive />
                     </ChartReveal>

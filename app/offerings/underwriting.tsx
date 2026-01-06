@@ -30,7 +30,7 @@ export default function UnderWriting({
       name: "Debt Issuance",
       description: (
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.6]">
             We structure and execute debt offerings—from flexible OTC placements
             to MSE-listed bonds—and asset-backed securities. Our team manages
             structuring, due diligence, documentation, filings, and investor
@@ -45,7 +45,7 @@ export default function UnderWriting({
       name: "IPO & Equity Capital Markets",
       description: (
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.6]">
             We guide companies through the IPO process on the Mongolian Stock
             Exchange, covering preparation, valuation, prospectus drafting,
             regulatory filings, underwriting, and investor outreach. Our support
@@ -60,7 +60,7 @@ export default function UnderWriting({
       name: "Mergers & Acquisitions",
       description: (
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#f8f8f8] leading-[1.4]">
+          <p className="text-md text-[#f8f8f8] leading-[1.6]">
             We advise on buy-side and sell-side M&A, supporting target
             evaluation, due diligence, deal structuring, valuation, and
             execution. Our team ensures confidential, strategic guidance,
