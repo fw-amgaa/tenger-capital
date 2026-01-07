@@ -2,18 +2,13 @@
 
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
-} from "@/components/ui/chart";
+import { ChartContainer, type ChartConfig } from "@/components/ui/chart";
 
 export const description = "A multiple bar chart";
 
 const chartData = [
-  { month: "Андеррайтер", prev: 48.7, this: 440.2 },
-  { month: "Брокер", prev: 74.7, this: 559.9 },
+  { month: "Андеррайтер", prev: 75.7, this: 685 },
+  { month: "Брокер", prev: 74.7, this: 685 },
 ];
 
 const chartConfig = {

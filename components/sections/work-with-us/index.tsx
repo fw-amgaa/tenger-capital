@@ -10,30 +10,33 @@ import { ChartReveal } from "./chart-reveal";
 
 const statsData = [
   {
-    title: "Бондын анхдагч зах зээл (2025 оны байдлаар)",
+    title: "2025 Primary Bond Market",
     percentage: "379.2",
     unit: "₮",
-    suffix: "тэрбум төгрөг",
+    suffix: "Billion MNT",
     labels: ["Others", "TG"],
     hasBarChart: true,
-    disclosure: "Бондын анхдагч зах зээл (2025 оны байдлаар)",
+    disclosure:
+      "This figure represents the total nominal value of bonds and asset-backed securities issued and successfully executed in 2025 across both the over-the-counter (OTC) market and the Mongolian Stock Exchange (MSE). It includes primary issuances completed during the year, reflecting overall market issuance activity and funding raised through Mongolia’s fixed-income capital markets.",
   },
   {
-    title: "Бондын анхдагч зах зээлийн эзлэх хувь.",
+    title: "Our Market Share in Primary Bond Issuance",
     percentage: "25",
     unit: "%",
-    suffix: "2025 оны нийт зах зээлийн",
+    suffix: "of 2025 total issuance",
     label: "Tenger Capital",
     hasPieChart: true,
-    disclosure: "Бондын анхдагч зах зээлийн эзлэх хувь.",
+    disclosure:
+      "Tenger Capital SC LLC acted as lead manager, co-manager, underwriter, or executing broker for approximately one-quarter of total primary bond issuances completed in 2025 across the OTC market and MSE. This share is calculated based on executed issuance volume, demonstrating our active role in originating, structuring, and bringing bond transactions to market.",
   },
   {
-    title: "Компаний үйл ажиллагааний өсөлт",
-    percentage: "9.04",
+    title: "Business Growth Overview",
+    percentage: "9.2",
     unit: "x",
-    suffix: "өнгөрсөн жилээс",
+    suffix: "Since 2024",
     hasChart: true,
-    disclosure: "Компаний үйл ажиллагааний өсөлт",
+    disclosure:
+      "This metric compares Tenger Capital’s total underwriting and brokerage transaction volume at the end of 2025 with the firm’s total transaction volume at the end of 2024. The comparison highlights year-on-year growth in both primary issuance and secondary market activity, reflecting the expansion of our client base, transaction capacity, and execution footprint within Mongolia’s capital markets.",
   },
 ];
 
@@ -61,7 +64,7 @@ const WorkWithUs = () => {
   return (
     <div className="w-full">
       <div className="flex justify-center">
-        <h2 className="text-[32px] my-48 text-center md:w-[240px] leading-[1]">
+        <h2 className="text-[48px] my-48 text-center md:w-[420px] leading-[1]">
           Why Should You Work With Us?
         </h2>
       </div>
@@ -209,7 +212,7 @@ const StatsCard = ({
 
                   <div className="absolute top-12 right-[28%]">
                     <div className="px-3 py-1 rounded-full border border-[#d4a55a] bg-[#5a4628] text-[#d4a55a] text-xs font-medium whitespace-nowrap">
-                      7.5x
+                      9.2x
                     </div>
                   </div>
 

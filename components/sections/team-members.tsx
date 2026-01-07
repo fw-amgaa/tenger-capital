@@ -1,6 +1,11 @@
 "use client";
 
-import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
@@ -10,7 +15,11 @@ interface TeamMember {
   image: string;
 }
 
-export default function TeamMembers({ showTitle = true }: { showTitle?: boolean }) {
+export default function TeamMembers({
+  showTitle = true,
+}: {
+  showTitle?: boolean;
+}) {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -61,11 +70,11 @@ export default function TeamMembers({ showTitle = true }: { showTitle?: boolean 
   return (
     <div className="section-container">
       {/* Spacer before section */}
-      {showTitle && <div className="flex items-center justify-center">
-        <h2 className="mt-48 mb-32 text-white text-7xl">
-          MEET THE TEAM
-        </h2>
-      </div>}
+      {showTitle && (
+        <div className="flex items-center justify-center">
+          <h2 className="mt-48 text-white text-7xl">MEET THE TEAM</h2>
+        </div>
+      )}
 
       {/* Scroll section with sticky images */}
       <div ref={containerRef} className="relative px-8">
@@ -79,11 +88,9 @@ export default function TeamMembers({ showTitle = true }: { showTitle?: boolean 
               >
                 <h3 className="text-3xl font-bold mb-8">{member.name}</h3>
                 <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
-                  Associate Wealth Advisor at TG. Prior
-                  to TG, Allison worked at Bank of
-                  America Private Bank in Charlotte and
-                  New York City, serving high net worth and
-                  ultra high net worth clients.
+                  Associate Wealth Advisor at TG. Prior to TG, Allison worked at
+                  Bank of America Private Bank in Charlotte and New York City,
+                  serving high net worth and ultra high net worth clients.
                 </p>
               </div>
             ))}
@@ -127,7 +134,9 @@ export default function TeamMembers({ showTitle = true }: { showTitle?: boolean 
                           alt={teamMembers[index + 1].name}
                           className="absolute inset-0 w-full h-full object-cover"
                           style={{
-                            clipPath: `inset(${100 - memberProgress * 100}% 0 0 0)`,
+                            clipPath: `inset(${
+                              100 - memberProgress * 100
+                            }% 0 0 0)`,
                           }}
                         />
                       </motion.div>
