@@ -46,7 +46,7 @@ function StatCard({
       }`}
     >
       <div className="relative h-full overflow-hidden rounded-3xl border">
-        <div className="absolute w-full h-full top-0 left-0 overflow-hidden">
+        <div className="absolute w-full h-full top-0 left-10 overflow-hidden">
           <Image fill src={"/brand/pattern.png"} alt="bg" objectFit="cover" />
         </div>
 

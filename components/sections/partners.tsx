@@ -34,13 +34,11 @@ export default function Partners() {
         <h1 className="text-4xl">Partners</h1>
 
         <div className="flex flex-col gap-6">
-          <p className="text-lg leading-[1.4]">
-            We partner with only the rich and wealthy, not with some fodders, peasants and commoners.
-          </p>
+          <p className="text-lg leading-[1.4]">Our partners</p>
         </div>
       </div>
 
-      <div className="relative overflow-hidden flex items-center justify-center w-full min-h-[160px] mt-48 mb-64">
+      <div className="relative overflow-hidden flex items-center justify-center w-full min-h-[160px] mt-24 mb-32">
         <div className="absolute left-0 top-0 h-full bg-red w-20 z-10" />
 
         <div
