@@ -20,10 +20,10 @@ export default function Page() {
       <WealthManagement />
       <WorkWithUs />
 
-      <div className="h-60" />
+      <div className="h-32 md:h-60" />
       <MacbookScrollSection />
 
-      <div className="my-40">
+      <div className="my-16 md:my-32">
         <FAQ />
       </div>
 

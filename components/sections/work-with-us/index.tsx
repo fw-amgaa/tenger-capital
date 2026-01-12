@@ -64,7 +64,7 @@ const WorkWithUs = () => {
   return (
     <div className="w-full">
       <div className="flex justify-center">
-        <h2 className="text-[48px] my-48 text-center md:w-[420px] leading-[1]">
+        <h2 className="text-4xl md:text-[48px] my-24 md:my-48 text-center md:w-[420px] leading-[1]">
           Why Should You Work With Us?
         </h2>
       </div>

@@ -19,22 +19,36 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
         transition={{ duration: 1, delay: 0.4 }}
         className="z-10 md:w-[370px] text-center md:text-left"
       >
-        <div className="flex items-center gap-4">
-          <TextCarousel items={["Established in 2007.", "One of top 3 securities company as of 2025 September.", "Raised over ₮300 Billion in 2025H2."]} />
-          <InfoBubbleDialog items={[
-            "Established in 2007.",
-            "One of top 3 securities company as of 2025 September.",
-            "Raised over ₮300 Billion in 2025H2."]} />
+        <div className="flex items-center gap-4 justify-center md:justify-start">
+          <TextCarousel
+            items={[
+              "Established in 2007.",
+              "One of top 3 securities company as of 2025 September.",
+              "Raised over ₮300 Billion in 2025H2.",
+            ]}
+          />
+          <InfoBubbleDialog
+            items={[
+              "Established in 2007.",
+              "One of top 3 securities company as of 2025 September.",
+              "Raised over ₮300 Billion in 2025H2.",
+            ]}
+          />
         </div>
         <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-4 mt-6">
           Create Value Through Investing
         </h1>
         <p className="text-sm font-light text-muted-foreground max-w-xl mx-auto mb-8">
-          <span className="italic">Underwriting</span> | <span className="italic">Brokerage</span> | <span className="italic">Wealth Management</span>
+          <span className="italic">Underwriting</span> |{" "}
+          <span className="italic">Brokerage</span> |{" "}
+          <span className="italic">Wealth Management</span>
         </p>
 
-        <div className="flex gap-2">
-          <Link href="https://xacex.tengercapital.mn/auth/login" target="_blank">
+        <div className="flex gap-2 justify-center md:justify-start">
+          <Link
+            href="https://xacex.tengercapital.mn/auth/login"
+            target="_blank"
+          >
             <GradientBorderButton>OPEN</GradientBorderButton>
           </Link>
           <GradientBorderButton hasBorder={false} borderAnimation={false}>

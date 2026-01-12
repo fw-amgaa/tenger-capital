@@ -75,7 +75,7 @@ export default function WealthManagement({
   const memberProgress = (progress * (totalServices - 1)) % 1;
 
   return (
-    <div className="section-container py-20">
+    <div className="section-container mt-16 md:mt-32">
       <div className="relative flex flex-col gap-8">
         <div
           className="absolute inset-0 opacity-90 z-0"
@@ -89,7 +89,7 @@ export default function WealthManagement({
         />
 
         <Seperator />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-48 z-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
             <h1 className="text-3xl md:text-4xl font-serif">
               Wealth & Asset Management
@@ -109,8 +109,32 @@ export default function WealthManagement({
           </p>
         </div>
       </div>
+
+      {/* Mobile view */}
+      <div className="md:hidden">
+        <div className="grid grid-cols-1 gap-16 px-8">
+          {services.map((member, index) => (
+            <div key={index} className="text-white">
+              <h3 className="text-3xl font-light mb-8">{member.name}</h3>
+              <p className="text-md leading-[1.4] opacity-70">
+                {member.description}
+              </p>
+
+              <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={member.name + "image"}
+                  fill
+                  objectFit="cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Scroll section with sticky images */}
-      <div ref={containerRef} className="relative px-8">
+      <div ref={containerRef} className="relative px-8 hidden md:block">
         <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-8">
           {/* Scrolling team member details - RIGHT SIDE */}
           <div className="text-white max-w-[400px]">

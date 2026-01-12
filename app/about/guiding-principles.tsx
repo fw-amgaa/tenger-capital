@@ -65,7 +65,7 @@ function PrincipleCard({
 
 export default function GuidingPrinciples() {
   return (
-    <section className="relative overflow-hidden section-container py-24 md:py-32 lg:py-40">
+    <section className="relative overflow-hidden section-container md:py-24 md:py-32 lg:py-40">
       {/* Ambient background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-48 h-96 w-96 rounded-full bg-[rgb(255,153,0)]/[0.03] blur-3xl" />
