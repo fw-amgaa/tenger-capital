@@ -16,7 +16,7 @@ const Footer = () => {
         >
           <div className="flex h-full flex-col justify-between max-md:items-center">
             <Link
-              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm"
+              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0"
               href="#"
             >
               Back to top
@@ -240,11 +240,11 @@ const Footer = () => {
               © 2025 Tenger Capital Capital Management LLC. All Rights Reserved
             </p>
           </div>
-          <div className="flex flex-col items-end justify-between max-lg:w-full lg:h-full">
+          <div className="flex flex-col items-center md:items-end justify-between max-lg:w-full lg:h-full">
             <GradientBorderButton mode="light" borderAnimation={false}>
               OPEN AN ACCOUNT
             </GradientBorderButton>
-            <div className="text-black flex flex-col items-center justify-center gap-[3rem] max-lg:w-full">
+            <div className="text-black flex flex-col items-center justify-center gap-[3rem] max-lg:w-full mt-8 md:mt-0">
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -390,7 +390,7 @@ const Footer = () => {
                 </Link>
               </div>
               <p className="text-black text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
-                © 2025 TG Global Capital Management USA LLC. All Rights Reserved
+                © 2025 Tenger Capital. All Rights Reserved
               </p>
             </div>
           </div>

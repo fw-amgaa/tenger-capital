@@ -174,6 +174,7 @@ export default function Header({ headerMode = "dark" }: Props) {
           {/* Navigation */}
           <nav className="flex">
             <motion.div
+              className="hidden sm:block"
               variants={buttonVariants}
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}
@@ -187,6 +188,7 @@ export default function Header({ headerMode = "dark" }: Props) {
               </GradientBorderButton>
             </motion.div>
             <motion.div
+              className="hidden sm:block"
               variants={buttonVariants}
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}

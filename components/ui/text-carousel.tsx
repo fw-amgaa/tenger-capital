@@ -10,21 +10,29 @@ type TextCarouselProps = {
   className?: string;
 };
 
-export default function TextCarousel({ items, intervalMs = 5000, className }: TextCarouselProps) {
+export default function TextCarousel({
+  items,
+  intervalMs = 5000,
+  className,
+}: TextCarouselProps) {
   const [index, setIndex] = useState(0);
   const itemCount = items.length;
   const timerRef = useRef<number | null>(null);
   const measureRef = useRef<HTMLDivElement | null>(null);
   const [textWidth, setTextWidth] = useState<number>(0);
 
-  const goTo = (i: number) => setIndex((i % itemCount + itemCount) % itemCount);
+  const goTo = (i: number) =>
+    setIndex(((i % itemCount) + itemCount) % itemCount);
   const next = () => goTo(index + 1);
 
   // Autoplay with reset on index change
   useEffect(() => {
     if (!itemCount) return;
     if (timerRef.current) window.clearInterval(timerRef.current);
-    timerRef.current = window.setInterval(next, intervalMs) as unknown as number;
+    timerRef.current = window.setInterval(
+      next,
+      intervalMs
+    ) as unknown as number;
     return () => {
       if (timerRef.current) window.clearInterval(timerRef.current);
     };
@@ -39,7 +47,11 @@ export default function TextCarousel({ items, intervalMs = 5000, className }: Te
     }
   };
   const onMouseLeave = () => {
-    if (!timerRef.current) timerRef.current = window.setInterval(next, intervalMs) as unknown as number;
+    if (!timerRef.current)
+      timerRef.current = window.setInterval(
+        next,
+        intervalMs
+      ) as unknown as number;
   };
 
   const indicators = useMemo(() => new Array(itemCount).fill(0), [itemCount]);
@@ -78,7 +90,9 @@ export default function TextCarousel({ items, intervalMs = 5000, className }: Te
                 className="block h-1 rounded-full hover:bg-[rgba(255,255,255,0.95)]"
                 animate={{
                   width: active ? 12 : 4,
-                  backgroundColor: active ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.35)",
+                  backgroundColor: active
+                    ? "rgba(255,255,255,0.95)"
+                    : "rgba(255,255,255,0.35)",
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
@@ -86,7 +100,6 @@ export default function TextCarousel({ items, intervalMs = 5000, className }: Te
           );
         })}
       </div>
-
 
       {/* Hidden measurer */}
       <div
@@ -99,7 +112,7 @@ export default function TextCarousel({ items, intervalMs = 5000, className }: Te
       {/* Text viewport (width animates to measured width) */}
       <motion.div
         layout
-        className="relative overflow-hidden h-[30px] flex items-center"
+        className="relative overflow-hidden h-[30px] flex items-center max-w-[250px] md:max-w-0"
         animate={{ width: textWidth || "auto" }}
         transition={{ type: "spring", stiffness: 400, damping: 40 }}
       >
@@ -119,5 +132,3 @@ export default function TextCarousel({ items, intervalMs = 5000, className }: Te
     </div>
   );
 }
-
-

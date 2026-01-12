@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Seperator from "../../seperator";
 import {
   Accordion,
@@ -13,19 +12,19 @@ const FAQ = () => {
 
   return (
     <div className="section-container flex flex-col gap-8 relative">
-      <div className="absolute left-0 w-full h-screen z-0">
+      {/* <div className="absolute left-0 w-full h-screen z-0">
         <Image
           src={"/brand/traditional-pattern.png"}
           fill
           objectFit="cover"
           alt="pattern"
         />
-      </div>
+      </div> */}
 
       <Seperator />
 
       <div className="grid md:grid-cols-2 z-1">
-        <h1 className="text-4xl">Frequently Asked Questions</h1>
+        <h1 className="text-4xl mb-12">Frequently Asked Questions</h1>
 
         <Accordion
           type="single"

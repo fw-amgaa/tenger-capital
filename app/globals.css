@@ -127,13 +127,12 @@ body {
   }
 
   body {
-    @apply bg-background text-foreground font-[var(--font-ttcommons)];
+    @apply bg-background text-foreground font-[var(--font-ttcommons)] tracking-wide;
   }
 
   .section-container {
-    @apply px-[20px] lg:px-[40px] w-full
+    @apply px-[20px] lg:px-[40px] w-full max-w-[1440px] mx-auto;
   }
-
 }
 
 @keyframes scroll-up {
@@ -155,7 +154,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 .animate-scroll-up {
   animation: scroll-up 30s linear infinite;

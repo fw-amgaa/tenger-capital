@@ -1,13 +1,8 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const initialWidth = 250; // Initial image size in pixels
 const initialHeight = 150; // Initial image size in pixels
@@ -76,7 +71,7 @@ export default function HeroSection() {
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           {/* Initial centered text */}
           <motion.div className="absolute inset-0 flex items-center justify-center z-5">
-            <h1 className="text-4xl md:text-8xl text-center mb-16 px-32">
+            <h1 className="text-5xl md:text-8xl text-center mb-16 md:px-32">
               CREATE VALUE THROUGH INVESTING
             </h1>
           </motion.div>

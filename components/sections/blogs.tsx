@@ -32,18 +32,18 @@ const Blogs = () => {
       <div className="grid md:grid-cols-2">
         <h1 className="text-4xl">Our Thinking</h1>
 
-        <div className="flex flex-col gap-6">
-          <p className="text-lg leading-[1.4]">
+        <div className="flex flex-col gap-6 mt-8 md:mt-0">
+          <p className="text-md md:text-lg leading-[1.4]">
             What’s top of mind for our investment team.
           </p>
 
-          <div>
+          <div className="mt-4">
             <GradientBorderButton>EXPLORE OUR BLOG</GradientBorderButton>
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-36">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-16 md:my-36">
         {blogsData.map((blog, index) => (
           <BlogCard
             key={index}

@@ -38,7 +38,7 @@ export default function Partners() {
         </div>
       </div>
 
-      <div className="relative overflow-hidden flex items-center justify-center w-full min-h-[160px] mt-24 mb-32">
+      <div className="relative overflow-hidden flex items-center justify-center w-full min-h-[160px] md:mt-24 md:mb-32">
         <div className="absolute left-0 top-0 h-full bg-red w-20 z-10" />
 
         <div

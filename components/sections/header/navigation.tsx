@@ -6,6 +6,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-is-mobile";
+import GradientBorderButton from "@/components/gradient-border-button";
 
 export const EASE_CUSTOM = [0.76, 0, 0.24, 1] as const;
 export const ENTER_DURATION = 0.25;
@@ -223,16 +224,16 @@ const Navigation = () => {
                   What We Offer
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                  target="_self"
-                  href="/TG-testimonials"
+                  href="https://xacex.tengercapital.mn/auth/login"
+                  target="_blank"
                 >
-                  Client Testimonials
+                  Login
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
                   target="_self"
@@ -251,9 +252,21 @@ const Navigation = () => {
                 </Link>
               </li> */}
             </ul>
-            <p className="text-sm text-black/80 font-semibold ml-4 flex items-center">
+
+            {/* <div className="text-sm">
+              Language:
+              <GradientBorderButton
+                mode={"light"}
+                hasBorder={true}
+                borderAnimation={false}
+                iconComponent={<></>}
+              >
+                ENG
+              </GradientBorderButton>
+            </div> */}
+            {/* <p className="text-sm text-black/80 font-semibold ml-4 flex items-center">
               ✧ <span className="text-xs ml-1">Powered by Esugsoft LLC</span>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
