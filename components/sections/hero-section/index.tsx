@@ -23,14 +23,14 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
           <TextCarousel
             items={[
               "Established in 2007.",
-              "One of top 3 securities company as of 2025 September.",
+              "One of top 3 securities as of 2026.",
               "Raised over ₮300 Billion in 2025H2.",
             ]}
           />
           <InfoBubbleDialog
             items={[
               "Established in 2007.",
-              "One of top 3 securities company as of 2025 September.",
+              "One of top 3 securities company as of 2026 January.",
               "Raised over ₮300 Billion in 2025H2.",
             ]}
           />
