@@ -176,7 +176,7 @@ const Navigation = () => {
             </a>
 
             <a
-              // href="/blog"
+              href="/submit-form"
               className="nav-section group min-h-32 relative flex w-full md:w-1/2 flex-col justify-between overflow-hidden rounded-3xl p-6 md:p-8 text-white"
             >
               <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
@@ -187,9 +187,11 @@ const Navigation = () => {
                   className="object-cover"
                 />
               </div>
-              <h2 className="relative text-2xl leading-[120%] z-10">Blog</h2>
+              <h2 className="relative text-2xl leading-[120%] z-10">
+                SUBMIT FORM
+              </h2>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
-                COMING SOON
+                REACH OUT TO US
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
                   →
                 </span>

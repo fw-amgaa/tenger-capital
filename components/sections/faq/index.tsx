@@ -35,7 +35,7 @@ const FAQ = () => {
           {brokerFaqs.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>{item[lang].question}</AccordionTrigger>
-              <AccordionContent className="opacity-80 leading-relaxed">
+              <AccordionContent className="opacity-80 leading-relaxed p-6 pt-0">
                 {item[lang].answer}
               </AccordionContent>
             </AccordionItem>

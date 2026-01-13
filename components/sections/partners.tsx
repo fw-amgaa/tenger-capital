@@ -6,10 +6,36 @@ import { useRef } from "react";
 import Seperator from "../seperator";
 
 const techLogos = [
-  { src: "/partners/binance.png", alt: "binance" },
-  { src: "/partners/mastercard.png", alt: "mastercard" },
-  { src: "/partners/pay-pal.png", alt: "paypal" },
-  { src: "/partners/google.webp", alt: "google" },
+  { src: "/partners/Alliance capital.png", alt: "Alliance capital" },
+  { src: "/partners/AODE.png", alt: "AODE" },
+  { src: "/partners/bers capital.png", alt: "bers capital" },
+  { src: "/partners/bers finance.png", alt: "bers finance" },
+  { src: "/partners/bichil globus.png", alt: "bichil globus" },
+  { src: "/partners/bichil globus.svg", alt: "bichil globus" },
+  { src: "/partners/eco car.png", alt: "eco car" },
+  { src: "/partners/finco.svg", alt: "finco" },
+  { src: "/partners/FRC.png", alt: "FRC" },
+  { src: "/partners/global town.png", alt: "global town" },
+  { src: "/partners/IBKR.png", alt: "IBKR" },
+  { src: "/partners/KA mining.png", alt: "KA mining" },
+  { src: "/partners/khan -altai.png", alt: "khan -altai" },
+  { src: "/partners/lend mn.png", alt: "lend mn" },
+  { src: "/partners/MASD.png", alt: "MASD" },
+  { src: "/partners/master group.png", alt: "master group" },
+  // { src: "/partners/mfo.png", alt: "mfo" },
+  { src: "/partners/monaybox.png", alt: "monaybox" },
+  { src: "/partners/mongol alt.png", alt: "mongol alt" },
+  { src: "/partners/monos.png", alt: "monos" },
+  { src: "/partners/MSE.png", alt: "MSE" },
+  { src: "/partners/mtrip.png", alt: "mtrip" },
+  { src: "/partners/MTZ.png", alt: "MTZ" },
+  { src: "/partners/munkhiin useg.png", alt: "munkhiin useg" },
+  { src: "/partners/neocity.png", alt: "neocity" },
+  { src: "/partners/neocity.svg", alt: "neocity" },
+  { src: "/partners/numus.png", alt: "numus" },
+  { src: "/partners/premier invest.png", alt: "premier invest" },
+  { src: "/partners/shunkhlai.png", alt: "shunkhlai" },
+  { src: "/partners/tsetsens maining.png", alt: "tsetsens maiming" },
 ];
 
 export default function Partners() {
@@ -55,7 +81,7 @@ export default function Partners() {
                 alt={logo.alt}
                 width={120}
                 height={40}
-                className="object-cover"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer"
               />
             </div>
           ))}
