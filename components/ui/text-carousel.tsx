@@ -112,7 +112,7 @@ export default function TextCarousel({
       {/* Text viewport (width animates to measured width) */}
       <motion.div
         layout
-        className="relative overflow-hidden h-[30px] flex items-center max-w-[250px] md:max-w-0"
+        className="relative overflow-hidden h-[30px] flex items-center max-w-[250px] sm:max-w-unset"
         animate={{ width: textWidth || "auto" }}
         transition={{ type: "spring", stiffness: 400, damping: 40 }}
       >
