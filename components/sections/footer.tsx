@@ -34,7 +34,7 @@ const Footer = () => {
             </Link>
 
             <Image
-              src={"/logo/logo_main_black.png"}
+              src={"/logo/logo_main_dark.png"}
               alt="logo"
               width={128}
               height={50}
@@ -71,6 +71,15 @@ const Footer = () => {
                       href="/offerings"
                     >
                       What We Offer
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="relative w-fit pt-[.2rem] lg:pt-[.35rem] inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+                      target="_self"
+                      href="/submit-form"
+                    >
+                      Submit A Form
                     </Link>
                   </li>
                   {/* <li>
@@ -237,7 +246,7 @@ const Footer = () => {
               </div> */}
             </div>
             <p className="text-black text-xs max-lg:hidden tracking-wide">
-              © 2025 Tenger Capital Capital Management LLC. All Rights Reserved
+              © 2026 Tenger Capital LLC. All Rights Reserved
             </p>
           </div>
           <div className="flex flex-col items-center md:items-end justify-between max-lg:w-full lg:h-full">
@@ -390,7 +399,7 @@ const Footer = () => {
                 </Link>
               </div>
               <p className="text-black text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
-                © 2025 Tenger Capital. All Rights Reserved
+                © 2026 Tenger Capital LLC. All Rights Reserved
               </p>
             </div>
           </div>
