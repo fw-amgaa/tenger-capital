@@ -10,6 +10,8 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Seperator from "../seperator";
+import NextVideo from "next-video";
+import introduction from "@/videos/loop.mp4";
 
 const carouselData = [
   {
@@ -135,18 +137,19 @@ const Brief = () => {
   };
 
   return (
-    <div className="section-container flex flex-col gap-16">
+    <div className="section-container relative flex flex-col gap-16">
       <div className="relative flex flex-col gap-8">
-        <div
-          className="absolute inset-0 opacity-90 z-0"
-          style={{
-            backgroundImage:
-              'linear-gradient(to bottom, rgba(0,0,0,0) 60%, var(--background) 100%), url("/brand/pattern-fade.png")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+        <div className="absolute w-full h-full top-[-23] z-0">
+          <NextVideo
+            src={introduction}
+            controls={false}
+            playsInline
+            muted={true}
+            autoPlay={true}
+            loop={true}
+            className="w-full h-full"
+          />
+        </div>
         <Seperator />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
