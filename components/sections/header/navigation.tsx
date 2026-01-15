@@ -188,7 +188,7 @@ const Navigation = () => {
                 />
               </div>
               <h2 className="relative text-2xl leading-[120%] z-10">
-                SUBMIT FORM
+                Submit form
               </h2>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
                 REACH OUT TO US
