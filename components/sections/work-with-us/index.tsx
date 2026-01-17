@@ -388,7 +388,7 @@ const WorkWithUs = () => {
           >
             <div className="flex w-fit items-center justify-center text-xs backdrop-blur-[20px] px-3 lg:px-4 py-2 lg:py-2 bg-[rgba(255,255,255,0.1)] absolute top-4 right-4 inline-flex h-7 rounded-2xl">
               <span className="gap-2">
-                <span>Other</span>
+                <span>Top #1</span>
               </span>
             </div>
           </div>
@@ -401,7 +401,7 @@ const WorkWithUs = () => {
             }}
           >
             <div className="absolute top-4 left-4  z-2">
-              <GradientBadge>Tenger Capital</GradientBadge>
+              <GradientBadge>TG as #2</GradientBadge>
             </div>
           </div>
         </div>

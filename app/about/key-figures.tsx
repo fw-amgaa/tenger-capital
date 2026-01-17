@@ -91,7 +91,7 @@ export default function KeyFigures() {
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             Trusted by Clients Worldwide
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-sm text-white/60 md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-sm text-white/60 md:text-base">
             Building wealth through expertise, innovation, and unwavering
             commitment to excellence
           </p>
