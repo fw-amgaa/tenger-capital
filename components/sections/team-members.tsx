@@ -93,6 +93,7 @@ export default function TeamMembers({
           {teamMembers.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-light mb-8">{member.name}</h3>
+              <div className="mb-6 h-px w-16 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
               <p className="text-md leading-[1.4] opacity-70">
                 {member.description}
               </p>
@@ -120,7 +121,8 @@ export default function TeamMembers({
                 key={index}
                 className="min-h-screen flex flex-col justify-center"
               >
-                <h3 className="text-3xl font-bold mb-8">{member.name}</h3>
+                <h3 className="text-3xl font-bold mb-2">{member.name}</h3>
+                <div className="mb-6 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
                 <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
                   Associate Wealth Advisor at TG. Prior to TG, Allison worked at
                   Bank of America Private Bank in Charlotte and New York City,
@@ -182,8 +184,6 @@ export default function TeamMembers({
           </div>
         </div>
       </div>
-
-      <div className="h-40" />
     </div>
   );
 }
