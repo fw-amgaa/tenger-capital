@@ -10,14 +10,15 @@ export function TimelineSection() {
         <div key="1" className="flex flex-col gap-8">
           <div className="grid grid-cols-2">
             <div className="flex gap-4 h-16">
-              <div>
-                <Image
-                  src={"/partners/songdo_hospital.jpeg"}
-                  alt="songdo"
-                  objectFit="contain"
-                  height={30}
-                  width={150}
-                />
+              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
+                <div className="relative bg-black w-full h-full rounded-xs">
+                  <Image
+                    src={"/partners/songdo_hospital.jpeg"}
+                    alt="songdo"
+                    objectFit="cover"
+                    fill
+                  />
+                </div>
               </div>
               <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                 Songdo
@@ -32,14 +33,15 @@ export function TimelineSection() {
           </div>
           <div className="grid grid-cols-2">
             <div className="flex gap-4 h-16">
-              <div>
-                <Image
-                  src={"/partners/gemnet.png"}
-                  alt="songdo"
-                  objectFit="contain"
-                  height={30}
-                  width={150}
-                />
+              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
+                <div className="relative bg-black w-full h-full rounded-xs">
+                  <Image
+                    src={"/partners/gemnet.png"}
+                    alt="songdo"
+                    objectFit="contain"
+                    fill
+                  />
+                </div>
               </div>
               <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                 Gemnet
@@ -56,15 +58,15 @@ export function TimelineSection() {
           </div>
           <div className="grid grid-cols-2">
             <div className="flex gap-4 h-16">
-              <div>
-                <Image
-                  src={"/partners/premium_concrete.webp"}
-                  alt="premium concrete"
-                  objectFit="contain"
-                  objectPosition="top"
-                  height={20}
-                  width={150}
-                />
+              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
+                <div className="relative bg-black w-full h-full rounded-xs">
+                  <Image
+                    src={"/partners/premium_concrete.webp"}
+                    alt="premium concrete"
+                    objectFit="contain"
+                    fill
+                  />
+                </div>
               </div>
               <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                 Premium Concrete
@@ -82,14 +84,15 @@ export function TimelineSection() {
           </div>
           <div className="grid grid-cols-2">
             <div className="flex gap-4 h-16">
-              <div>
-                <Image
-                  src={"/partners/master group.png"}
-                  alt="master group"
-                  objectFit="contain"
-                  height={20}
-                  width={150}
-                />
+              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
+                <div className="relative bg-black w-full h-full rounded-xs">
+                  <Image
+                    src={"/partners/master group.png"}
+                    alt="master group"
+                    objectFit="contain"
+                    fill
+                  />
+                </div>
               </div>
               <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                 Master Group
@@ -109,14 +112,15 @@ export function TimelineSection() {
           </div>
           <div className="grid grid-cols-2">
             <div className="flex gap-4 h-16">
-              <div>
-                <Image
-                  src={"/partners/tenger_insurance.png"}
-                  alt="master group"
-                  objectFit="contain"
-                  height={20}
-                  width={150}
-                />
+              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
+                <div className="relative bg-black w-full h-full rounded-xs">
+                  <Image
+                    src={"/partners/tenger_insurance.png"}
+                    alt="master group"
+                    objectFit="contain"
+                    fill
+                  />
+                </div>
               </div>
               <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
                 Tenger Insurance
@@ -141,6 +145,7 @@ export function TimelineSection() {
       title: "2023 Q3",
       content: (
         <div key="2">
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Served as Co-Underwriter for LendMN NBFI JSC’s public bond issuance,
             successfully raising MNT 3.0 billion.
@@ -157,6 +162,7 @@ export function TimelineSection() {
       title: "2023 Q4",
       content: (
         <div key="2">
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Worked as Lead Underwriter for LendMN NBFI JSC’s MNT 5.0 billion OTC
             debt instrument; successfully placed MNT 3.0 billion in 2023, with
@@ -181,6 +187,7 @@ export function TimelineSection() {
       title: "2024 Q1",
       content: (
         <div key="2">
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Acted as Lead Underwriter for GSB Capital NBFI’s MNT 20.0 billion
             OTC debt instrument; completed repayment in 2025 Q1.
@@ -198,6 +205,7 @@ export function TimelineSection() {
       title: "2024 Q2",
       content: (
         <div key="2">
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Acted as Lead Underwriter for Developing Entrepreneurial Mongolia
             NBFI LLC on a MNT 2.7 billion OTC bond issuance; full proceeds were
@@ -216,6 +224,7 @@ export function TimelineSection() {
       title: "2024 Q4",
       content: (
         <div key="2">
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Participated as Co-Underwriter for Shunkhlai LLC’s MNT 80.0 billion
             public bond issuance, successfully raising MNT 15.0 billion.
@@ -231,6 +240,7 @@ export function TimelineSection() {
             2025 Track Record
           </p> */}
           <div className="mb-8">
+            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
               Acted as Underwriter for ABTS NBFI LLC, a Japanese-invested
               company, successfully raising a MNT 1.6 billion OTC bond.
@@ -252,6 +262,7 @@ export function TimelineSection() {
       content: (
         <div key="3">
           <div className="mb-8">
+            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
               Served as Lead Underwriter for Bers Finance NBFI LLC’s MNT 5.0
               billion OTC debt instrument.
@@ -281,6 +292,7 @@ export function TimelineSection() {
       content: (
         <div key="3">
           <div className="mb-8">
+            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
               Acted as Lead Underwriter for Bichil Globus BZG LLC’s MNT 10.0
               billion OTC debt instrument.
