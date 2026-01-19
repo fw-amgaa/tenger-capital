@@ -10,6 +10,8 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import introduction from "@/videos/2040x516.mp4";
+import NextVideo from "next-video";
 
 interface Service {
   name: string;
@@ -118,16 +120,17 @@ export default function Brokerage({
   return (
     <div className="section-container mt-16 md:mt-32">
       <div className="relative flex flex-col gap-8">
-        <div
-          className="absolute inset-0 opacity-90 z-0"
-          style={{
-            backgroundImage:
-              'linear-gradient(to bottom, rgba(0,0,0,0) 60%, var(--background) 100%), url("/brand/pattern-fade.png")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+        <div className="absolute w-full h-full z-0 overflow-hidden top-0 left-0">
+          <NextVideo
+            src={introduction}
+            controls={false}
+            playsInline
+            muted={true}
+            autoPlay={true}
+            loop={true}
+            className="h-full [--media-object-fit:cover]"
+          />
+        </div>
         <Seperator />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>

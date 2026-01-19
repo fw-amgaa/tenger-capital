@@ -227,3 +227,8 @@ html.lenis body {
     @apply bg-background text-foreground;
   }
 }
+
+.next-video-container video {
+  --media-object-fit: cover;
+  object-fit: cover;
+}

@@ -1,17 +1,10 @@
+import introduction from "@/videos/2040x516.mp4";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
-import {
-  BarChart,
-  BatteryChargingIcon,
-  Bell,
-  TrendingUp,
-  User,
-  WifiIcon,
-} from "lucide-react";
+import { Bell, TrendingUp, User } from "lucide-react";
+import NextVideo from "next-video";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Seperator from "../seperator";
-import NextVideo from "next-video";
-import introduction from "@/videos/loop.mp4";
 
 const carouselData = [
   {
@@ -139,7 +132,7 @@ const Brief = () => {
   return (
     <div className="section-container relative flex flex-col gap-16">
       <div className="relative flex flex-col gap-8">
-        <div className="absolute w-full h-full top-[-23] z-0">
+        <div className="absolute w-full h-full z-0 overflow-hidden top-0 left-0">
           <NextVideo
             src={introduction}
             controls={false}
@@ -147,7 +140,7 @@ const Brief = () => {
             muted={true}
             autoPlay={true}
             loop={true}
-            className="w-full h-full"
+            className="h-full [--media-object-fit:cover]"
           />
         </div>
         <Seperator />
