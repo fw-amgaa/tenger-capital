@@ -2,142 +2,89 @@ import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
 
+function TimelineItem({
+  title,
+  facts,
+  imagePath,
+}: {
+  title: string;
+  facts: string[];
+  imagePath: string;
+}) {
+  return (
+    <div className="grid grid-cols-2 gap-8">
+      <div className="flex flex-col sm:flex-row sm:gap-4">
+        <div className="border rounded-sm overflow-hidden w-[150px] h-16 bg-[#111111] p-1">
+          <div className="relative bg-black w-full h-full rounded-xs">
+            <Image src={imagePath} alt={title} objectFit="cover" fill />
+          </div>
+        </div>
+        <p className="mt-1 sm:mt-5 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
+          {title}
+        </p>
+      </div>
+      <div>
+        <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+        {facts.map((fact, index) => (
+          <p
+            key={index}
+            className="mb-5 h-10 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200"
+          >
+            {fact}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function TimelineSection() {
   const data = [
     {
       title: "2007",
       content: (
         <div key="1" className="flex flex-col gap-8">
-          <div className="grid grid-cols-2">
-            <div className="flex gap-4 h-16">
-              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
-                <div className="relative bg-black w-full h-full rounded-xs">
-                  <Image
-                    src={"/partners/songdo_hospital.jpeg"}
-                    alt="songdo"
-                    objectFit="cover"
-                    fill
-                  />
-                </div>
-              </div>
-              <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
-                Songdo
-              </p>
-            </div>
-            <div>
-              <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - USD 15.3 million equity financing in the healthcare sector
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2">
-            <div className="flex gap-4 h-16">
-              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
-                <div className="relative bg-black w-full h-full rounded-xs">
-                  <Image
-                    src={"/partners/gemnet.png"}
-                    alt="songdo"
-                    objectFit="contain"
-                    fill
-                  />
-                </div>
-              </div>
-              <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
-                Gemnet
-              </p>
-            </div>
+          <TimelineItem
+            title="Songdo"
+            facts={[
+              "- USD 15.3 million equity financing in the healthcare sector",
+            ]}
+            imagePath="/timeline/songdo.png"
+          />
 
-            <div>
-              <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - USD 14.0 million debt financing in the information technology
-                sector
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2">
-            <div className="flex gap-4 h-16">
-              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
-                <div className="relative bg-black w-full h-full rounded-xs">
-                  <Image
-                    src={"/partners/premium_concrete.webp"}
-                    alt="premium concrete"
-                    objectFit="contain"
-                    fill
-                  />
-                </div>
-              </div>
-              <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
-                Premium Concrete
-              </p>
-            </div>
+          <TimelineItem
+            title="Gemnet"
+            facts={[
+              "- USD 14.0 million debt financing in the information technology sector",
+            ]}
+            imagePath="/timeline/gemnet.png"
+          />
 
-            <div>
-              <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <TimelineItem
+            title="Premium Concrete"
+            facts={[
+              "- MNT 30.0 billion merger and consolidation in the cement industry",
+            ]}
+            imagePath="/timeline/premium-concrete.png"
+          />
 
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - MNT 30.0 billion merger and consolidation in the cement
-                industry
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2">
-            <div className="flex gap-4 h-16">
-              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
-                <div className="relative bg-black w-full h-full rounded-xs">
-                  <Image
-                    src={"/partners/master group.png"}
-                    alt="master group"
-                    objectFit="contain"
-                    fill
-                  />
-                </div>
-              </div>
-              <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
-                Master Group
-              </p>
-            </div>
+          <TimelineItem
+            title="Master Group"
+            facts={[
+              "- MNT 2.0 billion corporate bond issuance in the real estate sector",
+              "- USD 10.0 million project financing in the real estate sector",
+            ]}
+            imagePath="/partners/master group.png"
+          />
 
-            <div>
-              <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - MNT 2.0 billion corporate bond issuance in the real estate
-                sector
-              </p>
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - USD 10.0 million project financing in the real estate sector
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2">
-            <div className="flex gap-4 h-16">
-              <div className="border rounded-sm overflow-hidden w-[150px] bg-[#111111] p-1">
-                <div className="relative bg-black w-full h-full rounded-xs">
-                  <Image
-                    src={"/partners/tenger_insurance.png"}
-                    alt="master group"
-                    objectFit="contain"
-                    fill
-                  />
-                </div>
-              </div>
-              <p className="mb-8 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
-                Tenger Insurance
-              </p>
-            </div>
-            <div>
-              <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - MNT 6.0 billion merger and consolidation in the insurance
-                sector
-              </p>
-              <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                - MNT 2.5 billion liquidation and asset disposal transaction in
-                the mining sector
-              </p>
-            </div>
-          </div>
+          <TimelineItem
+            title="Tenger Insurance"
+            facts={[
+              "- MNT 6.0 billion merger and consolidation in the insurance sector",
+              "- MNT 2.5 billion liquidation and asset disposal transaction in the mining sector",
+            ]}
+            imagePath="/timeline/tenger.png"
+          />
         </div>
       ),
     },
@@ -320,7 +267,7 @@ export function TimelineSection() {
     //       <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
     //         Built and launched Aceternity UI and Aceternity UI Pro from scratch
     //       </p>
-    //       <div className="grid grid-cols-2 gap-4">
+    //       <div className="grid grid-cols-2 gap-8 gap-4">
     //         <img
     //           src="https://assets.aceternity.com/templates/startup-1.webp"
     //           alt="startup template"
