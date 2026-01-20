@@ -204,7 +204,7 @@ export default function Offerings({ setHeaderMode }: Props) {
         paddingLeft: margin,
         paddingRight: margin,
       }}
-      className="relative mb-16 md:mb-64"
+      className="relative mb-8 md:mb-16"
     >
       <motion.div
         style={{ borderRadius }}
