@@ -80,90 +80,72 @@ const WorkWithUs = () => {
 
           {/* The Graph Container */}
           <div className="absolute top-0 right-0 h-[170%] w-[170%] overflow-hidden flex items-center justify-center">
-            <svg
-              viewBox="0 0 115 115"
-              className="w-full h-full"
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
-            >
+            <svg viewBox="0 0 115 115" className="w-full h-full">
               <defs>
-                <linearGradient id={goldId} x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#FF9900" />
-                  <stop offset="50%" stopColor="#F8E5B5" />
-                  <stop offset="100%" stopColor="#FF9900" />
+                <linearGradient
+                  id="gold-_R_hlfdb_"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#FF9900"></stop>
+                  <stop offset="50%" stop-color="#F8E5B5"></stop>
+                  <stop offset="100%" stop-color="#FF9900"></stop>
                 </linearGradient>
-
-                <linearGradient id={fillId} x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="rgba(255, 153, 0, 0.4)" />
-                  <stop offset="100%" stopColor="rgba(255, 153, 0, 0)" />
+                <linearGradient
+                  id="fill-_R_hlfdb_"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="rgba(255, 153, 0, 0.4)"></stop>
+                  <stop offset="100%" stop-color="rgba(255, 153, 0, 0)"></stop>
                 </linearGradient>
               </defs>
-
-              {/* Background ring (75% - darker portion) */}
               <path
-                d="M 60 15
-           A 45 45 0 1 1 60 105
-           A 45 45 0 1 1 60 15
-           Z
-           M 60 35
-           A 25 25 0 1 0 60 85
-           A 25 25 0 1 0 60 35
-           Z"
+                d="M 66 15 A 42 45 0 1 1 60 105 A 45 45 0 1 1 60 15 Z M 60 35 A 25 25 0 1 0 60 85 A 25 25 0 1 0 60 35 Z"
                 fill="rgba(139, 90, 43, 0.6)"
-                fillRule="evenodd"
-              />
+                fill-rule="evenodd"
+              ></path>
 
-              {/* Highlighted 25% segment with gradient stroke */}
               <path
-                d="M 60 15
-           A 45 45 0 0 1 105 60
-           L 85 60
-           A 25 25 0 0 0 60 35
-           Z"
-                fill={`url(#${fillId})`}
-              />
-
-              {/* Gold outline for the 25% segment - all 4 edges */}
-              {/* Top edge (outer to inner) */}
+                d="M 60 15 A 45 45 0 0 1 106 60 L 85 60 A 25 25 0 0 0 60 35 Z"
+                fill="url(#fill-_R_hlfdb_)"
+              ></path>
               <line
                 x1="60"
                 y1="15"
                 x2="60"
                 y2="35"
-                stroke={`#FF9900`}
-                strokeWidth="0.3"
-                strokeLinecap="round"
-              />
-
-              {/* Outer arc */}
+                stroke="#FF9900"
+                stroke-width="0.4"
+                stroke-linecap="round"
+              ></line>
               <path
-                d="M 60 15
-           A 45 45 0 0 1 105 60"
-                stroke={`url(#${goldId})`}
-                strokeWidth="0.3"
+                d="M 60 15 A 43 43 0 0 1 105 60"
+                stroke="url(#gold-_R_hlfdb_)"
+                stroke-width="0.4"
                 fill="none"
-                strokeLinecap="round"
-              />
-
-              {/* Right edge (outer to inner) */}
+                stroke-linecap="round"
+              ></path>
               <line
                 x1="105"
                 y1="60"
                 x2="85"
                 y2="60"
-                stroke={`#FF9900`}
-                strokeWidth="0.3"
-                strokeLinecap="round"
-              />
-
-              {/* Inner arc */}
+                stroke="#FF9900"
+                stroke-width="0.4"
+                stroke-linecap="round"
+              ></line>
               <path
-                d="M 60 35
-           A 25 25 0 0 1 85 60"
-                stroke={`url(#${goldId})`}
-                strokeWidth="0.3"
+                d="M 60 35 A 25 25 0 0 1 85 60"
+                stroke="url(#gold-_R_hlfdb_)"
+                stroke-width="0.4"
                 fill="none"
-                strokeLinecap="round"
-              />
+                stroke-linecap="round"
+              ></path>
             </svg>
           </div>
         </div>
