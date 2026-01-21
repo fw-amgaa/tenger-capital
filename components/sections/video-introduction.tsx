@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Video from "next-video";
-import introduction from "@/videos/introduction.mp4";
 import { useInView } from "framer-motion";
+import introduction from "@/videos/introduction.mp4";
 
 const VideoIntroduction = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,9 +28,6 @@ const VideoIntroduction = () => {
             console.log("Video autoplay prevented:", error);
           });
         }
-      } else if (!isInView && videoElement) {
-        // Pause when scrolled out of view to save resources
-        videoElement.pause();
       }
     }, 100);
 
@@ -40,10 +37,11 @@ const VideoIntroduction = () => {
   return (
     <div ref={containerRef} className="my-24 md:my-48 section-container">
       <Video
+        preload={"auto"}
         src={introduction}
         controls={true}
-        playsInline
-        muted={false}
+        playsInline={true}
+        muted
         autoPlay={true}
       />
     </div>
