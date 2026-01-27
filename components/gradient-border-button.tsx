@@ -10,6 +10,7 @@ interface GradientButtonProps {
   borderAnimation?: boolean;
   hasBorder?: boolean; // default true
   iconComponent?: React.ReactNode;
+  onClick?: () => void;
 }
 
 const GradientBorderButton = ({
@@ -18,6 +19,7 @@ const GradientBorderButton = ({
   borderAnimation = true,
   hasBorder = true,
   iconComponent,
+  onClick,
 }: GradientButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const time = useTime();
@@ -54,6 +56,7 @@ const GradientBorderButton = ({
     <motion.button
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
       whileTap={{ scale: 0.98 }}
       className="relative overflow-hidden rounded-full bg-transparent px-6 py-2 font-medium cursor-pointer"
     >

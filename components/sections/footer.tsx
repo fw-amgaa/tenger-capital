@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import GradientBorderButton from "../gradient-border-button";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/language-context";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="p-4">
       <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem]">
@@ -52,7 +57,7 @@ const Footer = () => {
                       target="_self"
                       href="/"
                     >
-                      Home
+                      {t("Home")}
                     </Link>
                   </li>
                   <li>
@@ -61,7 +66,7 @@ const Footer = () => {
                       target="_self"
                       href="/about"
                     >
-                      About
+                      {t("About")}
                     </Link>
                   </li>
                   <li>
@@ -70,7 +75,7 @@ const Footer = () => {
                       target="_self"
                       href="/offerings"
                     >
-                      What We Offer
+                      {t("What We Offer")}
                     </Link>
                   </li>
                   <li>
@@ -79,7 +84,7 @@ const Footer = () => {
                       target="_self"
                       href="/submit-form"
                     >
-                      Submit A Form
+                      {t("Submit A Form")}
                     </Link>
                   </li>
                   {/* <li>
@@ -251,7 +256,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center md:items-end justify-between max-lg:w-full lg:h-full">
             <GradientBorderButton mode="light" borderAnimation={false}>
-              OPEN AN ACCOUNT
+              {t("OPEN AN ACCOUNT")}
             </GradientBorderButton>
             <div className="text-black flex flex-col items-center justify-center gap-[3rem] max-lg:w-full mt-8 md:mt-0">
               {/* <svg

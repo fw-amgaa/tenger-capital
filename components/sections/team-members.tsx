@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 interface TeamMember {
   name: string;
@@ -23,6 +24,7 @@ export default function TeamMembers({
 }) {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const teamMembers: TeamMember[] = [
     {
@@ -30,32 +32,56 @@ export default function TeamMembers({
       role: "CEO & Founder",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop",
+      image: "/team-members/all-bw part1-1.jpg",
     },
     {
       name: "Michael Chen",
       role: "CTO",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
+      image: "/team-members/all-bw part1-2.jpg",
     },
     {
       name: "Emily Rodriguez",
       role: "Head of Design",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=800&fit=crop",
+      image: "/team-members/all-bw part1-3.jpg",
     },
     {
       name: "James Wilson",
       role: "Lead Developer",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=800&fit=crop",
+      image: "/team-members/all-bw part1-4.jpg",
+    },
+    {
+      name: "James Wilson",
+      role: "Lead Developer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-5.jpg",
+    },
+    {
+      name: "James Wilson",
+      role: "Lead Developer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-6.jpg",
+    },
+    {
+      name: "James Wilson",
+      role: "Lead Developer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-7.jpg",
+    },
+    {
+      name: "James Wilson",
+      role: "Lead Developer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-8.jpg",
     },
   ];
 
@@ -82,7 +108,7 @@ export default function TeamMembers({
       {showTitle && (
         <div className="flex items-center justify-center">
           <h2 className="mt-24 md:mt-48 text-white text-5xl md:text-7xl text-center">
-            MEET THE TEAM
+            {t("MEET THE TEAM")}
           </h2>
         </div>
       )}

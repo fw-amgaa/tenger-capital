@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
 
 export default function HeroSection() {
   const introDone = true;
+  const { t } = useLanguage();
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -19,7 +22,7 @@ export default function HeroSection() {
         className="z-10 md:w-[370px] text-center md:text-left"
       >
         <h3 className="text-3xl md:text-4xl tracking-tight text-primary mb-4 mt-6">
-          Every Money Question. One Trusted Team.
+          {t("Every Money Question. One Trusted Team.")}
         </h3>
       </motion.div>
 

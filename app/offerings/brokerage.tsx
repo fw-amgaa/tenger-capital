@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import introduction from "@/videos/2040x516.mp4";
 import NextVideo from "next-video";
+import { useLanguage } from "@/lib/language-context";
 
 interface Service {
   name: string;
@@ -26,33 +27,26 @@ export default function Brokerage({
 }) {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const services: Service[] = [
     {
-      name: "Domestic Exchange",
+      name: t("Domestic Exchange"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-md text-[#f8f8f8] leading-[1.4]">
-            Investors can access the domestic primary and secondary markets
-            through our online investment platform and mobile apps and manage
-            their portfolios, track performance, and stay informed with market
-            insights.
-          </p>
-          <p className="text-md text-[#f8f8f8] leading-[1.4]">
-            Through Tenger Capital, investors can access both primary and
-            secondary markets for a wide range of investment products,
-            including:
+            {t("domestic.description")}
           </p>
           <ol className="text-md ml-6">
-            <li>- Equities</li>
-            <li>- Corporate bonds</li>
-            <li>- Government bonds</li>
-            <li>- Asset-backed securities</li>
+            <li>- {t("Equities")}</li>
+            <li>- {t("Corporate bonds")}</li>
+            <li>- {t("Government bonds")}</li>
+            <li>- {t("Asset-backed securities")}</li>
           </ol>
 
           <div className="mt-6 m-auto">
             <GradientBorderButton borderAnimation={false}>
-              OPEN YOUR ACCOUNT
+              {t("Open your account")}
             </GradientBorderButton>
           </div>
         </div>
@@ -61,18 +55,16 @@ export default function Brokerage({
       image: "/offerings/mse.jpg",
     },
     {
-      name: "International Markets",
+      name: t("International Markets"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-md text-[#f8f8f8] leading-[1.4]">
-            Investors can access 160 stock markets of over 35 countries. Invest
-            globally in stocks, ETFs, options, futures, currencies and bonds
-            through our partner Interactive Brokers’ unified platform
+            {t("international.description")}
           </p>
 
           <div className="mt-6 m-auto">
             <GradientBorderButton borderAnimation={false}>
-              OPEN YOUR ACCOUNT
+              {t("Open your account")}
             </GradientBorderButton>
           </div>
         </div>
@@ -80,18 +72,16 @@ export default function Brokerage({
       image: "/offerings/external_trade.jpg",
     },
     {
-      name: "OTC market",
+      name: t("OTC market"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-md text-[#f8f8f8] leading-[1.4]">
-            Investors can participate in the fastest growing capital market
-            sector in Mongolia. We facilitate both sides of issuance and sales
-            of private bonds with thorough due dilligence and integrity.{" "}
+            {t("otc.description")}
           </p>
 
           <div className="mt-6 m-auto">
             <GradientBorderButton borderAnimation={false}>
-              OPEN YOUR ACCOUNT
+              {t("Open your account")}
             </GradientBorderButton>
           </div>
         </div>
@@ -134,19 +124,14 @@ export default function Brokerage({
         <Seperator />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
-            <h1 className="text-3xl md:text-4xl font-serif">Brokerage</h1>
+            <h1 className="text-3xl md:text-4xl font-serif">{t("Brokerage")}</h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
-              Stand solid. Stay liquid.
+              {t("Stand solid. Stay liquid.")}
             </h1>
           </div>
 
           <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-            Tenger Capital SC LLC delivers dynamic, full-service brokerage
-            solutions for both individual and institutional investors. We help
-            you take control of your cash flows and put your capital to work
-            with purpose. Powered by our research and advisory experts, you gain
-            the insight and confidence to act decisively in today’s fast-moving
-            markets.
+            {t("brokerage.description")}
           </p>
         </div>
       </div>

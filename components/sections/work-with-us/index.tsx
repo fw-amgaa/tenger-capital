@@ -12,10 +12,12 @@ import {
 } from "framer-motion";
 import { PlusIcon, X } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 const WorkWithUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const id = useId();
   const goldId = `gold-${id}`;
@@ -23,8 +25,7 @@ const WorkWithUs = () => {
 
   const statsData = [
     {
-      title:
-        "The 2025 Growth shows that Tenger Capital is expanding rapidly, multiplied by 9.2x its transaction volume compared to it's previous year.",
+      title: t("workwithus.stat1.title"),
       percentage: "9.2",
       unit: "x",
       suffix: "Since 2024",
@@ -63,8 +64,7 @@ const WorkWithUs = () => {
       ),
     },
     {
-      title:
-        "Our Market Share in Primary Bond Issuance in 2025 covers 25% of the entire market.",
+      title: t("workwithus.stat2.title"),
       percentage: "25",
       unit: "%",
       suffix: "of 2025 total issuance",
@@ -152,8 +152,7 @@ const WorkWithUs = () => {
       ),
     },
     {
-      title:
-        "Tenger Capital ranks second in 2025 Primary Bond Market with total volume of 379.2 Billion MNT.",
+      title: t("workwithus.stat3.title"),
       percentage: "379.2",
       unit: "₮",
       suffix: "Billion MNT",
@@ -255,7 +254,7 @@ const WorkWithUs = () => {
     <div className="w-full">
       <div className="flex justify-center">
         <h2 className="text-4xl md:text-[48px] my-24 md:my-48 text-center md:w-[420px] leading-[1]">
-          Why Should You Work With Us?
+          {t("Why Should You Work With Us?")}
         </h2>
       </div>
       {/* Desktop View */}

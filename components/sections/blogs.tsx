@@ -1,6 +1,9 @@
+"use client";
+
 import BlogCard from "../blog-card";
 import GradientBorderButton from "../gradient-border-button";
 import Seperator from "../seperator";
+import { useLanguage } from "@/lib/language-context";
 
 const blogsData = [
   {
@@ -25,20 +28,22 @@ const blogsData = [
 ];
 
 const Blogs = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="section-container flex flex-col gap-8">
       <Seperator />
 
       <div className="grid md:grid-cols-2">
-        <h1 className="text-4xl">Our Thinking</h1>
+        <h1 className="text-4xl">{t("Our Thinking")}</h1>
 
         <div className="flex flex-col gap-6 mt-8 md:mt-0">
           <p className="text-md md:text-lg leading-[1.4]">
-            What’s top of mind for our investment team.
+            {t("What's top of mind for our investment team")}
           </p>
 
           <div className="mt-4">
-            <GradientBorderButton>EXPLORE OUR BLOG</GradientBorderButton>
+            <GradientBorderButton>{t("EXPLORE OUR BLOG")}</GradientBorderButton>
           </div>
         </div>
       </div>

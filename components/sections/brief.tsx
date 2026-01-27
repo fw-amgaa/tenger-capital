@@ -1,3 +1,5 @@
+"use client";
+
 import introduction from "@/videos/2040x516.mp4";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { Bell, TrendingUp, User } from "lucide-react";
@@ -5,6 +7,7 @@ import NextVideo from "next-video";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Seperator from "../seperator";
+import { useLanguage } from "@/lib/language-context";
 
 const carouselData = [
   {
@@ -12,21 +15,21 @@ const carouselData = [
     title: "Real-Time Data",
     description:
       "Keep track with current market orders and prices of your MSE products.",
-    phoneImage: "/phone-screen/real_time.jpg",
+    phoneImage: "/phone-screen/market.jpg",
   },
   {
     icon: <User className="w-4 h-4" />,
     title: "Human Service",
     description:
       "All Tenger Capital clients have access to a dedicated wealth advisor.",
-    phoneImage: "/phone-screen/2.avif",
+    phoneImage: "/phone-screen/order_entry.jpg",
   },
   {
     icon: <TrendingUp className="w-4 h-4" />,
     title: "Monitor your Portfolio",
     description:
       "Your total portfolio including all your bonds and stocks in one place.",
-    phoneImage: "/phone-screen/monitoring_portfolio.jpg",
+    phoneImage: "/phone-screen/portfolio.jpg",
   },
 ];
 
@@ -35,6 +38,7 @@ const Brief = () => {
   const [progress, setProgress] = useState(0);
   const [direction, setDirection] = useState(1);
   const duration = 8000;
+  const { t } = useLanguage();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -147,17 +151,15 @@ const Brief = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
             <h1 className="text-3xl md:text-4xl font-serif">
-              Inspired by Tenger
+              {t("Inspired by Tenger")}
             </h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
-              Integrity. Wisdom. Foresight.
+              {t("Integrity. Wisdom. Foresight.")}
             </h1>
           </div>
 
           <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-            From executing trades to structuring deals and managing wealth,
-            Tenger Capital offers the expertise and clarity clients rely on. We
-            turn questions into strategy and uncertainty into opportunity.
+            {t("brief.description")}
           </p>
         </div>
       </div>

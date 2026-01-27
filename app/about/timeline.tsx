@@ -19,7 +19,7 @@ function TimelineItem({
             <Image src={imagePath} alt={title} objectFit="cover" fill />
           </div>
         </div>
-        <p className="mt-1 sm:mt-5 text-xs font-bold text-neutral-800 md:text-sm dark:text-neutral-200">
+        <p className="mt-1 sm:mt-5 text-xs font-bold md:text-sm text-neutral-200">
           {title}
         </p>
       </div>
@@ -28,7 +28,7 @@ function TimelineItem({
         {facts.map((fact, index) => (
           <p
             key={index}
-            className="mb-5 h-10 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200"
+            className="mb-5 h-10 text-xs font-normal md:text-sm text-neutral-200"
           >
             {fact}
           </p>
@@ -93,11 +93,11 @@ export function TimelineSection() {
       content: (
         <div key="2">
           <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm text-neutral-200">
             Served as Co-Underwriter for LendMN NBFI JSC’s public bond issuance,
             successfully raising MNT 3.0 billion.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm text-neutral-200">
             Acting as Underwriter, successfully placed a MNT 2.5 billion OTCly
             offered bond of Agro World LLC, an early-stage industrial company,
             to professional investors on the OTC market.
@@ -110,19 +110,19 @@ export function TimelineSection() {
       content: (
         <div key="2">
           <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Worked as Lead Underwriter for LendMN NBFI JSC’s MNT 5.0 billion OTC
             debt instrument; successfully placed MNT 3.0 billion in 2023, with
             the remaining MNT 2.0 billion placed in early 2024 through a
             blockchain-based platform under the Sandbox regulatory framework.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Served as Lead Underwriter for Bumbiin Shovkh LLC’s MNT 20.0 billion
             OTC bond. As of March 2024, the full amount was raised and repayment
             completed. Proceeds supported the completion of a mixed-use
             residential and commercial development project.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Provided advisory services on a MNT 40.0 billion debt restructuring
             transaction for a private healthcare company, including financial
             modeling and business / equity valuation.
@@ -135,11 +135,11 @@ export function TimelineSection() {
       content: (
         <div key="2">
           <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Acted as Lead Underwriter for GSB Capital NBFI’s MNT 20.0 billion
             OTC debt instrument; completed repayment in 2025 Q1.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Served as Lead Underwriter for LendMN NBFI JSC on a MNT 20.0 billion
             OTC bond issuance and successfully raised MNT 15.0 billion, the
             maximum amount permitted by the Financial Regulatory Commission as
@@ -153,12 +153,12 @@ export function TimelineSection() {
       content: (
         <div key="2">
           <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Acted as Lead Underwriter for Developing Entrepreneurial Mongolia
             NBFI LLC on a MNT 2.7 billion OTC bond issuance; full proceeds were
             raised repayment completed in 2024 Q3.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Worked as Underwriter for Platin City LLC’s MNT 1.5 billion OTC
             bond, successfully raising the full amount. Proceeds support
             real-estate dealership operations, improving liquidity for property
@@ -172,7 +172,7 @@ export function TimelineSection() {
       content: (
         <div key="2">
           <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             Participated as Co-Underwriter for Shunkhlai LLC’s MNT 80.0 billion
             public bond issuance, successfully raising MNT 15.0 billion.
           </p>
@@ -183,20 +183,20 @@ export function TimelineSection() {
       title: "2025 Q1",
       content: (
         <div key="3">
-          {/* <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          {/* <p className="mb-4 text-xs font-normal md:text-sm dark:text-neutral-200">
             2025 Track Record
           </p> */}
           <div className="mb-8">
             <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Acted as Underwriter for ABTS NBFI LLC, a Japanese-invested
               company, successfully raising a MNT 1.6 billion OTC bond.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Served as Underwriter for Khan-Altai Resource LLC’s MNT 20.0
               billion OTC bond, fully raising the entire amount.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Worked as Underwriter for Premier Investment Group LLC on a MNT
               10.0 billion OTC bond issuance, successfully raising the funds.
             </p>
@@ -210,23 +210,23 @@ export function TimelineSection() {
         <div key="3">
           <div className="mb-8">
             <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Served as Lead Underwriter for Bers Finance NBFI LLC’s MNT 5.0
               billion OTC debt instrument.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Acted as Lead Underwriter for Eco Car Center LLC’s MNT 9.5 billion
               OTC debt instrument.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Acted as Lead Underwriter for Munkhiin Useg LLC’s MNT 3.5 billion
               OTC bond, successfully raising MNT 3.2 billion.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Served as Lead Underwriter for Alliance Capital NBFI LLC’s MNT 1.6
               billion OTC bond.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Worked as Lead Underwriter for Mongol Alt LLC’s MNT 6.0 billion
               OTC bond.
             </p>
@@ -240,19 +240,19 @@ export function TimelineSection() {
         <div key="3">
           <div className="mb-8">
             <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Acted as Lead Underwriter for Bichil Globus BZG LLC’s MNT 10.0
               billion OTC debt instrument.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Served as Lead Underwriter for Mon Blox LLC’s MNT 3.0 billion OTC
               bond, successfully raising MNT 3.0 billion.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Worked as Lead Underwriter for West Hill LLC’s MNT 2.0 billion OTC
               bond.
             </p>
-            <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               Acted as Lead Underwriter for Finco Capital NBFI LLC’s MNT 3.0
               billion OTC bond.
             </p>
@@ -264,7 +264,7 @@ export function TimelineSection() {
     //   title: "2024",
     //   content: (
     //     <div key="13">
-    //       <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+    //       <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
     //         Built and launched Aceternity UI and Aceternity UI Pro from scratch
     //       </p>
     //       <div className="grid grid-cols-2 gap-8 gap-4">
@@ -290,11 +290,11 @@ export function TimelineSection() {
     //   title: "Early 2025",
     //   content: (
     //     <div key="14">
-    //       <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+    //       <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
     //         I usually run out of copy, but when I see content this big, I try to
     //         integrate lorem ipsum.
     //       </p>
-    //       <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+    //       <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
     //         Lorem ipsum is for people who are too lazy to write copy. But we are
     //         not. Here are some more example of beautiful designs I built.
     //       </p>
@@ -321,7 +321,7 @@ export function TimelineSection() {
     //   title: "Changelog",
     //   content: (
     //     <div key="15">
-    //       <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+    //       <p className="mb-4 text-xs font-normal md:text-sm dark:text-neutral-200">
     //         Deployed 5 new components on Aceternity today
     //       </p>
     //       <div className="mb-8">

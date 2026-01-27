@@ -11,6 +11,7 @@ import {
 import NextVideo from "next-video";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 interface Service {
   name: string;
@@ -25,48 +26,37 @@ export default function UnderWriting({
 }) {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const services: Service[] = [
     {
-      name: "Debt Issuance",
+      name: t("Debt Issuance"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-md text-[#f8f8f8] leading-[1.6]">
-            We structure and execute debt offerings—from flexible OTC placements
-            to MSE-listed bonds—and asset-backed securities. Our team manages
-            structuring, due diligence, documentation, filings, and investor
-            marketing, helping clients raise capital for expansion, refinancing,
-            working capital, or development projects.
+            {t("debt.description")}
           </p>
         </div>
       ),
       image: "/offerings/debt-insurance.png",
     },
     {
-      name: "IPO & Equity Capital Markets",
+      name: t("IPO & Equity Capital Markets"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-md text-[#f8f8f8] leading-[1.6]">
-            We guide companies through the IPO process on the Mongolian Stock
-            Exchange, covering preparation, valuation, prospectus drafting,
-            regulatory filings, underwriting, and investor outreach. Our support
-            helps issuers engage markets effectively, build sustainable
-            shareholder structures, and achieve long-term success.
+            {t("ipo.description")}
           </p>
         </div>
       ),
       image: "/offerings/mse.jpg",
     },
     {
-      name: "Mergers & Acquisitions",
+      name: t("Mergers & Acquisitions"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-md text-[#f8f8f8] leading-[1.6]">
-            We advise on buy-side and sell-side M&A, supporting target
-            evaluation, due diligence, deal structuring, valuation, and
-            execution. Our team ensures confidential, strategic guidance,
-            helping clients secure favorable terms and achieve optimal
-            transaction outcomes.
+            {t("ma.description")}
           </p>
         </div>
       ),
@@ -108,18 +98,14 @@ export default function UnderWriting({
         <Seperator />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
-            <h1 className="text-3xl md:text-4xl font-serif">Underwriting</h1>
+            <h1 className="text-3xl md:text-4xl font-serif">{t("Underwriting")}</h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
-              Building value that lasts.
+              {t("Building value that lasts.")}
             </h1>
           </div>
 
           <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-            Tenger Capital SC LLC provides end-to-end underwriting and
-            capital-raising solutions for corporations and institutions, guiding
-            clients through structuring, regulatory compliance, marketing, and
-            distribution. We ensure efficient execution and help issuers raise
-            capital confidently across domestic and private markets.
+            {t("underwriting.description")}
           </p>
         </div>
       </div>
