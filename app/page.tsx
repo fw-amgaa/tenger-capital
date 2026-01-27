@@ -30,7 +30,7 @@ export default function Home() {
         <WorkWithUs />
         <TeamMembers />
         <Offerings setHeaderMode={setHeaderMode} />
-        <Blogs />
+        {/* <Blogs /> */}
         <Partners />
         <FAQ />
       </main>
