@@ -154,6 +154,11 @@ export default function Offerings({ setHeaderMode }: Props) {
     [thirdState, fifthState],
     [1, 2]
   );
+  const containerTranslateY = useTransform(
+    scrollYProgress,
+    [thirdState, fifthState],
+    ["0%", "-60%"]
+  );
   const thirdStateOpacity = useTransform(
     scrollYProgress,
     [thirdState, thirdState + 0.02],
@@ -225,6 +230,7 @@ export default function Offerings({ setHeaderMode }: Props) {
                   <motion.div
                     style={{
                       scale: containerScale,
+                      y: containerTranslateY,
                       borderColor: thirdStateBorderColor,
                     }}
                     className="h-full w-full border-[1px] overflow-hidden"
