@@ -33,7 +33,7 @@ const FAQ = () => {
           type="single"
           collapsible
           className="w-full"
-          defaultValue="item-1"
+          defaultValue="item-0"
         >
           {brokerFaqs.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
