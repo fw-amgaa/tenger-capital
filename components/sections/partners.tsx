@@ -4,6 +4,7 @@ import { useAnimationFrame } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Seperator from "../seperator";
+import { useLanguage } from "@/lib/language-context";
 
 const techLogos = [
   { src: "/partners/Alliance capital.png", alt: "Alliance capital" },
@@ -41,6 +42,7 @@ const techLogos = [
 export default function Partners() {
   const baseX = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useAnimationFrame((t, delta) => {
     if (!containerRef.current) return;
@@ -57,10 +59,10 @@ export default function Partners() {
       <Seperator />
 
       <div className="grid md:grid-cols-2">
-        <h1 className="text-4xl">Partners</h1>
+        <h1 className="text-4xl">{t("Partners")}</h1>
 
         <div className="flex flex-col gap-6">
-          <p className="text-lg leading-[1.4]">Our partners</p>
+          <p className="text-lg leading-[1.4]">{t("Partners")}</p>
         </div>
       </div>
 

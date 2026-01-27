@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import GradientBorderButton from "@/components/gradient-border-button";
+import { useLanguage } from "@/lib/language-context";
 
 export const EASE_CUSTOM = [0.76, 0, 0.24, 1] as const;
 export const ENTER_DURATION = 0.25;
@@ -15,6 +16,7 @@ export const EXIT_DURATION = 0.2;
 const Navigation = () => {
   const isMobile = useIsMobile();
   const navRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const initial = {
     display: "hidden",
@@ -214,7 +216,7 @@ const Navigation = () => {
                   target="_self"
                   href="/about"
                 >
-                  About
+                  {t("About")}
                 </Link>
               </li>
               <li>
@@ -223,7 +225,7 @@ const Navigation = () => {
                   target="_self"
                   href="/offerings"
                 >
-                  What We Offer
+                  {t("What We Offer")}
                 </Link>
               </li>
               <li>

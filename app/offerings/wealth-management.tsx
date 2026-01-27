@@ -11,6 +11,7 @@ import NextVideo from "next-video";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import introduction from "@/videos/2040x516.mp4";
+import { useLanguage } from "@/lib/language-context";
 
 interface Service {
   name: string;
@@ -25,33 +26,26 @@ export default function WealthManagement({
 }) {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const services: Service[] = [
     {
-      name: "Fund Management",
+      name: t("Fund Management"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-sm text-[#f8f8f8] leading-[1.4]">
-            We provide personalized fund and portfolio management tailored to
-            each client’s goals and risk appetite. Our team builds diversified
-            portfolios—from conservative fixed-income to growth-oriented equity
-            funds—while actively monitoring and adjusting allocations to stay
-            aligned with market conditions and client objectives.
+            {t("fund.description")}
           </p>
         </div>
       ),
       image: "/offerings/fund-management.jpg",
     },
     {
-      name: "Equity & Market Research",
+      name: t("Equity&Market Research"),
       description: (
         <div className="flex flex-col gap-2">
           <p className="text-sm text-[#f8f8f8] leading-[1.4]">
-            Our dedicated research unit delivers fundamental equity research,
-            technical analyses, sector analyses, macroeconomic insights, and
-            valuation assessments. These research capabilities form the backbone
-            of our investment decisions, supporting portfolio construction, idea
-            generation, and tactical market positioning.
+            {t("research.description")}
           </p>
         </div>
       ),
@@ -94,20 +88,15 @@ export default function WealthManagement({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
             <h1 className="text-3xl md:text-4xl font-serif">
-              Wealth & Asset Management
+              {t("Wealth & Asset Management")}
             </h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
-              Preserving wealth. Securing future.
+              {t("Preserving wealth. Securing future.")}
             </h1>
           </div>
 
           <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-            Tenger Capital SC LLC delivers tailored wealth and asset management
-            solutions designed to help clients grow, preserve, and strategically
-            allocate their capital. Through disciplined portfolio management,
-            in-house equity research, and a structured fund platform, we offer
-            investment strategies that align with each client’s risk appetite
-            and long-term financial objectives.
+            {t("wealth.description")}
           </p>
         </div>
       </div>

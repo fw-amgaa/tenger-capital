@@ -3,28 +3,27 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useTime, useTransform, AnimatePresence } from "framer-motion";
 import { PlusIcon, X } from "lucide-react";
-
-const statsData = [
-  {
-    title: "Underwriting",
-    disclosure:
-      "We turn big ideas into real capital — fast, structured, and market-ready. Your deal gets the clarity, reach, and execution it deserves.",
-  },
-  {
-    title: "Brokerage",
-    disclosure:
-      "Trade smarter with a team that actually knows you. Precision execution, real-time insights, and zero guesswork — just clean, confident moves.",
-  },
-  {
-    title: "Wealth Management",
-    disclosure:
-      "Your goals, engineered. Dedicated experts, tailored strategies, and smart guidance that makes every decision feel effortless.",
-  },
-];
+import { useLanguage } from "@/lib/language-context";
 
 const WorkWithUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
+
+  const statsData = [
+    {
+      title: t("offerings.underwriting.title"),
+      disclosure: t("offerings.underwriting.desc"),
+    },
+    {
+      title: t("offerings.brokerage.title"),
+      disclosure: t("offerings.brokerage.desc"),
+    },
+    {
+      title: t("offerings.wealth.title"),
+      disclosure: t("offerings.wealth.desc"),
+    },
+  ];
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -47,7 +46,7 @@ const WorkWithUs = () => {
     <div className="w-full">
       <div className="flex justify-center">
         <h2 className="px-8 text-3xl md:text-[32px] my-24 md:my-48 text-center md:w-[280px] leading-[1]">
-          Why Should You Work With Us?
+          {t("offerings.whychoose.title")}
         </h2>
       </div>
       {/* Desktop View */}

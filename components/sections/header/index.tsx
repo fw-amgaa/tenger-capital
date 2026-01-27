@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { FlagIcon, LockIcon } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/lib/language-context";
 
 // Define the scroll threshold (in pixels) for the top animation to start
 const TOP_SCROLL_THRESHOLD = 800;
@@ -37,6 +38,7 @@ export default function Header({ headerMode = "dark" }: Props) {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   // NEW STATE: Tracks if the user is near the bottom
   const [isNearBottom, setIsNearBottom] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const logoLight = "/logo/logo_main_light.png";
   const logoDark = "/logo/logo_main_dark.png";
@@ -183,8 +185,9 @@ export default function Header({ headerMode = "dark" }: Props) {
                 mode={isOpen ? "light" : headerMode}
                 hasBorder={false}
                 iconComponent={<></>}
+                onClick={toggleLanguage}
               >
-                ENG
+                {language === "en" ? "MN" : "EN"}
               </GradientBorderButton>
             </motion.div>
             <motion.div
@@ -219,7 +222,7 @@ export default function Header({ headerMode = "dark" }: Props) {
                   mode={isOpen ? "light" : headerMode}
                   borderAnimation={shouldAnimateBorder}
                 >
-                  OPEN AN ACCOUNT
+                  {t("OPEN AN ACCOUNT")}
                 </GradientBorderButton>
               </Link>
             </motion.div>
