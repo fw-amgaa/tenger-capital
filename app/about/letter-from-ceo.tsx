@@ -46,7 +46,7 @@ export default function LetterFromCeo() {
         <div className="w-full md:w-[45%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">
           <Image
             objectFit="cover"
-            src={"/team-members/all-bw part1-1b.jpg"}
+            src={"/team-members/all-bw part1-3.jpg"}
             alt="hero"
             fill
           />
