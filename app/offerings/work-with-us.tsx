@@ -45,7 +45,7 @@ const WorkWithUs = () => {
   return (
     <div className="w-full">
       <div className="flex justify-center">
-        <h2 className="px-8 text-3xl md:text-[32px] my-24 md:my-48 text-center md:w-[280px] leading-[1]">
+        <h2 className="px-8 text-3xl sm:text-4xl md:text-[48px] my-24 md:my-48 text-center md:w-[460px] leading-[1]">
           {t("offerings.whychoose.title")}
         </h2>
       </div>
