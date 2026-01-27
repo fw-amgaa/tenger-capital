@@ -28,60 +28,95 @@ export default function TeamMembers({
 
   const teamMembers: TeamMember[] = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-1.jpg",
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-2.jpg",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Design",
+      name: "Gombodorj Nyamtogtokh",
+      role: "Chief Executive Officer",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part1-3.jpg",
     },
     {
-      name: "James Wilson",
-      role: "Lead Developer",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-4.jpg",
-    },
-    {
-      name: "James Wilson",
-      role: "Lead Developer",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-5.jpg",
-    },
-    {
-      name: "James Wilson",
-      role: "Lead Developer",
+      name: "Darkhanbayar Radnaa-Ochir",
+      role: "Tenger Fund Management CEO",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part1-6.jpg",
     },
     {
-      name: "James Wilson",
-      role: "Lead Developer",
+      name: "Lkhamsuren Boldbaatar",
+      role: "Chief Financial and Operating Officer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-2.jpg",
+    },
+    {
+      name: "Dashnyam Sanduijav",
+      role: "Chief Investment Officer",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part1-7.jpg",
     },
     {
-      name: "James Wilson",
-      role: "Lead Developer",
+      name: "Byambatogoo Davaasuren",
+      role: "Chief Marketing Officer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part2-3.jpg",
+    },
+    {
+      name: "Bilguun Ganbaatar",
+      role: "Chief Trade Officer",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part2-4.jpg",
+    },
+    {
+      name: "Erdenekhuu Ulziibadrakh",
+      role: "Broker & Office Manager",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-5.jpg",
+    },
+    {
+      name: "Bolor Bilegsaikhan",
+      role: "Broker",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part2-6.jpg",
+    },
+    {
+      name: "Khangal Batmagnai",
+      role: "Broker",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-4.jpg",
+    },
+    {
+      name: "Biger Ulambayar",
+      role: "Marketing Manager",
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part1-8.jpg",
+    },
+    {
+      name: "Nomin-Erdene Baatarchuluun",
+      role: "Analyst",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part2-2.jpg",
+    },
+    {
+      name: "Munkhzolboo Batbayar",
+      role: "Accountant",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part2-7.jpg",
+    },
+    {
+      name: "Nyamkhishig Purev",
+      role: "Driver",
+      description:
+        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      image: "/team-members/all-bw part1-1.jpg",
     },
   ];
 
@@ -148,13 +183,14 @@ export default function TeamMembers({
               <div
                 key={index}
                 className="flex flex-col justify-center"
-                style={{ height: '100vh' }}
+                style={{ height: "100vh" }}
               >
                 <h3 className="text-3xl font-bold mb-2">{member.name}</h3>
-                <div className="mb-6 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-                <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
+                <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+                <h3 className="text-lg mb-2">{member.role}</h3>
+                {/* <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
                   {member.description}
-                </p>
+                </p> */}
               </div>
             ))}
           </div>
