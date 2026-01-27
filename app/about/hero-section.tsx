@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/lib/language-context";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -12,6 +13,8 @@ export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scaleWidth, setScaleWidth] = useState(1);
   const [scaleHeight, setScaleHeight] = useState(1);
+
+  const { t } = useLanguage();
 
   useEffect(() => {
     const calculateScale = () => {
@@ -71,8 +74,8 @@ export default function HeroSection() {
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           {/* Initial centered text */}
           <motion.div className="absolute inset-0 flex items-center justify-center z-5">
-            <h1 className="text-5xl md:text-8xl text-center mb-16 md:px-32">
-              CREATE VALUE THROUGH INVESTING
+            <h1 className="text-5xl md:text-8xl text-center mb-16 md:px-32 uppercase">
+              {t("Create Value Through Investing")}
             </h1>
           </motion.div>
 
