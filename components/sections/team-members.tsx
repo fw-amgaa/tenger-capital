@@ -90,9 +90,9 @@ export default function TeamMembers({
     target: containerRef,
     offset: ["start start", "end end"],
   });
-  // Only advance progress while the sticky image is actually pinned on screen.
-  // Clamp to an inner band to avoid pre/post changes (tune as needed).
-  const clampedProgress = useTransform(scrollYProgress, [0.08, 0.92], [0, 1]);
+  // With 8 members at 100vh each, description centers align at intervals of 1/7
+  // Map directly so image transitions sync with description centers
+  const clampedProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   useMotionValueEvent(clampedProgress, "change", (v) => {
     setProgress(Math.max(0, Math.min(1, v)));
@@ -139,26 +139,27 @@ export default function TeamMembers({
 
       {/* Scroll section with sticky images */}
       <div ref={containerRef} className="relative px-8 hidden md:block">
-        <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-16 py-20">
-          {/* Scrolling team member details - RIGHT SIDE */}
+        <div className="grid grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-16">
+          {/* Scrolling team member details - LEFT SIDE */}
+          {/* Each description height = (0.84 / 7) * totalScroll / totalScroll * 100 = 12% of container per transition */}
+          {/* With 8 members taking full container, each should be ~12% but we have 8 items not 7 transitions */}
           <div className="text-white max-w-[400px]">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="min-h-screen flex flex-col justify-center"
+                className="flex flex-col justify-center"
+                style={{ height: '100vh' }}
               >
                 <h3 className="text-3xl font-bold mb-2">{member.name}</h3>
                 <div className="mb-6 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
                 <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
-                  Associate Wealth Advisor at TG. Prior to TG, Allison worked at
-                  Bank of America Private Bank in Charlotte and New York City,
-                  serving high net worth and ultra high net worth clients.
+                  {member.description}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Sticky image stack - LEFT SIDE */}
+          {/* Sticky image stack - RIGHT SIDE */}
           <div className="sticky top-0 h-screen flex items-center">
             <div className="relative w-full h-[65vh]">
               {teamMembers.map((member, index) => {
@@ -185,7 +186,6 @@ export default function TeamMembers({
                       />
                     </motion.div>
 
-                    {/* Next image with reversed vertical clip-path reveal (bottom to top) */}
                     {/* Next image with vertical clip-path reveal (top to bottom) */}
                     {isActive && index < totalMembers - 1 && (
                       <motion.div className="absolute inset-0">
