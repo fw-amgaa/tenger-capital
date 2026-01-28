@@ -69,55 +69,55 @@ export default function TeamMembers({
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part2-4.jpg",
     },
-    {
-      name: "Erdenekhuu Ulziibadrakh",
-      role: "Broker & Office Manager",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-5.jpg",
-    },
-    {
-      name: "Bolor Bilegsaikhan",
-      role: "Broker",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part2-6.jpg",
-    },
-    {
-      name: "Khangal Batmagnai",
-      role: "Broker",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-4.jpg",
-    },
-    {
-      name: "Biger Ulambayar",
-      role: "Marketing Manager",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-8.jpg",
-    },
-    {
-      name: "Nomin-Erdene Baatarchuluun",
-      role: "Analyst",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part2-2.jpg",
-    },
-    {
-      name: "Munkhzolboo Batbayar",
-      role: "Accountant",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part2-7.jpg",
-    },
-    {
-      name: "Nyamkhishig Purev",
-      role: "Driver",
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-1.jpg",
-    },
+    // {
+    //   name: "Erdenekhuu Ulziibadrakh",
+    //   role: "Broker & Office Manager",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part1-5.jpg",
+    // },
+    // {
+    //   name: "Bolor Bilegsaikhan",
+    //   role: "Broker",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part2-6.jpg",
+    // },
+    // {
+    //   name: "Khangal Batmagnai",
+    //   role: "Broker",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part1-4.jpg",
+    // },
+    // {
+    //   name: "Biger Ulambayar",
+    //   role: "Marketing Manager",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part1-8.jpg",
+    // },
+    // {
+    //   name: "Nomin-Erdene Baatarchuluun",
+    //   role: "Analyst",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part2-2.jpg",
+    // },
+    // {
+    //   name: "Munkhzolboo Batbayar",
+    //   role: "Accountant",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part2-7.jpg",
+    // },
+    // {
+    //   name: "Nyamkhishig Purev",
+    //   role: "Driver",
+    //   description:
+    //     "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+    //   image: "/team-members/all-bw part1-1.jpg",
+    // },
   ];
 
   // Framer Motion scroll progress across the entire container
