@@ -187,7 +187,7 @@ export default function Header({ headerMode = "dark" }: Props) {
                 iconComponent={<></>}
                 onClick={toggleLanguage}
               >
-                {language === "en" ? "MN" : "EN"}
+                {language === "en" ? "EN" : "MN"}
               </GradientBorderButton>
             </motion.div>
             <motion.div
