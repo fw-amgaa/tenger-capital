@@ -38,7 +38,7 @@ export default function UnderWriting({
           </p>
         </div>
       ),
-      image: "/offerings/debt-insurance.png",
+      image: "/offerings/debt-insurance.jpg",
     },
     {
       name: t("IPO & Equity Capital Markets"),
@@ -98,7 +98,9 @@ export default function UnderWriting({
         <Seperator />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
-            <h1 className="text-3xl md:text-4xl font-serif">{t("Underwriting")}</h1>
+            <h1 className="text-3xl md:text-4xl font-serif">
+              {t("Underwriting")}
+            </h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
               {t("Building value that lasts.")}
             </h1>
@@ -117,9 +119,9 @@ export default function UnderWriting({
           {services.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-light mb-8">{member.name}</h3>
-              <p className="text-md leading-[1.4] opacity-70">
+              <div className="text-md leading-[1.4] opacity-70">
                 {member.description}
-              </p>
+              </div>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
                 <Image

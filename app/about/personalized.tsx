@@ -13,7 +13,12 @@ export default function Personalized() {
       className="section-container mt-16 md:mt-0 md:h-screen relative flex flex-wrap items-center justify-center md:justify-between md:px-16 lg:px-32 xl:px-48 space-y-8 md:gap-8"
     >
       <div className="w-full md:w-[45%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">
-        <Image src={"/about-us/personalized-service.jpg"} alt="hero" fill />
+        <Image
+          src={"/about-us/personalized-service.jpg"}
+          alt="hero"
+          fill
+          objectFit="cover"
+        />
       </div>
 
       <motion.div
