@@ -169,8 +169,8 @@ export default function Offerings({ setHeaderMode }: Props) {
   const translateY = useMotionTemplate`translate3d(0px, calc(-100% + ${translate3d}vh), 0px)`;
   const thirdStateBorderColor = useMotionTemplate`rgba(219, 219, 219, ${thirdStateOpacity})`;
 
-  // clip-path: inset(0px 49% 0px 0px); stroke-width: 0.5px; transform: translate3d(0px, calc(-100% + 2.5vh), 0px);
-  // clip-path: inset(0px -1% 0px 0px); stroke-width: 1px; transform: translate3d(0px, calc(-100% + 15vh), 0px);
+  // clip-path: inset(0px 49% 0px 0px); strokeWidth: 0.5px; transform: translate3d(0px, calc(-100% + 2.5vh), 0px);
+  // clip-path: inset(0px -1% 0px 0px); strokeWidth: 1px; transform: translate3d(0px, calc(-100% + 15vh), 0px);
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (v > firstState) {

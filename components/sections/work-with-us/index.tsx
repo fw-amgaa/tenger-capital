@@ -89,9 +89,9 @@ const WorkWithUs = () => {
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stop-color="#FF9900"></stop>
-                  <stop offset="50%" stop-color="#F8E5B5"></stop>
-                  <stop offset="100%" stop-color="#FF9900"></stop>
+                  <stop offset="0%" stopColor="#FF9900"></stop>
+                  <stop offset="50%" stopColor="#F8E5B5"></stop>
+                  <stop offset="100%" stopColor="#FF9900"></stop>
                 </linearGradient>
                 <linearGradient
                   id="fill-_R_hlfdb_"
@@ -100,14 +100,14 @@ const WorkWithUs = () => {
                   x2="0%"
                   y2="100%"
                 >
-                  <stop offset="0%" stop-color="rgba(255, 153, 0, 0.4)"></stop>
-                  <stop offset="100%" stop-color="rgba(255, 153, 0, 0)"></stop>
+                  <stop offset="0%" stopColor="rgba(255, 153, 0, 0.4)"></stop>
+                  <stop offset="100%" stopColor="rgba(255, 153, 0, 0)"></stop>
                 </linearGradient>
               </defs>
               <path
                 d="M 66 15 A 42 45 0 1 1 60 105 A 45 45 0 1 1 60 15 Z M 60 35 A 25 25 0 1 0 60 85 A 25 25 0 1 0 60 35 Z"
                 fill="rgba(139, 90, 43, 0.6)"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               ></path>
 
               <path
@@ -120,15 +120,15 @@ const WorkWithUs = () => {
                 x2="60"
                 y2="35"
                 stroke="#FF9900"
-                stroke-width="0.4"
-                stroke-linecap="round"
+                strokeWidth="0.4"
+                strokeLinecap="round"
               ></line>
               <path
                 d="M 60 15 A 43 43 0 0 1 105 60"
                 stroke="url(#gold-_R_hlfdb_)"
-                stroke-width="0.4"
+                strokeWidth="0.4"
                 fill="none"
-                stroke-linecap="round"
+                strokeLinecap="round"
               ></path>
               <line
                 x1="105"
@@ -136,15 +136,15 @@ const WorkWithUs = () => {
                 x2="85"
                 y2="60"
                 stroke="#FF9900"
-                stroke-width="0.4"
-                stroke-linecap="round"
+                strokeWidth="0.4"
+                strokeLinecap="round"
               ></line>
               <path
                 d="M 60 35 A 25 25 0 0 1 85 60"
                 stroke="url(#gold-_R_hlfdb_)"
-                stroke-width="0.4"
+                strokeWidth="0.4"
                 fill="none"
-                stroke-linecap="round"
+                strokeLinecap="round"
               ></path>
             </svg>
           </div>
