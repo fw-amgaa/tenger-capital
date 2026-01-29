@@ -1,5 +1,6 @@
 "use client";
 
+import { animate } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import GradientBorderButton from "../gradient-border-button";
@@ -20,9 +21,15 @@ const Footer = () => {
           )}
         >
           <div className="flex h-full flex-col justify-between max-md:items-center">
-            <Link
-              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0"
-              href="#"
+            <button
+              onClick={() =>
+                animate(window.scrollY, 0, {
+                  duration: 1.2,
+                  ease: [0.22, 1, 0.36, 1],
+                  onUpdate: (v) => window.scrollTo(0, v),
+                })
+              }
+              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0 cursor-pointer"
             >
               Back to top
               <svg
@@ -36,7 +43,7 @@ const Footer = () => {
                   d="M5 3.006.833 7.173l.584.583L5 4.173l3.583 3.583.584-.583zm-5-2.5h10v.833H0z"
                 ></path>
               </svg>
-            </Link>
+            </button>
 
             <Image
               src={"/logo/logo_main_dark.png"}
