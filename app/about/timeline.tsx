@@ -6,34 +6,52 @@ function TimelineItem({
   title,
   facts,
   imagePath,
+  reverse,
 }: {
   title: string;
   facts: string[];
   imagePath: string;
+  reverse?: boolean;
 }) {
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
+      {reverse && (
+        <div>
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          {facts.map((fact, index) => (
+            <p
+              key={index}
+              className="mb-5 h-10 text-xs font-normal md:text-sm text-neutral-200"
+            >
+              {fact}
+            </p>
+          ))}
+        </div>
+      )}
+
       <div className="flex flex-col sm:flex-row sm:gap-4">
-        <div className="border rounded-sm overflow-hidden w-[150px] h-16 bg-[#111111] p-1">
+        <div className="border rounded-sm overflow-hidden w-full h-24 lg:h-36 xl:h-48 bg-[#111111] p-1">
           <div className="relative bg-black w-full h-full rounded-xs">
             <Image src={imagePath} alt={title} objectFit="cover" fill />
           </div>
         </div>
-        <p className="mt-1 sm:mt-5 text-xs font-bold md:text-sm text-neutral-200">
+        {/* <p className="mt-1 sm:mt-5 text-xs font-bold md:text-sm text-neutral-200">
           {title}
-        </p>
+        </p> */}
       </div>
-      <div>
-        <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-        {facts.map((fact, index) => (
-          <p
-            key={index}
-            className="mb-5 h-10 text-xs font-normal md:text-sm text-neutral-200"
-          >
-            {fact}
-          </p>
-        ))}
-      </div>
+      {!reverse && (
+        <div>
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          {facts.map((fact, index) => (
+            <p
+              key={index}
+              className="mb-5 h-10 text-xs font-normal md:text-sm text-neutral-200"
+            >
+              {fact}
+            </p>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -43,7 +61,7 @@ export function TimelineSection() {
     {
       title: "2007",
       content: (
-        <div key="1" className="flex flex-col gap-8">
+        <div key="1" className="flex flex-col gap-8 md:gap-16">
           <TimelineItem
             title="Songdo"
             facts={[
@@ -58,6 +76,7 @@ export function TimelineSection() {
               "- USD 14.0 million debt financing in the information technology sector",
             ]}
             imagePath="/timeline/gemnet.png"
+            reverse
           />
 
           <TimelineItem
@@ -75,6 +94,7 @@ export function TimelineSection() {
               "- USD 10.0 million project financing in the real estate sector",
             ]}
             imagePath="/partners/master group.png"
+            reverse
           />
 
           <TimelineItem
