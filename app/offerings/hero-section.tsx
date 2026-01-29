@@ -27,7 +27,13 @@ export default function HeroSection() {
       </motion.div>
 
       <div className="w-full md:w-[45%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">
-        <Image src={"/offerings/main.jpg"} alt="hero" fill objectFit="cover" />
+        <Image
+          src={"/offerings/main.jpg"}
+          alt="hero"
+          fill
+          objectFit="cover"
+          objectPosition="center"
+        />
       </div>
     </motion.main>
   );

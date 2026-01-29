@@ -52,7 +52,7 @@ export default function Brokerage({
         </div>
       ),
 
-      image: "/offerings/mse.jpg",
+      image: "/phone-screen/monitoring_portfolio.jpg",
     },
     {
       name: t("International Markets"),
@@ -124,7 +124,9 @@ export default function Brokerage({
         <Seperator />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
           <div>
-            <h1 className="text-3xl md:text-4xl font-serif">{t("Brokerage")}</h1>
+            <h1 className="text-3xl md:text-4xl font-serif">
+              {t("Brokerage")}
+            </h1>
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
               {t("Stand solid. Stay liquid.")}
             </h1>
@@ -142,9 +144,9 @@ export default function Brokerage({
           {services.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-light mb-8">{member.name}</h3>
-              <p className="text-md leading-[1.4] opacity-70">
+              <div className="text-md leading-[1.4] opacity-70">
                 {member.description}
-              </p>
+              </div>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
                 <Image
@@ -152,6 +154,7 @@ export default function Brokerage({
                   alt={member.name + "image"}
                   fill
                   objectFit="cover"
+                  objectPosition="top"
                 />
               </div>
             </div>
@@ -186,6 +189,7 @@ export default function Brokerage({
                         height={800}
                         className="w-full h-full object-cover"
                         style={{ opacity: isPast ? 0 : 1 }}
+                        objectPosition="top"
                       />
                     </motion.div>
 
@@ -199,6 +203,7 @@ export default function Brokerage({
                           src={services[index + 1].image}
                           alt={services[index + 1].name}
                           className="absolute inset-0 w-full h-full object-cover"
+                          objectPosition="top"
                           style={{
                             clipPath: `inset(${
                               100 - memberProgress * 100

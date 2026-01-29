@@ -107,9 +107,9 @@ export default function WealthManagement({
           {services.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-light mb-8">{member.name}</h3>
-              <p className="text-md leading-[1.4] opacity-70">
+              <div className="text-md leading-[1.4] opacity-70">
                 {member.description}
-              </p>
+              </div>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
                 <Image
@@ -163,6 +163,7 @@ export default function WealthManagement({
                         width={800}
                         height={800}
                         className="w-full h-full object-cover"
+                        objectPosition="bottom"
                         style={{ opacity: isPast ? 0 : 1 }}
                       />
                     </motion.div>
@@ -177,6 +178,7 @@ export default function WealthManagement({
                           src={services[index + 1].image}
                           alt={services[index + 1].name}
                           className="absolute inset-0 w-full h-full object-cover"
+                          objectPosition="bottom"
                           style={{
                             clipPath: `inset(${
                               100 - memberProgress * 100
