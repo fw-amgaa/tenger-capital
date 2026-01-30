@@ -1,34 +1,28 @@
 "use client";
 
 import GradientBadge from "@/components/gradient-badge";
+import { useLanguage } from "@/lib/language-context";
 import {
-  animate,
   AnimatePresence,
   motion,
   useInView,
-  useMotionValue,
   useTime,
   useTransform,
 } from "framer-motion";
 import { PlusIcon, X } from "lucide-react";
-import { useEffect, useId, useRef, useState } from "react";
-import { useLanguage } from "@/lib/language-context";
+import { useEffect, useRef, useState } from "react";
 
 const WorkWithUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
-  const id = useId();
-  const goldId = `gold-${id}`;
-  const fillId = `fill-${id}`;
-
   const statsData = [
     {
       title: t("workwithus.stat1.title"),
       percentage: "9.2",
       unit: "x",
-      suffix: "Since 2024",
+      suffix: t("Since 2024"),
       hasChart: true,
       disclosure:
         "This metric compares Tenger Capital’s total underwriting and brokerage transaction volume at the end of 2025 with the firm’s total transaction volume at the end of 2024. The comparison highlights year-on-year growth in both primary issuance and secondary market activity, reflecting the expansion of our client base, transaction capacity, and execution footprint within Mongolia’s capital markets.",
@@ -67,7 +61,7 @@ const WorkWithUs = () => {
       title: t("workwithus.stat2.title"),
       percentage: "25",
       unit: "%",
-      suffix: "of 2025 total issuance",
+      suffix: t("of 2025 total issuance"),
       label: "Tenger Capital",
       hasPieChart: true,
       disclosure:
@@ -155,7 +149,7 @@ const WorkWithUs = () => {
       title: t("workwithus.stat3.title"),
       percentage: "379.2",
       unit: "₮",
-      suffix: "Billion MNT",
+      suffix: t("Billion MNT"),
       labels: ["Others", "TC"],
       hasBarChart: true,
       disclosure:
@@ -168,26 +162,14 @@ const WorkWithUs = () => {
               background:
                 "linear-gradient(180deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 153, 0, 0) 100%)",
             }}
-          >
-            {/* <div className="flex w-fit items-center justify-center text-xs backdrop-blur-[20px] px-3 lg:px-4 py-2 lg:py-2 bg-[rgba(255,255,255,0.1)] absolute top-2 right-5 inline-flex h-7 rounded-2xl">
-              <span className="gap-2">
-                <span>#5</span>
-              </span>
-            </div> */}
-          </div>
+          ></div>
           <div
             className="relative h-[27%] w-[18%] shrink-0 rounded-t-2xl"
             style={{
               background:
                 "linear-gradient(180deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 153, 0, 0) 100%)",
             }}
-          >
-            {/* <div className="flex w-fit items-center justify-center text-xs backdrop-blur-[20px] px-3 lg:px-4 py-2 lg:py-2 bg-[rgba(255,255,255,0.1)] absolute top-2 right-3 inline-flex h-7 rounded-2xl">
-              <span className="gap-2">
-                <span>#4</span>
-              </span>
-            </div> */}
-          </div>
+          ></div>
 
           <div
             className="relative h-[33%] w-[18%] shrink-0 rounded-t-2xl"
@@ -195,13 +177,7 @@ const WorkWithUs = () => {
               background:
                 "linear-gradient(180deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 153, 0, 0) 100%)",
             }}
-          >
-            {/* <div className="flex w-fit items-center justify-center text-xs backdrop-blur-[20px] px-3 lg:px-4 py-2 lg:py-2 bg-[rgba(255,255,255,0.1)] absolute top-2 right-3 inline-flex h-7 rounded-2xl">
-              <span className="gap-2">
-                <span>#3</span>
-              </span>
-            </div> */}
-          </div>
+          ></div>
 
           <div
             className="relative w-[28%] shrink-0 rounded-t-2xl"
@@ -221,13 +197,7 @@ const WorkWithUs = () => {
               background:
                 "linear-gradient(180deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 153, 0, 0) 100%)",
             }}
-          >
-            {/* <div className="flex w-fit items-center justify-center text-xs backdrop-blur-[20px] px-3 lg:px-4 py-2 lg:py-2 bg-[rgba(255,255,255,0.1)] absolute top-2 right-2 inline-flex h-7 rounded-2xl">
-              <span className="gap-2">
-                <span>#1</span>
-              </span>
-            </div> */}
-          </div>
+          ></div>
         </div>
       ),
     },

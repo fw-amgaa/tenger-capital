@@ -1,25 +1,25 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import GradientBorderButton from "../../gradient-border-button";
-import styles from "./styles.module.css";
+import { useIsMobile } from "@/hooks/use-is-mobile";
+import { useLanguage } from "@/lib/language-context";
+import { cn } from "@/lib/utils";
 import {
   AnimatePresence,
   motion,
-  useScroll,
   useMotionValueEvent,
+  useScroll,
 } from "framer-motion";
+import { LockIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import GradientBorderButton from "../../gradient-border-button";
 import Navigation, {
   EASE_CUSTOM,
   ENTER_DURATION,
   EXIT_DURATION,
 } from "./navigation";
-import { cn } from "@/lib/utils";
-import { useIsMobile } from "@/hooks/use-is-mobile";
-import { FlagIcon, LockIcon } from "lucide-react";
-import Link from "next/link";
-import { useLanguage } from "@/lib/language-context";
+import styles from "./styles.module.css";
 
 // Define the scroll threshold (in pixels) for the top animation to start
 const TOP_SCROLL_THRESHOLD = 800;
@@ -187,7 +187,7 @@ export default function Header({ headerMode = "dark" }: Props) {
                 iconComponent={<></>}
                 onClick={toggleLanguage}
               >
-                {language === "en" ? "EN" : "MN"}
+                {language === "en" ? "ENG" : "MGL"}
               </GradientBorderButton>
             </motion.div>
             <motion.div
@@ -205,7 +205,7 @@ export default function Header({ headerMode = "dark" }: Props) {
                   hasBorder={false}
                   iconComponent={<LockIcon size={12} />}
                 >
-                  LOG IN
+                  {t("LOGIN")}
                 </GradientBorderButton>
               </Link>
             </motion.div>

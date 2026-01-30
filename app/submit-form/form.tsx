@@ -24,6 +24,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { useLanguage } from "@/lib/language-context";
 
 const formSchema = z.object({
   name: z.string().min(5, "Name must be at least 5 characters."),
@@ -34,6 +35,8 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
+  const { t } = useLanguage();
+
   const form = useForm({
     defaultValues: {
       name: "",
@@ -46,18 +49,15 @@ export function ContactForm() {
       onSubmit: formSchema,
     },
     onSubmit: async () => {
-      toast(
-        "You have submitted the form successfully. Thanks for reaching out.",
-        {
-          position: "bottom-right",
-          classNames: {
-            content: "flex flex-col gap-2",
-          },
-          style: {
-            "--border-radius": "calc(var(--radius)  + 4px)",
-          } as React.CSSProperties,
-        }
-      );
+      toast(t("submitform.success"), {
+        position: "bottom-right",
+        classNames: {
+          content: "flex flex-col gap-2",
+        },
+        style: {
+          "--border-radius": "calc(var(--radius)  + 4px)",
+        } as React.CSSProperties,
+      });
 
       form.reset();
     },
@@ -67,11 +67,8 @@ export function ContactForm() {
     <div className="section-container flex w-full justify-center mb-64">
       <Card className="w-full sm:max-w-md">
         <CardHeader>
-          <CardTitle>Бондын форм</CardTitle>
-          <CardDescription>
-            Та өндөр өгөөжтэй тус хөрөнгө оруулалтын бүтээгдэхүүнийг сонирхож
-            байвал өөрийн мэдээллээ үлдээнэ үү.
-          </CardDescription>
+          <CardTitle>{t("submitform.title")}</CardTitle>
+          <CardDescription>{t("submitform.description")}</CardDescription>
         </CardHeader>
         <CardContent>
           <form
@@ -89,7 +86,9 @@ export function ContactForm() {
                     field.state.meta.isTouched && !field.state.meta.isValid;
                   return (
                     <Field data-invalid={isInvalid}>
-                      <FieldLabel htmlFor={field.name}>Full Name</FieldLabel>
+                      <FieldLabel htmlFor={field.name}>
+                        {t("Full Name")}
+                      </FieldLabel>
                       <Input
                         id={field.name}
                         name={field.name}
@@ -97,7 +96,7 @@ export function ContactForm() {
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
                         aria-invalid={isInvalid}
-                        placeholder="e.g John Doe"
+                        placeholder={t("e.g John Doe")}
                         autoComplete="off"
                       />
                       {isInvalid && (
@@ -114,7 +113,7 @@ export function ContactForm() {
                   return (
                     <Field data-invalid={isInvalid}>
                       <FieldLabel htmlFor={field.name}>
-                        Email Address
+                        {t("Email Address")}
                       </FieldLabel>
                       <Input
                         id={field.name}
@@ -127,7 +126,7 @@ export function ContactForm() {
                       />
 
                       <FieldDescription>
-                        We&apos;ll never share your email with anyone else.
+                        {t("submitform.email.note")}
                       </FieldDescription>
                       {isInvalid && (
                         <FieldError errors={field.state.meta.errors} />
@@ -143,7 +142,9 @@ export function ContactForm() {
                     field.state.meta.isTouched && !field.state.meta.isValid;
                   return (
                     <Field data-invalid={isInvalid}>
-                      <FieldLabel htmlFor={field.name}>Phone Number</FieldLabel>
+                      <FieldLabel htmlFor={field.name}>
+                        {t("Phone Number")}
+                      </FieldLabel>
                       <Input
                         id={field.name}
                         name={field.name}
@@ -169,7 +170,7 @@ export function ContactForm() {
                   return (
                     <Field data-invalid={isInvalid}>
                       <FieldLabel htmlFor={field.name}>
-                        Do you have Tenger Capital account?
+                        {t("Do you have Tenger Capital account?")}
                       </FieldLabel>
 
                       <RadioGroup
@@ -180,11 +181,11 @@ export function ContactForm() {
                       >
                         <div className="flex items-center gap-3">
                           <RadioGroupItem value="yes" id="r1" />
-                          <Label htmlFor="r1">Yes</Label>
+                          <Label htmlFor="r1">{t("Yes")}</Label>
                         </div>
                         <div className="flex items-center gap-3">
                           <RadioGroupItem value="no" id="r2" />
-                          <Label htmlFor="r2">No</Label>
+                          <Label htmlFor="r2">{t("No")}</Label>
                         </div>
                       </RadioGroup>
 
@@ -203,7 +204,7 @@ export function ContactForm() {
                   return (
                     <Field data-invalid={isInvalid}>
                       <FieldLabel htmlFor={field.name}>
-                        How much are you planning to invest?
+                        {t("How much are you planning to invest?")}
                       </FieldLabel>
 
                       <RadioGroup
@@ -213,44 +214,46 @@ export function ContactForm() {
                         <div className="flex items-center gap-3">
                           <RadioGroupItem
                             id="amount1"
-                            value="10 сая төгрөг хүртэл"
+                            value={t("submitform.amount1")}
                           />
-                          <Label htmlFor="amount1">10 сая төгрөг хүртэл</Label>
+                          <Label htmlFor="amount1">
+                            {t("submitform.amount1")}
+                          </Label>
                         </div>
                         <div className="flex items-center gap-3">
                           <RadioGroupItem
                             id="amount2"
-                            value="10-50 сая төгрөг хүртэл"
+                            value={t("submitform.amount2")}
                           />
                           <Label htmlFor="amount2">
-                            10-50 сая төгрөг хүртэл
+                            {t("submitform.amount2")}
                           </Label>
                         </div>
                         <div className="flex items-center gap-3">
                           <RadioGroupItem
                             id="amount3"
-                            value="50-100 сая төгрөг хүртэл"
+                            value={t("submitform.amount3")}
                           />
                           <Label htmlFor="amount3">
-                            50-100 сая төгрөг хүртэл
+                            {t("submitform.amount3")}
                           </Label>
                         </div>
                         <div className="flex items-center gap-3">
                           <RadioGroupItem
                             id="amount4"
-                            value="100-300 сая төгрөг хүртэл"
+                            value={t("submitform.amount4")}
                           />
                           <Label htmlFor="amount4">
-                            100-300 сая төгрөг хүртэл
+                            {t("submitform.amount4")}
                           </Label>
                         </div>
                         <div className="flex items-center gap-3">
                           <RadioGroupItem
                             id="amount5"
-                            value="300 сая төгрөгөөс дээш"
+                            value={t("submitform.amount5")}
                           />
                           <Label htmlFor="amount5">
-                            300 сая төгрөгөөс дээш
+                            {t("submitform.amount5")}
                           </Label>
                         </div>
                       </RadioGroup>
@@ -272,10 +275,10 @@ export function ContactForm() {
               variant="outline"
               onClick={() => form.reset()}
             >
-              Reset
+              {t("Reset")}
             </Button>
             <Button type="submit" form="contact-form">
-              Submit
+              {t("Submit")}
             </Button>
           </Field>
         </CardFooter>

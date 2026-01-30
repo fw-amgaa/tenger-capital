@@ -9,36 +9,33 @@ import { useEffect, useState } from "react";
 import Seperator from "../seperator";
 import { useLanguage } from "@/lib/language-context";
 
-const carouselData = [
-  {
-    icon: <Bell className="w-4 h-4" />,
-    title: "Real-Time Data",
-    description:
-      "Keep track with current market orders and prices of your MSE products.",
-    phoneImage: "/phone-screen/market.jpg",
-  },
-  {
-    icon: <User className="w-4 h-4" />,
-    title: "Human Service",
-    description:
-      "All Tenger Capital clients have access to a dedicated wealth advisor.",
-    phoneImage: "/phone-screen/order_entry.jpg",
-  },
-  {
-    icon: <TrendingUp className="w-4 h-4" />,
-    title: "Monitor your Portfolio",
-    description:
-      "Your total portfolio including all your bonds and stocks in one place.",
-    phoneImage: "/phone-screen/portfolio.jpg",
-  },
-];
-
 const Brief = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [direction, setDirection] = useState(1);
   const duration = 8000;
   const { t } = useLanguage();
+
+  const carouselData = [
+    {
+      icon: <Bell className="w-4 h-4" />,
+      title: t("Real-Time Data"),
+      description: t("brief.realtime.desc"),
+      phoneImage: "/phone-screen/market.jpg",
+    },
+    {
+      icon: <User className="w-4 h-4" />,
+      title: t("Human Service"),
+      description: t("brief.human.desc"),
+      phoneImage: "/phone-screen/order_entry.jpg",
+    },
+    {
+      icon: <TrendingUp className="w-4 h-4" />,
+      title: t("Monitor your Portfolio"),
+      description: t("brief.portfolio.desc"),
+      phoneImage: "/phone-screen/portfolio.jpg",
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -181,16 +178,6 @@ const Brief = () => {
                 transition={transition}
                 className="text-white border-white rounded-overflow-hidden-safari relative aspect-[786/1704] h-full w-auto overflow-hidden rounded-2xl border-[1px] md:rounded-3xl lg:rounded-4xl"
               >
-                {/* Status Bar */}
-                {/* <div className="absolute top-0 left-0 right-0 h-8 flex items-center justify-between px-4 text-white z-10 bg-gradient-to-b from-black/50 to-transparent">
-                  <span className="text-[10px]">11:11</span>
-                  <div className="flex gap-1 items-center justify-center">
-                    <BarChart size={12} />
-                    <WifiIcon size={12} />
-                    <BatteryChargingIcon size={15} />
-                  </div>
-                </div> */}
-
                 {/* Phone Screen Content */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900">
                   <Image
@@ -200,15 +187,12 @@ const Brief = () => {
                     className="object-cover"
                   />
                 </div>
-
-                {/* Home Indicator */}
-                {/* <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-[3px] bg-white rounded-full z-10" /> */}
               </motion.div>
             </AnimatePresence>
 
             {/* Illustrative Label */}
             <p className="text-center text-[#f8f8f8] opacity-30 text-[8px] mt-6">
-              For illustrative purposes only.
+              {t("For illustrative purposes only.")}
             </p>
           </div>
         </div>

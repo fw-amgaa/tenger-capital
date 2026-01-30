@@ -111,9 +111,9 @@ export default function HeroSection() {
             className="absolute inset-0 flex items-center justify-center z-30 pointer-events-none"
           >
             <h2 className="text-4xl md:text-7xl font-bold text-white text-center px-4 drop-shadow-lg uppercase">
-              <span>Founded on Integrity.</span>
+              <span>{t("Founded on Integrity.")}</span>
               <br />
-              <span>Focused on Your Future.</span>
+              <span>{t("Focused on Your Future.")}</span>
             </h2>
           </motion.div>
         </div>

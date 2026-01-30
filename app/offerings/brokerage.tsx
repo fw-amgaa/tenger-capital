@@ -20,11 +20,7 @@ interface Service {
   image: string;
 }
 
-export default function Brokerage({
-  showTitle = true,
-}: {
-  showTitle?: boolean;
-}) {
+export default function Brokerage() {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();

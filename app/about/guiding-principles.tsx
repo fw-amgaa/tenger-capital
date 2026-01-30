@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/lib/language-context";
 import { useEffect, useRef, useState } from "react";
 
 interface PrincipleProps {
@@ -10,13 +11,7 @@ interface PrincipleProps {
   delay?: number;
 }
 
-function PrincipleCard({
-  number,
-  title,
-  subtitle,
-  description,
-  delay = 0,
-}: PrincipleProps) {
+function PrincipleCard({ title, description, delay = 0 }: PrincipleProps) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -64,6 +59,7 @@ function PrincipleCard({
 }
 
 export default function GuidingPrinciples() {
+  const { t } = useLanguage();
   return (
     <section className="relative overflow-hidden section-container py-8 lg:py-16">
       {/* Ambient background effects */}
@@ -76,7 +72,7 @@ export default function GuidingPrinciples() {
         {/* Header */}
         <div className="pb-16 text-center md:mb-20">
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-            Guiding Principles
+            {t("Guiding Principles")}
           </h2>
         </div>
 
@@ -84,30 +80,30 @@ export default function GuidingPrinciples() {
         <div className="grid gap-16 md:grid-cols-2">
           <PrincipleCard
             number="01"
-            title="Client First"
+            title={t("Client First")}
             subtitle="Your Success Is Our Priority"
-            description="We place our clients at the heart of everything we do. Every strategy, every decision, and every recommendation is crafted with your unique financial goals and risk tolerance in mind. Your trust drives our commitment to excellence."
+            description={t("clientfirst.desc")}
             delay={0}
           />
           <PrincipleCard
             number="02"
-            title="Transparent Integrity"
+            title={t("Transparent Integrity")}
             subtitle="Honesty in Every Interaction"
-            description="We believe in complete transparency and unwavering integrity. From fee structures to investment strategies, we ensure you have full visibility into how we manage your wealth. No hidden agendas, just honest guidance you can rely on."
+            description={t("transparentintegrity.desc")}
             delay={100}
           />
           <PrincipleCard
             number="03"
-            title="Productive Capital"
+            title={t("Productive Capital")}
             subtitle="Leading Through Knowledge"
-            description="We believe capital should deliver measurable value. Through disciplined structuring, efficient execution, and prudent risk management, we ensure each transaction supports issuers and investors while contributing to the long-term development of Mongolia’s capital markets."
+            description={t("productivecapital.desc")}
             delay={200}
           />
           <PrincipleCard
             number="04"
-            title="Long-Term Partnership"
+            title={t("Long-Term Partnership")}
             subtitle="Building Generational Wealth"
-            description="We’re not just executing trades—we’re building lasting relationships. Our approach focuses on sustainable, long-term growth for issuers and investors alike. From structuring deals to navigating market shifts, we’re here for every milestone, adapting strategies as your goals evolve."
+            description={t("longtermpartnership.desc")}
             delay={300}
           />
         </div>

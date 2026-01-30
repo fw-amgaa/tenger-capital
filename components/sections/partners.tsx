@@ -23,7 +23,6 @@ const techLogos = [
   { src: "/partners/lend mn.png", alt: "lend mn" },
   { src: "/partners/MASD.png", alt: "MASD" },
   { src: "/partners/master group.png", alt: "master group" },
-  // { src: "/partners/mfo.png", alt: "mfo" },
   { src: "/partners/monaybox.png", alt: "monaybox" },
   { src: "/partners/mongol alt.png", alt: "mongol alt" },
   { src: "/partners/monos.png", alt: "monos" },

@@ -1,19 +1,19 @@
 "use client";
 
 import { useComponentWidth } from "@/hooks/use-component-width";
+import { useLanguage } from "@/lib/language-context";
 import { cn } from "@/lib/utils";
 import {
   motion,
   useAnimation,
-  useInView,
   useMotionTemplate,
   useMotionValueEvent,
   useScroll,
   useTransform,
 } from "framer-motion";
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import GradientBorderButton from "../gradient-border-button";
 import Link from "next/link";
+import { Dispatch, SetStateAction, useRef, useState } from "react";
+import GradientBorderButton from "../gradient-border-button";
 
 const openingState = 0.22;
 const firstState = 0.3;
@@ -85,6 +85,7 @@ export default function Offerings({ setHeaderMode }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { ref, width } = useComponentWidth();
   const [isOverflowHidden, setIsOverflowHidden] = useState(true);
+  const { t } = useLanguage();
   const [showMonth, setShowMonth] = useState(false);
 
   const controls = useAnimation();
@@ -168,9 +169,6 @@ export default function Offerings({ setHeaderMode }: Props) {
   const clipPathValue = useMotionTemplate`inset(0px ${clipPath} 0px 0px)`;
   const translateY = useMotionTemplate`translate3d(0px, calc(-100% + ${translate3d}vh), 0px)`;
   const thirdStateBorderColor = useMotionTemplate`rgba(219, 219, 219, ${thirdStateOpacity})`;
-
-  // clip-path: inset(0px 49% 0px 0px); strokeWidth: 0.5px; transform: translate3d(0px, calc(-100% + 2.5vh), 0px);
-  // clip-path: inset(0px -1% 0px 0px); strokeWidth: 1px; transform: translate3d(0px, calc(-100% + 15vh), 0px);
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (v > firstState) {
@@ -328,7 +326,7 @@ export default function Offerings({ setHeaderMode }: Props) {
                     >
                       <div className="h-1.5 w-[100%] rounded-full bg-black/10" />
                       <p className="text-black opacity-10 font-semibold text-xs">
-                        A DAY
+                        {t("A DAY")}
                       </p>
                     </motion.div>
                     <motion.div className="flex" style={{ width: yearWidth }}>
@@ -336,7 +334,7 @@ export default function Offerings({ setHeaderMode }: Props) {
                       <div className="flex flex-col gap-[.6rem] w-full">
                         <div className="h-1.5 w-[100%] rounded-full bg-black" />
                         <p className="text-black font-semibold text-xs whitespace-nowrap">
-                          A YEAR
+                          {t("A YEAR")}
                         </p>
                       </div>
                     </motion.div>
@@ -349,8 +347,8 @@ export default function Offerings({ setHeaderMode }: Props) {
                   className="text-xl md:text-7xl text-black md:text-center"
                   animate={controls}
                 >
-                  <div>Markets move daily.</div>
-                  <div>Your focus shouldn&apos;t.</div>
+                  <div>{t("Markets move daily.")}</div>
+                  <div>{t("Your focus shouldn't.")}</div>
                 </motion.h2>
                 <div className="absolute bottom-[3.5rem] flex w-full flex-col items-center gap-[3.5rem] lg:w-[50%] lg:min-w-[51.8rem]">
                   <motion.div className="flex flex-col relative text-center text-black">
@@ -359,13 +357,13 @@ export default function Offerings({ setHeaderMode }: Props) {
                         initial={{ opacity: 0 }}
                         animate={{ ...endControls, animationDelay: 0 }}
                       >
-                        We filter out the noise,&nbsp;
+                        {t("We filter out the noise,")}&nbsp;
                       </motion.h3>
                       <motion.h3
                         initial={{ opacity: 0 }}
                         animate={{ ...endControls, animationDelay: 0.1 }}
                       >
-                        so you don&apos;t have to.&nbsp;
+                        {t("so you don't have to.")}&nbsp;
                       </motion.h3>
                     </div>
                     <motion.div
@@ -377,7 +375,7 @@ export default function Offerings({ setHeaderMode }: Props) {
                           borderAnimation={false}
                           mode={"light"}
                         >
-                          Offerings
+                          {t("Offerings")}
                         </GradientBorderButton>
                       </Link>
                     </motion.div>
@@ -393,15 +391,14 @@ export default function Offerings({ setHeaderMode }: Props) {
             className="flex-center absolute right-0 bottom-[2.4rem] left-0 md:bottom-[4.5rem]"
           >
             <div className="text-[8px] text-[#364153] text-center opacity-[.3] leading-6">
-              For illustrative purposes only; not representative of actual
-              clients.{" "}
+              {t("offerings.disclaimer")}{" "}
               <a
                 className="underline underline-offset-[.2rem] font-semibold"
                 href="https://web.archive.org/web/20251007172158mp_/https://titan.com"
                 target="_blank"
                 rel="noopener"
               >
-                Growth is not guaranteed
+                {t("Growth is not guaranteed")}
               </a>
               .
             </div>

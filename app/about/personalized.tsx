@@ -1,10 +1,12 @@
 "use client";
 
+import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Personalized() {
   const introDone = true;
+  const { t } = useLanguage();
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -28,17 +30,15 @@ export default function Personalized() {
         className="z-10 md:w-[370px] text-center md:text-left"
       >
         <h3 className="text-4xl md:text-5xl tracking-tight text-primary mb-1 mt-6">
-          Personalized service
+          {t("Personalized service")}
         </h3>
 
         <span className="text-white/60 text-sm">
-          A service as individual as you are
+          {t("A service as individual as you are")}
         </span>
 
         <p className="text-md mt-12 text-white/80">
-          Every client receives individualized attention from a dedicated broker
-          and analyst, ensuring you always have experts on hand to answer
-          questions and navigate every financial decision with confidence.
+          {t("personalized.desc")}
         </p>
       </motion.div>
     </motion.main>

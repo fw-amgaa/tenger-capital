@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import { motion, useTime, useTransform, AnimatePresence } from "framer-motion";
-import { PlusIcon, X } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
+import { AnimatePresence, motion, useTime, useTransform } from "framer-motion";
+import { PlusIcon, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const WorkWithUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

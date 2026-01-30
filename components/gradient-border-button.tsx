@@ -83,12 +83,14 @@ const GradientBorderButton = ({
         animate={{
           filter: isHovered
             ? [
-              `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
-              `blur(${mode === "light" ? 2 : 4}px) drop-shadow(0 0 ${mode === "light" ? 3 : 8
-              }px ${mode === "light" ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.6)"
-              })`,
-              `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
-            ]
+                `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
+                `blur(${mode === "light" ? 2 : 4}px) drop-shadow(0 0 ${
+                  mode === "light" ? 3 : 8
+                }px ${
+                  mode === "light" ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.6)"
+                })`,
+                `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
+              ]
             : `blur(0px) drop-shadow(0 0 0px rgba(0,0,0,0))`,
         }}
         transition={{
@@ -97,7 +99,7 @@ const GradientBorderButton = ({
           ease: "easeInOut",
         }}
         className={cn(
-          "relative z-10 flex items-center gap-2 text-[10px] font-semibold",
+          "relative z-10 flex items-center gap-2 text-[10px] font-semibold uppercase",
           mode === "light" ? "text-black" : "text-white"
         )}
       >

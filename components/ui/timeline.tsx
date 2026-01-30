@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/lib/language-context";
 import { motion, useScroll, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -12,6 +13,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (ref.current) {
@@ -35,11 +37,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
-          Changelog from our journey
+          {t("Changelog from our journey")}
         </h2>
         <p className="text-neutral-300 text-sm md:text-base max-w-sm">
-          We&apos;ve been working on Tenger Capital for the past 18 years.
-          Here&apos;s a timeline of our journey.
+          {t("timeline.subtitle")}
         </p>
       </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/lib/language-context";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -79,6 +80,7 @@ function StatCard({
 }
 
 export default function KeyFigures() {
+  const { t } = useLanguage();
   return (
     <section className="relative overflow-hidden section-container py-24 md:py-32 lg:py-40">
       <div className="absolute inset-0 overflow-hidden">
@@ -89,11 +91,10 @@ export default function KeyFigures() {
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-16 text-center md:mb-20">
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-            Trusted by Clients Worldwide
+            {t("Trusted by Clients Worldwide")}
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-sm text-white/60 md:text-base">
-            Building wealth through expertise, innovation, and unwavering
-            commitment to excellence
+            {t("keyfigures.subtitle")}
           </p>
         </div>
 
@@ -102,32 +103,32 @@ export default function KeyFigures() {
             value="300"
             suffix="B+"
             prefix="₮"
-            label="Billion raised in 2025H1"
+            label={t("Billion raised in 2025H1")}
             delay={0}
           />
           <StatCard
             value="170"
             suffix="+"
-            label="Institutional and HNW clients"
+            label={t("Institutional and HNW clients")}
             delay={100}
           />
-          <StatCard value="18" label="Years of Experience" delay={200} />
+          <StatCard value="19" label={t("Years of Experience")} delay={200} />
           <StatCard
             value="94"
             suffix="%"
-            label="Client Retention Rate"
+            label={t("Client Retention Rate")}
             delay={300}
           />
           <StatCard
             value="10,000"
             suffix="+"
-            label="Retail Clients"
+            label={t("Retail Clients")}
             delay={400}
           />
           <StatCard
             value="15"
             suffix="%"
-            label="Average Annual Return"
+            label={t("Average Annual Return")}
             delay={500}
           />
         </div>

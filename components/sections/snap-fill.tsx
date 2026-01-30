@@ -39,15 +39,6 @@ export default function SnapFillSection({
   const titleOpacity = useTransform(chartProgress, [0, 0.15, 0.22], [1, 1, 0]);
   const titleY = useTransform(chartProgress, [0, 0.22], [0, -12]);
 
-  // Bars fade in
-  // const barsOpacity = useTransform(chartProgress, [0.18, 0.3], [0, 1]);
-
-  // Horizontal pan across bars
-  // const barsTranslateX = useTransform(chartProgress, [0.3, 0.8], [0, -800]);
-
-  // Final stage: zoom out to show all bars
-  // const overviewScale = useTransform(chartProgress, [0.8, 1], [1, 0.7]);
-
   return (
     <section
       ref={ref}
@@ -56,7 +47,7 @@ export default function SnapFillSection({
         "h-[400vh] w-full",
         "flex items-center justify-center",
         "max-w-screen-2xl mx-auto",
-        className ?? "",
+        className ?? ""
       )}
     >
       {/* Sticky viewport container */}
@@ -73,11 +64,29 @@ export default function SnapFillSection({
         {children ?? (
           <div className="relative h-full w-full text-neutral-900">
             {/* Background line graph placeholder */}
-            <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 1200 600" preserveAspectRatio="none">
-              <path d="M0 420 L80 410 L140 430 L220 360 L300 380 L420 300 L520 340 L600 320 L700 380 L820 300 L980 360 L1200 320" fill="none" stroke="currentColor" strokeWidth="2" />
+            <svg
+              className="absolute inset-0 w-full h-full opacity-40"
+              viewBox="0 0 1200 600"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0 420 L80 410 L140 430 L220 360 L300 380 L420 300 L520 340 L600 320 L700 380 L820 300 L980 360 L1200 320"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
               {/* vertical grid */}
               {Array.from({ length: 12 }).map((_, i) => (
-                <line key={i} x1={(i + 1) * 100} y1={40} x2={(i + 1) * 100} y2={560} stroke="currentColor" strokeWidth="1" opacity="0.08" />
+                <line
+                  key={i}
+                  x1={(i + 1) * 100}
+                  y1={40}
+                  x2={(i + 1) * 100}
+                  y2={560}
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  opacity="0.08"
+                />
               ))}
             </svg>
 
@@ -87,8 +96,12 @@ export default function SnapFillSection({
               style={{ opacity: titleOpacity, y: titleY }}
             >
               <div className="text-center">
-                <h2 className="text-3xl md:text-5xl font-semibold">Markets move daily.</h2>
-                <p className="mt-3 text-base md:text-lg opacity-70">Your focus shouldn’t.</p>
+                <h2 className="text-3xl md:text-5xl font-semibold">
+                  Markets move daily.
+                </h2>
+                <p className="mt-3 text-base md:text-lg opacity-70">
+                  Your focus shouldn’t.
+                </p>
               </div>
             </motion.div>
           </div>
@@ -97,5 +110,3 @@ export default function SnapFillSection({
     </section>
   );
 }
-
-

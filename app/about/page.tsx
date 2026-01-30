@@ -10,23 +10,19 @@ import Personalized from "./personalized";
 import Header from "@/components/sections/header";
 
 export default function Page() {
-    return <ScrollControlProvider>
-        <Header />
-
-        <HeroSection />
-        <LetterFromCeo />
-
-        <KeyFigures />
-
-        <GuidingPrinciples />
-        <TeamMembers showTitle={false} />
-
-        <Personalized />
-
-        <div className="mb-24">
-            <TimelineSection />
-        </div>
-
-        <Footer />
+  return (
+    <ScrollControlProvider>
+      <Header />
+      <HeroSection />
+      <LetterFromCeo />
+      <KeyFigures />
+      <GuidingPrinciples />
+      <TeamMembers showTitle={false} />
+      <Personalized />
+      <div className="mb-24">
+        <TimelineSection />
+      </div>
+      <Footer />
     </ScrollControlProvider>
+  );
 }

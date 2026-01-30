@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useIsMobile } from "@/hooks/use-is-mobile";
+import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { useIsMobile } from "@/hooks/use-is-mobile";
-import GradientBorderButton from "@/components/gradient-border-button";
-import { useLanguage } from "@/lib/language-context";
+import { useEffect, useRef } from "react";
 
 export const EASE_CUSTOM = [0.76, 0, 0.24, 1] as const;
 export const ENTER_DURATION = 0.25;
@@ -143,9 +142,9 @@ const Navigation = () => {
                 className="object-cover"
               />
             </div>
-            <h2 className="relative text-2xl leading-[120%] z-10">Offerings</h2>
+            <h2 className="relative text-2xl leading-[120%] z-10">{t("Offerings")}</h2>
             <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
-              DISCOVER NOW
+              {t("DISCOVER NOW")}
               <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
                 →
               </span>
@@ -167,10 +166,10 @@ const Navigation = () => {
                 />
               </div>
               <h2 className="relative text-2xl leading-[120%] z-10">
-                About us
+                {t("About us")}
               </h2>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
-                DISCOVER NOW
+                {t("DISCOVER NOW")}
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
                   →
                 </span>
@@ -190,10 +189,10 @@ const Navigation = () => {
                 />
               </div>
               <h2 className="relative text-2xl leading-[120%] z-10">
-                Submit form
+                {t("Submit form")}
               </h2>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
-                REACH OUT TO US
+                {t("REACH OUT TO US")}
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
                   →
                 </span>
@@ -208,7 +207,7 @@ const Navigation = () => {
           >
             <ul className="flex flex-col nav-links">
               <span className="type-xs mb-4 text-black/40 text-[10px] uppercase tracking-wide">
-                Learn More
+                {t("Learn More")}
               </span>
               <li>
                 <Link
@@ -234,43 +233,10 @@ const Navigation = () => {
                   href="https://xacex.tengercapital.mn/auth/login"
                   target="_blank"
                 >
-                  Login
+                  {t("Login")}
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                  target="_self"
-                  href="/careers"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                  target="_self"
-                  href="/blog"
-                >
-                  Blog
-                </Link>
-              </li> */}
             </ul>
-
-            {/* <div className="text-sm">
-              Language:
-              <GradientBorderButton
-                mode={"light"}
-                hasBorder={true}
-                borderAnimation={false}
-                iconComponent={<></>}
-              >
-                ENG
-              </GradientBorderButton>
-            </div> */}
-            {/* <p className="text-sm text-black/80 font-semibold ml-4 flex items-center">
-              ✧ <span className="text-xs ml-1">Powered by Esugsoft LLC</span>
-            </p> */}
           </div>
         </div>
       </div>

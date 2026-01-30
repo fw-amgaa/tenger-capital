@@ -15,15 +15,6 @@ const FAQ = () => {
 
   return (
     <div className="section-container flex flex-col gap-8 relative">
-      {/* <div className="absolute left-0 w-full h-screen z-0">
-        <Image
-          src={"/brand/traditional-pattern.png"}
-          fill
-          objectFit="cover"
-          alt="pattern"
-        />
-      </div> */}
-
       <Seperator />
 
       <div className="grid md:grid-cols-2 z-1">

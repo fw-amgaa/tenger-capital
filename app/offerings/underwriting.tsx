@@ -19,11 +19,7 @@ interface Service {
   image: string;
 }
 
-export default function UnderWriting({
-  showTitle = true,
-}: {
-  showTitle?: boolean;
-}) {
+export default function UnderWriting() {
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
