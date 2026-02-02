@@ -34,14 +34,14 @@ export default function Brokerage() {
             {t("domestic.description")}
           </p>
           <ol className="text-md ml-6">
-            <li>- {t("Equities")}</li>
-            <li>- {t("Corporate bonds")}</li>
-            <li>- {t("Government bonds")}</li>
-            <li>- {t("Asset-backed securities")}</li>
+            <li>✓ {t("Equities")}</li>
+            <li>✓ {t("Corporate bonds")}</li>
+            <li>✓ {t("Government bonds")}</li>
+            <li>✓ {t("Asset-backed securities")}</li>
           </ol>
 
           <div className="mt-6 m-auto">
-            <GradientBorderButton borderAnimation={false}>
+            <GradientBorderButton>
               {t("Open your account")}
             </GradientBorderButton>
           </div>
@@ -59,7 +59,7 @@ export default function Brokerage() {
           </p>
 
           <div className="mt-6 m-auto">
-            <GradientBorderButton borderAnimation={false}>
+            <GradientBorderButton>
               {t("Open your account")}
             </GradientBorderButton>
           </div>
@@ -76,7 +76,7 @@ export default function Brokerage() {
           </p>
 
           <div className="mt-6 m-auto">
-            <GradientBorderButton borderAnimation={false}>
+            <GradientBorderButton>
               {t("Open your account")}
             </GradientBorderButton>
           </div>
@@ -128,9 +128,14 @@ export default function Brokerage() {
             </h1>
           </div>
 
-          <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-            {t("brokerage.description")}
-          </p>
+          <div>
+            <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8">
+              {t("brokerage.description")}
+            </p>
+            <GradientBorderButton>
+              {t("Open your account")}
+            </GradientBorderButton>
+          </div>
         </div>
       </div>
 

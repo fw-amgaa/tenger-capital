@@ -35,9 +35,13 @@ export default function LetterFromCeo() {
           <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-8 mt-6">
             {t("Letter from CEO")}
           </h1>
-          <p className="text-sm font-light italic text-muted-foreground max-w-xl mx-auto mb-8">
-            {t("ceo.letter")}
-          </p>
+          <div className="max-w-xl mx-auto mb-8 flex flex-col gap-4">
+            {t("ceo.letter").split("\n").map((paragraph, i) => (
+              <p key={i} className="text-sm font-light italic text-muted-foreground">
+                {paragraph}
+              </p>
+            ))}
+          </div>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">
             {t("ceo.regards")}
           </p>

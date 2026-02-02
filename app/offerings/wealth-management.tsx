@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import introduction from "@/videos/2040x516.mp4";
 import { useLanguage } from "@/lib/language-context";
+import GradientBorderButton from "@/components/gradient-border-button";
 
 interface Service {
   name: string;
@@ -91,9 +92,14 @@ export default function WealthManagement() {
             </h1>
           </div>
 
-          <p className="text-base md:text-md leading-relaxed md:w-[400px]">
-            {t("wealth.description")}
-          </p>
+          <div>
+            <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8">
+              {t("wealth.description")}
+            </p>
+            <GradientBorderButton>
+              {t("SUBMIT YOUR PROJECT")}
+            </GradientBorderButton>
+          </div>
         </div>
       </div>
 
@@ -103,8 +109,16 @@ export default function WealthManagement() {
           {services.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-light mb-8">{member.name}</h3>
-              <div className="text-md leading-[1.4] opacity-70">
-                {member.description}
+
+              <div className="flex flex-col gap-8">
+                <div className="text-md leading-[1.4] opacity-70">
+                  {member.description}
+                </div>
+                <div>
+                  <GradientBorderButton>
+                    {t("SUBMIT YOUR PROJECT")}
+                  </GradientBorderButton>
+                </div>
               </div>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
@@ -131,7 +145,14 @@ export default function WealthManagement() {
                 className="min-h-screen flex flex-col justify-center"
               >
                 <h3 className="text-3xl font-bold mb-8">{service.name}</h3>
-                {service.description}
+                <div className="flex flex-col gap-8">
+                  {service.description}
+                  <div>
+                    <GradientBorderButton>
+                      {t("SUBMIT YOUR PROJECT")}
+                    </GradientBorderButton>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

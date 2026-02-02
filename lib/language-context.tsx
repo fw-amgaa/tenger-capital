@@ -92,15 +92,15 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Brief Section
   "INSPIRED BY TENGER": {
     en: "INSPIRED BY TENGER",
-    mn: "Тэнгэр Капиталын үнэт зүйлс",
+    mn: "Бидний үнэт зүйлс",
   },
   "Inspired by Tenger": {
     en: "Inspired by Tenger",
-    mn: "Тэнгэр Капиталын үнэт зүйлс",
+    mn: "Бидний үнэт зүйлс",
   },
   "Integrity. Wisdom. Foresight.": {
     en: "Integrity. Wisdom. Foresight.",
-    mn: "Ёс зүйтэй. Мэдлэгт суурилсан. Алсын хараатай",
+    mn: "Мэргэжлийн өндөр ёс зүй. Нээлттэй мэдлэг. Баялгийн хуримтлал",
   },
 
   // Brief carousel
@@ -110,7 +110,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "brief.realtime.desc": {
     en: "Keep track with current market orders and prices of your MSE products.",
-    mn: "МХБ-ийн бүтээгдэхүүний захиалга, ханшийг бодит цагаар хянана.",
+    mn: "МХБ-ийн арилжааны захиалга, бодит цагийн ханшийг харна.",
   },
   "Human Service": {
     en: "Human Service",
@@ -118,7 +118,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "brief.human.desc": {
     en: "All Tenger Capital clients have access to a dedicated wealth advisor.",
-    mn: "Тэнгэр Капиталын бүх харилцагчид тусгай зөвлөхтэй байна.",
+    mn: "Харилцагч бүрд тусгайлан үйлчлэх зөвлөх брокер ажиллана.",
   },
   "Monitor your Portfolio": {
     en: "Monitor your Portfolio",
@@ -126,7 +126,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "brief.portfolio.desc": {
     en: "Your total portfolio including all your bonds and stocks in one place.",
-    mn: "Бонд, хувьцаа зэрэг бүх хөрөнгө оруулалтыг нэг дороос хянана.",
+    mn: "Бонд, хувьцаа зэрэг хөрөнгө оруулалтын багцын үлдэгдэл, өгөөжөө хянана.",
   },
   "For illustrative purposes only.": {
     en: "For illustrative purposes only.",
@@ -148,15 +148,15 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Your focus shouldn't.": {
     en: "Your focus shouldn't.",
-    mn: "Таны анхаарал тэгэх ёсгүй.",
+    mn: "Таны анхаарал сарних ёсгүй.",
   },
   "We filter out the noise,": {
     en: "We filter out the noise,",
-    mn: "Бид шуугианыг шүүж,",
+    mn: "Бид хөрөнгийн зах зээлийн хязгааргүй",
   },
   "so you don't have to.": {
     en: "so you don't have to.",
-    mn: "таныг чөлөөлнө.",
+    mn: "мэдээллээс “зөв”-ийг нь зөвлөнө.",
   },
   "offerings.disclaimer": {
     en: "For illustrative purposes only; not representative of actual clients.",
@@ -168,7 +168,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "brief.description": {
     en: "From executing trades to structuring deals and managing wealth, Tenger Capital offers the expertise and clarity clients rely on. We turn questions into strategy and uncertainty into opportunity.",
-    mn: "Тэнгэр Капитал үнэт цаасны компани нь харилцагчдадаа дэлхийн болон Монголын хөрөнгийн биржүүдийн арилжаанд оролцох, хөрөнгө оруулалт татан төвлөрүүлэх, өөрийн хөрөнгийг амжилттай удирдахад нь үнэнч туслагч нь байна. Бид асуудлыг шийдэл, асуултыг боломж болгоно.",
+    mn: "Тэнгэр Капитал үнэт цаасны компани нь харилцагчдадаа дэлхийн болон Монголын хөрөнгийн биржийн арилжаанд оролцох, хөрөнгө оруулалт татан төвлөрүүлэх, өөрийн хөрөнгийг амжилттай удирдахад нь үнэнч туслагч нь байна. Бид асуудлыг шийдэл, асуултыг боломж болгоно.",
   },
 
   // Work With Us Section
@@ -178,15 +178,15 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "workwithus.stat1.title": {
     en: "The 2025 Growth shows that Tenger Capital is expanding rapidly, multiplied by 9.2x its transaction volume compared to it's previous year.",
-    mn: "2025 онд Тэнгэр Капитал үнэт цаасны компанийн арилжааны гүйцэтгэл өнгөрсөн оны мөн үеийнхээс 9.2 дахин хурдацтай өсөв.",
+    mn: "2025 онд Тэнгэр Капитал компанийн арилжааны дүн 502.5% буюу 9.2 дахин хурдацтай өсөв.",
   },
   "workwithus.stat2.title": {
     en: "Our Market Share in Primary Bond Issuance in 2025 covers 25% of the entire market.",
-    mn: "2025 онд Тэнгэр Капитал үнэт цаасны компани нь бондын зах зээлийн арилжааны 25%-ийг гүйцэтгэв.",
+    mn: "2025 онд Тэнгэр Капитал нь бондын зах зээлийн арилжааны 25%-ийг гүйцэтгэв.",
   },
   "workwithus.stat3.title": {
     en: "Tenger Capital ranks second in 2025 Primary Bond Market with total volume of 379.2 Billion MNT.",
-    mn: "2025 онд Тэнгэр Капитал үнэт цаасны компани нь бондын зах зээлээс 379.2 тэрбум төгрөгийн санхүүжилтийг татан төвлөрүүлсэн амжилтаар салбартаа 2-т эрэмбэлэгдэв.",
+    mn: "2025 онд Тэнгэр Капитал нь бондын зах зээлээс 379.2 тэрбум төгрөгийн санхүүжилтийг татан төвлөрүүлснээр салбартаа 2-т эрэмбэлэгдэв.",
   },
 
   // Team Section
@@ -198,21 +198,25 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Blogs Section
   "Our Thinking": {
     en: "Our Thinking",
-    mn: "Бидний анхааралд",
+    mn: 'Бид хөрөнгийн зах зээлийн хязгааргүй мэдээллээс "зөв"-ийг нь зөвлөнө.',
   },
   "What's top of mind for our investment team": {
     en: "What's top of mind for our investment team",
     mn: "Шинжээчдийн таамаглал",
   },
   "EXPLORE OUR BLOG": {
-    en: "EXPLORE OUR BLOG",
+    en: "Explore our blog",
     mn: "Хамтдаа судлая",
   },
 
   // Partners Section
   Partners: {
-    en: "Partners",
+    en: "Our partners",
     mn: "Манай харилцагчид",
+  },
+  "partners.subtitle": {
+    en: "In partnership with Mongolia's top companies, we help drive large-scale national projects and contribute to our country's growth.",
+    mn: "Бид Монголын шилдэг ААН-үүдтэй хамтран үндэсний хэмжээний томоохон төсөл хөтөлбөрүүдийг хэрэгжүүлэх замаар эх орныхоо хөгжилд өөрсдийн хувь нэмрээ оруулдаг.",
   },
 
   // FAQ Section
@@ -230,11 +234,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "faq.q3": {
     en: "Who can open a securities account?",
-    mn: "Үнэт цаасны дансыг хэн нээх вэ?",
+    mn: "Хэн үнэт цаасны данс нээж болох вэ?",
   },
   "faq.q4": {
     en: "When can I trade, and can I place orders outside trading hours?",
-    mn: "Арилжаанд хэрхэн оролцох вэ? Биржийн арилжааны цаг хаагдсан ч захиалга өгч болох уу?",
+    mn: "Хэрхэн арилжааны захиалга өгөх вэ? Биржийн арилжааны цаг хаагдсан ч захиалга өгч болох уу?",
   },
   "faq.q5": {
     en: "How do bonds work, and what happens if I hold them until maturity?",
@@ -242,7 +246,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "faq.q6": {
     en: "How do you protect client assets and personal information?",
-    mn: "Харилцагчдын санхүү болон хувь хүний мэдээллийн аюулгүй байдлыг хэрхэн хангадаг вэ?",
+    mn: "Тухайн харилцагчийн санхүү болон хувь хүний мэдээллийн аюулгүй байдлыг хэрхэн хангадаг вэ?",
   },
   "faq.q7": {
     en: "Do you provide investment advice or asset management support?",
@@ -272,19 +276,19 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "OPEN AN ACCOUNT": {
     en: "OPEN AN ACCOUNT",
-    mn: "АРИЛЖААНД ОРОЛЦОХ",
+    mn: "ДАНС НЭЭХ",
   },
 
   // CTA Section
   "Every Money Question. One Trusted Team.": {
     en: "Every Money Question. One Trusted Team.",
-    mn: 'Таны асуулт бүрд Бид "шийдэл" өгнө.',
+    mn: 'Таны "АСУУДАЛ" бүрд\nБид "ШИЙДЭЛ" санал болгоно.',
   },
 
   // Offerings Page
   "Our services.": {
     en: "Our services.",
-    mn: "Бидний үйлчилгээ",
+    mn: "Бидний үйлчилгээ.",
   },
   "What Tenger Capital will offer:": {
     en: "What Tenger Capital will offer:",
@@ -294,15 +298,15 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Underwriting
   Underwriting: {
     en: "Underwriting",
-    mn: "Андеррайтын үйлчилгээ",
+    mn: "Андеррайтерын үйлчилгээ",
   },
   "Building value that lasts.": {
     en: "Building value that lasts.",
-    mn: "Тасралтгүй өсөх хөрөнгө оруулалтын үнэ цэн",
+    mn: "Тасралтгүй өсөх үнэ цэн",
   },
   "underwriting.description": {
     en: "Tenger Capital SC LLC provides end-to-end underwriting and capital-raising solutions for corporations and institutions, guiding clients through structuring, regulatory compliance, marketing, and distribution. We ensure efficient execution and help issuers raise capital confidently across domestic and private markets.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК нь төрийн болон хувийн хэвшлийн аж ахуйн нэгжүүдэд хөрөнгийн зах зээлээс санхүүжилт татах, зээлжих зэрэглэлээ ахиулах, хэлцэл зохион байгуулах, хөрөнгө оруулалтын багц бүрдүүлэх, санхүүгийн удирдлагын бодлогыг зөв удирдахад нь бүх төрлийн зөвлөх үйлчилгээг мэргэжлийн түвшинд үзүүлэхээс гадна хөрөнгийн зах зээлд гарахад нь зуучлан ажиллаж байна.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК нь төр, хувийн хэвшлийн ААН-үүдэд хөрөнгийн зах зээлээс санхүүжилт татах, зээлжих зэрэглэлээ ахиулах, хэлцэл зохион байгуулах, хөрөнгө оруулалтын багц бүрдүүлэх, санхүүгийн удирдлагын бодлогыг хэрэгжүүлэхэд нь бүх төрлийн зөвлөх үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлдэг.",
   },
   "Debt Issuance": {
     en: "Debt Issuance",
@@ -310,29 +314,29 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "debt.description": {
     en: "We structure and execute debt offerings—from flexible OTC placements to MSE-listed bonds—and asset-backed securities. Our team manages structuring, due diligence, documentation, filings, and investor marketing, helping clients raise capital for expansion, refinancing, working capital, or development projects.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК нь нь засгийн газар болон орон нутгийн засаг захиргааны байгууллага, компаниудад хөрөнгийн зах зээлээс нээлттэй болон хаалттай хэлбэрээр бондын санхүүжилт татах замаар өртгөө бууруулах, мөнгөн урсгалын хөрвөх чадвараа нэмэгдүүлэхэд нь туслах үйлчилгээг санал болгож байна.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК нь Монгол Улсын засгийн газар, засаг захиргааны байгууллага, компаниудад хөрөнгийн зах зээлээс нээлттэй, хаалттай хэлбэрээр бондын санхүүжилт татах, өртгөө бууруулах, мөнгөн урсгалын хөрвөх чадвараа нэмэхэд нь зориулсан үйлчилгээг үзүүлдэг.",
   },
   "IPO & Equity Capital Markets": {
     en: "IPO & Equity Capital Markets",
-    mn: "IPO хийх- Хувьцааны санхүүжилт",
+    mn: "IPO-Хувьцааны санхүүжилт",
   },
   "ipo.description": {
     en: "We guide companies through the IPO process on the Mongolian Stock Exchange, covering preparation, valuation, prospectus drafting, regulatory filings, underwriting, and investor outreach. Our support helps issuers engage markets effectively, build sustainable shareholder structures, and achieve long-term success.",
-    mn: "Бид төрийн болон хувийн өмчит компаниудын хөгжлийг шинэ шатанд гаргах буюу Монголын Хөрөнгийн Бирж дээр анх удаа хувьцаагаа олон нийтэд нээлттэй санал болгох /IPO/ үйл явцыг мэргэжлийн өндөр түвшинд удирдан, хөрөнгө оруулагчдад санал болгон ажилладаг. Тухайн компанийн засаглал, өмчийн хэлбэр бүтэц, үйл ажиллагаа, санхүүгийн мэдээлэл олон нийтэд ил тод болох, урт хугацааны тогтвортой амжилтад хөтлөх гүүр нь болдог.",
+    mn: "Бид төр, хувийн хэвшлийн компаниудыг Монголын Хөрөнгийн Бирж дээр хувьцаагаа анх удаа олон нийтэд нээлттэй санал болгох /IPO/ ажлыг мэргэжлийн өндөр түвшинд удирдан, хөрөнгө оруулагчдад санал болгох замаар урт хугацааны тогтвортой өсөлтөд хөтлөн ажилладаг.",
   },
   "Mergers & Acquisitions": {
     en: "Mergers & Acquisitions",
-    mn: "Компанийн нэгдэх, нийлүүлэх (M&A) үйлчилгээ",
+    mn: "Компанийг нэгдэх, нийлүүлэх (M&A) үйлчилгээ",
   },
   "ma.description": {
     en: "We advise on buy-side and sell-side M&A, supporting target evaluation, due diligence, deal structuring, valuation, and execution. Our team ensures confidential, strategic guidance, helping clients secure favorable terms and achieve optimal transaction outcomes.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК нь аж ахуйн нэгжүүдийн үйл ажиллагаа болон санхүүгийн чадавхийг сайжруулах, шинэ инновац нэвтрүүлэх, өрсөлдөх чадвараа нэмэх, бизнесийн үнэ цэнээ өсгөхөд нь дэмжлэг үзүүлэх зорилготой нэгдэх, нийлэх хэлцлийг хийхэд мэргэжлийн зуучлагчийн үйлчилгээ үзүүлдэг.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК нь ААН-үүдийн үйл ажиллагаа, санхүүгийн чадавхийг сайжруулах, шинэ инновац нэвтрүүлэх, өрсөлдөх чадвар, бизнесийн үнэ цэнээ өсгөхөд нь дэмжлэг үзүүлэх зорилгоор компаниудын нэгдэх, нийлэх хэлцлийг мэргэжлийн зуучлагчийн хувьд чанартай гүйцэтгэдэг.",
   },
 
   // Brokerage
   Brokerage: {
     en: "Brokerage",
-    mn: "Брокерийн үйлчилгээ",
+    mn: "Брокерын үйлчилгээ",
   },
   "Stand solid. Stay liquid.": {
     en: "Stand solid. Stay liquid.",
@@ -340,7 +344,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "brokerage.description": {
     en: "Tenger Capital SC LLC delivers dynamic, full-service brokerage solutions for both individual and institutional investors. We help you take control of your cash flows and put your capital to work with purpose. Powered by our research and advisory experts, you gain the insight and confidence to act decisively in today's fast-moving markets.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК нь хувь хүн болон байгууллагуудыг гадаад, дотоодын хөрөнгийн биржүүдийн арилжаанд оролцох, хувьцаа, бонд, үнэт метал зэрэг бүтээгдэхүүнээс сонголт хийх, хөрөнгө оруулалтын багц бүрдүүлэх, өөрийн мөнгөн хөрөнгийг зөв зохистой удирдахад нь дэмжлэг үзүүлэн ажиллаж байна. Манай мэргэшсэн шинжээчид хурдацтай өсөн тэлж буй хөрөнгийн зах зээлд оновчтой шийдвэр гаргахад тань туслах болно.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК-ийн мэргэшсэн хамт олны зүгээс хувь хүн, ААН-үүдийг дэлхийн болон Монголын хөрөнгийн биржүүдийн арилжаанд оролцох, хөрөнгө оруулалтын багц бүрдүүлэх, өөрийн мөнгөн хөрөнгийг оновчтой удирдахад нь луужин болон ажилладаг.",
   },
   "Domestic Exchange": {
     en: "Domestic Exchange",
@@ -348,7 +352,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "domestic.description": {
     en: "Investors can access the domestic primary and secondary markets through our online investment platform and mobile apps and manage their portfolios, track performance, and stay informed with market insights.",
-    mn: "Хөрөнгө оруулагч нь Тэнгэр Капитал ҮЦК ХХК-ийн онлайн арилжааны платформ, гар утасны аппликейшнийг ашиглан тив дэлхийн хаана ч байсан хүссэн цагтаа МХБ болон дэлхийн хөрөнгийн биржүүдийн анхдагч болон хоёрдогч зах зээлийн арилжаанд оролцож, өөрийн дансны үлдэгдэл, гүйлгээ, өгөөжөө тооцох зэрэг давуу талтай.",
+    mn: "Эрхэм та манай онлайн арилжааны платформ, гар утасны аппликейшныг ашиглан тив дэлхийн хаана ч байсан хүссэн үедээ МХБ болон дэлхийн хөрөнгийн биржүүдийн анхдагч болон хоёрдогч зах зээлийн арилжаанд оролцож, өөрийн дансны үлдэгдэл, гүйлгээ, өгөөж зэргийг тооцох давуу талтай.",
   },
   Equities: {
     en: "Equities",
@@ -368,7 +372,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Open your account": {
     en: "Open your account",
-    mn: "Арилжаанд оролцох",
+    mn: "АРИЛЖААНД ОРОЛЦОХ",
   },
   "International Markets": {
     en: "International Markets",
@@ -376,7 +380,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "international.description": {
     en: "Investors can access 160 stock markets of over 35 countries. Invest globally in stocks, ETFs, options, futures, currencies and bonds through our partner Interactive Brokers' unified platform",
-    mn: "Тэнгэр Капитал ҮЦК ХХК-ийн харилцагчид дэлхийд алдартай Interactive Brokers платформыг ашиглаг 35 улсын 160 гаруй биржийн арилжаанд оролцож, хувьцаа, ETF, опцион, фьючерс, валют, Засгийн газрын болон комапийн бондод хөрөнгө оруулах боломжтой.",
+    mn: "Эрхэм та дэлхийд алдартай Interactive Brokers платформыг ашиглан 35 улсын 160 гаруй биржийн арилжаанд оролцож, хувьцаа, ETF, опцион, фьючерс, валют, Засгийн газрын болон компанийн бондод хөрөнгө оруулах боломжтой.",
   },
   "OTC market": {
     en: "OTC market",
@@ -384,17 +388,17 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "otc.description": {
     en: "Investors can participate in the fastest growing capital market sector in Mongolia. We facilitate both sides of issuance and sales of private bonds with thorough due dilligence and integrity.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК-ийн харилцагч нь Монголын хөрөнгийн зах зээлд хурдацтай өсөн тэлж буй Биржийн бус зах зээлийн /OTC/ арилжаанд оролцож, өндөр өгөөж хүртэх боломжтой. Бид тус зах зээлд Монголын ТОП ААН-үүдийг үнэт цаас гаргахад нь мэргэжлийн үйлчилгээ үзүүлэхээс гадна хөрөнгө оруулагчдын эрх ашгийг эрхэмлэн ажиллаж байна.",
+    mn: "Бид Монголын ТОП ААН-үүдийг Биржийн бус зах зээлд /OTC/ үнэт цаас гаргаж, хөрөнгө оруулалт татахад нь мэргэжлийн өндөр түвшний үйлчилгээ үзүүлэхээс гадна өндөр өгөөж хүртэх боломжийг харилцагчдадаа олгодог.",
   },
 
   // Wealth Management
   "Wealth & Asset Management": {
     en: "Wealth & Asset Management",
-    mn: "Баялгийн удирдлага",
+    mn: "Хөрөнгийн удирдлага",
   },
   "Wealth Management": {
     en: "Wealth Management",
-    mn: "Баялгийн удирдлага",
+    mn: "Хөрөнгийн удирдлага",
   },
   "Preserving wealth. Securing future.": {
     en: "Preserving wealth. Securing future.",
@@ -402,7 +406,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "wealth.description": {
     en: "Tenger Capital SC LLC delivers tailored wealth and asset management solutions designed to help clients grow, preserve, and strategically allocate their capital. Through disciplined portfolio management, in-house equity research, and a structured fund platform, we offer investment strategies that align with each client's risk appetite and long-term financial objectives.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК нь харилцагч бүрт тохирсон тусгай саналыг боловсруулж, харилцагчийн мөнгөн хөрөнгийг өсгөх, хадгалах, оновчтой хуваарилахад чиглэсэн хөрөнгийн удирдлагын цогц шийдлийг санал болгодог. Бид зорилгод суурилсан зөвлөгөө, судалгаанд тулгуурласан хөрөнгө оруулалт, ил тод тайлагналыг харилцагчдадаа санал болгож тогтвортой өсөлтийг бий болгоно.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК нь харилцагчийн мөнгөн хөрөнгийг өсгөх, оновчтой хуваарилахад нь чиглэсэн хөрөнгийн удирдлагын цогц бодлогыг хэрэгжүүлдэг. Бид харилцагч бүрийн зорилгод суурилсан зөвлөгөө, судалгаанд тулгуурласан хөрөнгө оруулалтын санал, ил тод тайлагналыг санал болгож, тогтвортой өсөлтийг бий болгоно.",
   },
   "Fund Management": {
     en: "Fund Management",
@@ -410,7 +414,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "fund.description": {
     en: "We provide personalized fund and portfolio management tailored to each client's goals and risk appetite. Our team builds diversified portfolios—from conservative fixed-income to growth-oriented equity funds—while actively monitoring and adjusting allocations to stay aligned with market conditions and client objectives.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК нь харилцагч бүрийн зорилго, эрсдэлийн түвшинд нийцсэн хөрөнгө оруулалтын төрөлжсөн багцыг бүрдүүлэхийн зэрэгцээ зах зээлийн чиг хандлагыг соргогоор мэдэрч, хуваарилалтыг тогтмол хянах, шинэчлэх зэргээр мэргэжлийн түвшинд удирдан ажилладаг.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК нь зах зээлийн чиг хандлагыг соргогоор мэдэрч, харилцагч бүрийн зорилго, эрсдэлийн түвшинд нийцсэн хөрөнгө оруулалтын төрөлжсөн багцыг мэргэжлийн түвшинд бүрдүүлэн ажилладаг.",
   },
   "Equity&Market Research": {
     en: "Equity&Market Research",
@@ -418,7 +422,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "research.description": {
     en: "Our dedicated research unit delivers fundamental equity research, technical analyses, sector analyses, macroeconomic insights, and valuation assessments. These research capabilities form the backbone of our investment decisions, supporting portfolio construction, idea generation, and tactical market positioning.",
-    mn: "Тэнгэр Капитал ҮЦК ХХК-ийн судлаач, шинжээчдийн баг нь харилцагчдад хөрөнгө оруулалтын шийдвэр гаргахад нь дэмжлэг үзүүлэх үүднээс дэлхийн болон Монголын эдийн засаг, хөрөнгийн зах зээлийн чиг хандлага, өсөлттэй, салбар, компаниудын суурь болон техникийн шинжилгээ, үнэлгээ, судалгааг тогтмол гүйцэтгэдэг.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК-ийн мэргэшсэн шинжээчдийн баг нь харилцагчдад хөрөнгө оруулалтын оновчтой шийдвэр гаргахад нь дэмжлэг үзүүлэх үүднээс дэлхийн болон Монголын эдийн засаг, хөрөнгийн зах зээлийн чиг хандлага, өсөлттэй, салбар, компаниудын бүх төрлийн судалгааг тогтмол гүйцэтгэдэг.",
   },
 
   // Why Choose Us (Offerings page)
@@ -428,27 +432,27 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "offerings.underwriting.title": {
     en: "Underwriting",
-    mn: "Андеррайтерийн үйлчилгээ",
+    mn: "Андеррайтерын үйлчилгээ",
   },
   "offerings.underwriting.desc": {
     en: "We turn big ideas into real capital — fast, structured, and market-ready. Your deal gets the clarity, reach, and execution it deserves.",
-    mn: "Бид том санаануудыг бодит хөрөнгө болгож, үнэ цэнийг бүтээдэг.",
+    mn: "Бид цаасан дээрх шинэ санаа, төсөл хөтөлбөрийг бодитоор хэрэгжүүлж, үнэ цэнийг бүтээдэг.",
   },
   "offerings.brokerage.title": {
     en: "Brokerage",
-    mn: "Брокерийн үйлчилгээ",
+    mn: "Брокерын үйлчилгээ",
   },
   "offerings.brokerage.desc": {
     en: "Trade smarter with a team that actually knows you. Precision execution, real-time insights, and zero guesswork — just clean, confident moves.",
-    mn: "Хөрөнгө оруулалтын ухаалаг шийдвэр гаргахад тань мэргэжлийн баг, хамт олон туслана. Таны захиалга бүрийг цаг хугацаатай уралдан гүйцэтгэнэ.",
+    mn: "Бид таныг хөрөнгө оруулалтын оновчтой шийдвэр гаргахад тань мэргэжлийн дэмжлэг үзүүлэхээс гадна цаг хугацаатай уралдан гүйцэтгэнэ.",
   },
   "offerings.wealth.title": {
     en: "Wealth Management",
-    mn: "Баялгийн удирдлага",
+    mn: "Хөрөнгийн удирдлага",
   },
   "offerings.wealth.desc": {
     en: "Your goals, engineered. Dedicated experts, tailored strategies, and smart guidance that makes every decision feel effortless.",
-    mn: "Бид харилцагчдынхаа мөнгөн хөрөнгийг нарийвчилсан тооцоолол, зах зээлийн гүн судалгаатайгаар удирдаж, бодит өсөлт, тогтвортой ирээдүй рүү хөтлөнө.",
+    mn: "Бид таны мөнгөн хөрөнгийг зах зээлийн гүн судалгаа, нарийвчилсан тооцоонд үндэслэн удирдаж, бодит өсөлт, тогтвортой ирээдүй рүү хөтлөнө.",
   },
 
   // About Page - Hero
@@ -458,7 +462,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Focused on Your Future.": {
     en: "Focused on Your Future.",
-    mn: "ирээдүйг бид бүтээнэ.",
+    mn: "Ирээдүйг бид бүтээнэ.",
   },
 
   // About Page - Letter from CEO
@@ -468,7 +472,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "ceo.letter": {
     en: '"As CEO, I founded this company with a simple belief: everyone deserves access to clear, reliable guidance when it comes to building their wealth. Too many people feel overwhelmed by financial decisions, and our mission is to change that. We combine proven strategies with a modern, client-first approach so you can move forward with confidence and clarity."',
-    mn: 'Тэнгэр Капитал үнэт цаасны компани нь 2007 онд үүсгэн байгуулагдсанаас хойш Монголын хөрөнгийн зах зээлийн хөгжилд 19 жилийн туршид бодит хувь нэмрээ оруулсан хамт олон билээ. Бид 2025 оны хоёрдугаар улирлаас эхлэн "Хүн бүрийн хөрөнгийг өсгөх зам ойлгомжтой, найдвартай, зөв чиглэлтэй байх ёстой" гэсэн суурь зарчимд үндэслэн компанийн стратеги, засаглал, бүтцийг бүрэн шинэчилж, үйл ажиллагаагаа шинэ шатанд гарган ажиллаж байна. Энэхүү шинэчлэлийн хүрээнд богино хугацаанд 300 гаруй тэрбум төгрөгийг амжилттай татан төвлөрүүлж, зах зээлд тэргүүлэгч ТОП-3 компанийн нэг болон байр сууриа бататгалаа. Тэнгэр Капиталын хамт олон нь төрийн болон хувийн хэвшлийн аж ахуйн нэгжүүдийг хөрөнгийн зах зээлд амжилттай нэвтрүүлэх бүх төрлийн зөвлөх үйлчилгээ үзүүлэхийн зэрэгцээ харилцагч бүрийн зорилгод нийцсэн тусгай шийдлийг боловсруулж, хөрөнгийн удирдлагын цогц үйлчилгээг санал болгодог. Бид харилцагчийнхаа өнөөдрийн хөрөнгийг маргаашийн үнэ цэнтэй хуримтлал болгон өсгөж, тэдний болон тэдний ард буй гэр бүлийн санхүүгийн бат бөх байдлыг баталгаажуулах замаар эдийн засгийн тогтвортой өсөлтийг бий болгож, эх орныхоо хөгжилд бодит хувь нэмэр оруулахыг зорьдог. Цаашид бид үйл ажиллагааныхаа бүхий л түвшинд харилцагчийн эрх ашгийг дээдэлсэн нээлттэй, хариуцлагатай удирдлагыг хэрэгжүүлж, тогтвортой гүйцэтгэл, өндөр стандарт бүхий хөрөнгө оруулалт ба хөрөнгийн удирдлагын хамгийн найдвартай түнш байх зорилтыг тууштай хэрэгжүүлэн ажиллах болно.',
+    mn: 'Тэнгэр Капитал ҮЦК ХХК нь 2007 онд үүсгэн байгуулагдсан бөгөөд 19 жилийн түүхэн замналтай компани юм.\nБид 2025 онд "Хүн бүрийн хөрөнгийг өсгөх зам ойлгомжтой, найдвартай, зөв чиглэлтэй байх ёстой" гэсэн суурь зарчимд үндэслэн компанийн стратеги, засаглал, удирдлагын баг, бүтцийг бүрэн шинэчилснээр үйл ажиллагаагаа шинэ түвшинд гаргаад байна.\nТус шинэчлэлийн хүрээнд бид богино хугацаанд буюу 2025 оны 2 дугаар хагаст нийт 300 гаруй тэрбум төгрөгийг амжилттай татан төвлөрүүлснээс гадна арилжааны гүйцэтгэл 502.5% буюу 9.2 дахин өсөж, салбартаа тэргүүлэгч ТОП-3 компанийн нэгэнд зүй ёсоор тооцогдож байна.\nМаны хамт олон нь төр, хувийн хэвшлийн ААН-үүдийг хөрөнгийн зах зээлд амжилттай нэвтрэх, санхүүжилт татахад нь бүх төрлийн зөвлөх үйлчилгээг үзүүлэхээс гадна харилцагч бүрийн зорилгод нийцсэн тусгай шийдэл бүхий хөрөнгийн удирдлагын цогц үйлчилгээг санал болгон ажилладаг.\nБид харилцагч, айл өрх бүрийн өнөөдрийн хөрөнгийг маргаашийн үнэ цэнтэй хуримтлал болгон өсгөх замаар эдийн засгийн тогтвортой өсөлтийг бий болгож, эх орныхоо хөгжилд бодит хувь нэмрээ оруулахыг зорьдог билээ.\nЦаашид ч бид үйл ажиллагааныхаа бүхий л түвшинд харилцагчийн эрх ашгийг дээдэлсэн, мэргэжлийн ёс зүйтэй, хариуцлагатай, тогтвортой гүйцэтгэлийг тууштай хэрэгжүүлэн ажиллах болно гэдгээ илэрхийлэхэд таатай байна.',
   },
   "ceo.regards": {
     en: "Respectfully,",
@@ -486,19 +490,19 @@ const translations: Record<string, { en: string; mn: string }> = {
   // About Page - Key Figures
   "Trusted by Clients Worldwide": {
     en: "Trusted by Clients Worldwide",
-    mn: "Тив дэлхийн өнцөг булан бүрд хүрч, харилцагчийн сэтгэлд нийцсэн үйлчилгээг үзүүлнэ.",
+    mn: "Бид харилцагчийн сэтгэлд нийцсэн үйлчилгээг үзүүлнэ.",
   },
   "keyfigures.subtitle": {
     en: "Building wealth through expertise, innovation, and unwavering commitment to excellence",
-    mn: "Хөрөнгийн удирдлагын мэргэжлийн мэдлэг туршлага, гүйцэтгэлийн өндөр стандарт, оновчтой шийдлийг санал болгох замаар хөрөнгө оруулалтын үнэ цэнтэй ирээдүйг бүтээнэ.",
+    mn: "Өндөр мэдлэг, мэргэжлийн туршлага, гүйцэтгэлийн өндөр стандарт, оновчтой шийдлийг санал болгох замаар хөрөнгө оруулалтын цэнтэй ирээдүйг бүтээнэ.",
   },
   "Billion raised in 2025H1": {
     en: "Billion raised in 2025H1",
-    mn: "2025 оны нэгдүгээр улиралд 300 тэрбум төгрөгийн санхүүжилтийг татан төвлөрүүлсэн.",
+    mn: "2025 оны 1 дүгээр улиралд татан төвлөрүүлсэн санхүүжилт",
   },
   "Institutional and HNW clients": {
     en: "Institutional and HNW clients",
-    mn: "институци болон мэргэжлийн хөрөнгө оруулагчид",
+    mn: "Институци, мэргэжлийн хөрөнгө оруулагч",
   },
   "Years of Experience": {
     en: "Years of Experience",
@@ -506,11 +510,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Client Retention Rate": {
     en: "Client Retention Rate",
-    mn: "Тогтмол үйлчлүүлдэг хөрөнгө оруулагчдын гүйцэтгэл нийт харилцагчдын 94%",
+    mn: "Идэвхтэй хөрөнгө оруулагч",
   },
   "Retail Clients": {
     en: "Retail Clients",
-    mn: "харилцагч",
+    mn: "Харилцагч",
   },
 
   // About Page - Guiding Principles
@@ -520,7 +524,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Client First": {
     en: "Client First",
-    mn: "Харилцагчийн эрх ашиг нэн тэргүүнд",
+    mn: "Нэн тэргүүнд харилцагчийн эрх ашиг",
   },
   "clientfirst.desc": {
     en: "We place our clients at the heart of everything we do. Every strategy, every decision, and every recommendation is crafted with your unique financial goals and risk tolerance in mind. Your trust drives our commitment to excellence.",
@@ -528,19 +532,19 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Transparent Integrity": {
     en: "Transparent Integrity",
-    mn: "Ил тод нээлттэй",
+    mn: "Ёс зүйтэй, ил тод",
   },
   "transparentintegrity.desc": {
     en: "We believe in complete transparency and unwavering integrity. From fee structures to investment strategies, we ensure you have full visibility into how we manage your wealth. No hidden agendas, just honest guidance you can rely on.",
-    mn: "Бид Монгол Улсад хүчин төгөлдөр үйлчилж буй холбогдох хууль тогтоомж, бодлого шийдвэрийг чандлан сахиж, аливаа ашиг сонирхлын зөрчлөөс ангид үнэн, зөв, найдвартай, нээлттэй, ил тод зарчмыг мөрдлөг болгон ажилладаг.",
+    mn: "Бид Монгол Улсад хүчин төгөлдөр үйлчилж буй холбогдох хууль тогтоомж, бодлого шийдвэрийг чандлан сахихын зэрэгцээ аливаа ашиг сонирхлын зөрчлөөс ангид байж, найдвартай, нээлттэй, ил тод үйл ажиллагааг явуулдаг.",
   },
   "Productive Capital": {
     en: "Productive Capital",
-    mn: "Үр ашигтай хөрөнгө",
+    mn: "Үнэ цэнтэй хөрөнгө оруулалт",
   },
   "productivecapital.desc": {
     en: "We believe capital should deliver measurable value. Through disciplined structuring, efficient execution, and prudent risk management, we ensure each transaction supports issuers and investors while contributing to the long-term development of Mongolia's capital markets.",
-    mn: "Бид хөрөнгө оруулалтаар дамжуулан бодит өгөөж, хэмжигдэхүйц үнэ цэнийг бүтээхийг зорьдог. Тиймээс үнэт цаас гаргагч болон хөрөнгө оруулагчдын эрх ашигт нийцсэн, хөрөнгийн удирдлагын оновчтой шийдлийг хэрэгжүүлэх замаар хэлцэл бүрийг амжилттай хэрэгжүүлж, Монголын хөрөнгийн зах зээлийн хөгжилд бодит хувь нэмрээ оруулан ажиллаж байна.",
+    mn: "Бид үнэт цаас гаргагч болон хөрөнгө оруулагчдын эрх ашигт нийцсэн, бодит өгөөж, хэмжигдэхүйц үнэ цэнийг бүтээх оновчтой шийдлийг хэрэгжүүлэх замаар Монголын хөрөнгийн зах зээлийн хөгжилд хувь нэмрээ оруулан ажиллаж байна.",
   },
   "Long-Term Partnership": {
     en: "Long-Term Partnership",
@@ -548,7 +552,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "longtermpartnership.desc": {
     en: "We're not just executing trades—we're building lasting relationships. Our approach focuses on sustainable, long-term growth for issuers and investors alike. From structuring deals to navigating market shifts, we're here for every milestone, adapting strategies as your goals evolve.",
-    mn: "Бид үнэт цаас гаргагч болон хөрөнгө оруулагчдыг холбох гүүр нь байхаас гадна өндөр итгэлцэл, тогтвортой өсөлт, хариуцлагад суурилсан урт хугацааны тогтвортой түншлэлийн харилцааг бэхжүүлэхийг эрхэмлэдэг. Тиймээс аливаа хамтын ажиллагааг эхлүүлэхээс эхлээд үр дүнтэй хэрэгжих хүртэлх бүхий л цаг хугацаанд үнэт цаас гаргагч болон хөрөнгө оруулагчдын зорилгод нийцсэн стратегийг баримтлан өндөр өсөлтийг бүтээж байна.",
+    mn: "Бид үнэт цаас гаргагч, хөрөнгө оруулагчдыг холбох гүүр нь байх зорилтынхоо хүрээнд аливаа хамтын ажиллагааны эхлэлээс төгсгөл хүртэлх бүхий л цаг хугацаанд өндөр итгэлцэл, тогтвортой өсөлтийг эрхэмлэсэн урт хугацааны түншлэлийн харилцааг бэхжүүлэн ажилладаг.",
   },
 
   // About Page - Personalized Service
@@ -562,7 +566,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "personalized.desc": {
     en: "Every client receives individualized attention from a dedicated broker and analyst, ensuring you always have experts on hand to answer questions and navigate every financial decision with confidence.",
-    mn: "Зөвхөн танд тусгайлан үйлчлэх брокер, шинжээчдийн баг нь хөрөнгийн зах зээлийн мэдлэг, мэдээллээр таныг тогтмол хангаж, ухаалаг шийдвэр гаргахад тань туслах болно.",
+    mn: "Манай мэргэжлийн баг хамт олон зөвхөн танд зориулсан үйлчилгээг үзүүлэхээс гадна хөрөнгийн зах зээлийн мэдлэг, мэдээллээр тогтмол хангаж, ухаалаг шийдвэр гаргахад тань туслах болно.",
   },
 
   // About Page - Timeline
@@ -699,7 +703,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Offerings Page header
   "Our services.page": {
     en: "Our services.",
-    mn: "Бидний үйлчилгээ",
+    mn: "Бидний үйлчилгээ.",
   },
 
   // About page
@@ -711,53 +715,53 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Team member names
   "Gombodorj Nyamtogtokh": {
     en: "Gombodorj Nyamtogtokh",
-    mn: "Гомбодорж Нямтогтох",
+    mn: "Нямтогтох Гомбодорж",
   },
   "Darkhanbayar Radnaa-Ochir": {
     en: "Darkhanbayar Radnaa-Ochir",
-    mn: "Дарханбаяр Раднаа-Очир",
+    mn: "Раднаа-Очир Дарханбаяр",
   },
   "Lkhamsuren Boldbaatar": {
     en: "Lkhamsuren Boldbaatar",
-    mn: "Лхамсүрэн Болдбаатар",
+    mn: "Болдбаатар Лхамсүрэн",
   },
   "Dashnyam Sanduijav": {
     en: "Dashnyam Sanduijav",
-    mn: "Дашням Сандуйжав",
+    mn: "Сандуйжав Дашням",
   },
   "Byambatogoo Davaasuren": {
     en: "Byambatogoo Davaasuren",
-    mn: "Бямбатогоо Даваасүрэн",
+    mn: "Даваасүрэн Бямбатогоо",
   },
   "Bilguun Ganbaatar": {
     en: "Bilguun Ganbaatar",
-    mn: "Билгүүн Ганбаатар",
+    mn: "Ганбаатар Билгүүн",
   },
 
   // Team member roles
   "Chief Executive Officer": {
     en: "Chief Executive Officer",
-    mn: "Гүйцэтгэх захирал",
+    mn: "Тэнгэр Капитал ҮЦК ХХК\nГүйцэтгэх захирал",
   },
   "Tenger Fund Management CEO": {
     en: "Tenger Fund Management CEO",
-    mn: "Тэнгэр Фанд Менежмент ХХК-ийн Гүйцэтгэх захирал",
+    mn: "Тэнгэр фанд менежмент ХХК\nГүйцэтгэх захирал",
   },
   "Chief Financial and Operating Officer": {
     en: "Chief Financial and Operating Officer",
-    mn: "Санхүү, үйл ажиллагааны захирал",
+    mn: "Санхүү үйл ажиллагааны газрын захирал",
   },
   "Chief Investment Officer": {
     en: "Chief Investment Officer",
-    mn: "Хөрөнгө оруулалтын захирал",
+    mn: "Хөрөнгө оруулалтын газрын захирал",
   },
   "Chief Marketing Officer": {
     en: "Chief Marketing Officer",
-    mn: "Маркетингийн захирал",
+    mn: "Маркетингийн газрын захирал",
   },
   "Chief Trade Officer": {
     en: "Chief Trade Officer",
-    mn: "Арилжааны захирал",
+    mn: "Арилжааны газрын захирал",
   },
   "Broker & Office Manager": {
     en: "Broker & Office Manager",
@@ -787,35 +791,35 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Timeline titles
   "2023 Q3": {
     en: "2023 Q3",
-    mn: "2023 3-р улирал",
+    mn: "2023 3 улиралд",
   },
   "2023 Q4": {
     en: "2023 Q4",
-    mn: "2023 4-р улирал",
+    mn: "2023 4 улиралд",
   },
   "2024 Q1": {
     en: "2024 Q1",
-    mn: "2024 1-р улирал",
+    mn: "2024 1 улиралд",
   },
   "2024 Q2": {
     en: "2024 Q2",
-    mn: "2024 2-р улирал",
+    mn: "2024 2 улиралд",
   },
   "2024 Q4": {
     en: "2024 Q4",
-    mn: "2024 4-р улирал",
+    mn: "2024 4 улиралд",
   },
   "2025 Q1": {
     en: "2025 Q1",
-    mn: "2025 1-р улирал",
+    mn: "2025 1 улиралд",
   },
   "2025 Q2": {
     en: "2025 Q2",
-    mn: "2025 2-р улирал",
+    mn: "2025 2 улиралд",
   },
   "2025 Q3": {
     en: "2025 Q3",
-    mn: "2025 3-р улирал",
+    mn: "2025 3 улиралд",
   },
 
   // Footer

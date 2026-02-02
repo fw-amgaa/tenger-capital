@@ -61,7 +61,7 @@ export default function Partners() {
         <h1 className="text-4xl">{t("Partners")}</h1>
 
         <div className="flex flex-col gap-6">
-          <p className="text-lg leading-[1.4]">{t("Partners")}</p>
+          <p className="text-lg leading-[1.4]">{t("partners.subtitle")}</p>
         </div>
       </div>
 
