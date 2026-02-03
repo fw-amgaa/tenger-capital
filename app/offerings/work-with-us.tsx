@@ -50,7 +50,7 @@ const WorkWithUs = () => {
         </h2>
       </div>
       {/* Desktop View */}
-      <div className="hidden section-container md:grid md:grid-cols-3 gap-4 xl:px-24 2xl:px-36">
+      <div className="hidden section-container md:grid md:grid-cols-3 gap-4 md:px-24 xl:px-36 2xl:px-48">
         {statsData.map((stat, index) => (
           <StatsCard key={index} {...stat} />
         ))}

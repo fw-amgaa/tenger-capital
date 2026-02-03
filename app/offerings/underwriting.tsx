@@ -98,6 +98,7 @@ export default function UnderWriting() {
             <h1 className="text-3xl md:text-4xl font-serif">
               {t("Underwriting")}
             </h1>
+            <div className="my-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
               {t("Building value that lasts.")}
             </h1>

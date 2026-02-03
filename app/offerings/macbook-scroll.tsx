@@ -8,11 +8,7 @@ export function MacbookScrollSection() {
   return (
     <div className="w-full overflow-hidden bg-[#1a1a1a]">
       <MacbookScroll
-        title={
-          <span>
-            {t("Our services.")} <br /> {t("What Tenger Capital will offer:")}
-          </span>
-        }
+        title={<span>{t("What Tenger Capital will offer:")}</span>}
         src={`/about-us/dashboard.png`}
         showGradient={false}
       />

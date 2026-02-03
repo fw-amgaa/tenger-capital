@@ -32,15 +32,17 @@ function TimelineItem({
       )}
 
       <div className="flex flex-col sm:flex-row sm:gap-4">
-        <div className="border rounded-sm overflow-hidden w-full h-24 lg:h-36 xl:h-48 bg-[#111111] p-1">
-          <div className="relative bg-black w-full h-full rounded-xs">
-            <Image src={imagePath} alt={title} objectFit="cover" fill />
+        <div className="border rounded-sm overflow-hidden w-full h-24 lg:h-36 xl:h-48 bg-[linear-gradient(rgb(255,153,0)_15.57%,_rgb(248,229,181)_33.39%,_rgb(161,111,16)_50.58%,_rgb(248,229,181)_67.75%,_rgb(255,153,0)_91.74%)] p-1/2">
+          <div className="relative bg-black w-full h-full p-1">
+            <div className="relative w-full h-full rounded-xs">
+              <Image src={imagePath} alt={title} objectFit="cover" fill />
+            </div>
           </div>
         </div>
       </div>
       {!reverse && (
         <div>
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          {/* <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" /> */}
           {facts.map((fact, index) => (
             <p
               key={index}
@@ -72,7 +74,7 @@ export function TimelineSection() {
             title="Gemnet"
             facts={[t("timeline.2007.gemnet")]}
             imagePath="/timeline/gemnet.png"
-            reverse
+            // reverse
           />
 
           <TimelineItem
@@ -83,20 +85,14 @@ export function TimelineSection() {
 
           <TimelineItem
             title="Master Group"
-            facts={[
-              t("timeline.2007.master1"),
-              t("timeline.2007.master2"),
-            ]}
+            facts={[t("timeline.2007.master1"), t("timeline.2007.master2")]}
             imagePath="/partners/master group.png"
-            reverse
+            // reverse
           />
 
           <TimelineItem
             title="Tenger Insurance"
-            facts={[
-              t("timeline.2007.tenger1"),
-              t("timeline.2007.tenger2"),
-            ]}
+            facts={[t("timeline.2007.tenger1"), t("timeline.2007.tenger2")]}
             imagePath="/timeline/tenger.png"
           />
         </div>

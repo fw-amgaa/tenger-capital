@@ -36,19 +36,21 @@ export default function LetterFromCeo() {
             {t("Letter from CEO")}
           </h1>
           <div className="max-w-xl mx-auto mb-8 flex flex-col gap-4">
-            {t("ceo.letter").split("\n").map((paragraph, i) => (
-              <p key={i} className="text-sm font-light italic text-muted-foreground">
-                {paragraph}
-              </p>
-            ))}
+            {t("ceo.letter")
+              .split("\n")
+              .map((paragraph, i) => (
+                <p key={i} className="text-sm font-light italic text-white">
+                  {paragraph}
+                </p>
+              ))}
           </div>
-          <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+          <p className="text-sm text-white max-w-xl mx-auto">
             {t("ceo.regards")}
           </p>
           <p className="text-sm font-semibold text-primary mt-1">
             {t("ceo.name")}
           </p>
-          <p className="text-xs text-muted-foreground">{t("ceo.title")}</p>
+          <p className="text-xs text-white">{t("ceo.title")}</p>
         </motion.div>
 
         <div className="w-full md:w-[40%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">

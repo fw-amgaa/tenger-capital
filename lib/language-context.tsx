@@ -82,7 +82,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Create Value Through Investing": {
     en: "Create Value Through Investing",
-    mn: "Хөрөнгө оруулалтаар үнэт зүйл, үнэ цэнийг бүтээнэ.",
+    mn: "Хөрөнгө оруулалтаар үнэ цэнийг бүтээнэ.",
   },
   "Underwriting | Brokerage | Wealth Management": {
     en: "Underwriting | Brokerage | Wealth Management",
@@ -174,7 +174,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Work With Us Section
   "Why Should You Work With Us?": {
     en: "Why Should You Work With Us?",
-    mn: "Яагаад Тэнгэр Капитал ҮЦК ХХК-ийг сонгох ёстой вэ?",
+    mn: "Яагаад Тэнгэр Капиталыг сонгох ёстой вэ?",
   },
   "workwithus.stat1.title": {
     en: "The 2025 Growth shows that Tenger Capital is expanding rapidly, multiplied by 9.2x its transaction volume compared to it's previous year.",
@@ -192,7 +192,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Team Section
   "MEET THE TEAM": {
     en: "MEET THE TEAM",
-    mn: "Манай хамт олон",
+    mn: "Удирдлагын баг",
   },
 
   // Blogs Section
@@ -226,7 +226,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "faq.q1": {
     en: "What is a security, and what types of securities can I invest in?",
-    mn: "Хувьцаа гэж юу вэ? Ямар хувьцаанд хөрөнгө оруулах вэ?",
+    mn: "Үнэт цаас гэж юу вэ? Хэрхэн хөрөнгө оруулах вэ?",
   },
   "faq.q2": {
     en: "How do I open a securities account, and how long does it take?",
@@ -280,9 +280,13 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
 
   // CTA Section
-  "Every Money Question. One Trusted Team.": {
-    en: "Every Money Question. One Trusted Team.",
-    mn: 'Таны "АСУУДАЛ" бүрд\nБид "ШИЙДЭЛ" санал болгоно.',
+  "Every Money Question.": {
+    en: "Every Money Question.",
+    mn: "Таны асуудал бүрд",
+  },
+  "One Trusted Team.": {
+    en: "One Trusted Team.",
+    mn: "Бид шийдэл санал болгоно.",
   },
 
   // Offerings Page
@@ -338,9 +342,13 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "Brokerage",
     mn: "Брокерын үйлчилгээ",
   },
-  "Stand solid. Stay liquid.": {
-    en: "Stand solid. Stay liquid.",
-    mn: "Тогтвортой. Хөрвөх чадвартай",
+  "Stand solid.": {
+    en: "Stand solid.",
+    mn: "Тогтвортой.",
+  },
+  "Stay liquid.": {
+    en: "Stay liquid.",
+    mn: "Хөрвөх чадвартай",
   },
   "brokerage.description": {
     en: "Tenger Capital SC LLC delivers dynamic, full-service brokerage solutions for both individual and institutional investors. We help you take control of your cash flows and put your capital to work with purpose. Powered by our research and advisory experts, you gain the insight and confidence to act decisively in today's fast-moving markets.",
@@ -400,9 +408,13 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "Wealth Management",
     mn: "Хөрөнгийн удирдлага",
   },
-  "Preserving wealth. Securing future.": {
-    en: "Preserving wealth. Securing future.",
-    mn: "Баялгийн сан. Насан туршийн баталгаа",
+  "Preserving wealth.": {
+    en: "Preserving wealth.",
+    mn: "Баялгийн сан.",
+  },
+  "Securing future.": {
+    en: "Securing future.",
+    mn: "Насан туршийн баталгаа",
   },
   "wealth.description": {
     en: "Tenger Capital SC LLC delivers tailored wealth and asset management solutions designed to help clients grow, preserve, and strategically allocate their capital. Through disciplined portfolio management, in-house equity research, and a structured fund platform, we offer investment strategies that align with each client's risk appetite and long-term financial objectives.",
@@ -490,7 +502,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // About Page - Key Figures
   "Trusted by Clients Worldwide": {
     en: "Trusted by Clients Worldwide",
-    mn: "Бид харилцагчийн сэтгэлд нийцсэн үйлчилгээг үзүүлнэ.",
+    mn: "Харилцагчийн амжилт",
   },
   "keyfigures.subtitle": {
     en: "Building wealth through expertise, innovation, and unwavering commitment to excellence",
@@ -498,7 +510,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Billion raised in 2025H1": {
     en: "Billion raised in 2025H1",
-    mn: "2025 оны 1 дүгээр улиралд татан төвлөрүүлсэн санхүүжилт",
+    mn: "2025 онд татан төвлөрүүлсэн санхүүжилт",
   },
   "Institutional and HNW clients": {
     en: "Institutional and HNW clients",
@@ -572,7 +584,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // About Page - Timeline
   "Changelog from our journey": {
     en: "Changelog from our journey",
-    mn: "Бидний аяллын түүх",
+    mn: "Бидний бахархал",
   },
   // Timeline 2007
   "timeline.2007.songdo": {
@@ -835,7 +847,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Timeline subtitle
   "timeline.subtitle": {
     en: "We've been working on Tenger Capital for the past 19 years. Here's a timeline of our journey.",
-    mn: "Тэнгэр Капитал 19 жилийн турш хөрөнгийн зах зээлд үйл ажиллагаа явуулж байна. Бидний аяллын товч түүх.",
+    mn: "Тэнгэр Капитал ҮЦК ХХК-ийн бахархал бол харилцагчдынхаа хамтаар бүтээсэн 19 жилийн түүх юм.  ",
   },
 
   // Footer

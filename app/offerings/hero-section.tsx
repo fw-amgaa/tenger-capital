@@ -19,10 +19,11 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: introDone ? 1 : 0, y: introDone ? 0 : 40 }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="z-10 md:w-[370px] text-center md:text-left"
+        className="z-10 md:w-[400px] text-center md:text-left"
       >
         <h3 className="text-3xl md:text-4xl tracking-tight text-primary mb-4 mt-6">
-          {t("Every Money Question. One Trusted Team.")}
+          {t("Every Money Question.")} <br />
+          {t("One Trusted Team.")}
         </h3>
       </motion.div>
 
