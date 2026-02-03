@@ -98,9 +98,17 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "Inspired by Tenger",
     mn: "Бидний үнэт зүйлс",
   },
-  "Integrity. Wisdom. Foresight.": {
-    en: "Integrity. Wisdom. Foresight.",
-    mn: "Мэргэжлийн өндөр ёс зүй. Нээлттэй мэдлэг. Баялгийн хуримтлал",
+  "Integrity.": {
+    en: "Integrity.",
+    mn: "Мэргэжлийн өндөр ёс зүй.",
+  },
+  "Wisdom.": {
+    en: "Wisdom.",
+    mn: "Нээлттэй мэдлэг.",
+  },
+  "Foresight.": {
+    en: "Foresight.",
+    mn: "Баялгийн хуримтлал",
   },
 
   // Brief carousel
