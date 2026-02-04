@@ -36,12 +36,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
+        <h2 className="text-lg md:text-4xl text-white max-w-4xl">
           {t("Changelog from our journey")}
         </h2>
-        <div className="my-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+        <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
 
-        <p className="text-neutral-300 text-sm md:text-base max-w-sm pt-2">
+        <p className="text-neutral-300 text-sm md:text-base max-w-sm">
           {t("timeline.subtitle")}
         </p>
       </div>
