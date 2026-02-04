@@ -48,7 +48,7 @@ export default function Brokerage() {
         </div>
       ),
 
-      image: "/phone-screen/monitoring_portfolio.jpg",
+      image: "/offerings/domestic_exchange.jpg",
     },
     {
       name: t("International Markets"),
@@ -65,7 +65,7 @@ export default function Brokerage() {
           </div>
         </div>
       ),
-      image: "/offerings/external_trade.jpg",
+      image: "/offerings/international_markets.jpg",
     },
     {
       name: t("OTC market"),

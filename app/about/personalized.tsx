@@ -29,17 +29,11 @@ export default function Personalized() {
         transition={{ duration: 1, delay: 0.4 }}
         className="z-10 md:w-[370px] text-center md:text-left"
       >
-        <h3 className="text-4xl md:text-5xl tracking-tight text-primary mb-1 mt-6">
-          {t("Personalized service")}
+        <h3 className="text-3xl md:text-4xl tracking-tight text-primary mb-1 mt-6">
+          {t("A service as individual as you are")}
         </h3>
 
-        <span className="text-white/60 text-sm">
-          {t("A service as individual as you are")}
-        </span>
-
-        <p className="text-md mt-12 text-white/80">
-          {t("personalized.desc")}
-        </p>
+        <p className="text-md mt-12 text-white/80">{t("personalized.desc")}</p>
       </motion.div>
     </motion.main>
   );

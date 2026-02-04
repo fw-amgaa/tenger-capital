@@ -57,7 +57,7 @@ export default function UnderWriting() {
           </p>
         </div>
       ),
-      image: "/offerings/m_a.jpg",
+      image: "/offerings/mergers.jpg",
     },
   ];
 

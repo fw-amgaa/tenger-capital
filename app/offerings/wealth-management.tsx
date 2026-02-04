@@ -35,7 +35,7 @@ export default function WealthManagement() {
           </p>
         </div>
       ),
-      image: "/offerings/fund-management.jpg",
+      image: "/offerings/fund_management.jpg",
     },
     {
       name: t("Equity&Market Research"),

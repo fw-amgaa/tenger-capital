@@ -13,11 +13,11 @@ export default function LetterFromCeo() {
   return (
     <div
       ref={ref}
-      style={{
-        backgroundImage: 'url("/about-us/bg-pattern.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      // style={{
+      //   backgroundImage: 'url("/about-us/bg-pattern.png")',
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
       className="section-container px-8 md:px-16"
     >
       <motion.main
@@ -35,14 +35,55 @@ export default function LetterFromCeo() {
           <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-8 mt-6">
             {t("Letter from CEO")}
           </h1>
-          <div className="max-w-xl mx-auto mb-8 flex flex-col gap-4">
-            {t("ceo.letter")
+          <div className="max-w-xl mx-auto mb-8 text-sm font-light">
+            <div className="mb-2">
+              Тэнгэр Капитал ҮЦК ХХК нь 2007 онд үүсгэн байгуулагдсан бөгөөд 19
+              жилийн түүхэн замналтай компани юм.
+            </div>
+            <div className="mb-2">
+              Бид 2025 онд{" "}
+              <b className="font-bold">
+                “Хүн бүрийн хөрөнгийг өсгөх зам ойлгомжтой, найдвартай, зөв
+                чиглэлтэй байх ёстой”
+              </b>{" "}
+              гэсэн суурь зарчимд үндэслэн компанийн стратеги, засаглал,
+              удирдлагын баг, бүтцийг бүрэн шинэчилснээр үйл ажиллагаагаа шинэ
+              түвшинд гаргаад байна.
+            </div>
+            <div className="mb-2">
+              <b className="font-bold">
+                Тус шинэчлэлийн хүрээнд бид богино хугацаанд буюу 2025 онд нийт
+                300 гаруй тэрбум төгрөгийг амжилттай татан төвлөрүүлснээс гадна
+                арилжааны гүйцэтгэл 502.5% буюу 9.2 дахин өсөж, салбартаа
+                тэргүүлэгч ТОП-3 компанийн нэгэнд зүй ёсоор тооцогдож байна.
+              </b>
+            </div>
+            <div className="mb-2">
+              Манай хамт олон нь төр, хувийн хэвшлийн ААН-үүдийг хөрөнгийн зах
+              зээлд амжилттай нэвтрэх, санхүүжилт татахад нь бүх төрлийн зөвлөх
+              үйлчилгээг үзүүлэхээс гадна харилцагч бүрийн зорилгод нийцсэн
+              тусгай шийдэл бүхий хөрөнгийн удирдлагын цогц үйлчилгээг санал
+              болгон ажилладаг.
+            </div>
+            <div className="mb-2">
+              Бид харилцагч, айл өрх бүрийн өнөөдрийн хөрөнгийг маргаашийн үнэ
+              цэнтэй хуримтлал болгон өсгөх замаар эдийн засгийн тогтвортой
+              өсөлтийг бий болгож, эх орныхоо хөгжилд бодит хувь нэмрээ
+              оруулахыг зорьдог билээ.
+            </div>
+            <div className="mb-2">
+              Цаашид ч бид үйл ажиллагааныхаа бүхий л түвшинд харилцагчийн эрх
+              ашгийг дээдэлсэн, мэргэжлийн ёс зүйтэй, хариуцлагатай, тогтвортой
+              гүйцэтгэлийг тууштай хэрэгжүүлэн ажиллах болно гэдгээ илэрхийлэхэд
+              таатай байна.
+            </div>
+            {/* {t("ceo.letter")
               .split("\n")
               .map((paragraph, i) => (
                 <p key={i} className="text-sm font-light italic text-white">
                   {paragraph}
                 </p>
-              ))}
+              ))} */}
           </div>
           <p className="text-sm text-white max-w-xl mx-auto">
             {t("ceo.regards")}

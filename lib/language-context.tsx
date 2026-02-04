@@ -82,7 +82,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Create Value Through Investing": {
     en: "Create Value Through Investing",
-    mn: "Хөрөнгө оруулалтаар үнэ цэнийг бүтээнэ.",
+    mn: "Хөрөнгө оруулалтаар үнэ цэнийг бүтээнэ",
   },
   "Underwriting | Brokerage | Wealth Management": {
     en: "Underwriting | Brokerage | Wealth Management",
@@ -761,11 +761,15 @@ const translations: Record<string, { en: string; mn: string }> = {
   // Team member roles
   "Chief Executive Officer": {
     en: "Chief Executive Officer",
-    mn: "Тэнгэр Капитал ҮЦК ХХК\nГүйцэтгэх захирал",
+    mn: "Гүйцэтгэх захирал",
   },
-  "Tenger Fund Management CEO": {
-    en: "Tenger Fund Management CEO",
-    mn: "Тэнгэр фанд менежмент ХХК\nГүйцэтгэх захирал",
+  "Tenger Capital LLC": {
+    en: "Tenger Capital",
+    mn: "Тэнгэр Капитал ҮЦК ХХК",
+  },
+  "Tenger Fund Management": {
+    en: "Tenger Fund Management",
+    mn: "Тэнгэр фанд менежмент ХХК",
   },
   "Chief Financial and Operating Officer": {
     en: "Chief Financial and Operating Officer",

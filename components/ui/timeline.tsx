@@ -39,7 +39,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
           {t("Changelog from our journey")}
         </h2>
-        <p className="text-neutral-300 text-sm md:text-base max-w-sm">
+        <div className="my-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+
+        <p className="text-neutral-300 text-sm md:text-base max-w-sm pt-2">
           {t("timeline.subtitle")}
         </p>
       </div>

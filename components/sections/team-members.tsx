@@ -12,7 +12,7 @@ import { useLanguage } from "@/lib/language-context";
 
 interface TeamMember {
   name: string;
-  role: string;
+  role: React.ReactNode;
   image: string;
   description: string;
 }
@@ -29,14 +29,26 @@ export default function TeamMembers({
   const teamMembers: TeamMember[] = [
     {
       name: t("Gombodorj Nyamtogtokh"),
-      role: t("Chief Executive Officer"),
+      role: (
+        <span>
+          {t("Tenger Capital LLC")}
+          <br />
+          {t("Chief Executive Officer")}
+        </span>
+      ),
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part1-3.jpg",
     },
     {
       name: t("Darkhanbayar Radnaa-Ochir"),
-      role: t("Tenger Fund Management CEO"),
+      role: (
+        <span>
+          {t("Tenger Fund Management")}
+          <br />
+          {t("Chief Executive Officer")}
+        </span>
+      ),
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
       image: "/team-members/all-bw part1-6b.jpg",
