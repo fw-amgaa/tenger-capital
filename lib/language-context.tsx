@@ -160,11 +160,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "We filter out the noise,": {
     en: "We filter out the noise,",
-    mn: "Бид хөрөнгийн зах зээлийн хязгааргүй",
+    mn: "Бид хязгааргүй үргэлжлэх",
   },
   "so you don't have to.": {
     en: "so you don't have to.",
-    mn: "мэдээллээс “зөв”-ийг нь зөвлөнө.",
+    mn: "мэдээллийн урсгалаас зөвийг шүүнэ.",
   },
   "offerings.disclaimer": {
     en: "For illustrative purposes only; not representative of actual clients.",
@@ -510,7 +510,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   // About Page - Key Figures
   "Trusted by Clients Worldwide": {
     en: "Trusted by Clients Worldwide",
-    mn: "Харилцагчийн амжилт",
+    mn: "Амжилтын товчоон",
   },
   "keyfigures.subtitle": {
     en: "Building wealth through expertise, innovation, and unwavering commitment to excellence",
