@@ -147,7 +147,9 @@ export default function Brokerage() {
         <div className="grid grid-cols-1 gap-16 px-8">
           {services.map((member, index) => (
             <div key={index} className="text-white">
-              <h3 className="text-3xl font-light mb-8">{member.name}</h3>
+              <h3 className="text-3xl font-light">{member.name}</h3>
+              <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+
               <div className="text-md leading-[1.4] opacity-70">
                 {member.description}
               </div>
@@ -229,7 +231,8 @@ export default function Brokerage() {
                 key={index}
                 className="min-h-screen flex flex-col justify-center"
               >
-                <h3 className="text-3xl font-bold mb-8">{service.name}</h3>
+                <h3 className="text-3xl font-bold">{service.name}</h3>
+                <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
 
                 {service.description}
               </div>

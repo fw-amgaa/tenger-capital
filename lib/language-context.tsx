@@ -294,7 +294,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "One Trusted Team.": {
     en: "One Trusted Team.",
-    mn: "Бид шийдэл санал болгоно.",
+    mn: "бид шийдэл санал болгоно.",
   },
 
   // Offerings Page
