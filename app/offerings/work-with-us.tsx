@@ -162,12 +162,13 @@ const StatsCard = ({
             </button>
 
             {/* Title */}
-            <p className="text-white/80 text-lg leading-relaxed mb-auto pr-8">
+            <p className="text-white/80 text-lg leading-relaxed pr-8 h-[36%]">
               {title}
+              <div className="mt-4 h-px w-36 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
             </p>
 
             {/* Disclosure */}
-            <p className="text-white/60 text-base leading-relaxed mb-auto pr-8">
+            <p className="text-white/60 text-base leading-relaxed pr-8">
               {disclosure}
             </p>
 

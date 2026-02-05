@@ -142,7 +142,11 @@ const Navigation = () => {
                 className="object-cover"
               />
             </div>
-            <h2 className="relative text-2xl leading-[120%] z-10">{t("Offerings")}</h2>
+            <div className="inline-flex w-max py-1 px-3 rounded-md bg-black/30 backdrop-blur-xs z-5">
+              <h2 className="relative text-2xl leading-[120%] z-10">
+                {t("Offerings")}
+              </h2>
+            </div>
             <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
               {t("DISCOVER NOW")}
               <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
@@ -165,9 +169,11 @@ const Navigation = () => {
                   className="object-cover"
                 />
               </div>
-              <h2 className="relative text-2xl leading-[120%] z-10">
-                {t("About us")}
-              </h2>
+              <div className="inline-flex w-max py-1 px-3 rounded-md bg-black/30 backdrop-blur-xs z-5">
+                <h2 className="relative text-2xl leading-[120%] z-10">
+                  {t("About us")}
+                </h2>
+              </div>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
                 {t("DISCOVER NOW")}
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">
@@ -188,9 +194,11 @@ const Navigation = () => {
                   className="object-cover"
                 />
               </div>
-              <h2 className="relative text-2xl leading-[120%] z-10">
-                {t("Submit form")}
-              </h2>
+              <div className="inline-flex w-max py-1 px-3 rounded-md bg-black/30 backdrop-blur-xs z-5">
+                <h2 className="relative text-2xl leading-[120%] z-10">
+                  {t("Submit form")}
+                </h2>
+              </div>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">
                 {t("REACH OUT TO US")}
                 <span className="opacity-30 transition-opacity duration-300 ease-out group-hover:opacity-100">

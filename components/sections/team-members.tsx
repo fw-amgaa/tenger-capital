@@ -51,7 +51,7 @@ export default function TeamMembers({
       ),
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-6b.jpg",
+      image: "/team-members/all-bw part1-14b.jpg",
     },
     {
       name: t("Lkhamsuren Boldbaatar"),
@@ -105,7 +105,7 @@ export default function TeamMembers({
       {/* Spacer before section */}
       {showTitle && (
         <div className="flex items-center justify-center">
-          <h2 className="mt-24 md:mt-48 text-white text-5xl md:text-7xl text-center">
+          <h2 className="mt-24 md:mt-32 text-white text-5xl md:text-7xl text-center">
             {t("MEET THE TEAM")}
           </h2>
         </div>

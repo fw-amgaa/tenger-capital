@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="p-4">
-      <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem]">
+      <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem] px-16">
         <div
           className={cn(
             "relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-white",

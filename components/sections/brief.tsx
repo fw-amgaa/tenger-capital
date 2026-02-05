@@ -158,9 +158,9 @@ const Brief = () => {
             </h1>
           </div>
 
-          <p className="text-base md:text-md leading-relaxed md:w-[400px]">
+          <h3 className="text-base md:text-lg leading-relaxed md:w-[440px]">
             {t("brief.description")}
-          </p>
+          </h3>
         </div>
       </div>
 

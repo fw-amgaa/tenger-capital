@@ -81,7 +81,7 @@ export default function UnderWriting() {
   return (
     <div className="section-container mt-16 md:mt-32">
       <div className="relative flex flex-col gap-8">
-        <div className="absolute w-full h-full z-0 overflow-hidden top-0 left-0">
+        {/* <div className="absolute w-full h-full z-0 overflow-hidden top-0 left-0">
           <NextVideo
             src={introduction}
             controls={false}
@@ -91,9 +91,9 @@ export default function UnderWriting() {
             loop={true}
             className="h-full [--media-object-fit:cover]"
           />
-        </div>
+        </div> */}
         <Seperator />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 md:mb-48 z-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 mb-16 z-5">
           <div>
             <h1 className="text-3xl md:text-4xl font-serif">
               {t("Underwriting")}
@@ -105,7 +105,7 @@ export default function UnderWriting() {
           </div>
 
           <div>
-            <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8">
+            <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8 mt-18">
               {t("underwriting.description")}
             </p>
             <GradientBorderButton>

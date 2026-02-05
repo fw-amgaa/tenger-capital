@@ -32,10 +32,12 @@ export default function LetterFromCeo() {
           transition={{ duration: 1, delay: 0.4 }}
           className="z-10 md:w-[50%] text-center md:text-left"
         >
-          <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-8 mt-6">
+          <h1 className="text-3xl md:text-4xl tracking-tight text-primary">
             {t("Letter from CEO")}
           </h1>
-          <div className="max-w-xl mx-auto mb-8 text-sm font-light">
+          <div className="mt-2 mb-12 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+
+          <div className="max-w-xl mx-auto mb-8 text-sm font-light italic">
             <div className="mb-2">
               Тэнгэр Капитал ҮЦК ХХК нь 2007 онд үүсгэн байгуулагдсан бөгөөд 19
               жилийн түүхэн замналтай компани юм.
@@ -50,26 +52,14 @@ export default function LetterFromCeo() {
               удирдлагын баг, бүтцийг бүрэн шинэчилснээр үйл ажиллагаагаа шинэ
               түвшинд гаргаад байна.
             </div>
-            <div className="mb-2">
-              <b className="font-bold">
-                Тус шинэчлэлийн хүрээнд бид богино хугацаанд буюу 2025 онд нийт
-                300 гаруй тэрбум төгрөгийг амжилттай татан төвлөрүүлснээс гадна
-                арилжааны гүйцэтгэл 502.5% буюу 9.2 дахин өсөж, салбартаа
-                тэргүүлэгч ТОП-3 компанийн нэгэнд зүй ёсоор тооцогдож байна.
-              </b>
-            </div>
-            <div className="mb-2">
-              Манай хамт олон нь төр, хувийн хэвшлийн ААН-үүдийг хөрөнгийн зах
-              зээлд амжилттай нэвтрэх, санхүүжилт татахад нь бүх төрлийн зөвлөх
-              үйлчилгээг үзүүлэхээс гадна харилцагч бүрийн зорилгод нийцсэн
-              тусгай шийдэл бүхий хөрөнгийн удирдлагын цогц үйлчилгээг санал
-              болгон ажилладаг.
-            </div>
-            <div className="mb-2">
-              Бид харилцагч, айл өрх бүрийн өнөөдрийн хөрөнгийг маргаашийн үнэ
-              цэнтэй хуримтлал болгон өсгөх замаар эдийн засгийн тогтвортой
-              өсөлтийг бий болгож, эх орныхоо хөгжилд бодит хувь нэмрээ
-              оруулахыг зорьдог билээ.
+            <div className="mb-2 ml-8">
+              Тус шинэчлэлийн хүрээнд бид богино хугацаанд буюу 2025 онд нийт
+              <b className="font-bold">300 гаруй тэрбум</b> төгрөгийг амжилттай
+              татан төвлөрүүлснээс гадна арилжааны гүйцэтгэл{" "}
+              <b className="font-bold">502.5%</b> буюу{" "}
+              <b className="font-bold">9.2</b> дахин өсөж, салбартаа тэргүүлэгч
+              <b className="font-bold">ТОП-3</b> компанийн нэгэнд зүй ёсоор
+              тооцогдож байна.
             </div>
             <div className="mb-2">
               Цаашид ч бид үйл ажиллагааныхаа бүхий л түвшинд харилцагчийн эрх
@@ -77,21 +67,12 @@ export default function LetterFromCeo() {
               гүйцэтгэлийг тууштай хэрэгжүүлэн ажиллах болно гэдгээ илэрхийлэхэд
               таатай байна.
             </div>
-            {/* {t("ceo.letter")
-              .split("\n")
-              .map((paragraph, i) => (
-                <p key={i} className="text-sm font-light italic text-white">
-                  {paragraph}
-                </p>
-              ))} */}
           </div>
-          <p className="text-sm text-white max-w-xl mx-auto">
+          <p className="text-sm text-white font-bold max-w-xl mx-auto">
             {t("ceo.regards")}
           </p>
-          <p className="text-sm font-semibold text-primary mt-1">
-            {t("ceo.name")}
-          </p>
-          <p className="text-xs text-white">{t("ceo.title")}</p>
+          <p className="text-sm text-primary mt-1">{t("ceo.name")}</p>
+          <p className="text-sm text-white mt-1">{t("ceo.title")}</p>
         </motion.div>
 
         <div className="w-full md:w-[40%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">

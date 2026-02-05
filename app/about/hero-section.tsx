@@ -94,9 +94,10 @@ export default function HeroSection() {
             >
               <Image
                 fill
-                src="/about-us/about-us.jpg"
+                src="/about-us/about_us.jpg"
                 alt="Expanding landscape"
                 className="w-full h-full object-cover"
+                objectPosition="center 60%"
               />
               <div className="absolute inset-0 bg-black opacity-40 z-1" />
             </div>

@@ -68,9 +68,9 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "One of top 3 securities as of 2026.",
     mn: "Зах зээлд тэргүүлэгч ТОП-3 компанийн нэг",
   },
-  "Raised over ₮300 Billion in 2025H2.": {
-    en: "Raised over ₮300 Billion in 2025H2.",
-    mn: "2025 оны 2 улиралд 300 гаруй тэрбум төгрөгийг татан төвлөрүүлсэн.",
+  "Raised over ₮300 Billion in 2025.": {
+    en: "Raised over ₮300 Billion in 2025.",
+    mn: "2025 онд 300 гаруй тэрбум төгрөгийг татан төвлөрүүлсэн.",
   },
   OPEN: {
     en: "OPEN",
@@ -280,7 +280,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   LOGIN: {
     en: "LOG IN",
-    mn: "НЭВТРЭХ",
+    mn: "АРИЛЖААНД ОРОЛЦОХ",
   },
   "OPEN AN ACCOUNT": {
     en: "OPEN AN ACCOUNT",
@@ -897,7 +897,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   Login: {
     en: "Login",
-    mn: "Нэвтрэх",
+    mn: "Арилжаанд оролцох",
   },
   "Since 2024": {
     en: "Since 2024",
