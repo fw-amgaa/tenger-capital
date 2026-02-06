@@ -229,7 +229,13 @@ html.lenis body {
   }
 }
 
-.next-video-container video {
-  --media-object-fit: cover;
-  object-fit: cover;
+.custom-player {
+  /* This overrides the Mux Pink */
+  --media-accent-color: rgb(255, 153, 0);
+  /* --media-control-hover-background: rgba(255, 255, 255, 0.1); */
+  /* --media-range-thumb-background: #d7ff44; */
+  /* --media-range-bar-active-background: #ec2c2c; */
+
+  /* If you want it super clean, you can even hide specific parts */
+  /* --controls: all; */
 }

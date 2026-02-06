@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
+import MuxPlayer from "@mux/mux-player-react";
 
 const VideoIntroduction = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ const VideoIntroduction = () => {
 
   return (
     <div ref={containerRef} className="my-24 md:my-36 section-container">
-      <video
+      {/* <video
         preload={"auto"}
         src={
           "https://player.mux.com/00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
@@ -43,6 +44,15 @@ const VideoIntroduction = () => {
         playsInline={true}
         muted
         autoPlay={true}
+      /> */}
+      <MuxPlayer
+        playbackId="00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
+        metadataVideoTitle="Tenger Capital"
+        className="w-full aspect-32/15 custom-player"
+        secondaryColor="#000000"
+        primaryColor="#ffffff"
+        autoPlay={true}
+        muted={true}
       />
     </div>
   );
