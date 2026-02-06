@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem] px-16">
         <div
           className={cn(
-            "relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-white",
+            "relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-[#ff990026]",
             // "md:min-h-[40rem] lg:min-h-[50rem]"
             "md:min-h-[20rem] lg:min-h-[30rem]"
           )}
@@ -29,7 +29,7 @@ const Footer = () => {
                   onUpdate: (v) => window.scrollTo(0, v),
                 })
               }
-              className="type-btn text-black flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0 cursor-pointer"
+              className="type-btn text-white flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0 cursor-pointer"
             >
               {t("Back to top")}
               <svg
@@ -46,7 +46,7 @@ const Footer = () => {
             </button>
 
             <Image
-              src={"/logo/logo_main_dark.png"}
+              src={"/logo/logo_main_light.png"}
               alt="logo"
               width={128}
               height={50}
@@ -55,9 +55,9 @@ const Footer = () => {
 
           <div className="flex h-full flex-col justify-between items-center">
             <div className="flex flex-col gap-[4rem] lg:flex-row lg:gap-[30%]">
-              <div className="text-black type-xs flex flex-col gap-2 text-center lg:text-left">
+              <div className="text-white type-xs flex flex-col gap-2 text-center lg:text-left">
                 <h4 className="text-sm opacity-[.4]">{t("Tenger Capital")}</h4>
-                <ul className="flex flex-col text-sm">
+                <ul className="flex flex-col text-sm opacity-[.5]">
                   <li>
                     <Link
                       className="relative w-fit inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
@@ -97,16 +97,16 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <p className="text-black text-xs max-lg:hidden tracking-wide">
+            <p className="text-white text-xs max-lg:hidden tracking-wide opacity-[.5]">
               {t("footer.copyright")}
             </p>
           </div>
           <div className="flex flex-col items-center md:items-end justify-between max-lg:w-full lg:h-full">
-            <GradientBorderButton mode="light" borderAnimation={false}>
+            <GradientBorderButton mode="dark" borderAnimation={false}>
               {t("OPEN AN ACCOUNT")}
             </GradientBorderButton>
-            <div className="text-black flex flex-col items-center justify-center gap-[3rem] max-lg:w-full mt-8 md:mt-0">
-              <div className="flex gap-[1.5rem] lg:ml-auto">
+            <div className="text-white flex flex-col items-center justify-center gap-[3rem] max-lg:w-full mt-8 md:mt-0">
+              <div className="flex gap-[1.5rem] lg:ml-auto opacity-[.5]">
                 <Link
                   target="_blank"
                   aria-label="Social link for x"
@@ -180,7 +180,7 @@ const Footer = () => {
                   </svg>
                 </Link>
               </div>
-              <p className="text-black text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
+              <p className="text-white text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
                 {t("footer.copyright")}
               </p>
             </div>
