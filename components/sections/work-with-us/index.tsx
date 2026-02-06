@@ -147,7 +147,7 @@ const WorkWithUs = () => {
     },
     {
       title: t("workwithus.stat3.title"),
-      percentage: "379.2",
+      percentage: "603.7",
       unit: "₮",
       suffix: t("Billion MNT"),
       labels: ["Others", "TC"],

@@ -478,11 +478,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   // About Page - Hero
   "Founded on Integrity.": {
     en: "Founded on Integrity.",
-    mn: "Шударга, ёс зүйтэй",
+    mn: "Баялгийн хуримтлал",
   },
   "Focused on Your Future.": {
     en: "Focused on Your Future.",
-    mn: "Ирээдүйг бид бүтээнэ.",
+    mn: "Насан туршийн баталгаа",
   },
 
   // About Page - Letter from CEO
@@ -499,8 +499,8 @@ const translations: Record<string, { en: string; mn: string }> = {
     mn: "Хүндэтгэсэн:",
   },
   "ceo.name": {
-    en: "Ts. Gombodorj",
-    mn: "Ц.Гомбодорж",
+    en: "N. Gombodorj",
+    mn: "H.Гомбодорж",
   },
   "ceo.title": {
     en: "CEO of Tenger Capital SC LLC",

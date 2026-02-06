@@ -10,8 +10,6 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import introduction from "@/videos/2040x516.mp4";
-import NextVideo from "next-video";
 import { useLanguage } from "@/lib/language-context";
 
 interface Service {

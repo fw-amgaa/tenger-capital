@@ -7,10 +7,8 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import NextVideo from "next-video";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import introduction from "@/videos/2040x516.mp4";
 import { useLanguage } from "@/lib/language-context";
 import GradientBorderButton from "@/components/gradient-border-button";
 

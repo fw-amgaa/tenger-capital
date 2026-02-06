@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Video from "next-video";
 import { useInView } from "framer-motion";
-import introduction from "@/videos/introduction.mp4";
 
 const VideoIntroduction = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,10 +33,10 @@ const VideoIntroduction = () => {
   }, [isInView]);
 
   return (
-    <div ref={containerRef} className="my-24 md:my-48 section-container">
-      <Video
+    <div ref={containerRef} className="my-24 md:my-36 section-container">
+      <video
         preload={"auto"}
-        src={introduction}
+        src={"/videos/Tenger Capital.mp4"}
         controls={true}
         playsInline={true}
         muted

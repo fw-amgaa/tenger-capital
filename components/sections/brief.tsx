@@ -1,9 +1,7 @@
 "use client";
 
-import introduction from "@/videos/2040x516.mp4";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { Bell, TrendingUp, User } from "lucide-react";
-import NextVideo from "next-video";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Seperator from "../seperator";
@@ -134,14 +132,14 @@ const Brief = () => {
     <div className="section-container relative flex flex-col gap-16">
       <div className="relative flex flex-col gap-8">
         <div className="absolute w-full h-full z-0 overflow-hidden top-0 left-0">
-          <NextVideo
-            src={introduction}
+          <video
+            src={"/videos/2040x516.mp4"}
             controls={false}
             playsInline
             muted={true}
             autoPlay={true}
             loop={true}
-            className="h-full [--media-object-fit:cover]"
+            className="h-full object-cover"
           />
         </div>
         <Seperator />
