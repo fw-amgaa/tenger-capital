@@ -36,7 +36,9 @@ const VideoIntroduction = () => {
     <div ref={containerRef} className="my-24 md:my-36 section-container">
       <video
         preload={"auto"}
-        src={"/videos/Tenger Capital.mp4"}
+        src={
+          "https://player.mux.com/00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
+        }
         controls={true}
         playsInline={true}
         muted
