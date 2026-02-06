@@ -185,16 +185,16 @@ const translations: Record<string, { en: string; mn: string }> = {
     mn: "Яагаад Тэнгэр Капиталыг сонгох ёстой вэ?",
   },
   "workwithus.stat1.title": {
-    en: "The 2025 Growth shows that Tenger Capital is expanding rapidly, multiplied by 9.2x its transaction volume compared to it's previous year.",
-    mn: "2025 онд Тэнгэр Капитал компанийн арилжааны дүн 502.5% буюу 9.2 дахин хурдацтай өсөв.",
+    en: "Explosive Growth",
+    mn: "Үсрэнгүй өсөлт",
   },
   "workwithus.stat2.title": {
-    en: "Our Market Share in Primary Bond Issuance in 2025 covers 25% of the entire market.",
-    mn: "2025 онд Тэнгэр Капитал нь бондын зах зээлийн арилжааны 25%-ийг гүйцэтгэв.",
+    en: "Dominant Share",
+    mn: "Давамгай байрь суурь",
   },
   "workwithus.stat3.title": {
-    en: "Tenger Capital ranks second in 2025 Primary Bond Market with total volume of 379.2 Billion MNT.",
-    mn: "2025 онд Тэнгэр Капитал нь бондын зах зээлээс 379.2 тэрбум төгрөгийн санхүүжилтийг татан төвлөрүүлснээр салбартаа 2-т эрэмбэлэгдэв.",
+    en: "Trust at Scale",
+    mn: "Итгэлд суурилсан санхүүжилт",
   },
 
   // Team Section
