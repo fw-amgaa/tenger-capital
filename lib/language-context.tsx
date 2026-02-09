@@ -17,7 +17,7 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -68,9 +68,9 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "One of top 3 securities as of 2026.",
     mn: "Зах зээлд тэргүүлэгч ТОП-3 компанийн нэг",
   },
-  "Raised over ₮300 Billion in 2025.": {
-    en: "Raised over ₮300 Billion in 2025.",
-    mn: "2025 онд 300 гаруй тэрбум төгрөгийг татан төвлөрүүлсэн.",
+  "Raised over ₮600 Billion in 2025.": {
+    en: "Raised over ₮600 Billion in 2025.",
+    mn: "2025 онд 600 гаруй тэрбум төгрөгийг татан төвлөрүүлсэн.",
   },
   OPEN: {
     en: "OPEN",
@@ -516,8 +516,8 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "Building wealth through expertise, innovation, and unwavering commitment to excellence",
     mn: "Өндөр мэдлэг, мэргэжлийн туршлага, гүйцэтгэлийн өндөр стандарт, оновчтой шийдлийг санал болгох замаар хөрөнгө оруулалтын цэнтэй ирээдүйг бүтээнэ.",
   },
-  "Billion raised in 2025H1": {
-    en: "Billion raised in 2025H1",
+  "Billion raised in 2025": {
+    en: "Billion raised in 2025",
     mn: "2025 онд татан төвлөрүүлсэн санхүүжилт",
   },
   "Institutional and HNW clients": {

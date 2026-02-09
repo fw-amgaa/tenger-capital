@@ -12,12 +12,12 @@ const Footer = () => {
 
   return (
     <footer className="p-4">
-      <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem] px-16">
+      <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem] sm:px-16">
         <div
           className={cn(
             "relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-[#ff990026]",
             // "md:min-h-[40rem] lg:min-h-[50rem]"
-            "md:min-h-[20rem] lg:min-h-[30rem]"
+            "md:min-h-[20rem] lg:min-h-[30rem]",
           )}
         >
           <div className="flex h-full flex-col justify-between max-md:items-center">
@@ -107,78 +107,90 @@ const Footer = () => {
             </GradientBorderButton>
             <div className="text-white flex flex-col items-center justify-center gap-[3rem] max-lg:w-full mt-8 md:mt-0">
               <div className="flex gap-[1.5rem] lg:ml-auto opacity-[.5]">
-                <Link
-                  target="_blank"
-                  aria-label="Social link for x"
-                  className="flex-center"
-                  href="https://x.com/TGvest"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="11"
+                  fill="none"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="13"
-                    height="11"
-                    fill="none"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M9.514.001h1.852L7.32 4.64l4.762 6.311H8.353L5.43 7.123l-3.34 3.827H.238l4.329-4.962L0 .002h3.823L6.46 3.5zM8.862 9.84h1.027L3.262 1.055H2.16z"
-                    ></path>
-                  </svg>
-                </Link>
-                <Link
+                  <path
+                    fill="currentColor"
+                    d="M9.514.001h1.852L7.32 4.64l4.762 6.311H8.353L5.43 7.123l-3.34 3.827H.238l4.329-4.962L0 .002h3.823L6.46 3.5zM8.862 9.84h1.027L3.262 1.055H2.16z"
+                  ></path>
+                </svg>
+                {/* <Link
+                  target="_blank"
+                  aria-label="Social link for facebook"
+                  className="flex-center"
+                  href="https://facebook.com/TGvest"
+                > */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  ></path>
+                </svg>
+                {/* </Link> */}
+                {/* <Link
                   target="_blank"
                   aria-label="Social link for linkedin"
                   className="flex-center"
                   href="https://www.linkedin.com/company/TG-invest"
+                > */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="11"
+                  fill="none"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="13"
-                    height="11"
-                    fill="none"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M3.05 1.219a1.216 1.216 0 1 1-2.434-.002 1.216 1.216 0 0 1 2.433.002m.036 2.116H.653v7.615h2.433zm3.844 0H4.509v7.615h2.396V6.954c0-2.226 2.901-2.433 2.901 0v3.996h2.403V6.127c0-3.753-4.294-3.613-5.304-1.77z"
-                    ></path>
-                  </svg>
-                </Link>
-                <Link
+                  <path
+                    fill="currentColor"
+                    d="M3.05 1.219a1.216 1.216 0 1 1-2.434-.002 1.216 1.216 0 0 1 2.433.002m.036 2.116H.653v7.615h2.433zm3.844 0H4.509v7.615h2.396V6.954c0-2.226 2.901-2.433 2.901 0v3.996h2.403V6.127c0-3.753-4.294-3.613-5.304-1.77z"
+                  ></path>
+                </svg>
+                {/* </Link> */}
+                {/* <Link
                   target="_blank"
                   aria-label="Social link for youtube"
                   className="flex-center"
                   href="https://www.youtube.com/TGvest"
+                > */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="11"
+                  fill="none"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="11"
-                    fill="none"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="m7 7.822 4.058-2.346L7 3.13zm9.04-6.124c.102.368.172.86.219 1.486.055.626.078 1.166.078 1.635l.047.657c0 1.712-.125 2.971-.344 3.777-.196.704-.65 1.157-1.353 1.353-.368.101-1.04.172-2.072.219a52 52 0 0 1-2.808.078l-1.243.047c-3.277 0-5.318-.125-6.124-.344-.704-.196-1.157-.65-1.353-1.353-.101-.368-.172-.86-.219-1.486A19 19 0 0 1 .79 6.133l-.047-.657c0-1.713.125-2.972.344-3.778C1.283.995 1.737.541 2.44.346 2.808.244 3.48.174 4.513.126A52 52 0 0 1 7.32.049L8.564.001c3.276 0 5.317.126 6.123.345.704.195 1.157.649 1.353 1.352"
-                    ></path>
-                  </svg>
-                </Link>
-                <Link
+                  <path
+                    fill="currentColor"
+                    d="m7 7.822 4.058-2.346L7 3.13zm9.04-6.124c.102.368.172.86.219 1.486.055.626.078 1.166.078 1.635l.047.657c0 1.712-.125 2.971-.344 3.777-.196.704-.65 1.157-1.353 1.353-.368.101-1.04.172-2.072.219a52 52 0 0 1-2.808.078l-1.243.047c-3.277 0-5.318-.125-6.124-.344-.704-.196-1.157-.65-1.353-1.353-.101-.368-.172-.86-.219-1.486A19 19 0 0 1 .79 6.133l-.047-.657c0-1.713.125-2.972.344-3.778C1.283.995 1.737.541 2.44.346 2.808.244 3.48.174 4.513.126A52 52 0 0 1 7.32.049L8.564.001c3.276 0 5.317.126 6.123.345.704.195 1.157.649 1.353 1.352"
+                  ></path>
+                </svg>
+                {/* </Link> */}
+                {/* <Link
                   target="_blank"
                   aria-label="Social link for instagram"
                   className="flex-center"
                   href="https://www.instagram.com/TGvest"
+                > */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  fill="none"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="13"
-                    height="13"
-                    fill="none"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M4.422.436h5.074A3.506 3.506 0 0 1 13 3.939v5.074a3.503 3.503 0 0 1-3.504 3.503H4.422A3.506 3.506 0 0 1 .92 9.013V3.939A3.503 3.503 0 0 1 4.422.436m-.12 1.208a2.175 2.175 0 0 0-2.175 2.174v5.316c0 1.202.973 2.174 2.175 2.174h5.315a2.175 2.175 0 0 0 2.174-2.174V3.818a2.173 2.173 0 0 0-2.174-2.174zm5.828.906a.755.755 0 1 1 0 1.51.755.755 0 0 1 0-1.51m-3.17.906a3.02 3.02 0 1 1 0 6.04 3.02 3.02 0 0 1 0-6.04m0 1.208a1.812 1.812 0 1 0 0 3.624 1.812 1.812 0 0 0 0-3.624"
-                    ></path>
-                  </svg>
-                </Link>
+                  <path
+                    fill="currentColor"
+                    d="M4.422.436h5.074A3.506 3.506 0 0 1 13 3.939v5.074a3.503 3.503 0 0 1-3.504 3.503H4.422A3.506 3.506 0 0 1 .92 9.013V3.939A3.503 3.503 0 0 1 4.422.436m-.12 1.208a2.175 2.175 0 0 0-2.175 2.174v5.316c0 1.202.973 2.174 2.175 2.174h5.315a2.175 2.175 0 0 0 2.174-2.174V3.818a2.173 2.173 0 0 0-2.174-2.174zm5.828.906a.755.755 0 1 1 0 1.51.755.755 0 0 1 0-1.51m-3.17.906a3.02 3.02 0 1 1 0 6.04 3.02 3.02 0 0 1 0-6.04m0 1.208a1.812 1.812 0 1 0 0 3.624 1.812 1.812 0 0 0 0-3.624"
+                  ></path>
+                </svg>
+                {/* </Link> */}
               </div>
               <p className="text-white text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
                 {t("footer.copyright")}

@@ -29,14 +29,14 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
             items={[
               t("Established in 2007."),
               t("One of top 3 securities as of 2026."),
-              t("Raised over ₮300 Billion in 2025H2."),
+              t("Raised over ₮600 Billion in 2025."),
             ]}
           />
           <InfoBubbleDialog
             items={[
               t("Established in 2007."),
               t("One of top 3 securities as of 2026."),
-              t("Raised over ₮300 Billion in 2025H2."),
+              t("Raised over ₮600 Billion in 2025."),
             ]}
           />
         </div>

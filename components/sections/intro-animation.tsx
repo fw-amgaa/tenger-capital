@@ -44,8 +44,8 @@ export function IntroAnimation({
     <h2
       ref={ref}
       className={cn(
-        "fixed inset-0 z-100 flex items-center justify-center bg-black text-2xl md:text-4xl lg:text-6xl px-8",
-        language === "mn" ? "flex-col" : "flex-wrap"
+        "fixed inset-0 z-100 flex items-center justify-center bg-black text-2xl md:text-4xl lg:text-6xl px-2 sm:px-8",
+        language === "mn" ? "flex-col" : "flex-wrap",
       )}
     >
       {(() => {

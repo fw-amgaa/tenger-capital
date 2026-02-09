@@ -6,37 +6,11 @@ import { useRef } from "react";
 import Seperator from "../seperator";
 import { useLanguage } from "@/lib/language-context";
 
-const techLogos = [
-  { src: "/partners/Alliance capital.png", alt: "Alliance capital" },
-  { src: "/partners/AODE.png", alt: "AODE" },
-  { src: "/partners/bers capital.png", alt: "bers capital" },
-  { src: "/partners/bers finance.png", alt: "bers finance" },
-  { src: "/partners/bichil globus.png", alt: "bichil globus" },
-  { src: "/partners/bichil globus.svg", alt: "bichil globus" },
-  { src: "/partners/eco car.png", alt: "eco car" },
-  { src: "/partners/finco.svg", alt: "finco" },
-  { src: "/partners/FRC.png", alt: "FRC" },
-  { src: "/partners/global town.png", alt: "global town" },
-  { src: "/partners/IBKR.png", alt: "IBKR" },
-  { src: "/partners/KA mining.png", alt: "KA mining" },
-  { src: "/partners/khan -altai.png", alt: "khan -altai" },
-  { src: "/partners/lend mn.png", alt: "lend mn" },
-  { src: "/partners/MASD.png", alt: "MASD" },
-  { src: "/partners/master group.png", alt: "master group" },
-  { src: "/partners/monaybox.png", alt: "monaybox" },
-  { src: "/partners/mongol alt.png", alt: "mongol alt" },
-  { src: "/partners/monos.png", alt: "monos" },
-  { src: "/partners/MSE.png", alt: "MSE" },
-  { src: "/partners/mtrip.png", alt: "mtrip" },
-  { src: "/partners/MTZ.png", alt: "MTZ" },
-  { src: "/partners/munkhiin useg.png", alt: "munkhiin useg" },
-  { src: "/partners/neocity.png", alt: "neocity" },
-  { src: "/partners/neocity.svg", alt: "neocity" },
-  { src: "/partners/numus.png", alt: "numus" },
-  { src: "/partners/premier invest.png", alt: "premier invest" },
-  { src: "/partners/shunkhlai.png", alt: "shunkhlai" },
-  { src: "/partners/tsetsens maining.png", alt: "tsetsens maiming" },
-];
+const techLogos = Array.from({ length: 32 }, (_, i) => ({
+  gray: `/partners/new/Cropped Grey/Cropped Grey (${i + 1}).png`,
+  color: `/partners/new/Croped/Cropped (${i + 1}).png`,
+  alt: `Partner ${i + 1}`,
+}));
 
 export default function Partners() {
   const baseX = useRef(0);
@@ -77,14 +51,21 @@ export default function Partners() {
           {[...techLogos, ...techLogos].map((logo, i) => (
             <div
               key={i}
-              className="w-[120px] h-[40px] flex items-center justify-center"
+              className="w-[120px] h-[40px] flex items-center justify-center relative group cursor-pointer"
             >
               <Image
-                src={logo.src}
+                src={logo.gray}
                 alt={logo.alt}
                 width={120}
                 height={40}
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer"
+                className="object-contain transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+              />
+              <Image
+                src={logo.color}
+                alt={logo.alt}
+                width={120}
+                height={40}
+                className="object-contain absolute inset-0 m-auto opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
               />
             </div>
           ))}

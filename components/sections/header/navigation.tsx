@@ -1,5 +1,6 @@
 "use client";
 
+import GradientBorderButton from "@/components/gradient-border-button";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
@@ -15,7 +16,7 @@ export const EXIT_DURATION = 0.2;
 const Navigation = () => {
   const isMobile = useIsMobile();
   const navRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+  const { t, language, toggleLanguage } = useLanguage();
 
   const initial = {
     display: "hidden",
@@ -56,7 +57,7 @@ const Navigation = () => {
         ".nav-line",
         { scaleX: 0, transformOrigin: "center" },
         { scaleX: 1, duration: 0.45, ease: "power3.out" },
-        0 // start immediately
+        0, // start immediately
       );
 
       // ✦ Left side sections (Offerings, About, Blog)
@@ -70,7 +71,7 @@ const Navigation = () => {
           stagger: 0.08,
           ease: "power2.out",
         },
-        0 // simultaneous with line
+        0, // simultaneous with line
       );
 
       // ✦ Smooth image reveal (fade + slight scale)
@@ -78,7 +79,7 @@ const Navigation = () => {
         ".nav-section img",
         { scale: 1.15, opacity: 0 },
         { scale: 1, opacity: 1, duration: 0.9, ease: "power3.out" },
-        0 // same start
+        0, // same start
       );
 
       // ✦ Texts inside each nav-section
@@ -92,7 +93,7 @@ const Navigation = () => {
           stagger: 0.05,
           ease: "power2.out",
         },
-        0.15 // slight delay so text follows image nicely
+        0.15, // slight delay so text follows image nicely
       );
 
       // ✦ Right-side links (bottom → up)
@@ -106,7 +107,7 @@ const Navigation = () => {
           stagger: 0.05,
           ease: "power2.out",
         },
-        0 // simultaneous start
+        0, // simultaneous start
       );
     }, navRef);
 
@@ -244,6 +245,16 @@ const Navigation = () => {
                   {t("Login")}
                 </Link>
               </li>
+              <div className="mt-4">
+                <GradientBorderButton
+                  mode={"light"}
+                  hasBorder={true}
+                  iconComponent={<></>}
+                  onClick={toggleLanguage}
+                >
+                  {language === "en" ? "ENG" : "MGL"}
+                </GradientBorderButton>
+              </div>
             </ul>
           </div>
         </div>

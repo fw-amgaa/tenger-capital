@@ -29,7 +29,7 @@ function StatCard({
           setTimeout(() => setIsVisible(true), delay);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (cardRef.current) {
@@ -100,10 +100,10 @@ export default function KeyFigures() {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <StatCard
-            value="300"
+            value="600"
             suffix="B+"
             prefix="₮"
-            label={t("Billion raised in 2025H1")}
+            label={t("Billion raised in 2025")}
             delay={0}
           />
           <StatCard

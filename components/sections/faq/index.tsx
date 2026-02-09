@@ -20,12 +20,7 @@ const FAQ = () => {
       <div className="grid md:grid-cols-2 z-1">
         <h1 className="text-4xl mb-12">{t("Frequently Asked Questions")}</h1>
 
-        <Accordion
-          type="single"
-          collapsible
-          className="w-full"
-          defaultValue="item-0"
-        >
+        <Accordion type="single" collapsible className="w-full">
           {brokerFaqs.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>{item[language].question}</AccordionTrigger>

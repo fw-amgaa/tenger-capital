@@ -65,7 +65,7 @@ export default function TeamMembers({
       role: t("Chief Investment Officer"),
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-7b.jpg",
+      image: "/team-members/all-bw part1-7.jpg",
     },
     {
       name: t("Byambatogoo Davaasuren"),
@@ -79,7 +79,7 @@ export default function TeamMembers({
       role: t("Chief Trade Officer"),
       description:
         "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part2-4b.jpg",
+      image: "/team-members/all-bw part2-4.jpg",
     },
   ];
 
@@ -116,11 +116,9 @@ export default function TeamMembers({
         <div className="grid grid-cols-1 gap-16 px-8 py-24">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-white">
-              <h3 className="text-3xl font-light mb-8">{member.name}</h3>
-              <div className="mb-2 h-px w-16 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
-              <p className="text-md leading-[1.4] opacity-70">
-                {member.description}
-              </p>
+              <h3 className="text-3xl font-bold">{member.name}</h3>
+              <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+              <h3 className="text-lg mb-2">{member.role}</h3>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
                 <Image

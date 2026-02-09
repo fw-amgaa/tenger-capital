@@ -98,7 +98,7 @@ export default function Header({ headerMode = "dark" }: Props) {
     return (
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
         <div className="mx-auto px-6 py-4">
-          <div className="w-32 h-10 bg-gray-200 animate-pulse rounded" />
+          <div className="w-32 h-10" />
         </div>
       </header>
     );
@@ -129,12 +129,12 @@ export default function Header({ headerMode = "dark" }: Props) {
           "fixed z-50 px-6 py-2",
           isOpen && !isMobile
             ? "top-4 left-4 right-4 w-[calc(100% - 16px)]"
-            : "top-0 left-0 right-0 w-full"
+            : "top-0 left-0 right-0 w-full",
         )}
       >
         <div
           className={cn(
-            "mx-auto md:px-6 py-2 md:py-4 flex items-center justify-between z-50"
+            "mx-auto md:px-6 py-2 md:py-4 flex items-center justify-between z-50",
           )}
         >
           {/* Logo and Burger Button (UNCHANGED) */}
@@ -222,7 +222,7 @@ export default function Header({ headerMode = "dark" }: Props) {
                   mode={isOpen ? "light" : headerMode}
                   borderAnimation={shouldAnimateBorder}
                 >
-                  {t("OPEN AN ACCOUNT")}
+                  {isMobile ? t("OPEN") : t("OPEN AN ACCOUNT")}
                 </GradientBorderButton>
               </Link>
             </motion.div>
