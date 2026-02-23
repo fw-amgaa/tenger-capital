@@ -48,18 +48,31 @@ export function ContactForm() {
     validators: {
       onSubmit: formSchema,
     },
-    onSubmit: async () => {
-      toast(t("submitform.success"), {
-        position: "bottom-right",
-        classNames: {
-          content: "flex flex-col gap-2",
-        },
-        style: {
-          "--border-radius": "calc(var(--radius)  + 4px)",
-        } as React.CSSProperties,
-      });
+    onSubmit: async ({ value }) => {
+      try {
+        const res = await fetch("/api/form-submissions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(value),
+        });
 
-      form.reset();
+        if (res.ok) {
+          toast(t("submitform.success"), {
+            position: "bottom-right",
+            classNames: {
+              content: "flex flex-col gap-2",
+            },
+            style: {
+              "--border-radius": "calc(var(--radius)  + 4px)",
+            } as React.CSSProperties,
+          });
+          form.reset();
+        } else {
+          toast.error("Failed to submit form. Please try again.");
+        }
+      } catch {
+        toast.error("Failed to submit form. Please try again.");
+      }
     },
   });
 
