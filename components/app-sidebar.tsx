@@ -4,7 +4,6 @@ import * as React from "react";
 import { FileText, Home, LogOut } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -38,17 +37,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     router.refresh();
   };
 
-  const user = session?.user
-    ? {
-        name: session.user.name || "Admin",
-        email: session.user.email || "",
-        avatar: session.user.image || "",
-      }
-    : {
-        name: "Admin",
-        email: "admin@tengercapital.mn",
-        avatar: "",
-      };
+  // User info available from session if needed
+  const _userName = session?.user?.name || "Admin";
 
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -89,7 +79,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
-        {/* <NavUser user={user} /> */}
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
