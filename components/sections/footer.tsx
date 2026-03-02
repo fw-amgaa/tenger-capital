@@ -15,11 +15,11 @@ const Footer = () => {
       <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem] sm:px-16">
         <div
           className={cn(
-            "relative grid h-full gap-[5rem] rounded-[2rem] grid-cols-1 grid-rows-[1fr] lg:grid-cols-3 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-[#ff990026]",
-            // "md:min-h-[40rem] lg:min-h-[50rem]"
+            "relative grid h-full gap-[3rem] rounded-[2rem] grid-cols-1 lg:grid-cols-4 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-[#ff990026]",
             "md:min-h-[20rem] lg:min-h-[30rem]",
           )}
         >
+          {/* Column 1: Logo + Back to top */}
           <div className="flex h-full flex-col justify-between max-md:items-center">
             <button
               onClick={() =>
@@ -53,7 +53,8 @@ const Footer = () => {
             />
           </div>
 
-          <div className="flex h-full flex-col justify-between items-center">
+          {/* Column 2: Navigation */}
+          <div className="flex h-full flex-col justify-between">
             <div className="flex flex-col gap-[4rem] lg:flex-row lg:gap-[30%]">
               <div className="text-white type-xs flex flex-col gap-2 text-center lg:text-left">
                 <h4 className="text-sm opacity-[.4]">{t("Tenger Capital")}</h4>
@@ -101,11 +102,68 @@ const Footer = () => {
               {t("footer.copyright")}
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-end justify-between max-lg:w-full lg:h-full">
-            <GradientBorderButton mode="dark" borderAnimation={false}>
-              {t("OPEN AN ACCOUNT")}
-            </GradientBorderButton>
-            <div className="text-white flex flex-col items-center justify-center gap-[3rem] max-lg:w-full mt-8 md:mt-0">
+
+          {/* Column 3: Address + Broker Contacts */}
+          <div className="flex h-full flex-col justify-start gap-6 max-lg:items-center">
+            <div className="text-white flex flex-col gap-1.5 text-center lg:text-left">
+              <h4 className="text-sm opacity-[.4]">
+                {t("footer.address.title")}
+              </h4>
+              <p className="text-xs opacity-[.5] leading-relaxed max-w-[16rem]">
+                {t("footer.address")}
+              </p>
+            </div>
+            <div className="text-white flex flex-col gap-2 text-center lg:text-left">
+              <h4 className="text-sm opacity-[.4]">
+                {t("footer.contact.title")}
+              </h4>
+              <ul className="flex flex-col gap-1.5 text-xs opacity-[.5]">
+                <li className="flex flex-col items-center lg:items-start">
+                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider">
+                    {t("footer.broker.international")}
+                  </span>
+                  <Link
+                    href="tel:+97686140272"
+                    className="hover:opacity-100 transition-opacity duration-300"
+                  >
+                    +976 8614 0272
+                  </Link>
+                </li>
+                <li className="flex flex-col items-center lg:items-start">
+                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider">
+                    {t("footer.broker.domestic")}
+                  </span>
+                  <Link
+                    href="tel:+97680350272"
+                    className="hover:opacity-100 transition-opacity duration-300"
+                  >
+                    +976 8035 0272
+                  </Link>
+                </li>
+                <li className="flex flex-col items-center lg:items-start">
+                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider">
+                    {t("footer.broker.bond")}
+                  </span>
+                  <Link
+                    href="tel:+97680150272"
+                    className="hover:opacity-100 transition-opacity duration-300"
+                  >
+                    +976 8015 0272
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Column 4: CTA + App Download + Social */}
+          <div className="flex flex-col items-center justify-between max-lg:w-full lg:h-full">
+            <div className="mb-4">
+              <GradientBorderButton mode="dark" borderAnimation={false}>
+                {t("OPEN AN ACCOUNT")}
+              </GradientBorderButton>
+            </div>
+            <div className="text-white flex flex-col items-center lg:items-end gap-4 max-lg:w-full mt-8 md:mt-0">
+              {/* Social Icons */}
               <div className="flex gap-[1.5rem] lg:ml-auto opacity-[.5]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,12 +176,6 @@ const Footer = () => {
                     d="M9.514.001h1.852L7.32 4.64l4.762 6.311H8.353L5.43 7.123l-3.34 3.827H.238l4.329-4.962L0 .002h3.823L6.46 3.5zM8.862 9.84h1.027L3.262 1.055H2.16z"
                   ></path>
                 </svg>
-                {/* <Link
-                  target="_blank"
-                  aria-label="Social link for facebook"
-                  className="flex-center"
-                  href="https://facebook.com/TGvest"
-                > */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="13"
@@ -136,13 +188,6 @@ const Footer = () => {
                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
                   ></path>
                 </svg>
-                {/* </Link> */}
-                {/* <Link
-                  target="_blank"
-                  aria-label="Social link for linkedin"
-                  className="flex-center"
-                  href="https://www.linkedin.com/company/TG-invest"
-                > */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="13"
@@ -154,13 +199,6 @@ const Footer = () => {
                     d="M3.05 1.219a1.216 1.216 0 1 1-2.434-.002 1.216 1.216 0 0 1 2.433.002m.036 2.116H.653v7.615h2.433zm3.844 0H4.509v7.615h2.396V6.954c0-2.226 2.901-2.433 2.901 0v3.996h2.403V6.127c0-3.753-4.294-3.613-5.304-1.77z"
                   ></path>
                 </svg>
-                {/* </Link> */}
-                {/* <Link
-                  target="_blank"
-                  aria-label="Social link for youtube"
-                  className="flex-center"
-                  href="https://www.youtube.com/TGvest"
-                > */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
@@ -172,13 +210,6 @@ const Footer = () => {
                     d="m7 7.822 4.058-2.346L7 3.13zm9.04-6.124c.102.368.172.86.219 1.486.055.626.078 1.166.078 1.635l.047.657c0 1.712-.125 2.971-.344 3.777-.196.704-.65 1.157-1.353 1.353-.368.101-1.04.172-2.072.219a52 52 0 0 1-2.808.078l-1.243.047c-3.277 0-5.318-.125-6.124-.344-.704-.196-1.157-.65-1.353-1.353-.101-.368-.172-.86-.219-1.486A19 19 0 0 1 .79 6.133l-.047-.657c0-1.713.125-2.972.344-3.778C1.283.995 1.737.541 2.44.346 2.808.244 3.48.174 4.513.126A52 52 0 0 1 7.32.049L8.564.001c3.276 0 5.317.126 6.123.345.704.195 1.157.649 1.353 1.352"
                   ></path>
                 </svg>
-                {/* </Link> */}
-                {/* <Link
-                  target="_blank"
-                  aria-label="Social link for instagram"
-                  className="flex-center"
-                  href="https://www.instagram.com/TGvest"
-                > */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="13"
@@ -190,8 +221,64 @@ const Footer = () => {
                     d="M4.422.436h5.074A3.506 3.506 0 0 1 13 3.939v5.074a3.503 3.503 0 0 1-3.504 3.503H4.422A3.506 3.506 0 0 1 .92 9.013V3.939A3.503 3.503 0 0 1 4.422.436m-.12 1.208a2.175 2.175 0 0 0-2.175 2.174v5.316c0 1.202.973 2.174 2.175 2.174h5.315a2.175 2.175 0 0 0 2.174-2.174V3.818a2.173 2.173 0 0 0-2.174-2.174zm5.828.906a.755.755 0 1 1 0 1.51.755.755 0 0 1 0-1.51m-3.17.906a3.02 3.02 0 1 1 0 6.04 3.02 3.02 0 0 1 0-6.04m0 1.208a1.812 1.812 0 1 0 0 3.624 1.812 1.812 0 0 0 0-3.624"
                   ></path>
                 </svg>
-                {/* </Link> */}
               </div>
+
+              {/* App Store Download Buttons */}
+              <div className="flex flex-col gap-2 items-center lg:items-end">
+                <div className="flex gap-2">
+                  <Link
+                    href="https://apps.apple.com/us/app/tenger-capital/id1468074587"
+                    target="_blank"
+                    aria-label="Download on the App Store"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors duration-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="14"
+                      viewBox="0 0 814 1000"
+                      fill="currentColor"
+                      className="opacity-70"
+                    >
+                      <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49.1 189.2-49.1zM491.4 146.3c33.6-44.7 57.9-106.9 57.9-169.1 0-8.9-.6-17.9-2.2-25.5-54.3 2.2-118.9 36.2-157.8 86.5-32.3 41.6-62.9 103.3-62.9 166.2 0 9.5 1.7 19.1 2.2 22.1 3.9.6 10.1 1.7 16.4 1.7 48.5 0 109-32.4 146.4-81.9z" />
+                    </svg>
+                    <div className="flex flex-col leading-none">
+                      <span className="text-[0.5rem] opacity-60">
+                        {t("footer.app.apple.line1")}
+                      </span>
+                      <span className="text-[0.65rem] font-medium opacity-80">
+                        {t("footer.app.apple.line2")}
+                      </span>
+                    </div>
+                  </Link>
+                  <Link
+                    href="https://play.google.com/store/apps/details?id=com.dbx.xacex"
+                    target="_blank"
+                    aria-label="Get it on Google Play"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors duration-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="14"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                      className="opacity-70"
+                    >
+                      <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c17.1-9.8 17.1-34 .1-43.5l-1.3-.7-.7-.6zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                    </svg>
+                    <div className="flex flex-col leading-none">
+                      <span className="text-[0.5rem] opacity-60">
+                        {t("footer.app.google.line1")}
+                      </span>
+                      <span className="text-[0.65rem] font-medium opacity-80">
+                        {t("footer.app.google.line2")}
+                      </span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
               <p className="text-white text-[0.9rem] font-[400] text-balance max-lg:text-center max-lg:opacity-50 lg:hidden">
                 {t("footer.copyright")}
               </p>

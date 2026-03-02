@@ -418,11 +418,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Preserving wealth.": {
     en: "Preserving wealth.",
-    mn: "Баялгийн сан.",
+    mn: "Өвлөн үлдэх",
   },
   "Securing future.": {
     en: "Securing future.",
-    mn: "Насан туршийн баталгаа",
+    mn: "үнэ цэн",
   },
   "wealth.description": {
     en: "Tenger Capital SC LLC delivers tailored wealth and asset management solutions designed to help clients grow, preserve, and strategically allocate their capital. Through disciplined portfolio management, in-house equity research, and a structured fund platform, we offer investment strategies that align with each client's risk appetite and long-term financial objectives.",
@@ -478,11 +478,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   // About Page - Hero
   "Founded on Integrity.": {
     en: "Founded on Integrity.",
-    mn: "Баялгийн хуримтлал",
+    mn: "Өвлөн үлдэх",
   },
   "Focused on Your Future.": {
     en: "Focused on Your Future.",
-    mn: "Насан туршийн баталгаа",
+    mn: "үнэ цэн",
   },
 
   // About Page - Letter from CEO
@@ -854,6 +854,50 @@ const translations: Record<string, { en: string; mn: string }> = {
   "footer.copyright": {
     en: "© 2026 Tenger Capital LLC. All Rights Reserved",
     mn: "© 2026 Тэнгэр Капитал ҮЦК ХХК. Бүх эрх хуулиар хамгаалагдсан",
+  },
+  "footer.address.title": {
+    en: "Address",
+    mn: "Хаяг",
+  },
+  "footer.address": {
+    en: "1401, New Horizons tower, 4 Olympic street, 1st Khoroo, Ulaanbaatar, Mongolia, 11000",
+    mn: "Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, Олимпын гудамж, Нью Хоризон оффис, 14 давхар, 1401 тоот",
+  },
+  "footer.contact.title": {
+    en: "Contact",
+    mn: "Холбоо барих",
+  },
+  "footer.broker.international": {
+    en: "International Securities Broker",
+    mn: "Гадаад арилжааны брокер",
+  },
+  "footer.broker.domestic": {
+    en: "Domestic Securities Broker",
+    mn: "Дотоод арилжааны брокер",
+  },
+  "footer.broker.bond": {
+    en: "Bond Broker",
+    mn: "Бондын брокер",
+  },
+  "footer.app.download": {
+    en: "Download App",
+    mn: "Апп татах",
+  },
+  "footer.app.apple.line1": {
+    en: "Download on the",
+    mn: "Татаж авах",
+  },
+  "footer.app.apple.line2": {
+    en: "App Store",
+    mn: "App Store",
+  },
+  "footer.app.google.line1": {
+    en: "Get it on",
+    mn: "Татаж авах",
+  },
+  "footer.app.google.line2": {
+    en: "Google Play",
+    mn: "Google Play",
   },
 
   // Timeline subtitle

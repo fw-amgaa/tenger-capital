@@ -53,7 +53,7 @@ export default function LetterFromCeo() {
                     clear, reliable, and well‑directed.&rdquo;
                   </b>
                 </div>
-                <div className="mb-2 ml-8">
+                <div className="mb-2">
                   As part of this transformation, we successfully raised more
                   than <b className="font-bold">600 billion MNT</b> within a
                   short period in 2025, while our trading performance grew by{" "}
@@ -85,7 +85,7 @@ export default function LetterFromCeo() {
                   удирдлагын баг, бүтцийг бүрэн шинэчилснээр үйл ажиллагаагаа
                   шинэ түвшинд гаргаад байна.
                 </div>
-                <div className="mb-2 ml-8">
+                <div className="mb-2">
                   Тус шинэчлэлийн хүрээнд бид богино хугацаанд буюу 2025 онд
                   нийт <b className="font-bold">600 гаруй тэрбум</b> төгрөгийг
                   амжилттай татан төвлөрүүлснээс гадна арилжааны гүйцэтгэл{" "}

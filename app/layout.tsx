@@ -8,6 +8,9 @@ import { Toaster } from "sonner";
 export const metadata: Metadata = {
   title: "Tenger Capital",
   description: "Create value through investing.",
+  icons: {
+    icon: "/logo/logo_mono.png",
+  },
 };
 
 export default function RootLayout({
