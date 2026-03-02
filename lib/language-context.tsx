@@ -74,7 +74,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   OPEN: {
     en: "OPEN",
-    mn: "Нээх",
+    mn: "Данс Нээх",
   },
   "SUBMIT YOUR PROJECT": {
     en: "SUBMIT YOUR PROJECT",
