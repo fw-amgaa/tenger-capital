@@ -4,6 +4,7 @@ import {
   timestamp,
   boolean,
   uuid,
+  json,
 } from "drizzle-orm/pg-core";
 
 // Better-auth tables
@@ -68,6 +69,17 @@ export const formSubmission = pgTable("form_submission", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
+// Form page content (singleton CMS)
+export const formPageContent = pgTable("form_page_content", {
+  id: text("id").primaryKey(),
+  title: text("title"),
+  description: text("description"),
+  paragraphs: json("paragraphs").$type<string[]>().notNull().default([]),
+  images: json("images").$type<string[]>().notNull().default([]),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
 export type User = typeof user.$inferSelect;
 export type Session = typeof session.$inferSelect;
 export type FormSubmission = typeof formSubmission.$inferSelect;
+export type FormPageContent = typeof formPageContent.$inferSelect;

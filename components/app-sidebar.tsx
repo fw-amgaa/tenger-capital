@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { FileText, Home, LogOut } from "lucide-react";
+import { FileText, Home, LogOut, LayoutTemplate } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import {
@@ -24,6 +24,12 @@ const navMain = [
     url: "/dashboard",
     icon: FileText,
     isActive: true,
+  },
+  {
+    title: "Form Page Content",
+    url: "/dashboard/form-content",
+    icon: LayoutTemplate,
+    isActive: false,
   },
 ];
 
