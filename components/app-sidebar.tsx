@@ -15,27 +15,31 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { signOut, useSession } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
-const navMain = [
+const navItems = [
   {
     title: "Form Submissions",
     url: "/dashboard",
     icon: FileText,
-    isActive: true,
   },
   {
     title: "Form Page Content",
     url: "/dashboard/form-content",
     icon: LayoutTemplate,
-    isActive: false,
   },
 ];
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { data: session } = useSession();
   const router = useRouter();
+  const pathname = usePathname();
+
+  const navMain = navItems.map((item) => ({
+    ...item,
+    isActive: pathname === item.url,
+  }));
 
   const handleSignOut = async () => {
     await signOut();

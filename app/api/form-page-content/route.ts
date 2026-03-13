@@ -1,9 +1,7 @@
-import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { formPageContent } from "@/lib/db/schema";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
 import { eq } from "drizzle-orm";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   const content = await db
@@ -16,14 +14,6 @@ export async function GET() {
 }
 
 export async function PUT(req: Request) {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
-
-  if (!session) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
   const { title, description, paragraphs, images } = await req.json();
 
   await db

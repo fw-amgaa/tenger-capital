@@ -35,8 +35,8 @@ export default function SubmitFormPage() {
       </div>
 
       {hasContent && (
-        <div className="section-container py-12 md:py-20">
-          <div className="max-w-3xl mx-auto space-y-8">
+        <div className="section-container max-w-[768px] py-12 md:py-20">
+          <div className="max-w-3xl mx-auto space-y-4">
             {/* Title */}
             {content.title && (
               <h2 className="text-3xl md:text-5xl font-[var(--font-moisette)] leading-tight tracking-tight">
@@ -46,23 +46,9 @@ export default function SubmitFormPage() {
 
             {/* Description */}
             {content.description && (
-              <p className="text-lg md:text-xl leading-relaxed opacity-70">
+              <p className="text-md md:text-md leading-relaxed opacity-70 mb-16">
                 {content.description}
               </p>
-            )}
-
-            {/* Paragraphs */}
-            {content.paragraphs && content.paragraphs.length > 0 && (
-              <div className="space-y-5">
-                {content.paragraphs.map((para, i) => (
-                  <p
-                    key={i}
-                    className="text-base md:text-lg leading-relaxed opacity-60"
-                  >
-                    {para}
-                  </p>
-                ))}
-              </div>
             )}
 
             {/* Images */}
@@ -89,6 +75,20 @@ export default function SubmitFormPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                ))}
+              </div>
+            )}
+
+            {/* Paragraphs */}
+            {content.paragraphs && content.paragraphs.length > 0 && (
+              <div className="space-y-5 mt-16">
+                {content.paragraphs.map((para, i) => (
+                  <p
+                    key={i}
+                    className="text-base md:text-lg leading-relaxed opacity-60"
+                  >
+                    {para}
+                  </p>
                 ))}
               </div>
             )}
