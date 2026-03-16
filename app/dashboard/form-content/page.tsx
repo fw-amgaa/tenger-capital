@@ -29,6 +29,7 @@ import {
 import { Plus, X, Save, ImageIcon, Type, AlignLeft, List } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { RichTextEditor } from "@/components/ui/rich-text-editor";
 
 interface ContentState {
   title: string;
@@ -246,11 +247,9 @@ export default function FormContentPage() {
                           <Label className="text-xs text-muted-foreground">
                             Paragraph {i + 1}
                           </Label>
-                          <Textarea
+                          <RichTextEditor
                             value={p}
-                            onChange={(e) => updateParagraph(i, e.target.value)}
-                            rows={3}
-                            className="resize-none"
+                            onChange={(html) => updateParagraph(i, html)}
                             placeholder="Write paragraph text…"
                           />
                         </div>

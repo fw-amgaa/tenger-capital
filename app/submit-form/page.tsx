@@ -31,7 +31,8 @@ export default function SubmitFormPage() {
     <ScrollControlProvider>
       <Header />
       <div className="section-container text-8xl h-screen flex items-center justify-center">
-        {t("REACH OUT TO US.page")}
+        {/* {t("REACH OUT TO US.page")} */}
+        {t("invitation")}
       </div>
 
       {hasContent && (
@@ -83,12 +84,11 @@ export default function SubmitFormPage() {
             {content.paragraphs && content.paragraphs.length > 0 && (
               <div className="space-y-5 mt-16">
                 {content.paragraphs.map((para, i) => (
-                  <p
+                  <div
                     key={i}
-                    className="text-base md:text-lg leading-relaxed opacity-60"
-                  >
-                    {para}
-                  </p>
+                    className="rich-content"
+                    dangerouslySetInnerHTML={{ __html: para }}
+                  />
                 ))}
               </div>
             )}
