@@ -73,8 +73,11 @@ export const formSubmission = pgTable("form_submission", {
 export const formPageContent = pgTable("form_page_content", {
   id: text("id").primaryKey(),
   title: text("title"),
+  titleEn: text("title_en"),
   description: text("description"),
+  descriptionEn: text("description_en"),
   paragraphs: json("paragraphs").$type<string[]>().notNull().default([]),
+  paragraphsEn: json("paragraphs_en").$type<string[]>().notNull().default([]),
   images: json("images").$type<string[]>().notNull().default([]),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });

@@ -29,7 +29,7 @@ const Footer = () => {
                   onUpdate: (v) => window.scrollTo(0, v),
                 })
               }
-              className="type-btn text-white flex items-center gap-[1rem] opacity-[.5] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0 cursor-pointer"
+              className="type-btn text-white flex items-center gap-[1rem] opacity-[.8] transition-opacity duration-300 hover:opacity-100 text-sm mb-4 md:mb-0 cursor-pointer"
             >
               {t("Back to top")}
               <svg
@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="flex h-full flex-col justify-between">
             <div className="flex flex-col gap-[4rem] lg:flex-row lg:gap-[30%]">
               <div className="text-white type-xs flex flex-col gap-2 text-center lg:text-left">
-                <h4 className="text-sm opacity-[.4]">{t("Tenger Capital")}</h4>
+                <h4 className="text-sm opacity-[.8]">{t("Tenger Capital")}</h4>
                 <ul className="flex flex-col text-sm opacity-[.5]">
                   <li>
                     <Link
@@ -106,7 +106,7 @@ const Footer = () => {
           {/* Column 3: Address + Broker Contacts */}
           <div className="flex h-full flex-col justify-start gap-6 max-lg:items-center">
             <div className="text-white flex flex-col gap-1.5 text-center lg:text-left">
-              <h4 className="text-sm opacity-[.4]">
+              <h4 className="text-sm opacity-[.8]">
                 {t("footer.address.title")}
               </h4>
               <p className="text-xs opacity-[.5] leading-relaxed max-w-[16rem]">
@@ -114,39 +114,47 @@ const Footer = () => {
               </p>
             </div>
             <div className="text-white flex flex-col gap-2 text-center lg:text-left">
-              <h4 className="text-sm opacity-[.4]">
-                {t("footer.contact.title")}
-              </h4>
-              <ul className="flex flex-col gap-1.5 text-xs opacity-[.5]">
+              <div className="flex flex-col gap-1.5">
+                <h4 className="text-sm opacity-[.8]">
+                  {t("footer.contact.title")}
+                </h4>
+                <Link
+                  href="tel:+97677110272"
+                  className="hover:opacity-100 transition-opacity duration-300 text-xs opacity-[.5]"
+                >
+                  +976 7711 0272
+                </Link>
+              </div>
+              <ul className="flex flex-col gap-1.5 text-xs">
                 <li className="flex flex-col items-center lg:items-start">
-                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider">
+                  <span className="text-[0.65rem] uppercase tracking-wider opacity-80">
                     {t("footer.broker.international")}
                   </span>
                   <Link
                     href="tel:+97686140272"
-                    className="hover:opacity-100 transition-opacity duration-300"
+                    className="hover:opacity-100 transition-opacity duration-300 opacity-50"
                   >
                     +976 8614 0272
                   </Link>
                 </li>
                 <li className="flex flex-col items-center lg:items-start">
-                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider">
+                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider opacity-80">
                     {t("footer.broker.domestic")}
                   </span>
                   <Link
                     href="tel:+97680350272"
-                    className="hover:opacity-100 transition-opacity duration-300"
+                    className="hover:opacity-100 transition-opacity duration-300 opacity-50"
                   >
                     +976 8035 0272
                   </Link>
                 </li>
                 <li className="flex flex-col items-center lg:items-start">
-                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider">
+                  <span className="opacity-70 text-[0.65rem] uppercase tracking-wider opacity-80">
                     {t("footer.broker.bond")}
                   </span>
                   <Link
                     href="tel:+97680150272"
-                    className="hover:opacity-100 transition-opacity duration-300"
+                    className="hover:opacity-100 transition-opacity duration-300 opacity-50"
                   >
                     +976 8015 0272
                   </Link>

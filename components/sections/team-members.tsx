@@ -28,6 +28,18 @@ export default function TeamMembers({
 
   const teamMembers: TeamMember[] = [
     {
+      name: t("Gan-Erdene Sanjkhuyag"),
+      role: (
+        <span>
+          {t("Tenger Capital LLC")}
+          <br />
+          {t("Board Chairman")}
+        </span>
+      ),
+      description: "",
+      image: "/team-members/president.jpg",
+    },
+    {
       name: t("Gombodorj Nyamtogtokh"),
       role: (
         <span>
@@ -36,9 +48,20 @@ export default function TeamMembers({
           {t("Chief Executive Officer")}
         </span>
       ),
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      description: "",
       image: "/team-members/all-bw part1-3.jpg",
+    },
+    {
+      name: t("Baatarbold Jukov"),
+      role: (
+        <span>
+          {t("Tenger Capital LLC")}
+          <br />
+          {t("Deputy Chief Executive Officer")}
+        </span>
+      ),
+      description: "",
+      image: "/team-members/baatarbold.jpg",
     },
     {
       name: t("Darkhanbayar Radnaa-Ochir"),
@@ -49,36 +72,31 @@ export default function TeamMembers({
           {t("Chief Executive Officer")}
         </span>
       ),
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      description: "",
       image: "/team-members/all-bw part1-14b.jpg",
     },
     {
       name: t("Lkhamsuren Boldbaatar"),
       role: t("Chief Financial and Operating Officer"),
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part1-2.jpg",
+      description: "",
+      image: "/team-members/all-bw part1-2b.jpg",
     },
     {
       name: t("Dashnyam Sanduijav"),
       role: t("Chief Investment Officer"),
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      description: "",
       image: "/team-members/all-bw part1-7.jpg",
     },
     {
       name: t("Byambatogoo Davaasuren"),
       role: t("Chief Marketing Officer"),
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
-      image: "/team-members/all-bw part2-3.jpg",
+      description: "",
+      image: "/team-members/all-bw part2-3b.jpg",
     },
     {
       name: t("Bilguun Ganbaatar"),
       role: t("Chief Trade Officer"),
-      description:
-        "Associate Wealth Advisor at TG. Prior to TG, Allison worked at Bank of America Private Bank in Charlotte and New York City,serving high net worth and ultra high net worth clients.",
+      description: "",
       image: "/team-members/all-bw part2-4.jpg",
     },
   ];

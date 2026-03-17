@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { FormPageContent } from "@/lib/db/schema";
 
 export default function SubmitFormPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [content, setContent] = useState<FormPageContent | null>(null);
 
   useEffect(() => {
@@ -20,18 +20,30 @@ export default function SubmitFormPage() {
       .catch(() => {});
   }, []);
 
+  // Language-aware field helpers (fallback to MN if EN not set)
+  const displayTitle = content
+    ? (language === "en" ? content.titleEn || content.title : content.title)
+    : null;
+  const displayDescription = content
+    ? (language === "en" ? content.descriptionEn || content.description : content.description)
+    : null;
+  const displayParagraphs = content
+    ? (language === "en"
+        ? (content.paragraphsEn && content.paragraphsEn.length > 0 ? content.paragraphsEn : content.paragraphs)
+        : content.paragraphs)
+    : null;
+
   const hasContent =
     content &&
-    (content.title ||
-      content.description ||
-      (content.paragraphs && content.paragraphs.length > 0) ||
+    (displayTitle ||
+      displayDescription ||
+      (displayParagraphs && displayParagraphs.length > 0) ||
       (content.images && content.images.length > 0));
 
   return (
     <ScrollControlProvider>
       <Header />
       <div className="section-container text-8xl h-screen flex items-center justify-center">
-        {/* {t("REACH OUT TO US.page")} */}
         {t("invitation")}
       </div>
 
@@ -39,16 +51,16 @@ export default function SubmitFormPage() {
         <div className="section-container max-w-[768px] py-12 md:py-20">
           <div className="max-w-3xl mx-auto space-y-4">
             {/* Title */}
-            {content.title && (
+            {displayTitle && (
               <h2 className="text-3xl md:text-5xl font-[var(--font-moisette)] leading-tight tracking-tight">
-                {content.title}
+                {displayTitle}
               </h2>
             )}
 
             {/* Description */}
-            {content.description && (
+            {displayDescription && (
               <p className="text-md md:text-md leading-relaxed opacity-70 mb-16">
-                {content.description}
+                {displayDescription}
               </p>
             )}
 
@@ -81,9 +93,9 @@ export default function SubmitFormPage() {
             )}
 
             {/* Paragraphs */}
-            {content.paragraphs && content.paragraphs.length > 0 && (
+            {displayParagraphs && displayParagraphs.length > 0 && (
               <div className="space-y-5 mt-16">
-                {content.paragraphs.map((para, i) => (
+                {displayParagraphs.map((para, i) => (
                   <div
                     key={i}
                     className="rich-content"

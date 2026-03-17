@@ -20,7 +20,7 @@ const WorkWithUs = () => {
   const statsData = [
     {
       title: t("workwithus.stat1.title"),
-      percentage: "9.2",
+      percentage: "13.7",
       unit: "x",
       suffix: t("Since 2024"),
       hasChart: true,
@@ -59,7 +59,7 @@ const WorkWithUs = () => {
     },
     {
       title: t("workwithus.stat2.title"),
-      percentage: "25",
+      percentage: "20.8",
       unit: "%",
       suffix: t("of 2025 total issuance"),
       label: "Tenger Capital",

@@ -26,23 +26,30 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Plus, X, Save, ImageIcon, Type, AlignLeft, List } from "lucide-react";
+import { Plus, X, Save, Type, AlignLeft, List, ImageIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { RichTextEditor } from "@/components/ui/rich-text-editor";
+import { ImageUploader } from "@/components/ui/image-uploader";
 
 interface ContentState {
   title: string;
+  titleEn: string;
   description: string;
+  descriptionEn: string;
   paragraphs: string[];
+  paragraphsEn: string[];
   images: string[];
 }
 
 export default function FormContentPage() {
   const [content, setContent] = useState<ContentState>({
     title: "",
+    titleEn: "",
     description: "",
+    descriptionEn: "",
     paragraphs: [],
+    paragraphsEn: [],
     images: [],
   });
   const [loading, setLoading] = useState(true);
@@ -55,8 +62,11 @@ export default function FormContentPage() {
         if (data) {
           setContent({
             title: data.title || "",
+            titleEn: data.titleEn || "",
             description: data.description || "",
+            descriptionEn: data.descriptionEn || "",
             paragraphs: data.paragraphs || [],
+            paragraphsEn: data.paragraphsEn || [],
             images: data.images || [],
           });
         }
@@ -73,19 +83,23 @@ export default function FormContentPage() {
         body: JSON.stringify(content),
       });
       if (res.ok) {
-        toast.success("Content saved successfully.");
+        toast.success("Агуулга амжилттай хадгалагдлаа.");
       } else {
-        toast.error("Failed to save content.");
+        toast.error("Агуулга хадгалахад алдаа гарлаа.");
       }
     } catch {
-      toast.error("Failed to save content.");
+      toast.error("Агуулга хадгалахад алдаа гарлаа.");
     } finally {
       setSaving(false);
     }
   };
 
   const addParagraph = () =>
-    setContent((c) => ({ ...c, paragraphs: [...c.paragraphs, ""] }));
+    setContent((c) => ({
+      ...c,
+      paragraphs: [...c.paragraphs, ""],
+      paragraphsEn: [...c.paragraphsEn, ""],
+    }));
 
   const updateParagraph = (i: number, val: string) =>
     setContent((c) => {
@@ -94,26 +108,18 @@ export default function FormContentPage() {
       return { ...c, paragraphs: p };
     });
 
+  const updateParagraphEn = (i: number, val: string) =>
+    setContent((c) => {
+      const p = [...c.paragraphsEn];
+      p[i] = val;
+      return { ...c, paragraphsEn: p };
+    });
+
   const removeParagraph = (i: number) =>
     setContent((c) => ({
       ...c,
       paragraphs: c.paragraphs.filter((_, idx) => idx !== i),
-    }));
-
-  const addImage = () =>
-    setContent((c) => ({ ...c, images: [...c.images, ""] }));
-
-  const updateImage = (i: number, val: string) =>
-    setContent((c) => {
-      const imgs = [...c.images];
-      imgs[i] = val;
-      return { ...c, images: imgs };
-    });
-
-  const removeImage = (i: number) =>
-    setContent((c) => ({
-      ...c,
-      images: c.images.filter((_, idx) => idx !== i),
+      paragraphsEn: c.paragraphsEn.filter((_, idx) => idx !== i),
     }));
 
   return (
@@ -130,11 +136,11 @@ export default function FormContentPage() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+                  <BreadcrumbLink href="/dashboard">Хяналтын самбар</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Form Page Content</BreadcrumbPage>
+                  <BreadcrumbPage>Маягтын агуулга</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -145,21 +151,21 @@ export default function FormContentPage() {
           <div className="flex items-start justify-between">
             <div>
               <h1 className="text-2xl font-bold tracking-tight">
-                Form Page Content
+                Маягтын агуулга
               </h1>
               <p className="text-muted-foreground text-sm mt-1">
-                This content appears above the contact form on the public site.
+                Энэ агуулга нийтийн сайтын холбоо барих маягтын дээр харагдана.
               </p>
             </div>
             <Button onClick={handleSave} disabled={saving || loading}>
               <Save className="mr-2 h-4 w-4" />
-              {saving ? "Saving…" : "Save Changes"}
+              {saving ? "Хадгалж байна…" : "Хадгалах"}
             </Button>
           </div>
 
           {loading ? (
             <div className="flex items-center justify-center h-64 text-muted-foreground">
-              Loading…
+              Уншиж байна…
             </div>
           ) : (
             <div className="grid gap-5 max-w-3xl">
@@ -168,20 +174,33 @@ export default function FormContentPage() {
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-base">
                     <Type className="h-4 w-4 text-muted-foreground" />
-                    Section Title
+                    Гарчиг
                   </CardTitle>
                   <CardDescription>
-                    Optional heading shown at the top of this section.
+                    Хэсгийн дээд талд харагдах гарчиг.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Input
-                    placeholder="e.g. Current Bond Offering"
-                    value={content.title}
-                    onChange={(e) =>
-                      setContent((c) => ({ ...c, title: e.target.value }))
-                    }
-                  />
+                <CardContent className="space-y-3">
+                  <div className="space-y-1">
+                    <Label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">МН</Label>
+                    <Input
+                      placeholder="жнь: Одоогийн бондын санал"
+                      value={content.title}
+                      onChange={(e) =>
+                        setContent((c) => ({ ...c, title: e.target.value }))
+                      }
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <Label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">EN</Label>
+                    <Input
+                      placeholder="e.g. Current Bond Offering"
+                      value={content.titleEn}
+                      onChange={(e) =>
+                        setContent((c) => ({ ...c, titleEn: e.target.value }))
+                      }
+                    />
+                  </div>
                 </CardContent>
               </Card>
 
@@ -190,25 +209,43 @@ export default function FormContentPage() {
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-base">
                     <AlignLeft className="h-4 w-4 text-muted-foreground" />
-                    Description
+                    Тайлбар
                   </CardTitle>
                   <CardDescription>
-                    A short introductory text shown below the title.
+                    Гарчгийн доор харагдах богино оршил текст.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Textarea
-                    placeholder="Write a brief description…"
-                    value={content.description}
-                    onChange={(e) =>
-                      setContent((c) => ({
-                        ...c,
-                        description: e.target.value,
-                      }))
-                    }
-                    rows={3}
-                    className="resize-none"
-                  />
+                <CardContent className="space-y-3">
+                  <div className="space-y-1">
+                    <Label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">МН</Label>
+                    <Textarea
+                      placeholder="Богино тайлбар бичнэ үү…"
+                      value={content.description}
+                      onChange={(e) =>
+                        setContent((c) => ({
+                          ...c,
+                          description: e.target.value,
+                        }))
+                      }
+                      rows={3}
+                      className="resize-none"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <Label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">EN</Label>
+                    <Textarea
+                      placeholder="Write a brief description…"
+                      value={content.descriptionEn}
+                      onChange={(e) =>
+                        setContent((c) => ({
+                          ...c,
+                          descriptionEn: e.target.value,
+                        }))
+                      }
+                      rows={3}
+                      className="resize-none"
+                    />
+                  </div>
                 </CardContent>
               </Card>
 
@@ -219,10 +256,10 @@ export default function FormContentPage() {
                     <div>
                       <CardTitle className="flex items-center gap-2 text-base">
                         <List className="h-4 w-4 text-muted-foreground" />
-                        Paragraphs
+                        Догол мөрүүд
                       </CardTitle>
                       <CardDescription className="mt-1">
-                        Body text blocks displayed in order.
+                        Дарааллаар харагдах текст блокууд.
                       </CardDescription>
                     </div>
                     <Button
@@ -231,36 +268,47 @@ export default function FormContentPage() {
                       onClick={addParagraph}
                     >
                       <Plus className="h-3.5 w-3.5 mr-1" />
-                      Add
+                      Нэмэх
                     </Button>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-4">
                   {content.paragraphs.length === 0 ? (
                     <p className="text-sm text-muted-foreground text-center py-6 border-2 border-dashed rounded-lg">
-                      No paragraphs yet. Click &quot;Add&quot; to get started.
+                      Догол мөр байхгүй байна. &quot;Нэмэх&quot; дарна уу.
                     </p>
                   ) : (
                     content.paragraphs.map((p, i) => (
-                      <div key={i} className="flex gap-2 items-start">
-                        <div className="flex-1 space-y-1">
-                          <Label className="text-xs text-muted-foreground">
-                            Paragraph {i + 1}
-                          </Label>
+                      <div key={i} className="border rounded-lg p-3 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-semibold text-muted-foreground">
+                            Догол мөр {i + 1}
+                          </span>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6 text-muted-foreground hover:text-destructive"
+                            onClick={() => removeParagraph(i)}
+                          >
+                            <X className="h-3.5 w-3.5" />
+                          </Button>
+                        </div>
+                        <div className="space-y-1">
+                          <Label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">МН</Label>
                           <RichTextEditor
                             value={p}
                             onChange={(html) => updateParagraph(i, html)}
-                            placeholder="Write paragraph text…"
+                            placeholder="Монгол текст бичнэ үү…"
                           />
                         </div>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          className="mt-5 shrink-0 text-muted-foreground hover:text-destructive"
-                          onClick={() => removeParagraph(i)}
-                        >
-                          <X className="h-4 w-4" />
-                        </Button>
+                        <div className="space-y-1">
+                          <Label className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">EN</Label>
+                          <RichTextEditor
+                            value={content.paragraphsEn[i] || ""}
+                            onChange={(html) => updateParagraphEn(i, html)}
+                            placeholder="Write English text…"
+                          />
+                        </div>
                       </div>
                     ))
                   )}
@@ -270,78 +318,26 @@ export default function FormContentPage() {
               {/* Images */}
               <Card>
                 <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <CardTitle className="flex items-center gap-2 text-base">
-                        <ImageIcon className="h-4 w-4 text-muted-foreground" />
-                        Images
-                      </CardTitle>
-                      <CardDescription className="mt-1">
-                        Paste public image URLs. They display in a grid.
-                      </CardDescription>
-                    </div>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={addImage}
-                    >
-                      <Plus className="h-3.5 w-3.5 mr-1" />
-                      Add Image
-                    </Button>
-                  </div>
+                  <CardTitle className="flex items-center gap-2 text-base">
+                    <ImageIcon className="h-4 w-4 text-muted-foreground" />
+                    Зургууд
+                  </CardTitle>
+                  <CardDescription>
+                    Зураг чирж оруулах эсвэл дарж сонгоно уу. Тор хэлбэрээр харагдана.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {content.images.length === 0 ? (
-                    <p className="text-sm text-muted-foreground text-center py-6 border-2 border-dashed rounded-lg">
-                      No images yet. Click &quot;Add Image&quot; to get started.
-                    </p>
-                  ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {content.images.map((url, i) => (
-                        <div key={i} className="space-y-2">
-                          {url ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              src={url}
-                              alt={`Image ${i + 1}`}
-                              className="w-full h-36 object-cover rounded-lg border"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).style.display =
-                                  "none";
-                              }}
-                            />
-                          ) : (
-                            <div className="w-full h-36 rounded-lg border-2 border-dashed flex items-center justify-center text-muted-foreground">
-                              <ImageIcon className="h-8 w-8 opacity-30" />
-                            </div>
-                          )}
-                          <div className="flex gap-2">
-                            <Input
-                              value={url}
-                              onChange={(e) => updateImage(i, e.target.value)}
-                              placeholder="https://example.com/image.jpg"
-                              className="text-xs"
-                            />
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="shrink-0 text-muted-foreground hover:text-destructive"
-                              onClick={() => removeImage(i)}
-                            >
-                              <X className="h-4 w-4" />
-                            </Button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  <ImageUploader
+                    value={content.images}
+                    onChange={(urls) => setContent((c) => ({ ...c, images: urls }))}
+                  />
                 </CardContent>
               </Card>
 
               <div className="flex justify-end pb-6">
                 <Button onClick={handleSave} disabled={saving} size="lg">
                   <Save className="mr-2 h-4 w-4" />
-                  {saving ? "Saving…" : "Save Changes"}
+                  {saving ? "Хадгалж байна…" : "Хадгалах"}
                 </Button>
               </div>
             </div>

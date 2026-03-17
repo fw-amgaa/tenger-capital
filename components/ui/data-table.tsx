@@ -49,7 +49,7 @@ export function DataTable<TData, TValue>({
       {searchKey && (
         <div className="flex items-center py-4">
           <Input
-            placeholder={`Search by ${searchKey}...`}
+            placeholder={`Хайх (${searchKey})...`}
             value={
               (table.getColumn(searchKey)?.getFilterValue() as string) ?? ""
             }
@@ -104,7 +104,7 @@ export function DataTable<TData, TValue>({
                   colSpan={columns.length}
                   className="h-24 text-center text-muted-foreground"
                 >
-                  No results.
+                  Үр дүн олдсонгүй.
                 </td>
               </tr>
             )}
@@ -113,7 +113,7 @@ export function DataTable<TData, TValue>({
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredRowModel().rows.length} row(s) total.
+          Нийт {table.getFilteredRowModel().rows.length} бөглөлт.
         </div>
         <Button
           variant="outline"
@@ -121,7 +121,7 @@ export function DataTable<TData, TValue>({
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          Previous
+          Өмнөх
         </Button>
         <Button
           variant="outline"
@@ -129,7 +129,7 @@ export function DataTable<TData, TValue>({
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          Next
+          Дараах
         </Button>
       </div>
     </div>

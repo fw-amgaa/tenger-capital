@@ -20,12 +20,12 @@ import Link from "next/link";
 
 const navItems = [
   {
-    title: "Form Submissions",
+    title: "Маягт бөглөлтүүд",
     url: "/dashboard",
     icon: FileText,
   },
   {
-    title: "Form Page Content",
+    title: "Маягтын агуулга",
     url: "/dashboard/form-content",
     icon: LayoutTemplate,
   },
@@ -62,7 +62,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Tenger Capital</span>
-                  <span className="truncate text-xs">Dashboard</span>
+                  <span className="truncate text-xs">Хяналтын самбар</span>
                 </div>
               </Link>
             </SidebarMenuButton>
@@ -78,14 +78,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton asChild>
               <Link href="/" target="_blank">
                 <Home />
-                <span>View Site</span>
+                <span>Сайт харах</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton onClick={handleSignOut}>
               <LogOut />
-              <span>Sign Out</span>
+              <span>Гарах</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

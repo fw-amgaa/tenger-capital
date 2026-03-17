@@ -18,8 +18,9 @@ import { useEffect, useState } from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { FormSubmission } from "@/lib/db/schema";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpDown } from "lucide-react";
+import { ArrowUpDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import * as XLSX from "xlsx";
 
 const columns: ColumnDef<FormSubmission>[] = [
   {
@@ -30,7 +31,7 @@ const columns: ColumnDef<FormSubmission>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Name
+          Нэр
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
@@ -38,27 +39,27 @@ const columns: ColumnDef<FormSubmission>[] = [
   },
   {
     accessorKey: "email",
-    header: "Email",
+    header: "И-мэйл",
   },
   {
     accessorKey: "phone",
-    header: "Phone",
+    header: "Утас",
   },
   {
     accessorKey: "hasAccount",
-    header: "Has Account",
+    header: "Данс нээлгэсэн эсэх",
     cell: ({ row }) => {
       const hasAccount = row.getValue("hasAccount") as boolean;
       return (
         <Badge variant={hasAccount ? "default" : "secondary"}>
-          {hasAccount ? "Yes" : "No"}
+          {hasAccount ? "Тийм" : "Үгүй"}
         </Badge>
       );
     },
   },
   {
     accessorKey: "investAmount",
-    header: "Investment Amount",
+    header: "Хөрөнгө оруулалтын хэмжээ",
   },
   {
     accessorKey: "createdAt",
@@ -68,14 +69,14 @@ const columns: ColumnDef<FormSubmission>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Submitted
+          Илгээсэн огноо
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
     cell: ({ row }) => {
       const date = new Date(row.getValue("createdAt"));
-      return date.toLocaleDateString("en-US", {
+      return date.toLocaleDateString("mn-MN", {
         year: "numeric",
         month: "short",
         day: "numeric",
@@ -85,6 +86,22 @@ const columns: ColumnDef<FormSubmission>[] = [
     },
   },
 ];
+
+function exportToExcel(submissions: FormSubmission[]) {
+  const rows = submissions.map((s) => ({
+    "Нэр": s.name,
+    "И-мэйл": s.email,
+    "Утас": s.phone,
+    "Данс нээлгэсэн эсэх": s.hasAccount ? "Тийм" : "Үгүй",
+    "Хөрөнгө оруулалтын хэмжээ": s.investAmount ?? "",
+    "Илгээсэн огноо": new Date(s.createdAt).toLocaleString("mn-MN"),
+  }));
+
+  const ws = XLSX.utils.json_to_sheet(rows);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Бөглөлтүүд");
+  XLSX.writeFile(wb, `маягт-бөглөлтүүд-${new Date().toISOString().slice(0, 10)}.xlsx`);
+}
 
 export default function DashboardPage() {
   const [submissions, setSubmissions] = useState<FormSubmission[]>([]);
@@ -122,7 +139,7 @@ export default function DashboardPage() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Form Submissions</BreadcrumbPage>
+                  <BreadcrumbPage>Маягт бөглөлтүүд</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -132,16 +149,24 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold tracking-tight">
-                Form Submissions
+                Маягт бөглөлтүүд
               </h1>
               <p className="text-muted-foreground">
-                View all contact form submissions from the website.
+                Вэбсайтаас ирсэн бүх хүсэлтийг энд харна.
               </p>
             </div>
+            <Button
+              variant="outline"
+              onClick={() => exportToExcel(submissions)}
+              disabled={loading || submissions.length === 0}
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Excel татах
+            </Button>
           </div>
           {loading ? (
             <div className="flex items-center justify-center h-64">
-              <div className="text-muted-foreground">Loading...</div>
+              <div className="text-muted-foreground">Уншиж байна...</div>
             </div>
           ) : (
             <DataTable

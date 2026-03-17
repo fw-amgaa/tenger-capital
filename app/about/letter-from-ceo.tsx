@@ -33,7 +33,7 @@ export default function LetterFromCeo() {
           className="z-10 md:w-[50%] text-center md:text-left"
         >
           <h1 className="text-3xl md:text-4xl tracking-tight text-primary">
-            {t("Letter from CEO")}
+            {t("Letter from Board Chairman")}
           </h1>
           <div className="mt-2 mb-12 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
 
@@ -57,8 +57,8 @@ export default function LetterFromCeo() {
                   As part of this transformation, we successfully raised more
                   than <b className="font-bold">600 billion MNT</b> within a
                   short period in 2025, while our trading performance grew by{" "}
-                  <b className="font-bold">502.5%</b> — a{" "}
-                  <b className="font-bold">9.2</b>-fold increase — positioning
+                  <b className="font-bold">1250%</b> — a{" "}
+                  <b className="font-bold">13.7</b>-fold increase — positioning
                   us as one of the <b className="font-bold">Top‑3</b> leading
                   companies in the sector.
                 </div>
@@ -89,8 +89,8 @@ export default function LetterFromCeo() {
                   Тус шинэчлэлийн хүрээнд бид богино хугацаанд буюу 2025 онд
                   нийт <b className="font-bold">600 гаруй тэрбум</b> төгрөгийг
                   амжилттай татан төвлөрүүлснээс гадна арилжааны гүйцэтгэл{" "}
-                  <b className="font-bold">502.5%</b> буюу{" "}
-                  <b className="font-bold">9.2</b> дахин өсөж, салбартаа
+                  <b className="font-bold">1250%</b> буюу{" "}
+                  <b className="font-bold">13.7</b> дахин өсөж, салбартаа
                   тэргүүлэгч <b className="font-bold">ТОП-3</b> компанийн нэгэнд
                   зүй ёсоор тооцогдож байна.
                 </div>
@@ -113,7 +113,7 @@ export default function LetterFromCeo() {
         <div className="w-full md:w-[40%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">
           <Image
             objectFit="cover"
-            src={"/team-members/all-bw part1-3.jpg"}
+            src={"/team-members/president.jpg"}
             alt="hero"
             fill
           />
