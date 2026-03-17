@@ -14,15 +14,18 @@ export async function GET() {
 }
 
 export async function PUT(req: Request) {
-  const { title, description, paragraphs, images } = await req.json();
+  const { title, titleEn, description, descriptionEn, paragraphs, paragraphsEn, images } = await req.json();
 
   await db
     .insert(formPageContent)
     .values({
       id: "singleton",
       title: title || null,
+      titleEn: titleEn || null,
       description: description || null,
+      descriptionEn: descriptionEn || null,
       paragraphs: paragraphs || [],
+      paragraphsEn: paragraphsEn || [],
       images: images || [],
       updatedAt: new Date(),
     })
@@ -30,8 +33,11 @@ export async function PUT(req: Request) {
       target: formPageContent.id,
       set: {
         title: title || null,
+        titleEn: titleEn || null,
         description: description || null,
+        descriptionEn: descriptionEn || null,
         paragraphs: paragraphs || [],
+        paragraphsEn: paragraphsEn || [],
         images: images || [],
         updatedAt: new Date(),
       },
