@@ -19,19 +19,19 @@ const Brief = () => {
       icon: <Bell className="w-4 h-4" />,
       title: t("Real-Time Data"),
       description: t("brief.realtime.desc"),
-      phoneImage: "/phone-screen/market.jpg",
+      phoneImage: "/phone-screen/1.jpg",
     },
     {
       icon: <User className="w-4 h-4" />,
       title: t("Human Service"),
       description: t("brief.human.desc"),
-      phoneImage: "/phone-screen/order_entry.jpg",
+      phoneImage: "/phone-screen/2.jpg",
     },
     {
       icon: <TrendingUp className="w-4 h-4" />,
       title: t("Monitor your Portfolio"),
       description: t("brief.portfolio.desc"),
-      phoneImage: "/phone-screen/portfolio.jpg",
+      phoneImage: "/phone-screen/3.jpg",
     },
   ];
 
@@ -60,7 +60,7 @@ const Brief = () => {
     setDirection(-1);
     setProgress(0);
     setCurrentIndex(
-      (prev) => (prev - 1 + carouselData.length) % carouselData.length
+      (prev) => (prev - 1 + carouselData.length) % carouselData.length,
     );
   };
 
@@ -76,7 +76,7 @@ const Brief = () => {
 
   const handleDragEnd = (
     event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
+    info: PanInfo,
   ) => {
     const swipeThreshold = 50;
     if (info.offset.x > swipeThreshold) {

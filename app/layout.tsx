@@ -11,6 +11,25 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo/logo_mono.png",
   },
+  openGraph: {
+    title: "Tenger Capital",
+    description: "Create value through investing.",
+    url: "https://www.tengercapital.mn",
+    siteName: "Tenger Capital",
+    images: [
+      {
+        url: "/logo/logo_main_white.png",
+        alt: "Tenger Capital",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tenger Capital",
+    description: "Create value through investing.",
+    images: ["/logo/logo_main_white.png"],
+  },
 };
 
 export default function RootLayout({
