@@ -99,71 +99,71 @@ export default function Offerings({ setHeaderMode }: Props) {
   const borderRadius = useTransform(
     scrollYProgress,
     [0, openingState, closingState, 1],
-    [initialBorderRadius, "0px", "0px", initialBorderRadius]
+    [initialBorderRadius, "0px", "0px", initialBorderRadius],
   );
   const margin = useTransform(
     scrollYProgress,
     [0, openingState, closingState, 1],
-    [initialMargin, "0px", "0px", initialBorderRadius]
+    [initialMargin, "0px", "0px", initialBorderRadius],
   );
 
   const dayWidth = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    ["100%", "10%"]
+    ["100%", "10%"],
   );
   const yearWidth = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    ["0%", "90%"]
+    ["0%", "90%"],
   );
 
   const monthWidth = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    [width / 7, width / 12]
+    [width / 7, width / 12],
   );
   const graphOpacity = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    [0.1, 1]
+    [0.1, 1],
   );
   const graphScale = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    [2, 1]
+    [2, 1],
   );
 
   const strokeWidth = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    [0.5, 1]
+    [0.5, 1],
   );
   const translate3d = useTransform(
     scrollYProgress,
     [firstState, secondState],
-    [2.5, 15]
+    [2.5, 15],
   );
 
   const clipPath = useTransform(
     scrollYProgress,
     [firstState, thirdState],
-    ["49%", "-1%"]
+    ["49%", "-1%"],
   );
   const containerScale = useTransform(
     scrollYProgress,
     [thirdState, fifthState],
-    [1, 2]
+    [1, 2],
   );
   const containerTranslateY = useTransform(
     scrollYProgress,
     [thirdState, fifthState],
-    ["0%", "-60%"]
+    ["0%", "-60%"],
   );
   const thirdStateOpacity = useTransform(
     scrollYProgress,
     [thirdState, thirdState + 0.02],
-    [1, 0]
+    [1, 0],
   );
 
   const clipPathValue = useMotionTemplate`inset(0px ${clipPath} 0px 0px)`;
@@ -222,7 +222,7 @@ export default function Offerings({ setHeaderMode }: Props) {
                   ref={ref}
                   className={cn(
                     isOverflowHidden ? "overflow-hidden" : "",
-                    "absolute bottom-[7rem] left-[.5rem] flex h-[75%] w-[calc(100%-1rem)] flex-col gap-[1.3rem] lg:top-[6rem] lg:left-[6rem] lg:h-[calc(100%-6rem)] lg:w-[calc(100%-12rem)]"
+                    "absolute bottom-[7rem] left-[.5rem] flex h-[75%] w-[calc(100%-1rem)] flex-col gap-[1.3rem] lg:top-[6rem] lg:left-[6rem] lg:h-[calc(100%-6rem)] lg:w-[calc(100%-12rem)]",
                   )}
                 >
                   <motion.div
@@ -394,7 +394,7 @@ export default function Offerings({ setHeaderMode }: Props) {
               {t("offerings.disclaimer")}{" "}
               <a
                 className="underline underline-offset-[.2rem] font-semibold"
-                href="https://web.archive.org/web/20251007172158mp_/https://titan.com"
+                href="https://tengercapital.mn"
                 target="_blank"
                 rel="noopener"
               >
