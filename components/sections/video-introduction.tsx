@@ -3,10 +3,13 @@
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import MuxPlayer from "@mux/mux-player-react";
+import { useLanguage } from "@/lib/language-context";
 
 const VideoIntroduction = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.5 });
+
+  const { language } = useLanguage();
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -15,7 +18,7 @@ const VideoIntroduction = () => {
     const timeoutId = setTimeout(() => {
       // Find the video element within the container (next-video wraps it)
       const videoElement = containerRef.current?.querySelector(
-        "video"
+        "video",
       ) as HTMLVideoElement | null;
 
       if (isInView && videoElement) {
@@ -46,7 +49,11 @@ const VideoIntroduction = () => {
         autoPlay={true}
       /> */}
       <MuxPlayer
-        playbackId="00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
+        playbackId={
+          language === "en"
+            ? "h8adHMQY9vbypyjyHl85KehlQeax8YI5Lg1dgajDXq4"
+            : "00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
+        }
         metadataVideoTitle="Tenger Capital"
         className="w-full aspect-32/15 custom-player"
         secondaryColor="#000000"

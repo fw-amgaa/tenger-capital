@@ -4,6 +4,7 @@ import { ScrollControlProvider } from "@/components/scroll-control";
 import Blogs from "@/components/sections/blogs";
 import Brief from "@/components/sections/brief";
 import FAQ from "@/components/sections/faq";
+import FloatingDashboard from "@/components/sections/floating-dashboard";
 import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
 import HeroSection from "@/components/sections/hero-section";
@@ -35,7 +36,7 @@ export default function Home() {
         <FAQ />
       </main>
       <Footer />
-      {/* <FloatingDashboard
+      <FloatingDashboard
         deposits={[
           {
             amount: "4,000.00",
@@ -48,7 +49,7 @@ export default function Home() {
             timeAgo: "22 hours ago",
           },
         ]}
-      /> */}
+      />
     </ScrollControlProvider>
   );
 }
