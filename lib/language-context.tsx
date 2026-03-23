@@ -801,7 +801,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Chief Investment Officer": {
     en: "Chief Investment Officer",
-    mn: "Хөрөнгө оруулалтын газрын захирал",
+    mn: "Хөрөнгө оруулалтын хэлтсийн захирал",
   },
   "Chief Marketing Officer": {
     en: "Chief Marketing Officer",
@@ -809,7 +809,7 @@ const translations: Record<string, { en: string; mn: string }> = {
   },
   "Chief Trade Officer": {
     en: "Chief Trade Officer",
-    mn: "Арилжааны газрын захирал",
+    mn: "Хэлтсийн захирал",
   },
   "Broker & Office Manager": {
     en: "Broker & Office Manager",

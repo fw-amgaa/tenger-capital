@@ -328,7 +328,7 @@ const StatsCard = ({
             {/* Plus/Close Button */}
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="absolute top-6 right-6 w-6 h-6 rounded-4xl flex items-center justify-center bg-white/10 text-white/60 hover:text-white/80 transition-colors z-3"
+              className="absolute top-6 right-6 w-6 h-6 rounded-4xl flex items-center justify-center bg-white/10 text-white/60 hover:text-white/80 transition-colors z-11"
             >
               <AnimatePresence mode="wait">
                 {isExpanded ? (
@@ -361,7 +361,7 @@ const StatsCard = ({
             </p>
 
             {/* Percentage Display */}
-            <div className="flex items-baseline gap-1">
+            <div className="flex items-baseline gap-1 z-9">
               <span className="text-white text-7xl font-medium leading-none">
                 <RollingNumber value={percentage} duration={1} />
               </span>
@@ -371,7 +371,9 @@ const StatsCard = ({
             </div>
 
             {/* Suffix */}
-            {suffix && <p className="text-white/60 text-sm mt-2">{suffix}</p>}
+            {suffix && (
+              <p className="text-white/60 text-sm mt-2 z-9">{suffix}</p>
+            )}
 
             {/* Disclosure Overlay */}
             <AnimatePresence>
@@ -381,7 +383,7 @@ const StatsCard = ({
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute inset-0 rounded-4xl bg-white/10 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center overflow-hidden z-2"
+                  className="absolute inset-0 rounded-4xl bg-white/10 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center overflow-hidden z-10"
                 >
                   <div className="max-w-full overflow-y-auto max-h-full">
                     <motion.p
