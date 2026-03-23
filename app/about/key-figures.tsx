@@ -80,7 +80,7 @@ function StatCard({
 }
 
 export default function KeyFigures() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="relative overflow-hidden section-container py-24 md:py-32 lg:py-40">
       <div className="absolute inset-0 overflow-hidden">
@@ -100,8 +100,8 @@ export default function KeyFigures() {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <StatCard
-            value="600"
-            suffix="B+"
+            value="670"
+            suffix={language === "en" ? "B+" : "Т+"}
             prefix="₮"
             label={t("Billion raised in 2025")}
             delay={0}
@@ -114,9 +114,9 @@ export default function KeyFigures() {
           />
           <StatCard value="19" label={t("Years of Experience")} delay={200} />
           <StatCard
-            value="94"
-            suffix="%"
-            label={t("Client Retention Rate")}
+            value="600"
+            suffix="+"
+            label={t("Investment product groups")}
             delay={300}
           />
           <StatCard
@@ -126,9 +126,9 @@ export default function KeyFigures() {
             delay={400}
           />
           <StatCard
-            value="15"
-            suffix="%"
-            label={t("Average Annual Return")}
+            value="160"
+            suffix="+"
+            label={t("Over 160 exchanges of 35 countries")}
             delay={500}
           />
         </div>

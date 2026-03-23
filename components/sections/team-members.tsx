@@ -49,7 +49,7 @@ export default function TeamMembers({
         </span>
       ),
       description: "",
-      image: "/team-members/all-bw part1-3.jpg",
+      image: "/team-members/all-bw part1-3b.jpg",
     },
     {
       name: t("Baatarbold Jukov"),

@@ -524,6 +524,14 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "Institutional and HNW clients",
     mn: "Институци, мэргэжлийн хөрөнгө оруулагч",
   },
+  "Investment product groups": {
+    en: "Investment product groups",
+    mn: "Хөрөнгө оруулалтын бүтээгдэхүүн",
+  },
+  "Over 160 exchanges of 35 countries": {
+    en: "Over 160 exchanges of 35 countries",
+    mn: "35 улсын 160 гаруй бирж",
+  },
   "Years of Experience": {
     en: "Years of Experience",
     mn: "жилийн туршлага",

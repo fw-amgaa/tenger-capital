@@ -38,21 +38,11 @@ const VideoIntroduction = () => {
 
   return (
     <div ref={containerRef} className="my-24 md:my-36 section-container">
-      {/* <video
-        preload={"auto"}
-        src={
-          "https://player.mux.com/00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
-        }
-        controls={true}
-        playsInline={true}
-        muted
-        autoPlay={true}
-      /> */}
       <MuxPlayer
         playbackId={
           language === "en"
-            ? "h8adHMQY9vbypyjyHl85KehlQeax8YI5Lg1dgajDXq4"
-            : "00bQIyb6S8VXZ4L6XvMAduJOFjFN3gQH02StoVIzaMa3w"
+            ? "nfwEnKHGBrlu8GGB7UG2aIm00IJg100f5ilN01wq00UAc700"
+            : "GP3iAIzk2ZPmTNzdKd01u8GFVonyd3aMdDkqf4N82QTk"
         }
         metadataVideoTitle="Tenger Capital"
         className="w-full aspect-32/15 custom-player"

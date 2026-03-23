@@ -16,22 +16,25 @@ const Brief = () => {
 
   const carouselData = [
     {
-      icon: <Bell className="w-4 h-4" />,
+      icon: <Bell className="w-4 h-4 text-black" />,
       title: t("Real-Time Data"),
       description: t("brief.realtime.desc"),
-      phoneImage: "/phone-screen/1.jpg",
+      phoneImage: "/phone-screen/market.jpg",
+      sideImage: "/phone-screen/1.jpg",
     },
     {
-      icon: <User className="w-4 h-4" />,
+      icon: <User className="w-4 h-4 text-black" />,
       title: t("Human Service"),
       description: t("brief.human.desc"),
-      phoneImage: "/phone-screen/2.jpg",
+      phoneImage: "/phone-screen/order_entry.jpg",
+      sideImage: "/phone-screen/2.jpg",
     },
     {
-      icon: <TrendingUp className="w-4 h-4" />,
+      icon: <TrendingUp className="w-4 h-4 text-black" />,
       title: t("Monitor your Portfolio"),
       description: t("brief.portfolio.desc"),
-      phoneImage: "/phone-screen/3.jpg",
+      phoneImage: "/phone-screen/portfolio.jpg",
+      sideImage: "/phone-screen/3.jpg",
     },
   ];
 
@@ -199,13 +202,21 @@ const Brief = () => {
         </div>
 
         {/* Content Card - Right Side */}
-        <div className="bg-white rounded-3xl items-center justify-center relative mt-[-4rem] flex flex-col aspect-[0.92] w-full sm:w-[150%] md:w-full sm:mt-[0px] lg:w-[calc(45%-1.5rem)]">
+        <div
+          className="rounded-3xl items-center justify-center relative mt-[-4rem] flex flex-col aspect-[0.92] w-full sm:w-[150%] md:w-full sm:mt-[0px] lg:w-[calc(45%-1.5rem)] overflow-hidden"
+          style={{
+            backgroundImage: `url(${currentItem.sideImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60 rounded-3xl" />
           <motion.div
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.2}
             onDragEnd={handleDragEnd}
-            className="max-w-[300px] w-full cursor-grab active:cursor-grabbing flex flex-col items-center"
+            className="relative z-10 max-w-[300px] w-full cursor-grab active:cursor-grabbing flex flex-col items-center"
           >
             {/* Content that transitions */}
             <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -220,17 +231,17 @@ const Brief = () => {
                 className="flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-white mb-8">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-white mb-8">
                   {currentItem.icon}
                 </div>
 
                 {/* Title */}
-                <span className="font-bold mb-4 text-black">
+                <span className="font-bold mb-4 text-white">
                   {currentItem.title}
                 </span>
 
                 {/* Description */}
-                <p className="text-black opacity-70 mb-12 text-center">
+                <p className="text-white opacity-70 mb-12 text-center">
                   {currentItem.description}
                 </p>
               </motion.div>
@@ -240,7 +251,7 @@ const Brief = () => {
           <div className="absolute top-[auto] right-[auto] bottom-8 left-[50%] translate-x-[-50%] flex items-center gap-[.4rem] justify-center">
             <button
               onClick={handlePrev}
-              className="cursor-pointer w-[30px] h-[30px] rounded-lg bg-[#0A0A0A0D] text-black transition-colors flex items-center justify-center rotate-[-180deg]"
+              className="cursor-pointer w-[30px] h-[30px] rounded-lg bg-white text-black transition-colors flex items-center justify-center rotate-[-180deg]"
               aria-label="Previous"
             >
               <svg
@@ -257,7 +268,7 @@ const Brief = () => {
             </button>
 
             {/* Progress Indicators */}
-            <div className="flex items-center justify-center gap-2 bg-[#0A0A0A0D] h-[30px] rounded-lg px-4">
+            <div className="flex items-center justify-center gap-2 bg-white h-[30px] rounded-lg px-4">
               {carouselData.map((_, index) => (
                 <button
                   key={index}
@@ -287,7 +298,7 @@ const Brief = () => {
 
             <button
               onClick={handleNext}
-              className="cursor-pointer w-[30px] h-[30px] rounded-lg bg-[#0A0A0A0D] text-black transition-colors flex items-center justify-center"
+              className="cursor-pointer w-[30px] h-[30px] rounded-lg bg-white text-black transition-colors flex items-center justify-center"
               aria-label="Next"
             >
               <svg
