@@ -36,7 +36,7 @@ export default function Home() {
         <FAQ />
       </main>
       <Footer />
-      <FloatingDashboard
+      {/* <FloatingDashboard
         deposits={[
           {
             amount: "4,000.00",
@@ -49,7 +49,7 @@ export default function Home() {
             timeAgo: "22 hours ago",
           },
         ]}
-      />
+      /> */}
     </ScrollControlProvider>
   );
 }
