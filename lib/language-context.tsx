@@ -290,11 +290,11 @@ const translations: Record<string, { en: string; mn: string }> = {
   // CTA Section
   "Every Money Question.": {
     en: "Every Money Question.",
-    mn: "Таны асуудал бүрд",
+    mn: "Бид танд шийдэл",
   },
   "One Trusted Team.": {
     en: "One Trusted Team.",
-    mn: "бид шийдэл санал болгоно.",
+    mn: "санал болгоно.",
   },
 
   // Offerings Page
