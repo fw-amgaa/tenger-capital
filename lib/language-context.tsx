@@ -986,8 +986,8 @@ const translations: Record<string, { en: string; mn: string }> = {
     mn: "ХОЛБОО БАРИХ",
   },
   invitation: {
-    en: "Invitation",
-    mn: "Урилга",
+    en: "Bond Savings",
+    mn: "Бондын хуримтлал",
   },
   "submitform.title": {
     en: "Bond Form",
