@@ -54,9 +54,15 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
           >
             <GradientBorderButton>{t("OPEN")}</GradientBorderButton>
           </Link>
-          <GradientBorderButton hasBorder={false} borderAnimation={false}>
-            {t("SUBMIT YOUR PROJECT")}
-          </GradientBorderButton>
+
+          <Link
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+            target="_blank"
+          >
+            <GradientBorderButton hasBorder={false} borderAnimation={false}>
+              {t("SUBMIT YOUR PROJECT")}
+            </GradientBorderButton>
+          </Link>
         </div>
       </motion.div>
 

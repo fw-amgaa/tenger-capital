@@ -11,6 +11,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import GradientBorderButton from "@/components/gradient-border-button";
+import Link from "next/link";
 
 interface Service {
   name: string;
@@ -96,9 +97,14 @@ export default function WealthManagement() {
             <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8 mt-18">
               {t("wealth.description")}
             </p>
-            <GradientBorderButton>
-              {t("SUBMIT YOUR PROJECT")}
-            </GradientBorderButton>
+            <Link
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+              target="_blank"
+            >
+              <GradientBorderButton>
+                {t("SUBMIT YOUR PROJECT")}
+              </GradientBorderButton>
+            </Link>
           </div>
         </div>
       </div>
@@ -116,9 +122,14 @@ export default function WealthManagement() {
                   {member.description}
                 </div>
                 <div>
-                  <GradientBorderButton>
-                    {t("SUBMIT YOUR PROJECT")}
-                  </GradientBorderButton>
+                  <Link
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+                    target="_blank"
+                  >
+                    <GradientBorderButton>
+                      {t("SUBMIT YOUR PROJECT")}
+                    </GradientBorderButton>
+                  </Link>
                 </div>
               </div>
 
@@ -151,9 +162,14 @@ export default function WealthManagement() {
                 <div className="flex flex-col gap-8">
                   {service.description}
                   <div>
-                    <GradientBorderButton>
-                      {t("SUBMIT YOUR PROJECT")}
-                    </GradientBorderButton>
+                    <Link
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+                      target="_blank"
+                    >
+                      <GradientBorderButton>
+                        {t("SUBMIT YOUR PROJECT")}
+                      </GradientBorderButton>
+                    </Link>
                   </div>
                 </div>
               </div>

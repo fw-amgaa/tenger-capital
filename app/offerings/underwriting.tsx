@@ -11,6 +11,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import GradientBorderButton from "@/components/gradient-border-button";
+import Link from "next/link";
 
 interface Service {
   name: string;
@@ -106,9 +107,14 @@ export default function UnderWriting() {
             <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8 mt-18">
               {t("underwriting.description")}
             </p>
-            <GradientBorderButton>
-              {t("SUBMIT YOUR PROJECT")}
-            </GradientBorderButton>
+            <Link
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+              target="_blank"
+            >
+              <GradientBorderButton>
+                {t("SUBMIT YOUR PROJECT")}
+              </GradientBorderButton>
+            </Link>
           </div>
         </div>
       </div>
@@ -126,9 +132,15 @@ export default function UnderWriting() {
                 <div className="text-md leading-[1.4] opacity-70">
                   {member.description}
                 </div>
-                <GradientBorderButton>
-                  {t("SUBMIT YOUR PROJECT")}
-                </GradientBorderButton>
+
+                <Link
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+                  target="_blank"
+                >
+                  <GradientBorderButton>
+                    {t("SUBMIT YOUR PROJECT")}
+                  </GradientBorderButton>
+                </Link>
               </div>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
@@ -160,9 +172,14 @@ export default function UnderWriting() {
                 <div className="flex flex-col gap-8">
                   {service.description}
                   <div>
-                    <GradientBorderButton>
-                      {t("SUBMIT YOUR PROJECT")}
-                    </GradientBorderButton>
+                    <Link
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tengercapital.mn"
+                      target="_blank"
+                    >
+                      <GradientBorderButton>
+                        {t("SUBMIT YOUR PROJECT")}
+                      </GradientBorderButton>
+                    </Link>
                   </div>
                 </div>
               </div>
