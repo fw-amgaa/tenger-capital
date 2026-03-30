@@ -199,7 +199,7 @@ const Navigation = () => {
                 <h2 className="relative text-lg leading-[120%] z-10">
                   {t("Bond return")}
                 </h2>
-                <h2 className="relative text-2xl leading-[120%] z-10">
+                <h2 className="relative text-lg leading-[120%] z-10">
                   {t("Purchase bonds")}
                 </h2>
               </div>

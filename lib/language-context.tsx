@@ -283,8 +283,8 @@ const translations: Record<string, { en: string; mn: string }> = {
     mn: "Хүсэлт илгээх",
   },
   "Purchase bonds": {
-    en: "Purchase bonds",
-    mn: "Бонд худалдаж авах",
+    en: "Purchase bonds - Submit a form",
+    mn: "Бонд авах - Хүсэлт илгээх",
   },
   LOGIN: {
     en: "LOG IN",
