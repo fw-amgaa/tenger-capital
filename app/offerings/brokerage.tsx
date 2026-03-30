@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
+import Link from "next/link";
 
 interface Service {
   name: string;
@@ -39,9 +40,14 @@ export default function Brokerage() {
           </ol>
 
           <div className="mt-6 m-auto">
-            <GradientBorderButton>
-              {t("Open your account")}
-            </GradientBorderButton>
+            <Link
+              href="https://trader.tengercapital.mn/auth/login"
+              target="_blank"
+            >
+              <GradientBorderButton>
+                {t("Open your account")}
+              </GradientBorderButton>
+            </Link>
           </div>
         </div>
       ),
@@ -57,9 +63,14 @@ export default function Brokerage() {
           </p>
 
           <div className="mt-6 m-auto">
-            <GradientBorderButton>
-              {t("Open your account")}
-            </GradientBorderButton>
+            <Link
+              href="https://trader.tengercapital.mn/auth/login"
+              target="_blank"
+            >
+              <GradientBorderButton>
+                {t("Open your account")}
+              </GradientBorderButton>
+            </Link>
           </div>
         </div>
       ),
@@ -74,9 +85,14 @@ export default function Brokerage() {
           </p>
 
           <div className="mt-6 m-auto">
-            <GradientBorderButton>
-              {t("Open your account")}
-            </GradientBorderButton>
+            <Link
+              href="https://trader.tengercapital.mn/auth/login"
+              target="_blank"
+            >
+              <GradientBorderButton>
+                {t("Open your account")}
+              </GradientBorderButton>
+            </Link>
           </div>
         </div>
       ),
@@ -133,9 +149,14 @@ export default function Brokerage() {
             <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8 mt-18">
               {t("brokerage.description")}
             </p>
-            <GradientBorderButton>
-              {t("Open your account")}
-            </GradientBorderButton>
+            <Link
+              href="https://trader.tengercapital.mn/auth/login"
+              target="_blank"
+            >
+              <GradientBorderButton>
+                {t("Open your account")}
+              </GradientBorderButton>
+            </Link>
           </div>
         </div>
       </div>

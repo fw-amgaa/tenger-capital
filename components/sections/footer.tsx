@@ -166,9 +166,14 @@ const Footer = () => {
           {/* Column 4: CTA + App Download + Social */}
           <div className="flex flex-col items-center justify-between max-lg:w-full lg:h-full">
             <div className="mb-4">
-              <GradientBorderButton mode="dark" borderAnimation={false}>
-                {t("OPEN AN ACCOUNT")}
-              </GradientBorderButton>
+              <Link
+                href="https://trader.tengercapital.mn/auth/login"
+                target="_blank"
+              >
+                <GradientBorderButton mode="dark" borderAnimation={false}>
+                  {t("OPEN AN ACCOUNT")}
+                </GradientBorderButton>
+              </Link>
             </div>
             <div className="text-white flex flex-col items-center lg:items-end gap-4 max-lg:w-full mt-8 md:mt-0">
               {/* Social Icons */}

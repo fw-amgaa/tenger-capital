@@ -274,9 +274,17 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "What We Offer",
     mn: "Бидний үйлчилгээ",
   },
+  "Bond return": {
+    en: "Bond return-19.0%-21.0%",
+    mn: "Бондын хуримтлал-19.0%-21.0%",
+  },
   "Submit A Form": {
     en: "Submit A Form",
     mn: "Хүсэлт илгээх",
+  },
+  "Purchase bonds": {
+    en: "Purchase bonds",
+    mn: "Бонд авах",
   },
   LOGIN: {
     en: "LOG IN",

@@ -195,9 +195,12 @@ const Navigation = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="inline-flex w-max py-1 px-3 rounded-md bg-black/30 backdrop-blur-xs z-5">
+              <div className="inline-flex flex-col w-max py-1 px-3 rounded-md bg-black/30 backdrop-blur-xs z-5">
+                <h2 className="relative text-lg leading-[120%] z-10">
+                  {t("Bond return")}
+                </h2>
                 <h2 className="relative text-2xl leading-[120%] z-10">
-                  {t("Submit form")}
+                  {t("Purchase bonds")}
                 </h2>
               </div>
               <div className="type-btn relative z-10 flex items-center gap-[.7rem] text-[10px]">

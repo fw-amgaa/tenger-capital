@@ -49,7 +49,7 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
 
         <div className="flex gap-2 justify-center md:justify-start">
           <Link
-            href="https://xacex.tengercapital.mn/auth/login"
+            href="https://trader.tengercapital.mn/auth/login"
             target="_blank"
           >
             <GradientBorderButton>{t("OPEN")}</GradientBorderButton>
