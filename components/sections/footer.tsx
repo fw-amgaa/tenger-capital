@@ -265,7 +265,7 @@ const Footer = () => {
                     </div>
                   </Link>
                   <Link
-                    href="https://play.google.com/store/apps/details?id=com.dbx.xacex"
+                    href="https://play.google.com/store/apps/details?id=mn.tengercapital.caspo&pcampaignid=web_share"
                     target="_blank"
                     aria-label="Get it on Google Play"
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors duration-300"
