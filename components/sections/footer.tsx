@@ -240,7 +240,7 @@ const Footer = () => {
               <div className="flex flex-col gap-2 items-center lg:items-end">
                 <div className="flex gap-2">
                   <Link
-                    href="https://apps.apple.com/us/app/tenger-capital/id1468074587"
+                    href="https://apps.apple.com/mn/app/tenger-capital-sc/id6758688580"
                     target="_blank"
                     aria-label="Download on the App Store"
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-colors duration-300"
