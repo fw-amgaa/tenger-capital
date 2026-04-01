@@ -242,7 +242,7 @@ const Navigation = () => {
               <li>
                 <Link
                   className="relative w-fit text-xs inline-block pb-[.1rem] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                  href="https://xacex.tengercapital.mn/auth/login"
+                  href="https://trader.tengercapital.mn"
                   target="_blank"
                 >
                   {t("Login")}

@@ -196,10 +196,7 @@ export default function Header({ headerMode = "dark" }: Props) {
               animate={isButtonVisible ? "visible" : "hidden"}
               transition={{ duration: 0.3 }}
             >
-              <Link
-                href="https://xacex.tengercapital.mn/auth/login"
-                target="_blank"
-              >
+              <Link href="https://trader.tengercapital.mn" target="_blank">
                 <GradientBorderButton
                   mode={isOpen ? "light" : headerMode}
                   hasBorder={false}
