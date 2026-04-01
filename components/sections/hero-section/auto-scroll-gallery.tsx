@@ -8,7 +8,8 @@ export default function AutoScrollGallery() {
   return (
     <div className="w-full md:w-[45%] aspect-[279/333] md:aspect-[500/630] rounded-3xl overflow-hidden relative">
       <Image
-        src={language === "en" ? "/home/hero_en.jpg" : "/home/hero_mn.jpg"}
+        src="/home/hero.jpg"
+        // src={language === "en" ? "/home/hero_en.jpg" : "/home/hero_mn.jpg"}
         alt="hero"
         fill
         objectFit="contain"
