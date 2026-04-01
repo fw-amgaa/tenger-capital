@@ -212,7 +212,7 @@ export default function Header({ headerMode = "dark" }: Props) {
               transition={{ duration: 0.3 }}
             >
               <Link
-                href="https://trader.tengercapital.mn/login"
+                href="https://trader.tengercapital.mn/register/step-1"
                 target="_blank"
               >
                 <GradientBorderButton
