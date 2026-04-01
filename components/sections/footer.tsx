@@ -167,7 +167,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between max-lg:w-full lg:h-full">
             <div className="mb-4">
               <Link
-                href="https://trader.tengercapital.mn/auth/login"
+                href="https://trader.tengercapital.mn/login"
                 target="_blank"
               >
                 <GradientBorderButton mode="dark" borderAnimation={false}>

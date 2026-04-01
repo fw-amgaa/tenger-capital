@@ -40,10 +40,7 @@ export default function Brokerage() {
           </ol>
 
           <div className="mt-6 m-auto">
-            <Link
-              href="https://trader.tengercapital.mn/auth/login"
-              target="_blank"
-            >
+            <Link href="https://trader.tengercapital.mn/login" target="_blank">
               <GradientBorderButton>
                 {t("Open your account")}
               </GradientBorderButton>
@@ -63,10 +60,7 @@ export default function Brokerage() {
           </p>
 
           <div className="mt-6 m-auto">
-            <Link
-              href="https://trader.tengercapital.mn/auth/login"
-              target="_blank"
-            >
+            <Link href="https://trader.tengercapital.mn/login" target="_blank">
               <GradientBorderButton>
                 {t("Open your account")}
               </GradientBorderButton>
@@ -85,10 +79,7 @@ export default function Brokerage() {
           </p>
 
           <div className="mt-6 m-auto">
-            <Link
-              href="https://trader.tengercapital.mn/auth/login"
-              target="_blank"
-            >
+            <Link href="https://trader.tengercapital.mn/login" target="_blank">
               <GradientBorderButton>
                 {t("Open your account")}
               </GradientBorderButton>
@@ -149,10 +140,7 @@ export default function Brokerage() {
             <p className="text-base md:text-md leading-relaxed md:w-[400px] mb-8 mt-18">
               {t("brokerage.description")}
             </p>
-            <Link
-              href="https://trader.tengercapital.mn/auth/login"
-              target="_blank"
-            >
+            <Link href="https://trader.tengercapital.mn/login" target="_blank">
               <GradientBorderButton>
                 {t("Open your account")}
               </GradientBorderButton>
