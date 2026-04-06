@@ -21,7 +21,7 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 0.4 }}
         className="z-10 md:w-[400px] text-center md:text-left"
       >
-        <h3 className="text-3xl md:text-4xl tracking-tight text-primary mb-4 mt-6">
+        <h3 className="text-3xl md:text-4xl tracking-tight mb-4 mt-6">
           {t("Every Money Question.")} <br />
           {t("One Trusted Team.")}
         </h3>

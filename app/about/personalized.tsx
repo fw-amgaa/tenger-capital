@@ -29,7 +29,7 @@ export default function Personalized() {
         transition={{ duration: 1, delay: 0.4 }}
         className="z-10 md:w-[370px] text-center md:text-left"
       >
-        <h3 className="text-3xl md:text-4xl tracking-tight text-primary mb-1 mt-6">
+        <h3 className="text-3xl md:text-4xl tracking-tight mb-1 mt-6">
           {t("A service as individual as you are")}
         </h3>
         <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />

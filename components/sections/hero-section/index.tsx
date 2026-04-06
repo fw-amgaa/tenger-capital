@@ -40,7 +40,7 @@ export default function HeroSection({ introDone }: { introDone: boolean }) {
             ]}
           />
         </div>
-        <h1 className="text-4xl md:text-5xl tracking-tight text-primary mb-4 mt-6">
+        <h1 className="text-4xl md:text-5xl tracking-tight mb-4 mt-6">
           {t("Create Value Through Investing")}
         </h1>
         <p className="text-sm font-light text-muted-foreground max-w-xl mx-auto mb-8">

@@ -32,7 +32,7 @@ export default function LetterFromCeo() {
           transition={{ duration: 1, delay: 0.4 }}
           className="z-10 md:w-[50%] text-center md:text-left"
         >
-          <h1 className="text-3xl md:text-4xl tracking-tight text-primary">
+          <h1 className="text-3xl md:text-4xl tracking-tight">
             {t("Letter from Board Chairman")}
           </h1>
           <div className="mt-2 mb-12 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
@@ -106,7 +106,7 @@ export default function LetterFromCeo() {
           <p className="text-sm text-white font-bold max-w-xl mx-auto">
             {t("ceo.regards")}
           </p>
-          <p className="text-sm text-primary mt-1">{t("ceo.name")}</p>
+          <p className="text-sm mt-1">{t("ceo.name")}</p>
           <p className="text-sm text-white mt-1">{t("ceo.title")}</p>
         </motion.div>
 
