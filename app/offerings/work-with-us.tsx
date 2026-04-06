@@ -110,11 +110,11 @@ const StatsCard = ({
 
   const rotatingBackground = useTransform(rotate, (r) => {
     return `linear-gradient(${r}deg,
-      rgb(255,153,0) 15.57%,
-      rgb(248,229,181) 33.39%,
-      rgb(161,111,16) 50.58%,
-      rgb(248,229,181) 67.75%,
-      rgb(255,153,0) 91.74%)`;
+      rgb(245,135,90) 15.57%,
+      rgb(250,205,185) 33.39%,
+      rgb(195,85,45) 50.58%,
+      rgb(250,205,185) 67.75%,
+      rgb(245,135,90) 91.74%)`;
   });
 
   return (
@@ -164,7 +164,7 @@ const StatsCard = ({
             {/* Title */}
             <p className="text-white/80 text-lg leading-relaxed pr-8 h-[36%]">
               {title}
-              <div className="mt-4 h-px w-36 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+              <div className="mt-4 h-px w-36 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
             </p>
 
             {/* Disclosure */}

@@ -32,7 +32,7 @@ export default function Personalized() {
         <h3 className="text-3xl md:text-4xl tracking-tight text-primary mb-1 mt-6">
           {t("A service as individual as you are")}
         </h3>
-        <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+        <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
         <p className="text-md text-white/80">{t("personalized.desc")}</p>
       </motion.div>

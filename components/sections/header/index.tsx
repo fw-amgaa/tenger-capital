@@ -40,8 +40,8 @@ export default function Header({ headerMode = "dark" }: Props) {
   const [isNearBottom, setIsNearBottom] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
 
-  const logoLight = "/logo/logo_main_light.png";
-  const logoDark = "/logo/logo_main_dark.png";
+  const logoLight = "/logo/logo_main_light_new.png";
+  const logoDark = "/logo/logo_main_dark_new.png";
 
   const { scrollY } = useScroll();
 

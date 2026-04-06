@@ -96,7 +96,7 @@ export function LoginForm({
           </form>
           <div className="bg-muted relative hidden md:block">
             <Image
-              src="/logo/logo_main_dark.png"
+              src="/logo/logo_main_dark_new.png"
               alt="Tenger Capital"
               width={200}
               height={80}

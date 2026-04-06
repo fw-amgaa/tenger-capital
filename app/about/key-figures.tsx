@@ -68,7 +68,7 @@ function StatCard({
             )}
           </div>
 
-          <div className="mb-4 h-px w-12 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-4 h-px w-12 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
           <p className="max-w-[70%] text-xs font-medium uppercase tracking-wider text-white/50 md:text-sm">
             {label}
@@ -84,8 +84,8 @@ export default function KeyFigures() {
   return (
     <section className="relative overflow-hidden section-container py-24 md:py-32 lg:py-40">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 left-1/4 h-96 w-96 rounded-full bg-[rgb(255,153,0)]/[0.03] blur-3xl" />
-        <div className="absolute -bottom-1/2 right-1/4 h-96 w-96 rounded-full bg-[rgb(248,229,181)]/[0.02] blur-3xl" />
+        <div className="absolute -top-1/2 left-1/4 h-96 w-96 rounded-full bg-[rgb(245,135,90)]/[0.03] blur-3xl" />
+        <div className="absolute -bottom-1/2 right-1/4 h-96 w-96 rounded-full bg-[rgb(250,205,185)]/[0.02] blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl">

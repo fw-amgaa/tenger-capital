@@ -76,7 +76,7 @@ export default function Seperator() {
           left: `${Math.max(0, displayX - 50)}px`,
           width: "853px",
           background:
-            "linear-gradient(90deg, #f900, #ff9900b3 17.81%, #f900 35.62%), linear-gradient(90deg, #ffc16400 5.95%, #ffc164b3 15.04%, #ffc16400 24.14%)",
+            "linear-gradient(90deg, #f5875a00, #f5875ab3 17.81%, #f5875a00 35.62%), linear-gradient(90deg, #f9a88200 5.95%, #f9a882b3 15.04%, #f9a88200 24.14%)",
           transition: "opacity 0.5s ease-out",
         }}
       />

@@ -24,11 +24,11 @@ const GradientBadge = ({
 
   const rotatingBackground = useTransform(rotate, (r) => {
     return `linear-gradient(${r}deg,
-      rgb(255,153,0) 15.57%,
-      rgb(248,229,181) 33.39%,
-      rgb(161,111,16) 50.58%,
-      rgb(248,229,181) 67.75%,
-      rgb(255,153,0) 91.74%)`;
+      rgb(245,135,90) 15.57%,
+      rgb(250,205,185) 33.39%,
+      rgb(195,85,45) 50.58%,
+      rgb(250,205,185) 67.75%,
+      rgb(245,135,90) 91.74%)`;
   });
 
   const staticBackground = mode === "light" ? "#0a0a0a1a" : "#3b3b3b";
@@ -52,8 +52,8 @@ const GradientBadge = ({
           style={{
             background:
               mode === "light"
-                ? "radial-gradient(circle, rgba(255,153,0,0.25) 0%, rgba(255,153,0,0.05) 70%)"
-                : "radial-gradient(circle, rgba(255,153,0,0.5) 0%, transparent 70%)",
+                ? "radial-gradient(circle, rgba(245,135,90,0.25) 0%, rgba(245,135,90,0.05) 70%)"
+                : "radial-gradient(circle, rgba(245,135,90,0.5) 0%, transparent 70%)",
           }}
         />
       )}

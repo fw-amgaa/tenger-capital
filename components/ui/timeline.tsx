@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-lg md:text-4xl text-white max-w-4xl">
           {t("Changelog from our journey")}
         </h2>
-        <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+        <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
         <p className="text-neutral-300 text-sm md:text-base max-w-sm">
           {t("timeline.subtitle")}
@@ -80,7 +80,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
               background:
-                "linear-gradient(to top, rgb(255,153,0) 15.57%, rgb(248,229,181) 33.39%, rgb(161,111,16) 50.58%, rgb(248,229,181) 67.75%, rgb(255,153,0) 91.74%)",
+                "linear-gradient(to top, rgb(245,135,90) 15.57%, rgb(250,205,185) 33.39%, rgb(195,85,45) 50.58%, rgb(250,205,185) 67.75%, rgb(245,135,90) 91.74%)",
             }}
             className="absolute inset-x-0 top-0 w-[2px] rounded-full"
           />

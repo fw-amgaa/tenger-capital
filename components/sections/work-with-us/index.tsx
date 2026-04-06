@@ -83,9 +83,9 @@ const WorkWithUs = () => {
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stopColor="#FF9900"></stop>
-                  <stop offset="50%" stopColor="#F8E5B5"></stop>
-                  <stop offset="100%" stopColor="#FF9900"></stop>
+                  <stop offset="0%" stopColor="#f5875a"></stop>
+                  <stop offset="50%" stopColor="#f9c4a8"></stop>
+                  <stop offset="100%" stopColor="#f5875a"></stop>
                 </linearGradient>
                 <linearGradient
                   id="fill-_R_hlfdb_"
@@ -113,7 +113,7 @@ const WorkWithUs = () => {
                 y1="15"
                 x2="60"
                 y2="35"
-                stroke="#FF9900"
+                stroke="#f5875a"
                 strokeWidth="0.4"
                 strokeLinecap="round"
               ></line>
@@ -129,7 +129,7 @@ const WorkWithUs = () => {
                 y1="60"
                 x2="85"
                 y2="60"
-                stroke="#FF9900"
+                stroke="#f5875a"
                 strokeWidth="0.4"
                 strokeLinecap="round"
               ></line>
@@ -301,11 +301,11 @@ const StatsCard = ({
 
   const rotatingBackground = useTransform(rotate, (r) => {
     return `linear-gradient(${r}deg,
-      rgb(255,153,0) 15.57%,
-      rgb(248,229,181) 33.39%,
-      rgb(161,111,16) 50.58%,
-      rgb(248,229,181) 67.75%,
-      rgb(255,153,0) 91.74%)`;
+      rgb(245,135,90) 15.57%,
+      rgb(250,205,185) 33.39%,
+      rgb(195,85,45) 50.58%,
+      rgb(250,205,185) 67.75%,
+      rgb(245,135,90) 91.74%)`;
   });
 
   return (

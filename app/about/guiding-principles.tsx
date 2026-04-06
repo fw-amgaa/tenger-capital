@@ -40,7 +40,7 @@ function PrincipleCard({ title, description, delay = 0 }: PrincipleProps) {
       }`}
     >
       {/* Subtle glow effect on hover */}
-      <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[rgb(255,153,0)]/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[rgb(245,135,90)]/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       <div className="relative">
         {/* Title */}
@@ -49,7 +49,7 @@ function PrincipleCard({ title, description, delay = 0 }: PrincipleProps) {
         </div>
 
         {/* Divider */}
-        <div className="mb-6 h-px w-16 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+        <div className="mb-6 h-px w-16 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
         {/* Description */}
         <p className="text-white/60 md:text-md">{description}</p>
@@ -64,8 +64,8 @@ export default function GuidingPrinciples() {
     <section className="relative overflow-hidden section-container py-8 lg:py-16">
       {/* Ambient background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-48 h-96 w-96 rounded-full bg-[rgb(255,153,0)]/[0.03] blur-3xl" />
-        <div className="absolute bottom-1/4 -right-48 h-96 w-96 rounded-full bg-[rgb(248,229,181)]/[0.02] blur-3xl" />
+        <div className="absolute top-1/4 -left-48 h-96 w-96 rounded-full bg-[rgb(245,135,90)]/[0.03] blur-3xl" />
+        <div className="absolute bottom-1/4 -right-48 h-96 w-96 rounded-full bg-[rgb(250,205,185)]/[0.02] blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl">

@@ -35,7 +35,7 @@ export default function LetterFromCeo() {
           <h1 className="text-3xl md:text-4xl tracking-tight text-primary">
             {t("Letter from Board Chairman")}
           </h1>
-          <div className="mt-2 mb-12 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mt-2 mb-12 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
           <div className="max-w-xl mx-auto mb-8 text-sm font-light italic">
             {language === "en" ? (

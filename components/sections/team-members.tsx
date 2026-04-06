@@ -135,7 +135,7 @@ export default function TeamMembers({
           {teamMembers.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-bold">{member.name}</h3>
-              <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+              <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
               <h3 className="text-lg mb-2">{member.role}</h3>
 
               <div className="w-full aspect-square mt-8 relative rounded-2xl overflow-hidden">
@@ -165,7 +165,7 @@ export default function TeamMembers({
                 style={{ height: "100vh" }}
               >
                 <h3 className="text-3xl font-bold">{member.name}</h3>
-                <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+                <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
                 <h3 className="text-lg mb-2">{member.role}</h3>
                 {/* <p className="text-[16px] text-[#f8f8f8] leading-[1.4]">
                   {member.description}

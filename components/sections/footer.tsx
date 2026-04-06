@@ -46,7 +46,7 @@ const Footer = () => {
             </button>
 
             <Image
-              src={"/logo/logo_main_light.png"}
+              src={"/logo/logo_main_light_new.png"}
               alt="logo"
               width={128}
               height={50}

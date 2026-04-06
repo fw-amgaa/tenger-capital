@@ -97,7 +97,7 @@ export default function UnderWriting() {
             <h1 className="text-3xl md:text-4xl font-serif">
               {t("Underwriting")}
             </h1>
-            <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+            <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
             <h1 className="text-3xl md:text-4xl font-serif opacity-40">
               {t("Building value that lasts.")}
             </h1>
@@ -126,7 +126,7 @@ export default function UnderWriting() {
           {services.map((member, index) => (
             <div key={index} className="text-white">
               <h3 className="text-3xl font-light mb-8">{member.name}</h3>
-              <div className="my-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+              <div className="my-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
               <div>
                 <div className="text-md leading-[1.4] opacity-70">
@@ -167,7 +167,7 @@ export default function UnderWriting() {
                 className="min-h-screen flex flex-col justify-center"
               >
                 <h3 className="text-3xl font-bold">{service.name}</h3>
-                <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+                <div className="mt-2 mb-4 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
 
                 <div className="flex flex-col gap-8">
                   {service.description}

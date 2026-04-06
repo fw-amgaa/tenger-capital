@@ -19,7 +19,7 @@ function TimelineItem({
     <div className="grid grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
       {reverse && (
         <div>
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
           {facts.map((fact, index) => (
             <p
               key={index}
@@ -32,7 +32,7 @@ function TimelineItem({
       )}
 
       <div className="flex flex-col sm:flex-row sm:gap-4">
-        <div className="border rounded-sm overflow-hidden w-full h-24 lg:h-36 xl:h-48 bg-[linear-gradient(rgb(255,153,0)_15.57%,_rgb(248,229,181)_33.39%,_rgb(161,111,16)_50.58%,_rgb(248,229,181)_67.75%,_rgb(255,153,0)_91.74%)] p-1/2">
+        <div className="border rounded-sm overflow-hidden w-full h-24 lg:h-36 xl:h-48 bg-[linear-gradient(rgb(245,135,90)_15.57%,_rgb(250,205,185)_33.39%,_rgb(195,85,45)_50.58%,_rgb(250,205,185)_67.75%,_rgb(245,135,90)_91.74%)] p-1/2">
           <div className="relative bg-black w-full h-full p-1">
             <div className="relative w-full h-full rounded-xs">
               <Image src={imagePath} alt={title} objectFit="cover" fill />
@@ -42,7 +42,7 @@ function TimelineItem({
       </div>
       {!reverse && (
         <div>
-          {/* <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" /> */}
+          {/* <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" /> */}
           {facts.map((fact, index) => (
             <p
               key={index}
@@ -102,7 +102,7 @@ export function TimelineSection() {
       title: t("2023 Q3"),
       content: (
         <div key="2">
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
           <p className="mb-8 text-xs font-normal md:text-sm text-neutral-200">
             {t("timeline.2023q3.lendmn")}
           </p>
@@ -116,7 +116,7 @@ export function TimelineSection() {
       title: t("2023 Q4"),
       content: (
         <div key="2">
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
           <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             {t("timeline.2023q4.lendmn")}
           </p>
@@ -133,7 +133,7 @@ export function TimelineSection() {
       title: t("2024 Q1"),
       content: (
         <div key="2">
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
           <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             {t("timeline.2024q1.gsb")}
           </p>
@@ -147,7 +147,7 @@ export function TimelineSection() {
       title: t("2024 Q2"),
       content: (
         <div key="2">
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
           <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             {t("timeline.2024q2.dem")}
           </p>
@@ -161,7 +161,7 @@ export function TimelineSection() {
       title: t("2024 Q4"),
       content: (
         <div key="2">
-          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+          <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
           <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
             {t("timeline.2024q4.shunkhlai")}
           </p>
@@ -173,7 +173,7 @@ export function TimelineSection() {
       content: (
         <div key="3">
           <div className="mb-8">
-            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
             <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               {t("timeline.2025q1.abts")}
             </p>
@@ -192,7 +192,7 @@ export function TimelineSection() {
       content: (
         <div key="3">
           <div className="mb-8">
-            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
             <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               {t("timeline.2025q2.bers")}
             </p>
@@ -217,7 +217,7 @@ export function TimelineSection() {
       content: (
         <div key="3">
           <div className="mb-8">
-            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(255,153,0)] to-transparent" />
+            <div className="mb-2 h-px w-24 bg-gradient-to-r from-[rgb(245,135,90)] to-transparent" />
             <p className="mb-8 text-xs font-normal md:text-sm dark:text-neutral-200">
               {t("timeline.2025q3.bichil")}
             </p>
