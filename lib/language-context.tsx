@@ -765,6 +765,10 @@ const translations: Record<string, { en: string; mn: string }> = {
     en: "Darkhanbayar Radnaa-Ochir",
     mn: "Раднаа-Очир Дарханбаяр",
   },
+  "Gunbileg Enkhmend": {
+    en: "Gunbileg Enkhmend",
+    mn: "Энхмэнд Гүнбилэг",
+  },
   "Lkhamsuren Boldbaatar": {
     en: "Lkhamsuren Boldbaatar",
     mn: "Болдбаатар Лхамсүрэн",
