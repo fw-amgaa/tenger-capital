@@ -76,6 +76,18 @@ export default function TeamMembers({
       image: "/team-members/all-bw part1-14b.jpg",
     },
     {
+      name: t("Gunbileg Enkhmend"),
+      role: (
+        <span>
+          {t("Tenger Fund Management")}
+          <br />
+          {t("Chief Investment Officer")}
+        </span>
+      ),
+      description: "",
+      image: "/team-members/all-bw part22.jpg",
+    },
+    {
       name: t("Lkhamsuren Boldbaatar"),
       role: t("Chief Financial and Operating Officer"),
       description: "",
@@ -92,12 +104,6 @@ export default function TeamMembers({
       role: t("Chief Marketing Officer"),
       description: "",
       image: "/team-members/all-bw part2-3b.jpg",
-    },
-    {
-      name: t("Bilguun Ganbaatar"),
-      role: t("Chief Trade Officer"),
-      description: "",
-      image: "/team-members/all-bw part2-4.jpg",
     },
   ];
 
