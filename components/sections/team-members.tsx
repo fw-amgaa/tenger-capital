@@ -97,7 +97,7 @@ export default function TeamMembers({
       name: t("Dashnyam Sanduijav"),
       role: t("Chief Investment Officer"),
       description: "",
-      image: "/team-members/all-bw part1-7.jpg",
+      image: "/team-members/dash.jpg",
     },
     {
       name: t("Byambatogoo Davaasuren"),
