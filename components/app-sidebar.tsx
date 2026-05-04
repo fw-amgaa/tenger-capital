@@ -1,7 +1,26 @@
 "use client";
 
 import * as React from "react";
-import { FileText, Home, LogOut, LayoutTemplate } from "lucide-react";
+import {
+  FileText,
+  Home,
+  LogOut,
+  LayoutTemplate,
+  Images,
+  LayoutDashboard,
+  FileBarChart,
+  MousePointerClick,
+  Globe2,
+  Radio,
+  Send,
+  Activity,
+  BookOpen,
+  MessageSquare,
+  Mail,
+  PenSquare,
+  HelpCircle,
+  Handshake,
+} from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import {
@@ -29,6 +48,46 @@ const navItems = [
     url: "/dashboard/form-content",
     icon: LayoutTemplate,
   },
+  {
+    title: "Нүүр баннер",
+    url: "/dashboard/hero",
+    icon: Images,
+  },
+  {
+    title: "Журнал",
+    url: "/dashboard/journal",
+    icon: BookOpen,
+    items: [
+      { title: "Нийтлэлүүд", url: "/dashboard/journal", icon: PenSquare },
+      { title: "Сэтгэгдэл", url: "/dashboard/journal/comments", icon: MessageSquare },
+      { title: "Захиалагчид", url: "/dashboard/journal/subscribers", icon: Mail },
+    ],
+  },
+  {
+    title: "FAQ",
+    url: "/dashboard/faq",
+    icon: HelpCircle,
+  },
+  {
+    title: "Хамтрагчид",
+    url: "/dashboard/partners",
+    icon: Handshake,
+  },
+  {
+    title: "Аналитик",
+    url: "/dashboard/analytics",
+    icon: Activity,
+    items: [
+      { title: "Тойм", url: "/dashboard/analytics", icon: LayoutDashboard },
+      { title: "Хуудсууд", url: "/dashboard/analytics/pages", icon: FileBarChart },
+      { title: "Хэсгүүд", url: "/dashboard/analytics/sections", icon: LayoutDashboard },
+      { title: "Идэвх", url: "/dashboard/analytics/engagement", icon: MousePointerClick },
+      { title: "Үзэгчид", url: "/dashboard/analytics/audience", icon: Globe2 },
+      { title: "Эх сурвалж", url: "/dashboard/analytics/acquisition", icon: Globe2 },
+      { title: "Маягт", url: "/dashboard/analytics/form", icon: Send },
+      { title: "Шууд", url: "/dashboard/analytics/live", icon: Radio },
+    ],
+  },
 ];
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -38,7 +97,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   const navMain = navItems.map((item) => ({
     ...item,
-    isActive: pathname === item.url,
+    isActive:
+      pathname === item.url ||
+      ("items" in item && item.items
+        ? item.items.some(
+            (s) => pathname === s.url || pathname.startsWith(`${s.url}/`),
+          )
+        : false),
   }));
 
   const handleSignOut = async () => {

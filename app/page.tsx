@@ -14,6 +14,7 @@ import Partners from "@/components/sections/partners";
 import TeamMembers from "@/components/sections/team-members";
 import VideoIntroduction from "@/components/sections/video-introduction";
 import WorkWithUs from "@/components/sections/work-with-us";
+import { TrackedSection } from "@/components/analytics/tracked-section";
 import { useState } from "react";
 
 export default function Home() {
@@ -25,15 +26,31 @@ export default function Home() {
       <Header headerMode={headerMode} />
       {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />}
       <main className="flex flex-col gap-[32px] row-start-2 mb-48">
-        <HeroSection introDone={introDone} />
-        <VideoIntroduction />
-        <Brief />
-        <WorkWithUs />
-        <TeamMembers />
-        <Offerings setHeaderMode={setHeaderMode} />
-        {/* <Blogs /> */}
-        <Partners />
-        <FAQ />
+        <TrackedSection id="hero">
+          <HeroSection introDone={introDone} />
+        </TrackedSection>
+        <TrackedSection id="video-intro">
+          <VideoIntroduction />
+        </TrackedSection>
+        <TrackedSection id="brief">
+          <Brief />
+        </TrackedSection>
+        <TrackedSection id="work-with-us">
+          <WorkWithUs />
+        </TrackedSection>
+        <TrackedSection id="team-members">
+          <TeamMembers />
+        </TrackedSection>
+        <TrackedSection id="offerings">
+          <Offerings setHeaderMode={setHeaderMode} />
+        </TrackedSection>
+        <Blogs />
+        <TrackedSection id="partners">
+          <Partners />
+        </TrackedSection>
+        <TrackedSection id="faq">
+          <FAQ />
+        </TrackedSection>
       </main>
       <Footer />
       {/* <FloatingDashboard

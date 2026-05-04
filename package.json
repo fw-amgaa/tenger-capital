@@ -11,7 +11,10 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
-    "db:seed": "tsx scripts/seed.ts"
+    "db:seed": "tsx scripts/seed.ts",
+    "db:seed-journal": "tsx scripts/seed-journal.ts",
+    "db:seed-faq": "tsx scripts/seed-faq.ts",
+    "db:seed-partner": "tsx scripts/seed-partner.ts"
   },
   "dependencies": {
     "@mux/mux-player-react": "^3.10.2",

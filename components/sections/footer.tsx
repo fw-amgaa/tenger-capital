@@ -15,7 +15,8 @@ const Footer = () => {
       <div className="relative flex flex-col gap-4 lg:gap-8 lg:pt-[3rem] sm:px-16">
         <div
           className={cn(
-            "relative grid h-full gap-[3rem] rounded-[2rem] grid-cols-1 lg:grid-cols-4 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0 bg-[#ff990026]",
+            "relative grid h-full gap-[3rem] rounded-[2rem] grid-cols-1 lg:grid-cols-4 px-[2rem] pt-[2.5rem] pb-[4rem] lg:p-[3rem] lg:pb-[5rem] lg:gap-0",
+            "bg-black [background-image:linear-gradient(rgba(255,153,0,0.15),rgba(255,153,0,0.15))]",
             "md:min-h-[20rem] lg:min-h-[30rem]",
           )}
         >

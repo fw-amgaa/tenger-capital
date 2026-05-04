@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/language-context";
 import { ContactForm } from "./form";
 import { useEffect, useState } from "react";
 import { FormPageContent } from "@/lib/db/schema";
+import { TrackedSection } from "@/components/analytics/tracked-section";
 
 export default function SubmitFormPage() {
   const { t, language } = useLanguage();
@@ -43,12 +44,14 @@ export default function SubmitFormPage() {
   return (
     <ScrollControlProvider>
       <Header />
-      <div className="section-container text-8xl h-screen flex items-center justify-center">
-        {t("invitation")}
-      </div>
+      <TrackedSection id="submit-form-intro">
+        <div className="section-container text-8xl h-screen flex items-center justify-center">
+          {t("invitation")}
+        </div>
+      </TrackedSection>
 
       {hasContent && (
-        <div className="section-container max-w-[768px] py-12 md:py-20">
+        <TrackedSection id="submit-form-content" className="section-container max-w-[768px] py-12 md:py-20">
           <div className="max-w-3xl mx-auto space-y-4">
             {/* Title */}
             {displayTitle && (
@@ -107,13 +110,15 @@ export default function SubmitFormPage() {
 
             <div className="border-t border-white/10 pt-4" />
           </div>
-        </div>
+        </TrackedSection>
       )}
 
-      <ContactForm />
-      <div className="my-16 md:my-32">
+      <TrackedSection id="submit-form">
+        <ContactForm />
+      </TrackedSection>
+      <TrackedSection id="faq" className="my-16 md:my-32">
         <FAQ />
-      </div>
+      </TrackedSection>
       <Footer />
     </ScrollControlProvider>
   );

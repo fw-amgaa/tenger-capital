@@ -43,11 +43,11 @@ const GradientBorderButton = ({
 
   const rotatingBackground = useTransform(rotate, (r) => {
     return `linear-gradient(${r}deg,
-      rgb(245,135,90) 15.57%,
-      rgb(250,205,185) 33.39%,
-      rgb(195,85,45) 50.58%,
-      rgb(250,205,185) 67.75%,
-      rgb(245,135,90) 91.74%)`;
+      var(--gbb-c1, rgb(245,135,90)) 15.57%,
+      var(--gbb-c2, rgb(250,205,185)) 33.39%,
+      var(--gbb-c3, rgb(195,85,45)) 50.58%,
+      var(--gbb-c2, rgb(250,205,185)) 67.75%,
+      var(--gbb-c1, rgb(245,135,90)) 91.74%)`;
   });
 
   const staticBackground = mode === "light" ? "#0a0a0a1a" : "#3b3b3b";
@@ -72,8 +72,8 @@ const GradientBorderButton = ({
           style={{
             background:
               mode === "light"
-                ? "radial-gradient(circle, rgba(245,135,90,0.25) 0%, rgba(245,135,90,0.05) 70%)"
-                : "radial-gradient(circle, rgba(245,135,90,0.5) 0%, transparent 70%)",
+                ? "radial-gradient(circle, var(--gbb-glow-soft, rgba(245,135,90,0.25)) 0%, transparent 70%)"
+                : "radial-gradient(circle, var(--gbb-glow-strong, rgba(245,135,90,0.5)) 0%, transparent 70%)",
           }}
         />
       )}

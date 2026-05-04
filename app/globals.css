@@ -159,6 +159,18 @@ body {
   .rich-content li { @apply leading-relaxed; }
 }
 
+/* Partner page palette — only applied inside .partner-page so home / main
+   pages keep the brand orange GradientBorderButton + Seperator. */
+.partner-page {
+  --gbb-c1: var(--partner-primary);
+  --gbb-c2: color-mix(in oklch, var(--partner-primary) 35%, white);
+  --gbb-c3: color-mix(in oklch, var(--partner-primary) 78%, black);
+  --gbb-glow-strong: color-mix(in oklch, var(--partner-primary) 55%, transparent);
+  --gbb-glow-soft: color-mix(in oklch, var(--partner-primary) 25%, transparent);
+  --sep-c1: var(--partner-primary);
+  --sep-c2: color-mix(in oklch, var(--partner-primary) 65%, white);
+}
+
 @keyframes scroll-up {
   0% {
     transform: translateY(0);

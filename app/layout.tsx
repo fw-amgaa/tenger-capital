@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { moisette, ttCommons } from "./fonts";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { AnalyticsProvider } from "@/components/analytics-provider";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Tenger Capital",
@@ -51,6 +53,9 @@ export default function RootLayout({
           <LanguageProvider>
             {children}
             <Toaster />
+            <Suspense fallback={null}>
+              <AnalyticsProvider />
+            </Suspense>
           </LanguageProvider>
         </ThemeProvider>
       </body>
