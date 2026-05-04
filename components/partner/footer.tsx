@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { animate } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import { ArrowUp, Send } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/lib/language-context";
+import { useScrollControl } from "@/components/scroll-control";
 import { pickLang, type PartnerPageBundle } from "@/lib/partners/shared";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +27,7 @@ export default function PartnerFooter({
   const { page, links, socials, underwriters } = bundle;
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const { scrollTo } = useScrollControl();
 
   const subscribeTitle = pickLang(
     language,
@@ -245,13 +246,7 @@ export default function PartnerFooter({
 
           {/* Back-to-top button */}
           <button
-            onClick={() =>
-              animate(window.scrollY, 0, {
-                duration: 1.2,
-                ease: [0.22, 1, 0.36, 1],
-                onUpdate: (v) => window.scrollTo(0, v),
-              })
-            }
+            onClick={() => scrollTo(0)}
             aria-label="Back to top"
             className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6 flex items-center justify-center h-10 w-10 rounded-full text-white shadow-lg cursor-pointer"
             style={{ background: "var(--partner-primary)" }}

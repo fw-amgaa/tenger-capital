@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo } from "react";
+import { ScrollControlProvider } from "@/components/scroll-control";
 import { TrackedSection } from "@/components/analytics/tracked-section";
 import PartnerHeader from "@/components/partner/header";
 import PartnerHero from "@/components/partner/hero";
@@ -52,6 +53,7 @@ export default function PartnerClient({ bundle }: { bundle: PartnerPageBundle })
   }, [bundle.page, language]);
 
   return (
+    <ScrollControlProvider>
     <div
       className="partner-page relative min-h-screen bg-[#0a0a0a] text-white selection:bg-[color-mix(in_oklch,var(--partner-primary)_60%,transparent)] selection:text-white"
       style={{
@@ -98,5 +100,6 @@ export default function PartnerClient({ bundle }: { bundle: PartnerPageBundle })
 
       <PartnerFooter bundle={bundle} />
     </div>
+    </ScrollControlProvider>
   );
 }

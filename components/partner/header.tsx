@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Download, ShoppingBag, Menu, X } from "lucide-react";
 import GradientBorderButton from "@/components/gradient-border-button";
 import { useLanguage } from "@/lib/language-context";
+import { useScrollControl } from "@/components/scroll-control";
 import { pickLang, type PartnerPageBundle } from "@/lib/partners/shared";
 import { cn } from "@/lib/utils";
 
@@ -30,12 +31,12 @@ export default function PartnerHeader({
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 30));
+  const { scrollTo } = useScrollControl();
 
   const tengerLogo = page.tengerLogoUrl || "/logo/logo_main_light_new.png";
 
   const handleNavClick = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollTo(`#${id}`, { offset: -64 });
     setMobileOpen(false);
   };
 
