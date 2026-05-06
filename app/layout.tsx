@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/lib/language-context";
 import type { Metadata } from "next";
-import { moisette, ttCommons } from "./fonts";
+import { manrope, moisette } from "./fonts";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { AnalyticsProvider } from "@/components/analytics-provider";
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${moisette.variable} ${ttCommons.variable} antialiased`}
+        className={`${moisette.variable} ${manrope.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

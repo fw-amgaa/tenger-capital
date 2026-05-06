@@ -541,7 +541,7 @@ export default function ArticlePage({
                         {c.isAuthor && (
                           <span
                             style={{
-                              fontFamily: "var(--font-mono)",
+                              fontFamily: "var(--font-manrope)",
                               fontSize: 10,
                               marginLeft: 8,
                               padding: "2px 6px",
@@ -567,7 +567,7 @@ export default function ArticlePage({
                                 {r.isAuthor && (
                                   <span
                                     style={{
-                                      fontFamily: "var(--font-mono)",
+                                      fontFamily: "var(--font-manrope)",
                                       fontSize: 10,
                                       marginLeft: 8,
                                       padding: "2px 6px",

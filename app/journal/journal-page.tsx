@@ -427,7 +427,7 @@ function CmdK({
               <kbd>esc</kbd>Close
             </span>
           </div>
-          <span style={{ fontFamily: "var(--font-mono)" }}>
+          <span style={{ fontFamily: "var(--font-manrope)" }}>
             tenger.mn / journal
           </span>
         </div>

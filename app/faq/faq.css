@@ -26,8 +26,8 @@
 
   /* Type */
   --serif: var(--font-moisette);
-  --sans: var(--font-ttcommons);
-  --mono: var(--font-geist-mono);
+  --sans: var(--font-manrope);
+  --mono: var(--font-manrope);
 
   /* Layout */
   --max: 1280px;
